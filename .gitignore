@@ -1,62 +1,9 @@
-# Python
 __pycache__/
 *.pyc
-*.pyo
-*.egg-info/
-dist/
-build/
-*.egg
-
-# Virtual environments
-.venv/
-venv/
-env/
-
-# Testing
 .pytest_cache/
-.coverage
-htmlcov/
-
-# Jupyter
-.ipynb_checkpoints/
-notebooks/*_executed.ipynb
-notebooks/executed_*.ipynb
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Environment / secrets
+*.egg-info/
 .env
-.env.local
-
-# OS
 .DS_Store
-Thumbs.db
-.Rhistory
-
-# Reference papers (large PDFs, download separately)
-papers/
-
-# Cloned reference repos (large, contain nested .git dirs and binaries)
-repos/
-
-# Copyrighted NYT data -- download separately (see README)
-data/nyt_puzzles/
-
-# Large model files
-*.bin
-*.pt
-*.onnx
-
-# Claude Code config (not relevant to collaborators)
-CLAUDE.md
-CLAUDE (1).md
-
-# Generated benchmark artifacts (reproducible via scripts/)
-data/benchmark_*.png
-data/solver_benchmark.json
-data/nyt_analysis_stats.json
+data/generated/
+notebooks/.ipynb_checkpoints/
+venv/

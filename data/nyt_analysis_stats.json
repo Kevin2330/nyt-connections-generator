@@ -1,0 +1,184 @@
+{
+  "dataset": {
+    "total_puzzles": 554,
+    "date_range": "2023-06-12 to 2024-12-16",
+    "puzzles_with_difficulty": 227,
+    "puzzles_per_month_avg": 29.2
+  },
+  "words": {
+    "total_appearances": 8864,
+    "unique_words": 4918,
+    "avg_per_puzzle": 16.0,
+    "top_10": [
+      {
+        "word": "BALL",
+        "count": 15
+      },
+      {
+        "word": "RING",
+        "count": 13
+      },
+      {
+        "word": "FLY",
+        "count": 12
+      },
+      {
+        "word": "LEAD",
+        "count": 12
+      },
+      {
+        "word": "HEART",
+        "count": 12
+      },
+      {
+        "word": "WING",
+        "count": 12
+      },
+      {
+        "word": "EGG",
+        "count": 11
+      },
+      {
+        "word": "LOVE",
+        "count": 11
+      },
+      {
+        "word": "BAR",
+        "count": 11
+      },
+      {
+        "word": "CAN",
+        "count": 10
+      }
+    ],
+    "median_length": 5,
+    "multi_word_entries": 112,
+    "reused_3plus": 936
+  },
+  "categories": {
+    "total_appearances": 2216,
+    "unique_categories": 2054,
+    "categories_per_puzzle": 4,
+    "median_word_length": 2,
+    "median_char_length": 15,
+    "type_distribution": {
+      "Common property": 1013,
+      "Synonyms / Slang": 846,
+      "Fill-in-the-blank": 202,
+      "Pop culture": 125,
+      "Wordplay / Hidden pattern": 30
+    }
+  },
+  "difficulty": {
+    "n_rated": 227,
+    "mean": 2.935,
+    "median": 3.0,
+    "std": 0.641,
+    "min": 1.3,
+    "max": 4.8,
+    "time_correlation": -0.1989
+  },
+  "embeddings": {
+    "by_nyt_color": {
+      "yellow": {
+        "mean": 0.3441,
+        "median": 0.33,
+        "std": 0.0969,
+        "count": 554
+      },
+      "green": {
+        "mean": 0.3168,
+        "median": 0.3032,
+        "std": 0.0838,
+        "count": 554
+      },
+      "blue": {
+        "mean": 0.2887,
+        "median": 0.2774,
+        "std": 0.0762,
+        "count": 554
+      },
+      "purple": {
+        "mean": 0.248,
+        "median": 0.2395,
+        "std": 0.0634,
+        "count": 554
+      }
+    },
+    "by_ranked_color": {
+      "yellow": {
+        "mean": 0.3893,
+        "median": 0.3747,
+        "std": 0.0893,
+        "count": 554
+      },
+      "green": {
+        "mean": 0.3153,
+        "median": 0.3067,
+        "std": 0.0601,
+        "count": 554
+      },
+      "blue": {
+        "mean": 0.2677,
+        "median": 0.2595,
+        "std": 0.0499,
+        "count": 554
+      },
+      "purple": {
+        "mean": 0.2253,
+        "median": 0.2215,
+        "std": 0.0487,
+        "count": 554
+      }
+    },
+    "nyt_rank_agreement": 0.4391,
+    "overall_mean": 0.2994,
+    "overall_std": 0.0884
+  },
+  "cross_puzzle": {
+    "versatile_words_3plus_cats": 876,
+    "top_10_versatile": [
+      {
+        "word": "BALL",
+        "num_categories": 15
+      },
+      {
+        "word": "RING",
+        "num_categories": 13
+      },
+      {
+        "word": "HEART",
+        "num_categories": 12
+      },
+      {
+        "word": "FLY",
+        "num_categories": 11
+      },
+      {
+        "word": "LEAD",
+        "num_categories": 11
+      },
+      {
+        "word": "EGG",
+        "num_categories": 11
+      },
+      {
+        "word": "LOVE",
+        "num_categories": 11
+      },
+      {
+        "word": "BAR",
+        "num_categories": 11
+      },
+      {
+        "word": "CHECK",
+        "num_categories": 10
+      },
+      {
+        "word": "STICK",
+        "num_categories": 10
+      }
+    ],
+    "repeat_pairs": 513
+  }
+}
