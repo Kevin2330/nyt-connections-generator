@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Connections</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Infinite Connections</h1>
+            <p class="subtitle">AI-Generated Word Puzzles</p>
+        </header>
+
+        <div id="message-bar" class="message-bar hidden"></div>
+
+        <div id="solved-groups"></div>
+
+        <div id="grid" class="grid"></div>
+
+        <div class="controls">
+            <div class="mistakes" id="mistakes">
+                Mistakes remaining: <span id="mistakes-count">4</span>
+                <span id="mistake-dots">&#9679; &#9679; &#9679; &#9679;</span>
+            </div>
+            <div class="buttons">
+                <button id="btn-shuffle" onclick="shuffleWords()">Shuffle</button>
+                <button id="btn-deselect" onclick="deselectAll()">Deselect All</button>
+                <button id="btn-submit" onclick="submitGuess()" disabled>Submit</button>
+            </div>
+            <div class="buttons secondary">
+                <button id="btn-new" onclick="loadNewPuzzle()">New Puzzle</button>
+                <button id="btn-reveal" onclick="revealAnswer()">Reveal</button>
+            </div>
+        </div>
+
+        <div id="game-over" class="game-over hidden">
+            <h2 id="game-over-text"></h2>
+            <button onclick="loadNewPuzzle()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="/static/game.js"></script>
+</body>
+</html>
