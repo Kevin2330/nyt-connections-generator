@@ -1,0 +1,2147 @@
+[
+  {
+    "id": "INF-00004",
+    "words": [
+      "CAPPUCCINO",
+      "COFFEE",
+      "VENUE",
+      "BALLOON",
+      "SUCCESS",
+      "ESPRESSO",
+      "WALLET",
+      "COMMITTEE",
+      "BACKSTAGE",
+      "GLASS",
+      "STAGE",
+      "PHONE",
+      "LATTE",
+      "BAND",
+      "OCCUR",
+      "MOCHA"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE ORDERED AT A CAFE",
+        "words": [
+          "ESPRESSO",
+          "LATTE",
+          "CAPPUCCINO",
+          "MOCHA"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.6369519233703613
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH A CONCERT",
+        "words": [
+          "STAGE",
+          "BACKSTAGE",
+          "BAND",
+          "VENUE"
+        ],
+        "color": "green",
+        "similarity_score": 0.45805951952934265
+      },
+      {
+        "category": "THINGS YOU MIGHT DROP",
+        "words": [
+          "PHONE",
+          "GLASS",
+          "COFFEE",
+          "WALLET"
+        ],
+        "color": "blue",
+        "similarity_score": 0.309390664100647
+      },
+      {
+        "category": "WORDS WITH DOUBLE LETTERS",
+        "words": [
+          "BALLOON",
+          "SUCCESS",
+          "OCCUR",
+          "COMMITTEE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.27803587913513184
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "CAPPUCCINO",
+                "COFFEE",
+                "ESPRESSO",
+                "LATTE"
+              ],
+              "score": 0.6445298790931702
+            },
+            {
+              "words": [
+                "VENUE",
+                "BACKSTAGE",
+                "STAGE",
+                "BAND"
+              ],
+              "score": 0.4580594599246979
+            },
+            {
+              "words": [
+                "BALLOON",
+                "WALLET",
+                "GLASS",
+                "PHONE"
+              ],
+              "score": 0.32335224747657776
+            },
+            {
+              "words": [
+                "SUCCESS",
+                "COMMITTEE",
+                "OCCUR",
+                "MOCHA"
+              ],
+              "score": 0.248424232006073
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "COFFEE",
+                "ESPRESSO",
+                "LATTE",
+                "MOCHA"
+              ],
+              "score": 0.6341385245323181
+            },
+            {
+              "words": [
+                "VENUE",
+                "BACKSTAGE",
+                "STAGE",
+                "BAND"
+              ],
+              "score": 0.4580594599246979
+            },
+            {
+              "words": [
+                "BALLOON",
+                "WALLET",
+                "GLASS",
+                "PHONE"
+              ],
+              "score": 0.32335224747657776
+            },
+            {
+              "words": [
+                "CAPPUCCINO",
+                "SUCCESS",
+                "COMMITTEE",
+                "OCCUR"
+              ],
+              "score": 0.275758296251297
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4206095039844513,
+      "created_at": "2026-04-08T03:07:52.966684+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00010",
+    "words": [
+      "BARBELL",
+      "KITE",
+      "JAZZ",
+      "SUN",
+      "FIDDLESTICKS",
+      "BALLOON",
+      "DUMBBELL",
+      "HOBBES",
+      "KETTLEBELL",
+      "FELIX",
+      "GARFIELD",
+      "TREADMILL",
+      "HEATHCLIFF",
+      "SMOKE",
+      "BOTTLE",
+      "BREAD"
+    ],
+    "groups": [
+      {
+        "category": "THINGS IN A GYM",
+        "words": [
+          "DUMBBELL",
+          "TREADMILL",
+          "KETTLEBELL",
+          "BARBELL"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.621211051940918
+      },
+      {
+        "category": "FAMOUS CATS",
+        "words": [
+          "GARFIELD",
+          "HEATHCLIFF",
+          "FELIX",
+          "HOBBES"
+        ],
+        "color": "green",
+        "similarity_score": 0.3715934455394745
+      },
+      {
+        "category": "THINGS THAT RISE",
+        "words": [
+          "BREAD",
+          "KITE",
+          "SMOKE",
+          "SUN"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3119826018810272
+      },
+      {
+        "category": "WORDS WITH DOUBLE LETTERS",
+        "words": [
+          "BOTTLE",
+          "JAZZ",
+          "BALLOON",
+          "FIDDLESTICKS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.31143078207969666
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "BARBELL",
+                "DUMBBELL",
+                "KETTLEBELL",
+                "TREADMILL"
+              ],
+              "score": 0.6212109923362732
+            },
+            {
+              "words": [
+                "KITE",
+                "JAZZ",
+                "BALLOON",
+                "BOTTLE"
+              ],
+              "score": 0.3811166286468506
+            },
+            {
+              "words": [
+                "FIDDLESTICKS",
+                "HOBBES",
+                "GARFIELD",
+                "HEATHCLIFF"
+              ],
+              "score": 0.37883031368255615
+            },
+            {
+              "words": [
+                "SUN",
+                "FELIX",
+                "SMOKE",
+                "BREAD"
+              ],
+              "score": 0.2679630219936371
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "BARBELL",
+                "DUMBBELL",
+                "KETTLEBELL",
+                "TREADMILL"
+              ],
+              "score": 0.6212109923362732
+            },
+            {
+              "words": [
+                "KITE",
+                "BALLOON",
+                "FELIX",
+                "BREAD"
+              ],
+              "score": 0.3685857355594635
+            },
+            {
+              "words": [
+                "FIDDLESTICKS",
+                "HOBBES",
+                "GARFIELD",
+                "HEATHCLIFF"
+              ],
+              "score": 0.37883031368255615
+            },
+            {
+              "words": [
+                "JAZZ",
+                "SUN",
+                "SMOKE",
+                "BOTTLE"
+              ],
+              "score": 0.30588263273239136
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4040544927120209,
+      "created_at": "2026-04-08T03:08:34.201568+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00021",
+    "words": [
+      "MUFFLER",
+      "BROOK",
+      "CURTAIN",
+      "WINDSHIELD",
+      "OCEAN",
+      "CHAIR",
+      "ENGINE",
+      "STAGE",
+      "LAKE",
+      "AUDIENCE",
+      "TABLE",
+      "AXLE",
+      "NAPKIN",
+      "BACKDROP",
+      "RIVER",
+      "PLATE"
+    ],
+    "groups": [
+      {
+        "category": "WORDS ASSOCIATED WITH WATER",
+        "words": [
+          "RIVER",
+          "OCEAN",
+          "LAKE",
+          "BROOK"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4672151803970337
+      },
+      {
+        "category": "VEHICLE PARTS",
+        "words": [
+          "ENGINE",
+          "WINDSHIELD",
+          "MUFFLER",
+          "AXLE"
+        ],
+        "color": "green",
+        "similarity_score": 0.3909764289855957
+      },
+      {
+        "category": "THINGS FOUND IN A RESTAURANT",
+        "words": [
+          "TABLE",
+          "NAPKIN",
+          "PLATE",
+          "CHAIR"
+        ],
+        "color": "blue",
+        "similarity_score": 0.36800050735473633
+      },
+      {
+        "category": "THINGS IN THEATRE",
+        "words": [
+          "CURTAIN",
+          "STAGE",
+          "BACKDROP",
+          "AUDIENCE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.34823891520500183
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BROOK",
+                "OCEAN",
+                "LAKE",
+                "RIVER"
+              ],
+              "score": 0.4672151803970337
+            },
+            {
+              "words": [
+                "CURTAIN",
+                "CHAIR",
+                "NAPKIN",
+                "BACKDROP"
+              ],
+              "score": 0.41683462262153625
+            },
+            {
+              "words": [
+                "MUFFLER",
+                "WINDSHIELD",
+                "ENGINE",
+                "AXLE"
+              ],
+              "score": 0.3909764587879181
+            },
+            {
+              "words": [
+                "STAGE",
+                "AUDIENCE",
+                "TABLE",
+                "PLATE"
+              ],
+              "score": 0.2746691107749939
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CURTAIN",
+                "NAPKIN",
+                "BACKDROP",
+                "PLATE"
+              ],
+              "score": 0.39941635727882385
+            },
+            {
+              "words": [
+                "BROOK",
+                "OCEAN",
+                "LAKE",
+                "RIVER"
+              ],
+              "score": 0.4672151803970337
+            },
+            {
+              "words": [
+                "MUFFLER",
+                "WINDSHIELD",
+                "ENGINE",
+                "AXLE"
+              ],
+              "score": 0.3909764587879181
+            },
+            {
+              "words": [
+                "CHAIR",
+                "STAGE",
+                "AUDIENCE",
+                "TABLE"
+              ],
+              "score": 0.30881479382514954
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.3936077654361725,
+      "created_at": "2026-04-08T03:09:48.528223+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00029",
+    "words": [
+      "BLACKJACK",
+      "THUMB",
+      "POKER",
+      "LAPTOP",
+      "KNIGHT",
+      "TABLET",
+      "SPOON",
+      "TOASTER",
+      "GNOME",
+      "SMARTPHONE",
+      "CUTTING BOARD",
+      "SOLITAIRE",
+      "SPATULA",
+      "KNOT",
+      "BRIDGE",
+      "MONITOR"
+    ],
+    "groups": [
+      {
+        "category": "ELECTRONIC DEVICES",
+        "words": [
+          "LAPTOP",
+          "TABLET",
+          "SMARTPHONE",
+          "MONITOR"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5499237775802612
+      },
+      {
+        "category": "CARD GAMES",
+        "words": [
+          "POKER",
+          "BRIDGE",
+          "SOLITAIRE",
+          "BLACKJACK"
+        ],
+        "color": "green",
+        "similarity_score": 0.545913577079773
+      },
+      {
+        "category": "THINGS FOUND IN A KITCHEN",
+        "words": [
+          "SPATULA",
+          "CUTTING BOARD",
+          "TOASTER",
+          "SPOON"
+        ],
+        "color": "blue",
+        "similarity_score": 0.36003577709198
+      },
+      {
+        "category": "WORDS WITH SILENT LETTERS",
+        "words": [
+          "KNOT",
+          "KNIGHT",
+          "THUMB",
+          "GNOME"
+        ],
+        "color": "purple",
+        "similarity_score": 0.28779128193855286
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "LAPTOP",
+                "TABLET",
+                "SMARTPHONE",
+                "MONITOR"
+              ],
+              "score": 0.549923837184906
+            },
+            {
+              "words": [
+                "BLACKJACK",
+                "POKER",
+                "SOLITAIRE",
+                "BRIDGE"
+              ],
+              "score": 0.5459136366844177
+            },
+            {
+              "words": [
+                "THUMB",
+                "SPOON",
+                "SPATULA",
+                "KNOT"
+              ],
+              "score": 0.38953933119773865
+            },
+            {
+              "words": [
+                "KNIGHT",
+                "TOASTER",
+                "GNOME",
+                "CUTTING BOARD"
+              ],
+              "score": 0.2951947748661041
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "LAPTOP",
+                "TABLET",
+                "SMARTPHONE",
+                "MONITOR"
+              ],
+              "score": 0.549923837184906
+            },
+            {
+              "words": [
+                "BLACKJACK",
+                "POKER",
+                "SOLITAIRE",
+                "BRIDGE"
+              ],
+              "score": 0.5459136366844177
+            },
+            {
+              "words": [
+                "THUMB",
+                "SPOON",
+                "SPATULA",
+                "KNOT"
+              ],
+              "score": 0.38953933119773865
+            },
+            {
+              "words": [
+                "KNIGHT",
+                "TOASTER",
+                "GNOME",
+                "CUTTING BOARD"
+              ],
+              "score": 0.2951947748661041
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.43591609597206116,
+      "created_at": "2026-04-08T03:10:59.668312+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00032",
+    "words": [
+      "BRIDGE",
+      "COMMITTEE",
+      "THEATER",
+      "MARKET",
+      "MISSPELL",
+      "BOLT",
+      "PITCH",
+      "PLACE",
+      "BARK",
+      "BROOD",
+      "BOOKKEEPER",
+      "SWORD",
+      "MUSEUM",
+      "NAIL",
+      "BRACELET",
+      "BOSS"
+    ],
+    "groups": [
+      {
+        "category": "METAL OBJECTS",
+        "words": [
+          "BRACELET",
+          "NAIL",
+          "SWORD",
+          "BOLT"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.3812844753265381
+      },
+      {
+        "category": "THINGS FOUND IN A CITY",
+        "words": [
+          "MUSEUM",
+          "BRIDGE",
+          "MARKET",
+          "THEATER"
+        ],
+        "color": "green",
+        "similarity_score": 0.3648292124271393
+      },
+      {
+        "category": "WORDS WITH DOUBLE LETTERS",
+        "words": [
+          "COMMITTEE",
+          "BOOKKEEPER",
+          "BOSS",
+          "MISSPELL"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3065216541290283
+      },
+      {
+        "category": "WORDS WITH MULTIPLE MEANINGS",
+        "words": [
+          "BROOD",
+          "PLACE",
+          "BARK",
+          "PITCH"
+        ],
+        "color": "purple",
+        "similarity_score": 0.22805744409561157
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BOLT",
+                "SWORD",
+                "NAIL",
+                "BRACELET"
+              ],
+              "score": 0.3812845051288605
+            },
+            {
+              "words": [
+                "BRIDGE",
+                "THEATER",
+                "PLACE",
+                "MUSEUM"
+              ],
+              "score": 0.3725571632385254
+            },
+            {
+              "words": [
+                "COMMITTEE",
+                "MISSPELL",
+                "BOOKKEEPER",
+                "BOSS"
+              ],
+              "score": 0.3065216839313507
+            },
+            {
+              "words": [
+                "MARKET",
+                "PITCH",
+                "BARK",
+                "BROOD"
+              ],
+              "score": 0.24055124819278717
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "BOLT",
+                "SWORD",
+                "NAIL",
+                "BRACELET"
+              ],
+              "score": 0.3812845051288605
+            },
+            {
+              "words": [
+                "THEATER",
+                "MARKET",
+                "PLACE",
+                "MUSEUM"
+              ],
+              "score": 0.36580488085746765
+            },
+            {
+              "words": [
+                "BRIDGE",
+                "COMMITTEE",
+                "BOOKKEEPER",
+                "BOSS"
+              ],
+              "score": 0.31400442123413086
+            },
+            {
+              "words": [
+                "MISSPELL",
+                "PITCH",
+                "BARK",
+                "BROOD"
+              ],
+              "score": 0.2504812180995941
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.3201732039451599,
+      "created_at": "2026-04-08T03:11:19.003705+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00037",
+    "words": [
+      "WIRE",
+      "POLITICIAN",
+      "SANDCASTLE",
+      "BOOK",
+      "BRIDGE",
+      "MOUNTAIN",
+      "MOVIE",
+      "CELEBRITY",
+      "LASAGNA",
+      "STATUE",
+      "ANKLE",
+      "ROPE",
+      "ONION",
+      "CAKE",
+      "METAL",
+      "TEMPLE"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE TWISTED",
+        "words": [
+          "ANKLE",
+          "WIRE",
+          "ROPE",
+          "METAL"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.3732834756374359
+      },
+      {
+        "category": "THINGS THAT CAN BE PARODIED",
+        "words": [
+          "MOVIE",
+          "POLITICIAN",
+          "BOOK",
+          "CELEBRITY"
+        ],
+        "color": "green",
+        "similarity_score": 0.3595609962940216
+      },
+      {
+        "category": "THINGS YOU CAN BUILD",
+        "words": [
+          "BRIDGE",
+          "TEMPLE",
+          "STATUE",
+          "SANDCASTLE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3409667909145355
+      },
+      {
+        "category": "THINGS WITH LAYERS",
+        "words": [
+          "CAKE",
+          "LASAGNA",
+          "ONION",
+          "MOUNTAIN"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3179970681667328
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "WIRE",
+                "BRIDGE",
+                "ROPE",
+                "METAL"
+              ],
+              "score": 0.3980425298213959
+            },
+            {
+              "words": [
+                "POLITICIAN",
+                "MOVIE",
+                "CELEBRITY",
+                "STATUE"
+              ],
+              "score": 0.3836090862751007
+            },
+            {
+              "words": [
+                "SANDCASTLE",
+                "MOUNTAIN",
+                "LASAGNA",
+                "CAKE"
+              ],
+              "score": 0.3230290710926056
+            },
+            {
+              "words": [
+                "BOOK",
+                "ANKLE",
+                "ONION",
+                "TEMPLE"
+              ],
+              "score": 0.2229660302400589
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "WIRE",
+                "BRIDGE",
+                "ROPE",
+                "METAL"
+              ],
+              "score": 0.3980425298213959
+            },
+            {
+              "words": [
+                "POLITICIAN",
+                "BOOK",
+                "MOVIE",
+                "CELEBRITY"
+              ],
+              "score": 0.3595609664916992
+            },
+            {
+              "words": [
+                "SANDCASTLE",
+                "MOUNTAIN",
+                "STATUE",
+                "TEMPLE"
+              ],
+              "score": 0.3381335735321045
+            },
+            {
+              "words": [
+                "LASAGNA",
+                "ANKLE",
+                "ONION",
+                "CAKE"
+              ],
+              "score": 0.2961006462574005
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.34795209765434265,
+      "created_at": "2026-04-08T03:11:49.448680+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00045",
+    "words": [
+      "HONOR",
+      "PSALM",
+      "ALBUM",
+      "LAMB",
+      "KNIGHT",
+      "LEAD",
+      "BASS",
+      "BAND",
+      "INCEPTION",
+      "ARRIVAL",
+      "BOW",
+      "CONCERT",
+      "ORCHESTRA",
+      "INTERSTELLAR",
+      "BAT",
+      "AVATAR"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH MUSIC",
+        "words": [
+          "CONCERT",
+          "ALBUM",
+          "ORCHESTRA",
+          "BAND"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.533244788646698
+      },
+      {
+        "category": "SCI-FI MOVIES",
+        "words": [
+          "AVATAR",
+          "INCEPTION",
+          "ARRIVAL",
+          "INTERSTELLAR"
+        ],
+        "color": "green",
+        "similarity_score": 0.5178132653236389
+      },
+      {
+        "category": "WORDS WITH SILENT LETTERS",
+        "words": [
+          "KNIGHT",
+          "LAMB",
+          "PSALM",
+          "HONOR"
+        ],
+        "color": "blue",
+        "similarity_score": 0.35627639293670654
+      },
+      {
+        "category": "WORDS WITH MULTIPLE MEANINGS",
+        "words": [
+          "LEAD",
+          "BAT",
+          "BASS",
+          "BOW"
+        ],
+        "color": "purple",
+        "similarity_score": 0.32557085156440735
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ALBUM",
+                "BAND",
+                "CONCERT",
+                "ORCHESTRA"
+              ],
+              "score": 0.533244788646698
+            },
+            {
+              "words": [
+                "INCEPTION",
+                "ARRIVAL",
+                "INTERSTELLAR",
+                "AVATAR"
+              ],
+              "score": 0.5178133845329285
+            },
+            {
+              "words": [
+                "PSALM",
+                "LAMB",
+                "KNIGHT",
+                "BOW"
+              ],
+              "score": 0.3694716691970825
+            },
+            {
+              "words": [
+                "HONOR",
+                "LEAD",
+                "BASS",
+                "BAT"
+              ],
+              "score": 0.3068636655807495
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ALBUM",
+                "BAND",
+                "CONCERT",
+                "ORCHESTRA"
+              ],
+              "score": 0.533244788646698
+            },
+            {
+              "words": [
+                "INCEPTION",
+                "ARRIVAL",
+                "INTERSTELLAR",
+                "AVATAR"
+              ],
+              "score": 0.5178133845329285
+            },
+            {
+              "words": [
+                "HONOR",
+                "PSALM",
+                "KNIGHT",
+                "BOW"
+              ],
+              "score": 0.36756959557533264
+            },
+            {
+              "words": [
+                "LAMB",
+                "LEAD",
+                "BASS",
+                "BAT"
+              ],
+              "score": 0.32571637630462646
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4332263171672821,
+      "created_at": "2026-04-08T03:12:43.914334+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00050",
+    "words": [
+      "POTTERY",
+      "STOVE",
+      "JEWELRY",
+      "GLOVES",
+      "NECKLACE",
+      "FRIDGE",
+      "TOASTER",
+      "PLANET",
+      "SCARF",
+      "EARRINGS",
+      "FURNITURE",
+      "METEOR",
+      "MICROWAVE",
+      "COMET",
+      "ASTEROID",
+      "SCULPTURE"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE CRAFTED",
+        "words": [
+          "POTTERY",
+          "JEWELRY",
+          "FURNITURE",
+          "SCULPTURE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.534228503704071
+      },
+      {
+        "category": "ASTRONOMICAL OBJECTS",
+        "words": [
+          "PLANET",
+          "COMET",
+          "ASTEROID",
+          "METEOR"
+        ],
+        "color": "green",
+        "similarity_score": 0.5272566676139832
+      },
+      {
+        "category": "THINGS FOUND IN A KITCHEN",
+        "words": [
+          "STOVE",
+          "FRIDGE",
+          "MICROWAVE",
+          "TOASTER"
+        ],
+        "color": "blue",
+        "similarity_score": 0.5237457156181335
+      },
+      {
+        "category": "THINGS YOU WEAR",
+        "words": [
+          "SCARF",
+          "GLOVES",
+          "EARRINGS",
+          "NECKLACE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4897867441177368
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "JEWELRY",
+                "NECKLACE",
+                "EARRINGS",
+                "SCULPTURE"
+              ],
+              "score": 0.5911851525306702
+            },
+            {
+              "words": [
+                "PLANET",
+                "METEOR",
+                "COMET",
+                "ASTEROID"
+              ],
+              "score": 0.5272565484046936
+            },
+            {
+              "words": [
+                "STOVE",
+                "FRIDGE",
+                "TOASTER",
+                "MICROWAVE"
+              ],
+              "score": 0.5237458348274231
+            },
+            {
+              "words": [
+                "POTTERY",
+                "GLOVES",
+                "SCARF",
+                "FURNITURE"
+              ],
+              "score": 0.3439077138900757
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "JEWELRY",
+                "NECKLACE",
+                "SCARF",
+                "EARRINGS"
+              ],
+              "score": 0.5836670994758606
+            },
+            {
+              "words": [
+                "STOVE",
+                "FRIDGE",
+                "TOASTER",
+                "MICROWAVE"
+              ],
+              "score": 0.5237458348274231
+            },
+            {
+              "words": [
+                "PLANET",
+                "METEOR",
+                "COMET",
+                "ASTEROID"
+              ],
+              "score": 0.5272565484046936
+            },
+            {
+              "words": [
+                "POTTERY",
+                "GLOVES",
+                "FURNITURE",
+                "SCULPTURE"
+              ],
+              "score": 0.4101482629776001
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5187543630599976,
+      "created_at": "2026-04-08T03:13:16.191816+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00068",
+    "words": [
+      "HINGES",
+      "CLAM",
+      "NECKLACE",
+      "LENSES",
+      "WRIST",
+      "FRAMES",
+      "OCTOPUS",
+      "SPINE",
+      "ELBOW",
+      "KNEE",
+      "OYSTER",
+      "ARMS",
+      "LOBSTER",
+      "BACHELOR",
+      "SPOONS",
+      "CORAL"
+    ],
+    "groups": [
+      {
+        "category": "JOINTS",
+        "words": [
+          "ELBOW",
+          "KNEE",
+          "WRIST",
+          "SPINE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5591481328010559
+      },
+      {
+        "category": "THINGS FOUND UNDERWATER",
+        "words": [
+          "CORAL",
+          "OCTOPUS",
+          "CLAM",
+          "LOBSTER"
+        ],
+        "color": "green",
+        "similarity_score": 0.5456098914146423
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH GLASSES",
+        "words": [
+          "LENSES",
+          "FRAMES",
+          "HINGES",
+          "ARMS"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3385651409626007
+      },
+      {
+        "category": "PEARL ASSOCIATIONS",
+        "words": [
+          "OYSTER",
+          "NECKLACE",
+          "SPOONS",
+          "BACHELOR"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3083721101284027
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "WRIST",
+                "ELBOW",
+                "KNEE",
+                "ARMS"
+              ],
+              "score": 0.6046109795570374
+            },
+            {
+              "words": [
+                "CLAM",
+                "OCTOPUS",
+                "OYSTER",
+                "LOBSTER"
+              ],
+              "score": 0.565485417842865
+            },
+            {
+              "words": [
+                "HINGES",
+                "LENSES",
+                "FRAMES",
+                "SPOONS"
+              ],
+              "score": 0.3170667290687561
+            },
+            {
+              "words": [
+                "NECKLACE",
+                "SPINE",
+                "BACHELOR",
+                "CORAL"
+              ],
+              "score": 0.23742222785949707
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "WRIST",
+                "ELBOW",
+                "KNEE",
+                "ARMS"
+              ],
+              "score": 0.6046109795570374
+            },
+            {
+              "words": [
+                "CLAM",
+                "OCTOPUS",
+                "OYSTER",
+                "LOBSTER"
+              ],
+              "score": 0.565485417842865
+            },
+            {
+              "words": [
+                "HINGES",
+                "LENSES",
+                "FRAMES",
+                "SPOONS"
+              ],
+              "score": 0.3170667290687561
+            },
+            {
+              "words": [
+                "NECKLACE",
+                "SPINE",
+                "BACHELOR",
+                "CORAL"
+              ],
+              "score": 0.23742222785949707
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4379238188266754,
+      "created_at": "2026-04-08T03:15:36.246607+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00073",
+    "words": [
+      "GLOVES",
+      "SHARK",
+      "DOLPHIN",
+      "NOVEL",
+      "MOVIE",
+      "GOGGLES",
+      "HELMET",
+      "SCRIPT",
+      "OTTER",
+      "BOOTS",
+      "TURTLE",
+      "BEAKER",
+      "SCALPEL",
+      "BOOK",
+      "MASK",
+      "MICROSCOPE"
+    ],
+    "groups": [
+      {
+        "category": "ANIMALS IN WATER",
+        "words": [
+          "OTTER",
+          "DOLPHIN",
+          "TURTLE",
+          "SHARK"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5329353213310242
+      },
+      {
+        "category": "WORKPLACE SAFETY GEAR",
+        "words": [
+          "HELMET",
+          "GLOVES",
+          "MASK",
+          "BOOTS"
+        ],
+        "color": "green",
+        "similarity_score": 0.4779263734817505
+      },
+      {
+        "category": "THINGS WITH A PLOT",
+        "words": [
+          "NOVEL",
+          "MOVIE",
+          "BOOK",
+          "SCRIPT"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4159025251865387
+      },
+      {
+        "category": "THINGS FOUND IN LABS",
+        "words": [
+          "MICROSCOPE",
+          "BEAKER",
+          "GOGGLES",
+          "SCALPEL"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3320716321468353
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "GLOVES",
+                "GOGGLES",
+                "HELMET",
+                "MASK"
+              ],
+              "score": 0.5356858372688293
+            },
+            {
+              "words": [
+                "SHARK",
+                "DOLPHIN",
+                "OTTER",
+                "TURTLE"
+              ],
+              "score": 0.5329355001449585
+            },
+            {
+              "words": [
+                "NOVEL",
+                "MOVIE",
+                "SCRIPT",
+                "BOOK"
+              ],
+              "score": 0.4159024655818939
+            },
+            {
+              "words": [
+                "BOOTS",
+                "BEAKER",
+                "SCALPEL",
+                "MICROSCOPE"
+              ],
+              "score": 0.29715093970298767
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "GLOVES",
+                "GOGGLES",
+                "HELMET",
+                "MASK"
+              ],
+              "score": 0.5356858372688293
+            },
+            {
+              "words": [
+                "SHARK",
+                "DOLPHIN",
+                "OTTER",
+                "TURTLE"
+              ],
+              "score": 0.5329355001449585
+            },
+            {
+              "words": [
+                "NOVEL",
+                "MOVIE",
+                "SCRIPT",
+                "BOOK"
+              ],
+              "score": 0.4159024655818939
+            },
+            {
+              "words": [
+                "BOOTS",
+                "BEAKER",
+                "SCALPEL",
+                "MICROSCOPE"
+              ],
+              "score": 0.29715093970298767
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.439708948135376,
+      "created_at": "2026-04-08T03:16:07.746137+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00083",
+    "words": [
+      "CAPTAIN",
+      "GIRAFFE",
+      "BALLOON",
+      "GOLD",
+      "GALLEY",
+      "SAIL",
+      "JUGGLER",
+      "RINGMASTER",
+      "JEWELS",
+      "TIGHTROPE",
+      "ALLEY",
+      "LIFEBOAT",
+      "CLOWN",
+      "KITTEN",
+      "CLUE",
+      "KEY"
+    ],
+    "groups": [
+      {
+        "category": "THINGS FOUND ON A BOAT",
+        "words": [
+          "SAIL",
+          "CAPTAIN",
+          "LIFEBOAT",
+          "GALLEY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4782123863697052
+      },
+      {
+        "category": "THINGS IN A CIRCUS",
+        "words": [
+          "CLOWN",
+          "RINGMASTER",
+          "JUGGLER",
+          "TIGHTROPE"
+        ],
+        "color": "green",
+        "similarity_score": 0.3961728513240814
+      },
+      {
+        "category": "THINGS FOUND IN A TREASURE HUNT",
+        "words": [
+          "CLUE",
+          "GOLD",
+          "JEWELS",
+          "KEY"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3691750764846802
+      },
+      {
+        "category": "WORDS WITH DOUBLE LETTERS",
+        "words": [
+          "ALLEY",
+          "BALLOON",
+          "KITTEN",
+          "GIRAFFE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.29473766684532166
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "CAPTAIN",
+                "GALLEY",
+                "SAIL",
+                "LIFEBOAT"
+              ],
+              "score": 0.47821226716041565
+            },
+            {
+              "words": [
+                "JUGGLER",
+                "RINGMASTER",
+                "JEWELS",
+                "CLOWN"
+              ],
+              "score": 0.42082488536834717
+            },
+            {
+              "words": [
+                "BALLOON",
+                "GOLD",
+                "CLUE",
+                "KEY"
+              ],
+              "score": 0.3625952899456024
+            },
+            {
+              "words": [
+                "GIRAFFE",
+                "TIGHTROPE",
+                "ALLEY",
+                "KITTEN"
+              ],
+              "score": 0.26239731907844543
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "JUGGLER",
+                "RINGMASTER",
+                "JEWELS",
+                "CLOWN"
+              ],
+              "score": 0.42082488536834717
+            },
+            {
+              "words": [
+                "CAPTAIN",
+                "GALLEY",
+                "SAIL",
+                "LIFEBOAT"
+              ],
+              "score": 0.47821226716041565
+            },
+            {
+              "words": [
+                "BALLOON",
+                "GOLD",
+                "CLUE",
+                "KEY"
+              ],
+              "score": 0.3625952899456024
+            },
+            {
+              "words": [
+                "GIRAFFE",
+                "TIGHTROPE",
+                "ALLEY",
+                "KITTEN"
+              ],
+              "score": 0.26239731907844543
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.3845745027065277,
+      "created_at": "2026-04-08T03:17:13.791092+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00084",
+    "words": [
+      "JAVELIN",
+      "BOOMERANG",
+      "DART",
+      "SUIT",
+      "VEST",
+      "CUT",
+      "SCARF",
+      "JACKET",
+      "COAT",
+      "SOCKS",
+      "BLOUSE",
+      "HAT",
+      "FRISBEE",
+      "BULK",
+      "RIPPED",
+      "GAINS"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE BUTTONED",
+        "words": [
+          "COAT",
+          "BLOUSE",
+          "SUIT",
+          "VEST"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5641463994979858
+      },
+      {
+        "category": "CLOTHING ITEMS",
+        "words": [
+          "JACKET",
+          "HAT",
+          "SOCKS",
+          "SCARF"
+        ],
+        "color": "green",
+        "similarity_score": 0.5192386507987976
+      },
+      {
+        "category": "THINGS THAT CAN BE THROWN",
+        "words": [
+          "FRISBEE",
+          "DART",
+          "BOOMERANG",
+          "JAVELIN"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4366115629673004
+      },
+      {
+        "category": "GYM TERMINOLOGY",
+        "words": [
+          "GAINS",
+          "RIPPED",
+          "CUT",
+          "BULK"
+        ],
+        "color": "purple",
+        "similarity_score": 0.36628827452659607
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "VEST",
+                "SCARF",
+                "JACKET",
+                "COAT"
+              ],
+              "score": 0.6494720578193665
+            },
+            {
+              "words": [
+                "JAVELIN",
+                "BOOMERANG",
+                "DART",
+                "FRISBEE"
+              ],
+              "score": 0.4366116225719452
+            },
+            {
+              "words": [
+                "SUIT",
+                "SOCKS",
+                "BLOUSE",
+                "HAT"
+              ],
+              "score": 0.43143439292907715
+            },
+            {
+              "words": [
+                "CUT",
+                "BULK",
+                "RIPPED",
+                "GAINS"
+              ],
+              "score": 0.3662882149219513
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SUIT",
+                "VEST",
+                "JACKET",
+                "BLOUSE"
+              ],
+              "score": 0.6025611758232117
+            },
+            {
+              "words": [
+                "SCARF",
+                "COAT",
+                "SOCKS",
+                "HAT"
+              ],
+              "score": 0.5157051682472229
+            },
+            {
+              "words": [
+                "JAVELIN",
+                "BOOMERANG",
+                "DART",
+                "FRISBEE"
+              ],
+              "score": 0.4366116225719452
+            },
+            {
+              "words": [
+                "CUT",
+                "BULK",
+                "RIPPED",
+                "GAINS"
+              ],
+              "score": 0.3662882149219513
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4715712070465088,
+      "created_at": "2026-04-08T03:17:19.367466+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00099",
+    "words": [
+      "BAMBOO",
+      "SPINE",
+      "DOUGHNUT",
+      "FERRIS WHEEL",
+      "SOLAR",
+      "CAROUSEL",
+      "WILLOW",
+      "SUNRISE",
+      "NEEDLE",
+      "ROLLER COASTER",
+      "DAYLIGHT",
+      "POTATO",
+      "CARNIVAL",
+      "REED",
+      "SUNSET",
+      "SNAIL"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH THE SUN",
+        "words": [
+          "SUNRISE",
+          "SUNSET",
+          "SOLAR",
+          "DAYLIGHT"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.6183308959007263
+      },
+      {
+        "category": "THINGS AT A FAIR",
+        "words": [
+          "CARNIVAL",
+          "CAROUSEL",
+          "ROLLER COASTER",
+          "FERRIS WHEEL"
+        ],
+        "color": "green",
+        "similarity_score": 0.5590876936912537
+      },
+      {
+        "category": "THINGS WITH EYES",
+        "words": [
+          "NEEDLE",
+          "POTATO",
+          "DOUGHNUT",
+          "SNAIL"
+        ],
+        "color": "blue",
+        "similarity_score": 0.37546277046203613
+      },
+      {
+        "category": "THINGS THAT CAN BE FLEXIBLE",
+        "words": [
+          "REED",
+          "WILLOW",
+          "SPINE",
+          "BAMBOO"
+        ],
+        "color": "purple",
+        "similarity_score": 0.330951064825058
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SOLAR",
+                "SUNRISE",
+                "DAYLIGHT",
+                "SUNSET"
+              ],
+              "score": 0.6183309555053711
+            },
+            {
+              "words": [
+                "FERRIS WHEEL",
+                "CAROUSEL",
+                "ROLLER COASTER",
+                "CARNIVAL"
+              ],
+              "score": 0.5590877532958984
+            },
+            {
+              "words": [
+                "BAMBOO",
+                "DOUGHNUT",
+                "POTATO",
+                "SNAIL"
+              ],
+              "score": 0.38443470001220703
+            },
+            {
+              "words": [
+                "SPINE",
+                "WILLOW",
+                "NEEDLE",
+                "REED"
+              ],
+              "score": 0.32435342669487
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SOLAR",
+                "SUNRISE",
+                "DAYLIGHT",
+                "SUNSET"
+              ],
+              "score": 0.6183309555053711
+            },
+            {
+              "words": [
+                "FERRIS WHEEL",
+                "CAROUSEL",
+                "ROLLER COASTER",
+                "CARNIVAL"
+              ],
+              "score": 0.5590877532958984
+            },
+            {
+              "words": [
+                "BAMBOO",
+                "DOUGHNUT",
+                "POTATO",
+                "SNAIL"
+              ],
+              "score": 0.38443470001220703
+            },
+            {
+              "words": [
+                "SPINE",
+                "WILLOW",
+                "NEEDLE",
+                "REED"
+              ],
+              "score": 0.32435342669487
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4709581136703491,
+      "created_at": "2026-04-08T03:19:01.085230+00:00",
+      "accepted": false
+    }
+  }
+]

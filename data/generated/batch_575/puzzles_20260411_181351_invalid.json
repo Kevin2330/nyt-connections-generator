@@ -1,0 +1,6767 @@
+[
+  {
+    "id": "INF-00004",
+    "words": [
+      "PLIERS",
+      "CAKE",
+      "FURIOUS",
+      "BURRITO",
+      "CIGARETTE",
+      "HAMMER",
+      "TOAST",
+      "TIRE",
+      "ANGRY",
+      "CONFETTI",
+      "JOY",
+      "BALLOON",
+      "WRENCH",
+      "CALM",
+      "BALL",
+      "CHISEL"
+    ],
+    "groups": [
+      {
+        "category": "TOOLS OF THE TRADE",
+        "words": [
+          "HAMMER",
+          "WRENCH",
+          "PLIERS",
+          "CHISEL"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5395879149436951
+      },
+      {
+        "category": "EMOTIONS",
+        "words": [
+          "JOY",
+          "ANGRY",
+          "CALM",
+          "FURIOUS"
+        ],
+        "color": "green",
+        "similarity_score": 0.44959333539009094
+      },
+      {
+        "category": "PARTY SUPPLIES",
+        "words": [
+          "BALLOON",
+          "CONFETTI",
+          "CAKE",
+          "TOAST"
+        ],
+        "color": "blue",
+        "similarity_score": 0.401780366897583
+      },
+      {
+        "category": "THINGS THAT CAN BE ROLLED",
+        "words": [
+          "BURRITO",
+          "CIGARETTE",
+          "BALL",
+          "TIRE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.32449981570243835
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "PLIERS",
+                "HAMMER",
+                "WRENCH",
+                "CHISEL"
+              ],
+              "score": 0.5395878553390503
+            },
+            {
+              "words": [
+                "FURIOUS",
+                "ANGRY",
+                "JOY",
+                "CALM"
+              ],
+              "score": 0.449593186378479
+            },
+            {
+              "words": [
+                "CAKE",
+                "CONFETTI",
+                "BALLOON",
+                "BALL"
+              ],
+              "score": 0.40351077914237976
+            },
+            {
+              "words": [
+                "BURRITO",
+                "CIGARETTE",
+                "TOAST",
+                "TIRE"
+              ],
+              "score": 0.30668905377388
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "PLIERS",
+                "HAMMER",
+                "WRENCH",
+                "CHISEL"
+              ],
+              "score": 0.5395878553390503
+            },
+            {
+              "words": [
+                "CIGARETTE",
+                "TIRE",
+                "BALLOON",
+                "BALL"
+              ],
+              "score": 0.39094972610473633
+            },
+            {
+              "words": [
+                "FURIOUS",
+                "ANGRY",
+                "JOY",
+                "CALM"
+              ],
+              "score": 0.449593186378479
+            },
+            {
+              "words": [
+                "CAKE",
+                "BURRITO",
+                "TOAST",
+                "CONFETTI"
+              ],
+              "score": 0.3587903678417206
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.42886537313461304,
+      "created_at": "2026-04-11T16:41:21.721110+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00016",
+    "words": [
+      "LUNCH",
+      "SANDWICH",
+      "JUICE",
+      "CABLE",
+      "CORD",
+      "CLASS",
+      "RECESS",
+      "SCULPTURE",
+      "STRING",
+      "SNACKS",
+      "DESK",
+      "MUSIC",
+      "FURNITURE",
+      "CHAIN",
+      "PAINTING",
+      "FRUIT"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE TIGHT",
+        "words": [
+          "CABLE",
+          "CORD",
+          "CHAIN",
+          "STRING"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.46037641167640686
+      },
+      {
+        "category": "THINGS YOU MIGHT ENJOY AT A PICNIC",
+        "words": [
+          "SANDWICH",
+          "JUICE",
+          "FRUIT",
+          "SNACKS"
+        ],
+        "color": "green",
+        "similarity_score": 0.4301488399505615
+      },
+      {
+        "category": "THINGS THAT CAN BE MADE",
+        "words": [
+          "PAINTING",
+          "MUSIC",
+          "SCULPTURE",
+          "FURNITURE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4281013011932373
+      },
+      {
+        "category": "SCHOOL-RELATED ITEMS",
+        "words": [
+          "DESK",
+          "LUNCH",
+          "CLASS",
+          "RECESS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3863912522792816
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "LUNCH",
+                "SANDWICH",
+                "SNACKS",
+                "FRUIT"
+              ],
+              "score": 0.47876814007759094
+            },
+            {
+              "words": [
+                "CABLE",
+                "CORD",
+                "STRING",
+                "CHAIN"
+              ],
+              "score": 0.4603763818740845
+            },
+            {
+              "words": [
+                "SCULPTURE",
+                "DESK",
+                "FURNITURE",
+                "PAINTING"
+              ],
+              "score": 0.445662260055542
+            },
+            {
+              "words": [
+                "JUICE",
+                "CLASS",
+                "RECESS",
+                "MUSIC"
+              ],
+              "score": 0.2940293848514557
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "LUNCH",
+                "SANDWICH",
+                "RECESS",
+                "SNACKS"
+              ],
+              "score": 0.46434321999549866
+            },
+            {
+              "words": [
+                "CABLE",
+                "CORD",
+                "STRING",
+                "CHAIN"
+              ],
+              "score": 0.4603763818740845
+            },
+            {
+              "words": [
+                "SCULPTURE",
+                "DESK",
+                "FURNITURE",
+                "PAINTING"
+              ],
+              "score": 0.445662260055542
+            },
+            {
+              "words": [
+                "JUICE",
+                "CLASS",
+                "MUSIC",
+                "FRUIT"
+              ],
+              "score": 0.34092608094215393
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4262544512748718,
+      "created_at": "2026-04-11T16:43:24.173257+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00021",
+    "words": [
+      "BLANKET",
+      "SERENDIPITY",
+      "PAINT",
+      "MEDICINE",
+      "ACCIDENT",
+      "CANDLE",
+      "BANDAGE",
+      "SOLDER",
+      "MISHAP",
+      "PAPER",
+      "PILLOW",
+      "ROPE",
+      "ROBE",
+      "CARVE",
+      "SURPRISE",
+      "SOFA"
+    ],
+    "groups": [
+      {
+        "category": "UNEXPECTED OCCURRENCES",
+        "words": [
+          "SURPRISE",
+          "ACCIDENT",
+          "MISHAP",
+          "SERENDIPITY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.43522223830223083
+      },
+      {
+        "category": "THINGS YOU MIGHT NEED IN AN EMERGENCY",
+        "words": [
+          "BANDAGE",
+          "MEDICINE",
+          "BLANKET",
+          "ROPE"
+        ],
+        "color": "green",
+        "similarity_score": 0.39092135429382324
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH COMFORT",
+        "words": [
+          "PILLOW",
+          "ROBE",
+          "SOFA",
+          "CANDLE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.38545119762420654
+      },
+      {
+        "category": "CRAFTING MATERIALS",
+        "words": [
+          "PAINT",
+          "SOLDER",
+          "CARVE",
+          "PAPER"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3731464147567749
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BLANKET",
+                "PILLOW",
+                "ROBE",
+                "SOFA"
+              ],
+              "score": 0.48596706986427307
+            },
+            {
+              "words": [
+                "SERENDIPITY",
+                "ACCIDENT",
+                "MISHAP",
+                "SURPRISE"
+              ],
+              "score": 0.43522223830223083
+            },
+            {
+              "words": [
+                "PAINT",
+                "SOLDER",
+                "PAPER",
+                "CARVE"
+              ],
+              "score": 0.3731464147567749
+            },
+            {
+              "words": [
+                "MEDICINE",
+                "CANDLE",
+                "BANDAGE",
+                "ROPE"
+              ],
+              "score": 0.3390792906284332
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BLANKET",
+                "CANDLE",
+                "PILLOW",
+                "SOFA"
+              ],
+              "score": 0.45721402764320374
+            },
+            {
+              "words": [
+                "SERENDIPITY",
+                "ACCIDENT",
+                "MISHAP",
+                "SURPRISE"
+              ],
+              "score": 0.43522223830223083
+            },
+            {
+              "words": [
+                "MEDICINE",
+                "BANDAGE",
+                "ROPE",
+                "ROBE"
+              ],
+              "score": 0.39741647243499756
+            },
+            {
+              "words": [
+                "PAINT",
+                "SOLDER",
+                "PAPER",
+                "CARVE"
+              ],
+              "score": 0.3731464147567749
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.3961853086948395,
+      "created_at": "2026-04-11T16:44:11.698987+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00059",
+    "words": [
+      "RIVER",
+      "PROFESSION",
+      "CAREER",
+      "BREAD",
+      "OCEAN",
+      "EMPLOYMENT",
+      "TEA",
+      "WAVE",
+      "FLOOD",
+      "COFFEE",
+      "OCCUPATION",
+      "SANDCASTLE",
+      "VACATION",
+      "OUTDOORS",
+      "CAKE",
+      "BEACH"
+    ],
+    "groups": [
+      {
+        "category": "CAREER TERMS",
+        "words": [
+          "PROFESSION",
+          "CAREER",
+          "EMPLOYMENT",
+          "OCCUPATION"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.6769655346870422
+      },
+      {
+        "category": "WORDS ASSOCIATED WITH WATER",
+        "words": [
+          "OCEAN",
+          "RIVER",
+          "FLOOD",
+          "WAVE"
+        ],
+        "color": "green",
+        "similarity_score": 0.45658573508262634
+      },
+      {
+        "category": "THINGS YOU MIGHT FIND AT A CAFE",
+        "words": [
+          "COFFEE",
+          "CAKE",
+          "TEA",
+          "BREAD"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4558957815170288
+      },
+      {
+        "category": "SUMMER ACTIVITIES",
+        "words": [
+          "VACATION",
+          "BEACH",
+          "OUTDOORS",
+          "SANDCASTLE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4408368170261383
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "PROFESSION",
+                "CAREER",
+                "EMPLOYMENT",
+                "OCCUPATION"
+              ],
+              "score": 0.6769656538963318
+            },
+            {
+              "words": [
+                "OCEAN",
+                "SANDCASTLE",
+                "VACATION",
+                "BEACH"
+              ],
+              "score": 0.5055119395256042
+            },
+            {
+              "words": [
+                "BREAD",
+                "TEA",
+                "COFFEE",
+                "CAKE"
+              ],
+              "score": 0.45589587092399597
+            },
+            {
+              "words": [
+                "RIVER",
+                "WAVE",
+                "FLOOD",
+                "OUTDOORS"
+              ],
+              "score": 0.3933715522289276
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "OCEAN",
+                "SANDCASTLE",
+                "VACATION",
+                "BEACH"
+              ],
+              "score": 0.5055119395256042
+            },
+            {
+              "words": [
+                "PROFESSION",
+                "CAREER",
+                "EMPLOYMENT",
+                "OCCUPATION"
+              ],
+              "score": 0.6769656538963318
+            },
+            {
+              "words": [
+                "BREAD",
+                "TEA",
+                "COFFEE",
+                "CAKE"
+              ],
+              "score": 0.45589587092399597
+            },
+            {
+              "words": [
+                "RIVER",
+                "WAVE",
+                "FLOOD",
+                "OUTDOORS"
+              ],
+              "score": 0.3933715522289276
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5075709819793701,
+      "created_at": "2026-04-11T16:50:46.868657+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00067",
+    "words": [
+      "PIE",
+      "COOKIE",
+      "FLIP",
+      "ZOOMS",
+      "SPRINTS",
+      "JUMP",
+      "WALK",
+      "RUN",
+      "CAKE",
+      "CLIMB",
+      "PLAY",
+      "GRAZE",
+      "LUNGES",
+      "SWING",
+      "RACES",
+      "CANDY"
+    ],
+    "groups": [
+      {
+        "category": "SWEETS AND TREATS",
+        "words": [
+          "CANDY",
+          "COOKIE",
+          "PIE",
+          "CAKE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5074627995491028
+      },
+      {
+        "category": "COMMON ACTIVITIES",
+        "words": [
+          "WALK",
+          "RUN",
+          "PLAY",
+          "GRAZE"
+        ],
+        "color": "green",
+        "similarity_score": 0.3876286745071411
+      },
+      {
+        "category": "THINGS THAT MOVE QUICKLY",
+        "words": [
+          "LUNGES",
+          "ZOOMS",
+          "RACES",
+          "SPRINTS"
+        ],
+        "color": "blue",
+        "similarity_score": 0.380172997713089
+      },
+      {
+        "category": "WORDS THAT ARE ALSO COMMON VERBS",
+        "words": [
+          "JUMP",
+          "SWING",
+          "FLIP",
+          "CLIMB"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3439442217350006
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "PIE",
+                "COOKIE",
+                "CAKE",
+                "CANDY"
+              ],
+              "score": 0.5074629187583923
+            },
+            {
+              "words": [
+                "JUMP",
+                "WALK",
+                "RUN",
+                "CLIMB"
+              ],
+              "score": 0.47621217370033264
+            },
+            {
+              "words": [
+                "ZOOMS",
+                "SPRINTS",
+                "LUNGES",
+                "RACES"
+              ],
+              "score": 0.38017305731773376
+            },
+            {
+              "words": [
+                "FLIP",
+                "PLAY",
+                "GRAZE",
+                "SWING"
+              ],
+              "score": 0.2757803499698639
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "JUMP",
+                "WALK",
+                "RUN",
+                "CLIMB"
+              ],
+              "score": 0.47621217370033264
+            },
+            {
+              "words": [
+                "PIE",
+                "COOKIE",
+                "CAKE",
+                "CANDY"
+              ],
+              "score": 0.5074629187583923
+            },
+            {
+              "words": [
+                "ZOOMS",
+                "SPRINTS",
+                "LUNGES",
+                "RACES"
+              ],
+              "score": 0.38017305731773376
+            },
+            {
+              "words": [
+                "FLIP",
+                "PLAY",
+                "GRAZE",
+                "SWING"
+              ],
+              "score": 0.2757803499698639
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4048021733760834,
+      "created_at": "2026-04-11T16:52:04.047855+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00073",
+    "words": [
+      "MATCH",
+      "ANKLE",
+      "SHOULDER",
+      "HAT",
+      "SCARF",
+      "SPORT",
+      "TOURNAMENT",
+      "COAT",
+      "KNEE",
+      "LEAGUE",
+      "ELBOW",
+      "MUSIC",
+      "ART",
+      "GLOVES",
+      "CHAMPIONSHIP",
+      "GAME"
+    ],
+    "groups": [
+      {
+        "category": "BODY PARTS",
+        "words": [
+          "KNEE",
+          "SHOULDER",
+          "ELBOW",
+          "ANKLE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.704616367816925
+      },
+      {
+        "category": "COMPETITIVE ACTIVITIES",
+        "words": [
+          "TOURNAMENT",
+          "MATCH",
+          "CHAMPIONSHIP",
+          "LEAGUE"
+        ],
+        "color": "green",
+        "similarity_score": 0.5503538846969604
+      },
+      {
+        "category": "THINGS THAT CAN BE WORN",
+        "words": [
+          "HAT",
+          "SCARF",
+          "GLOVES",
+          "COAT"
+        ],
+        "color": "blue",
+        "similarity_score": 0.5256430506706238
+      },
+      {
+        "category": "FORMS OF ENTERTAINMENT",
+        "words": [
+          "GAME",
+          "MUSIC",
+          "SPORT",
+          "ART"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4481821060180664
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ANKLE",
+                "SHOULDER",
+                "KNEE",
+                "ELBOW"
+              ],
+              "score": 0.704616129398346
+            },
+            {
+              "words": [
+                "SPORT",
+                "TOURNAMENT",
+                "LEAGUE",
+                "CHAMPIONSHIP"
+              ],
+              "score": 0.5754897594451904
+            },
+            {
+              "words": [
+                "HAT",
+                "SCARF",
+                "COAT",
+                "GLOVES"
+              ],
+              "score": 0.5256432294845581
+            },
+            {
+              "words": [
+                "MATCH",
+                "MUSIC",
+                "ART",
+                "GAME"
+              ],
+              "score": 0.3842250108718872
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SPORT",
+                "TOURNAMENT",
+                "LEAGUE",
+                "CHAMPIONSHIP"
+              ],
+              "score": 0.5754897594451904
+            },
+            {
+              "words": [
+                "ANKLE",
+                "SHOULDER",
+                "KNEE",
+                "ELBOW"
+              ],
+              "score": 0.704616129398346
+            },
+            {
+              "words": [
+                "HAT",
+                "SCARF",
+                "COAT",
+                "GLOVES"
+              ],
+              "score": 0.5256432294845581
+            },
+            {
+              "words": [
+                "MATCH",
+                "MUSIC",
+                "ART",
+                "GAME"
+              ],
+              "score": 0.3842250108718872
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5571988821029663,
+      "created_at": "2026-04-11T16:53:05.817989+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00087",
+    "words": [
+      "PICNIC",
+      "PLAYGROUND",
+      "LITER",
+      "BENCH",
+      "MILLILITER",
+      "OUNCE",
+      "FOUNTAIN",
+      "BARBECUE",
+      "GALLON",
+      "BIRDBATH",
+      "SANDCASTLE",
+      "ICECREAM",
+      "SNAKE",
+      "SCORPION",
+      "FROG",
+      "CHAMELEON"
+    ],
+    "groups": [
+      {
+        "category": "UNITS OF LIQUID MEASURE",
+        "words": [
+          "OUNCE",
+          "LITER",
+          "GALLON",
+          "MILLILITER"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5402494072914124
+      },
+      {
+        "category": "REPTILES AND AMPHIBIANS",
+        "words": [
+          "CHAMELEON",
+          "SNAKE",
+          "FROG",
+          "SCORPION"
+        ],
+        "color": "green",
+        "similarity_score": 0.4975903034210205
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH SUMMER",
+        "words": [
+          "SANDCASTLE",
+          "BARBECUE",
+          "ICECREAM",
+          "PICNIC"
+        ],
+        "color": "blue",
+        "similarity_score": 0.35378965735435486
+      },
+      {
+        "category": "THINGS YOU MIGHT FIND IN A PARK",
+        "words": [
+          "FOUNTAIN",
+          "PLAYGROUND",
+          "BIRDBATH",
+          "BENCH"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3218802511692047
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "LITER",
+                "MILLILITER",
+                "OUNCE",
+                "GALLON"
+              ],
+              "score": 0.5402493476867676
+            },
+            {
+              "words": [
+                "SNAKE",
+                "SCORPION",
+                "FROG",
+                "CHAMELEON"
+              ],
+              "score": 0.4975903332233429
+            },
+            {
+              "words": [
+                "PLAYGROUND",
+                "FOUNTAIN",
+                "BIRDBATH",
+                "SANDCASTLE"
+              ],
+              "score": 0.4095360040664673
+            },
+            {
+              "words": [
+                "PICNIC",
+                "BENCH",
+                "BARBECUE",
+                "ICECREAM"
+              ],
+              "score": 0.3256675899028778
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "PLAYGROUND",
+                "FOUNTAIN",
+                "BIRDBATH",
+                "SANDCASTLE"
+              ],
+              "score": 0.4095360040664673
+            },
+            {
+              "words": [
+                "LITER",
+                "MILLILITER",
+                "OUNCE",
+                "GALLON"
+              ],
+              "score": 0.5402493476867676
+            },
+            {
+              "words": [
+                "SNAKE",
+                "SCORPION",
+                "FROG",
+                "CHAMELEON"
+              ],
+              "score": 0.4975903332233429
+            },
+            {
+              "words": [
+                "PICNIC",
+                "BENCH",
+                "BARBECUE",
+                "ICECREAM"
+              ],
+              "score": 0.3256675899028778
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4283773899078369,
+      "created_at": "2026-04-11T16:55:18.358373+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00094",
+    "words": [
+      "MILE",
+      "MARATHON",
+      "SHOW",
+      "RUN",
+      "CAKE",
+      "BOOMERANG",
+      "DANCE",
+      "FRISBEE",
+      "DART",
+      "GAME",
+      "BALLOON",
+      "PRIZE",
+      "FOOD",
+      "BALL",
+      "MUSIC",
+      "TRACK"
+    ],
+    "groups": [
+      {
+        "category": "RACE EVENTS",
+        "words": [
+          "MILE",
+          "MARATHON",
+          "TRACK",
+          "RUN"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.48865175247192383
+      },
+      {
+        "category": "THINGS THAT CAN BE THROWN",
+        "words": [
+          "BALL",
+          "DART",
+          "FRISBEE",
+          "BOOMERANG"
+        ],
+        "color": "green",
+        "similarity_score": 0.42392611503601074
+      },
+      {
+        "category": "THINGS FOUND AT A FAIR",
+        "words": [
+          "GAME",
+          "FOOD",
+          "PRIZE",
+          "SHOW"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3614886999130249
+      },
+      {
+        "category": "PARTY ITEMS",
+        "words": [
+          "BALLOON",
+          "DANCE",
+          "CAKE",
+          "MUSIC"
+        ],
+        "color": "purple",
+        "similarity_score": 0.34469175338745117
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "MILE",
+                "MARATHON",
+                "RUN",
+                "TRACK"
+              ],
+              "score": 0.48865175247192383
+            },
+            {
+              "words": [
+                "BOOMERANG",
+                "FRISBEE",
+                "BALLOON",
+                "BALL"
+              ],
+              "score": 0.45376765727996826
+            },
+            {
+              "words": [
+                "CAKE",
+                "GAME",
+                "FOOD",
+                "MUSIC"
+              ],
+              "score": 0.3885718882083893
+            },
+            {
+              "words": [
+                "SHOW",
+                "DANCE",
+                "DART",
+                "PRIZE"
+              ],
+              "score": 0.2714507281780243
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "FRISBEE",
+                "DART",
+                "GAME",
+                "BALL"
+              ],
+              "score": 0.44665780663490295
+            },
+            {
+              "words": [
+                "MILE",
+                "MARATHON",
+                "RUN",
+                "TRACK"
+              ],
+              "score": 0.48865175247192383
+            },
+            {
+              "words": [
+                "CAKE",
+                "BOOMERANG",
+                "BALLOON",
+                "PRIZE"
+              ],
+              "score": 0.3641083538532257
+            },
+            {
+              "words": [
+                "SHOW",
+                "DANCE",
+                "FOOD",
+                "MUSIC"
+              ],
+              "score": 0.3556669056415558
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.40468958020210266,
+      "created_at": "2026-04-11T16:56:29.703248+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00118",
+    "words": [
+      "FATE",
+      "ENTREE",
+      "DICE",
+      "APPETIZER",
+      "RISK",
+      "URBAN",
+      "SERENDIPITY",
+      "SKYSCRAPER",
+      "INCH",
+      "METER",
+      "CROWN",
+      "PLAZA",
+      "SUBWAY",
+      "LITER",
+      "VOLUME",
+      "DESSERT"
+    ],
+    "groups": [
+      {
+        "category": "COURSE TYPES",
+        "words": [
+          "ENTREE",
+          "DESSERT",
+          "APPETIZER",
+          "CROWN"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.42520132660865784
+      },
+      {
+        "category": "MEASUREMENT TERMS",
+        "words": [
+          "INCH",
+          "LITER",
+          "VOLUME",
+          "METER"
+        ],
+        "color": "green",
+        "similarity_score": 0.4144410192966461
+      },
+      {
+        "category": "WORDS RELATED TO CITY LIFE",
+        "words": [
+          "URBAN",
+          "SKYSCRAPER",
+          "SUBWAY",
+          "PLAZA"
+        ],
+        "color": "blue",
+        "similarity_score": 0.39082053303718567
+      },
+      {
+        "category": "WORDS RELATED TO LUCK",
+        "words": [
+          "FATE",
+          "DICE",
+          "RISK",
+          "SERENDIPITY"
+        ],
+        "color": "purple",
+        "similarity_score": 0.38722753524780273
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ENTREE",
+                "APPETIZER",
+                "SUBWAY",
+                "DESSERT"
+              ],
+              "score": 0.46373268961906433
+            },
+            {
+              "words": [
+                "INCH",
+                "METER",
+                "LITER",
+                "VOLUME"
+              ],
+              "score": 0.414440780878067
+            },
+            {
+              "words": [
+                "FATE",
+                "DICE",
+                "RISK",
+                "SERENDIPITY"
+              ],
+              "score": 0.3872275650501251
+            },
+            {
+              "words": [
+                "URBAN",
+                "SKYSCRAPER",
+                "CROWN",
+                "PLAZA"
+              ],
+              "score": 0.3442705571651459
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ENTREE",
+                "APPETIZER",
+                "SUBWAY",
+                "DESSERT"
+              ],
+              "score": 0.46373268961906433
+            },
+            {
+              "words": [
+                "URBAN",
+                "SKYSCRAPER",
+                "CROWN",
+                "PLAZA"
+              ],
+              "score": 0.3442705571651459
+            },
+            {
+              "words": [
+                "INCH",
+                "METER",
+                "LITER",
+                "VOLUME"
+              ],
+              "score": 0.414440780878067
+            },
+            {
+              "words": [
+                "FATE",
+                "DICE",
+                "RISK",
+                "SERENDIPITY"
+              ],
+              "score": 0.3872275650501251
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4044226109981537,
+      "created_at": "2026-04-11T17:00:05.393101+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00120",
+    "words": [
+      "CAKE",
+      "POND",
+      "VANILLA",
+      "FJORD",
+      "LAKE",
+      "FLEXIBILITY",
+      "STRENGTH",
+      "CINNAMON",
+      "SKILLS",
+      "SAVORY",
+      "BALLOON",
+      "CREEK",
+      "CHOCOLATE",
+      "TALENTS",
+      "CONFETTI",
+      "SNACKS"
+    ],
+    "groups": [
+      {
+        "category": "PLACES WITH WATER",
+        "words": [
+          "POND",
+          "CREEK",
+          "LAKE",
+          "FJORD"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5417951345443726
+      },
+      {
+        "category": "SKILLS AND ABILITIES",
+        "words": [
+          "SKILLS",
+          "TALENTS",
+          "STRENGTH",
+          "FLEXIBILITY"
+        ],
+        "color": "green",
+        "similarity_score": 0.46861326694488525
+      },
+      {
+        "category": "FOODS WITH DISTINCT TASTES",
+        "words": [
+          "CHOCOLATE",
+          "CINNAMON",
+          "VANILLA",
+          "SAVORY"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4507303237915039
+      },
+      {
+        "category": "PARTY SUPPLIES",
+        "words": [
+          "BALLOON",
+          "CONFETTI",
+          "CAKE",
+          "SNACKS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3912317752838135
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "POND",
+                "FJORD",
+                "LAKE",
+                "CREEK"
+              ],
+              "score": 0.5417950749397278
+            },
+            {
+              "words": [
+                "CAKE",
+                "VANILLA",
+                "CINNAMON",
+                "CHOCOLATE"
+              ],
+              "score": 0.4959959089756012
+            },
+            {
+              "words": [
+                "FLEXIBILITY",
+                "STRENGTH",
+                "SKILLS",
+                "TALENTS"
+              ],
+              "score": 0.4686131775379181
+            },
+            {
+              "words": [
+                "SAVORY",
+                "BALLOON",
+                "CONFETTI",
+                "SNACKS"
+              ],
+              "score": 0.3445863425731659
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CAKE",
+                "SAVORY",
+                "CHOCOLATE",
+                "SNACKS"
+              ],
+              "score": 0.46210360527038574
+            },
+            {
+              "words": [
+                "POND",
+                "FJORD",
+                "LAKE",
+                "CREEK"
+              ],
+              "score": 0.5417950749397278
+            },
+            {
+              "words": [
+                "FLEXIBILITY",
+                "STRENGTH",
+                "SKILLS",
+                "TALENTS"
+              ],
+              "score": 0.4686131775379181
+            },
+            {
+              "words": [
+                "VANILLA",
+                "CINNAMON",
+                "BALLOON",
+                "CONFETTI"
+              ],
+              "score": 0.3706979751586914
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4630926251411438,
+      "created_at": "2026-04-11T17:00:25.183013+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00135",
+    "words": [
+      "MOUNTAIN",
+      "ELEVATION",
+      "PASTA",
+      "SOUP",
+      "VEGETABLES",
+      "ENGINE",
+      "COMPUTER",
+      "MAXIM",
+      "DEVICE",
+      "MACHINE",
+      "RICE",
+      "CEILING",
+      "MEDIA",
+      "LIGHT",
+      "MUSIC",
+      "ART"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE COOKED",
+        "words": [
+          "PASTA",
+          "RICE",
+          "VEGETABLES",
+          "SOUP"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4874899387359619
+      },
+      {
+        "category": "FORMS OF ART",
+        "words": [
+          "MACHINE",
+          "ART",
+          "MEDIA",
+          "MUSIC"
+        ],
+        "color": "green",
+        "similarity_score": 0.42148497700691223
+      },
+      {
+        "category": "THINGS THAT CAN BE TURNED ON",
+        "words": [
+          "LIGHT",
+          "DEVICE",
+          "COMPUTER",
+          "ENGINE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3903624713420868
+      },
+      {
+        "category": "MEASUREMENTS OF HEIGHT",
+        "words": [
+          "MOUNTAIN",
+          "CEILING",
+          "MAXIM",
+          "ELEVATION"
+        ],
+        "color": "purple",
+        "similarity_score": 0.380985826253891
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ENGINE",
+                "COMPUTER",
+                "DEVICE",
+                "MACHINE"
+              ],
+              "score": 0.5011823773384094
+            },
+            {
+              "words": [
+                "PASTA",
+                "SOUP",
+                "VEGETABLES",
+                "RICE"
+              ],
+              "score": 0.4874899089336395
+            },
+            {
+              "words": [
+                "MEDIA",
+                "LIGHT",
+                "MUSIC",
+                "ART"
+              ],
+              "score": 0.45969995856285095
+            },
+            {
+              "words": [
+                "MOUNTAIN",
+                "ELEVATION",
+                "MAXIM",
+                "CEILING"
+              ],
+              "score": 0.3809855282306671
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "MEDIA",
+                "LIGHT",
+                "MUSIC",
+                "ART"
+              ],
+              "score": 0.45969995856285095
+            },
+            {
+              "words": [
+                "ENGINE",
+                "COMPUTER",
+                "DEVICE",
+                "MACHINE"
+              ],
+              "score": 0.5011823773384094
+            },
+            {
+              "words": [
+                "PASTA",
+                "SOUP",
+                "VEGETABLES",
+                "RICE"
+              ],
+              "score": 0.4874899089336395
+            },
+            {
+              "words": [
+                "MOUNTAIN",
+                "ELEVATION",
+                "MAXIM",
+                "CEILING"
+              ],
+              "score": 0.3809855282306671
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4200808107852936,
+      "created_at": "2026-04-11T17:02:49.002891+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00141",
+    "words": [
+      "SUNGLASSES",
+      "BED",
+      "MATTRESS",
+      "CLOTHES",
+      "TRUTH",
+      "HUMBLE",
+      "SWIMSUIT",
+      "FUTON",
+      "HOUSES",
+      "CARS",
+      "BOOKS",
+      "PILLOW",
+      "BITTER",
+      "SUNBLOCK",
+      "FLIPFLOPS",
+      "SOUR"
+    ],
+    "groups": [
+      {
+        "category": "THINGS YOU CAN SLEEP ON",
+        "words": [
+          "MATTRESS",
+          "FUTON",
+          "PILLOW",
+          "BED"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5881173014640808
+      },
+      {
+        "category": "ABSTRACT CONCEPTS",
+        "words": [
+          "BITTER",
+          "HUMBLE",
+          "SOUR",
+          "TRUTH"
+        ],
+        "color": "green",
+        "similarity_score": 0.4022047221660614
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH SUMMER",
+        "words": [
+          "SUNBLOCK",
+          "SWIMSUIT",
+          "FLIPFLOPS",
+          "SUNGLASSES"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3908783197402954
+      },
+      {
+        "category": "THINGS THAT CAN BE SOLD",
+        "words": [
+          "CARS",
+          "HOUSES",
+          "BOOKS",
+          "CLOTHES"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3787402808666229
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BED",
+                "MATTRESS",
+                "FUTON",
+                "PILLOW"
+              ],
+              "score": 0.5881173610687256
+            },
+            {
+              "words": [
+                "SUNGLASSES",
+                "CLOTHES",
+                "SWIMSUIT",
+                "SUNBLOCK"
+              ],
+              "score": 0.4687941074371338
+            },
+            {
+              "words": [
+                "TRUTH",
+                "HUMBLE",
+                "BITTER",
+                "SOUR"
+              ],
+              "score": 0.40220463275909424
+            },
+            {
+              "words": [
+                "HOUSES",
+                "CARS",
+                "BOOKS",
+                "FLIPFLOPS"
+              ],
+              "score": 0.3029029071331024
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SUNGLASSES",
+                "CLOTHES",
+                "SWIMSUIT",
+                "SUNBLOCK"
+              ],
+              "score": 0.4687941074371338
+            },
+            {
+              "words": [
+                "BED",
+                "MATTRESS",
+                "FUTON",
+                "PILLOW"
+              ],
+              "score": 0.5881173610687256
+            },
+            {
+              "words": [
+                "TRUTH",
+                "HUMBLE",
+                "BITTER",
+                "SOUR"
+              ],
+              "score": 0.40220463275909424
+            },
+            {
+              "words": [
+                "HOUSES",
+                "CARS",
+                "BOOKS",
+                "FLIPFLOPS"
+              ],
+              "score": 0.3029029071331024
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.43998515605926514,
+      "created_at": "2026-04-11T17:03:44.679519+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00155",
+    "words": [
+      "HELICOPTER",
+      "KITE",
+      "BLOOM",
+      "PILLOW",
+      "FLORET",
+      "PUMPKIN",
+      "PARAGLIDER",
+      "DRONE",
+      "BUNNY",
+      "COTTON",
+      "FEATHER",
+      "ZOMBIE",
+      "LEAF",
+      "GHOST",
+      "SPROUT",
+      "WITCH"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT FLY",
+        "words": [
+          "HELICOPTER",
+          "KITE",
+          "DRONE",
+          "PARAGLIDER"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5877132415771484
+      },
+      {
+        "category": "THINGS THAT ARE ASSOCIATED WITH HALLOWEEN",
+        "words": [
+          "PUMPKIN",
+          "GHOST",
+          "WITCH",
+          "ZOMBIE"
+        ],
+        "color": "green",
+        "similarity_score": 0.43944278359413147
+      },
+      {
+        "category": "THINGS THAT GROW",
+        "words": [
+          "SPROUT",
+          "BLOOM",
+          "LEAF",
+          "FLORET"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4243569076061249
+      },
+      {
+        "category": "THINGS THAT CAN BE FLUFFY",
+        "words": [
+          "PILLOW",
+          "BUNNY",
+          "FEATHER",
+          "COTTON"
+        ],
+        "color": "purple",
+        "similarity_score": 0.386197954416275
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "HELICOPTER",
+                "KITE",
+                "PARAGLIDER",
+                "DRONE"
+              ],
+              "score": 0.5877132415771484
+            },
+            {
+              "words": [
+                "FLORET",
+                "PUMPKIN",
+                "LEAF",
+                "SPROUT"
+              ],
+              "score": 0.4421567916870117
+            },
+            {
+              "words": [
+                "BUNNY",
+                "ZOMBIE",
+                "GHOST",
+                "WITCH"
+              ],
+              "score": 0.4277111291885376
+            },
+            {
+              "words": [
+                "BLOOM",
+                "PILLOW",
+                "COTTON",
+                "FEATHER"
+              ],
+              "score": 0.3414830267429352
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "HELICOPTER",
+                "KITE",
+                "PARAGLIDER",
+                "DRONE"
+              ],
+              "score": 0.5877132415771484
+            },
+            {
+              "words": [
+                "PILLOW",
+                "PUMPKIN",
+                "COTTON",
+                "FEATHER"
+              ],
+              "score": 0.41959238052368164
+            },
+            {
+              "words": [
+                "BUNNY",
+                "ZOMBIE",
+                "GHOST",
+                "WITCH"
+              ],
+              "score": 0.4277111291885376
+            },
+            {
+              "words": [
+                "BLOOM",
+                "FLORET",
+                "LEAF",
+                "SPROUT"
+              ],
+              "score": 0.4243569076061249
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.45942771434783936,
+      "created_at": "2026-04-11T17:06:01.834293+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00159",
+    "words": [
+      "INCENSE",
+      "BUTTER",
+      "MUSTARD",
+      "CRYSTALS",
+      "CREAM",
+      "BLUNDER",
+      "GAMES",
+      "ACCIDENT",
+      "STONES",
+      "CRAYONS",
+      "CANDLES",
+      "MISTAKE",
+      "TOYS",
+      "DOLLS",
+      "ERROR",
+      "HUMMUS"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH MISHAPS",
+        "words": [
+          "ERROR",
+          "ACCIDENT",
+          "BLUNDER",
+          "MISTAKE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.577409565448761
+      },
+      {
+        "category": "THINGS THAT CAN BE SPREAD",
+        "words": [
+          "BUTTER",
+          "MUSTARD",
+          "CREAM",
+          "HUMMUS"
+        ],
+        "color": "green",
+        "similarity_score": 0.5059719681739807
+      },
+      {
+        "category": "THINGS RELATED TO CHILDHOOD",
+        "words": [
+          "TOYS",
+          "GAMES",
+          "DOLLS",
+          "CRAYONS"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4872119128704071
+      },
+      {
+        "category": "THINGS FOUND IN A FORTUNE TELLER'S BOOTH",
+        "words": [
+          "CRYSTALS",
+          "CANDLES",
+          "STONES",
+          "INCENSE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.43720540404319763
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "BLUNDER",
+                "ACCIDENT",
+                "MISTAKE",
+                "ERROR"
+              ],
+              "score": 0.5774094462394714
+            },
+            {
+              "words": [
+                "CRAYONS",
+                "CANDLES",
+                "TOYS",
+                "DOLLS"
+              ],
+              "score": 0.5127640962600708
+            },
+            {
+              "words": [
+                "INCENSE",
+                "BUTTER",
+                "MUSTARD",
+                "HUMMUS"
+              ],
+              "score": 0.511776328086853
+            },
+            {
+              "words": [
+                "CRYSTALS",
+                "CREAM",
+                "GAMES",
+                "STONES"
+              ],
+              "score": 0.35789844393730164
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "CRAYONS",
+                "CANDLES",
+                "TOYS",
+                "DOLLS"
+              ],
+              "score": 0.5127640962600708
+            },
+            {
+              "words": [
+                "BLUNDER",
+                "ACCIDENT",
+                "MISTAKE",
+                "ERROR"
+              ],
+              "score": 0.5774094462394714
+            },
+            {
+              "words": [
+                "INCENSE",
+                "BUTTER",
+                "MUSTARD",
+                "HUMMUS"
+              ],
+              "score": 0.511776328086853
+            },
+            {
+              "words": [
+                "CRYSTALS",
+                "CREAM",
+                "GAMES",
+                "STONES"
+              ],
+              "score": 0.35789844393730164
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5019497275352478,
+      "created_at": "2026-04-11T17:06:38.611056+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00163",
+    "words": [
+      "BALL",
+      "DINOSAUR",
+      "FLOWERS",
+      "CHOCOLATE",
+      "DART",
+      "BATTER",
+      "OVEN",
+      "FRISBEE",
+      "MASTODON",
+      "EGG",
+      "CANDY",
+      "PIGSKIN",
+      "FOSSIL",
+      "PALEONTOLOGY",
+      "PAN",
+      "DOUGH"
+    ],
+    "groups": [
+      {
+        "category": "DINOSAUR-RELATED TERMS",
+        "words": [
+          "FOSSIL",
+          "DINOSAUR",
+          "PALEONTOLOGY",
+          "MASTODON"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5562893748283386
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH EASTER",
+        "words": [
+          "EGG",
+          "CANDY",
+          "CHOCOLATE",
+          "FLOWERS"
+        ],
+        "color": "green",
+        "similarity_score": 0.4315243661403656
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH BAKING",
+        "words": [
+          "DOUGH",
+          "OVEN",
+          "BATTER",
+          "PAN"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3937118947505951
+      },
+      {
+        "category": "THINGS YOU CAN THROW",
+        "words": [
+          "BALL",
+          "FRISBEE",
+          "PIGSKIN",
+          "DART"
+        ],
+        "color": "purple",
+        "similarity_score": 0.38031911849975586
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "DINOSAUR",
+                "MASTODON",
+                "FOSSIL",
+                "PALEONTOLOGY"
+              ],
+              "score": 0.5562894344329834
+            },
+            {
+              "words": [
+                "CHOCOLATE",
+                "BATTER",
+                "CANDY",
+                "DOUGH"
+              ],
+              "score": 0.4806119203567505
+            },
+            {
+              "words": [
+                "BALL",
+                "DART",
+                "FRISBEE",
+                "PIGSKIN"
+              ],
+              "score": 0.38031908869743347
+            },
+            {
+              "words": [
+                "FLOWERS",
+                "OVEN",
+                "EGG",
+                "PAN"
+              ],
+              "score": 0.2675316631793976
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CHOCOLATE",
+                "BATTER",
+                "EGG",
+                "CANDY"
+              ],
+              "score": 0.4637232720851898
+            },
+            {
+              "words": [
+                "DINOSAUR",
+                "MASTODON",
+                "FOSSIL",
+                "PALEONTOLOGY"
+              ],
+              "score": 0.5562894344329834
+            },
+            {
+              "words": [
+                "BALL",
+                "DART",
+                "FRISBEE",
+                "PIGSKIN"
+              ],
+              "score": 0.38031908869743347
+            },
+            {
+              "words": [
+                "FLOWERS",
+                "OVEN",
+                "PAN",
+                "DOUGH"
+              ],
+              "score": 0.2885240614414215
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4404611885547638,
+      "created_at": "2026-04-11T17:07:18.980583+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00167",
+    "words": [
+      "MAP",
+      "LYRICS",
+      "FOCUS",
+      "VISION",
+      "SONG",
+      "BAG",
+      "ALBUM",
+      "SIGHT",
+      "COIN",
+      "GAZE",
+      "BOTTLE",
+      "DRIVE",
+      "CHORUS",
+      "PANCAKE",
+      "SANDWICH",
+      "MILEAGE"
+    ],
+    "groups": [
+      {
+        "category": "WORDS RELATED TO VISION",
+        "words": [
+          "FOCUS",
+          "SIGHT",
+          "VISION",
+          "GAZE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.590488851070404
+      },
+      {
+        "category": "MUSIC ELEMENTS",
+        "words": [
+          "ALBUM",
+          "LYRICS",
+          "SONG",
+          "CHORUS"
+        ],
+        "color": "green",
+        "similarity_score": 0.5504891872406006
+      },
+      {
+        "category": "FLIPPABLE OBJECTS",
+        "words": [
+          "PANCAKE",
+          "COIN",
+          "BOTTLE",
+          "SANDWICH"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3346487283706665
+      },
+      {
+        "category": "ROAD TRIP ITEMS",
+        "words": [
+          "MAP",
+          "MILEAGE",
+          "BAG",
+          "DRIVE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.30197200179100037
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "FOCUS",
+                "VISION",
+                "SIGHT",
+                "GAZE"
+              ],
+              "score": 0.5904889106750488
+            },
+            {
+              "words": [
+                "LYRICS",
+                "SONG",
+                "ALBUM",
+                "CHORUS"
+              ],
+              "score": 0.5504892468452454
+            },
+            {
+              "words": [
+                "BAG",
+                "BOTTLE",
+                "PANCAKE",
+                "SANDWICH"
+              ],
+              "score": 0.37174639105796814
+            },
+            {
+              "words": [
+                "MAP",
+                "COIN",
+                "DRIVE",
+                "MILEAGE"
+              ],
+              "score": 0.2919810116291046
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "LYRICS",
+                "SONG",
+                "ALBUM",
+                "CHORUS"
+              ],
+              "score": 0.5504892468452454
+            },
+            {
+              "words": [
+                "FOCUS",
+                "VISION",
+                "SIGHT",
+                "GAZE"
+              ],
+              "score": 0.5904889106750488
+            },
+            {
+              "words": [
+                "BAG",
+                "BOTTLE",
+                "PANCAKE",
+                "SANDWICH"
+              ],
+              "score": 0.37174639105796814
+            },
+            {
+              "words": [
+                "MAP",
+                "COIN",
+                "DRIVE",
+                "MILEAGE"
+              ],
+              "score": 0.2919810116291046
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.44439971446990967,
+      "created_at": "2026-04-11T17:07:58.057624+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00177",
+    "words": [
+      "BRIDGE",
+      "TRUST",
+      "CHESS",
+      "GEMS",
+      "MAHJONG",
+      "HARVEST",
+      "MONEY",
+      "SECRETS",
+      "SCRABBLE",
+      "BREAD",
+      "TREASURE",
+      "BOND",
+      "FERTILIZER",
+      "FARMER",
+      "CHECKERS",
+      "ROPE"
+    ],
+    "groups": [
+      {
+        "category": "STRATEGY GAMES",
+        "words": [
+          "CHESS",
+          "MAHJONG",
+          "CHECKERS",
+          "SCRABBLE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.6038729548454285
+      },
+      {
+        "category": "FOOD AND FARMING",
+        "words": [
+          "FARMER",
+          "HARVEST",
+          "FERTILIZER",
+          "BREAD"
+        ],
+        "color": "green",
+        "similarity_score": 0.404273122549057
+      },
+      {
+        "category": "THINGS THAT CAN BE STOLEN",
+        "words": [
+          "TREASURE",
+          "GEMS",
+          "SECRETS",
+          "MONEY"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3970252573490143
+      },
+      {
+        "category": "THINGS THAT CAN BREAK",
+        "words": [
+          "BRIDGE",
+          "ROPE",
+          "BOND",
+          "TRUST"
+        ],
+        "color": "purple",
+        "similarity_score": 0.32753536105155945
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CHESS",
+                "MAHJONG",
+                "SCRABBLE",
+                "CHECKERS"
+              ],
+              "score": 0.6038728952407837
+            },
+            {
+              "words": [
+                "TRUST",
+                "MONEY",
+                "SECRETS",
+                "TREASURE"
+              ],
+              "score": 0.42005324363708496
+            },
+            {
+              "words": [
+                "HARVEST",
+                "BREAD",
+                "FERTILIZER",
+                "FARMER"
+              ],
+              "score": 0.404273122549057
+            },
+            {
+              "words": [
+                "BRIDGE",
+                "GEMS",
+                "BOND",
+                "ROPE"
+              ],
+              "score": 0.32235074043273926
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "TRUST",
+                "MONEY",
+                "SECRETS",
+                "TREASURE"
+              ],
+              "score": 0.42005324363708496
+            },
+            {
+              "words": [
+                "CHESS",
+                "MAHJONG",
+                "SCRABBLE",
+                "CHECKERS"
+              ],
+              "score": 0.6038728952407837
+            },
+            {
+              "words": [
+                "HARVEST",
+                "BREAD",
+                "FERTILIZER",
+                "FARMER"
+              ],
+              "score": 0.404273122549057
+            },
+            {
+              "words": [
+                "BRIDGE",
+                "GEMS",
+                "BOND",
+                "ROPE"
+              ],
+              "score": 0.32235074043273926
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4331766664981842,
+      "created_at": "2026-04-11T17:09:41.447530+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00178",
+    "words": [
+      "CANDLE",
+      "BREAD",
+      "DUST",
+      "COTTONCANDY",
+      "FERRISWHEEL",
+      "FUEL",
+      "CENTURY",
+      "EPOCH",
+      "FOG",
+      "MINUTE",
+      "INCENSE",
+      "DECADE",
+      "COAL",
+      "POPCORN",
+      "BALLOON",
+      "CLOWN"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE BURNED",
+        "words": [
+          "FUEL",
+          "CANDLE",
+          "COAL",
+          "INCENSE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.45500969886779785
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH TIME",
+        "words": [
+          "MINUTE",
+          "EPOCH",
+          "DECADE",
+          "CENTURY"
+        ],
+        "color": "green",
+        "similarity_score": 0.4281424283981323
+      },
+      {
+        "category": "THINGS THAT FLOAT",
+        "words": [
+          "BALLOON",
+          "BREAD",
+          "FOG",
+          "DUST"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3406120240688324
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH A CARNIVAL",
+        "words": [
+          "COTTONCANDY",
+          "CLOWN",
+          "POPCORN",
+          "FERRISWHEEL"
+        ],
+        "color": "purple",
+        "similarity_score": 0.2976147532463074
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "DUST",
+                "FUEL",
+                "COAL",
+                "POPCORN"
+              ],
+              "score": 0.4567790925502777
+            },
+            {
+              "words": [
+                "CENTURY",
+                "EPOCH",
+                "MINUTE",
+                "DECADE"
+              ],
+              "score": 0.4281422793865204
+            },
+            {
+              "words": [
+                "CANDLE",
+                "BREAD",
+                "INCENSE",
+                "BALLOON"
+              ],
+              "score": 0.4191305637359619
+            },
+            {
+              "words": [
+                "COTTONCANDY",
+                "FERRISWHEEL",
+                "FOG",
+                "CLOWN"
+              ],
+              "score": 0.2437639981508255
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "DUST",
+                "FUEL",
+                "COAL",
+                "POPCORN"
+              ],
+              "score": 0.4567790925502777
+            },
+            {
+              "words": [
+                "CENTURY",
+                "EPOCH",
+                "MINUTE",
+                "DECADE"
+              ],
+              "score": 0.4281422793865204
+            },
+            {
+              "words": [
+                "CANDLE",
+                "BREAD",
+                "FOG",
+                "INCENSE"
+              ],
+              "score": 0.3676472008228302
+            },
+            {
+              "words": [
+                "COTTONCANDY",
+                "FERRISWHEEL",
+                "BALLOON",
+                "CLOWN"
+              ],
+              "score": 0.3444681465625763
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.3803447484970093,
+      "created_at": "2026-04-11T17:09:50.889487+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00188",
+    "words": [
+      "FOUNTAIN",
+      "ORANGE",
+      "PLAYGROUND",
+      "MAGAZINE",
+      "GOLF",
+      "DANCE",
+      "GARDEN",
+      "NEWSPAPER",
+      "HIKING",
+      "LEMON",
+      "LIME",
+      "PICNIC",
+      "BOOK",
+      "CARROT",
+      "TRAIL",
+      "COMIC"
+    ],
+    "groups": [
+      {
+        "category": "FRUITS THAT CAN BE SQUEEZED",
+        "words": [
+          "LEMON",
+          "LIME",
+          "ORANGE",
+          "CARROT"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5455363392829895
+      },
+      {
+        "category": "THINGS THAT CAN BE READ",
+        "words": [
+          "BOOK",
+          "MAGAZINE",
+          "NEWSPAPER",
+          "COMIC"
+        ],
+        "color": "green",
+        "similarity_score": 0.4780963659286499
+      },
+      {
+        "category": "THINGS THAT CAN BE FOUND IN A PARK",
+        "words": [
+          "FOUNTAIN",
+          "PLAYGROUND",
+          "PICNIC",
+          "TRAIL"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3531631529331207
+      },
+      {
+        "category": "WORDS THAT CAN BE FOLLOWED BY 'CLUB'",
+        "words": [
+          "GOLF",
+          "GARDEN",
+          "HIKING",
+          "DANCE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3372981548309326
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "ORANGE",
+                "LEMON",
+                "LIME",
+                "CARROT"
+              ],
+              "score": 0.5455361008644104
+            },
+            {
+              "words": [
+                "MAGAZINE",
+                "NEWSPAPER",
+                "BOOK",
+                "COMIC"
+              ],
+              "score": 0.47809648513793945
+            },
+            {
+              "words": [
+                "PLAYGROUND",
+                "GARDEN",
+                "HIKING",
+                "TRAIL"
+              ],
+              "score": 0.43916890025138855
+            },
+            {
+              "words": [
+                "FOUNTAIN",
+                "GOLF",
+                "DANCE",
+                "PICNIC"
+              ],
+              "score": 0.26542985439300537
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "PLAYGROUND",
+                "GARDEN",
+                "HIKING",
+                "PICNIC"
+              ],
+              "score": 0.4347522258758545
+            },
+            {
+              "words": [
+                "ORANGE",
+                "LEMON",
+                "LIME",
+                "CARROT"
+              ],
+              "score": 0.5455361008644104
+            },
+            {
+              "words": [
+                "MAGAZINE",
+                "NEWSPAPER",
+                "BOOK",
+                "COMIC"
+              ],
+              "score": 0.47809648513793945
+            },
+            {
+              "words": [
+                "FOUNTAIN",
+                "GOLF",
+                "DANCE",
+                "TRAIL"
+              ],
+              "score": 0.2647973597049713
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4285235106945038,
+      "created_at": "2026-04-11T17:11:19.494816+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00195",
+    "words": [
+      "PHONE",
+      "WALLET",
+      "MINIATURE",
+      "LITTLE",
+      "HAND",
+      "KEYS",
+      "SPOON",
+      "SIGN",
+      "VOICE",
+      "HANDLE",
+      "WHEEL",
+      "PETITE",
+      "TINY",
+      "FLAG",
+      "HEAD",
+      "ITEM"
+    ],
+    "groups": [
+      {
+        "category": "SIZES OF OBJECTS",
+        "words": [
+          "MINIATURE",
+          "TINY",
+          "PETITE",
+          "LITTLE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.7273334860801697
+      },
+      {
+        "category": "THINGS THAT CAN BE RAISED",
+        "words": [
+          "FLAG",
+          "HAND",
+          "VOICE",
+          "SIGN"
+        ],
+        "color": "green",
+        "similarity_score": 0.33244645595550537
+      },
+      {
+        "category": "ITEMS YOU CAN LOSE",
+        "words": [
+          "KEYS",
+          "WALLET",
+          "PHONE",
+          "ITEM"
+        ],
+        "color": "blue",
+        "similarity_score": 0.32465270161628723
+      },
+      {
+        "category": "OBJECTS THAT CAN BE TURNED",
+        "words": [
+          "HEAD",
+          "SPOON",
+          "WHEEL",
+          "HANDLE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.30315709114074707
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "MINIATURE",
+                "LITTLE",
+                "PETITE",
+                "TINY"
+              ],
+              "score": 0.7273334860801697
+            },
+            {
+              "words": [
+                "HAND",
+                "SPOON",
+                "HANDLE",
+                "HEAD"
+              ],
+              "score": 0.40703609585762024
+            },
+            {
+              "words": [
+                "PHONE",
+                "WALLET",
+                "SIGN",
+                "VOICE"
+              ],
+              "score": 0.3246708810329437
+            },
+            {
+              "words": [
+                "KEYS",
+                "WHEEL",
+                "FLAG",
+                "ITEM"
+              ],
+              "score": 0.21759428083896637
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "MINIATURE",
+                "LITTLE",
+                "PETITE",
+                "TINY"
+              ],
+              "score": 0.7273334860801697
+            },
+            {
+              "words": [
+                "HAND",
+                "SPOON",
+                "HANDLE",
+                "HEAD"
+              ],
+              "score": 0.40703609585762024
+            },
+            {
+              "words": [
+                "PHONE",
+                "SIGN",
+                "VOICE",
+                "FLAG"
+              ],
+              "score": 0.3229406177997589
+            },
+            {
+              "words": [
+                "WALLET",
+                "KEYS",
+                "WHEEL",
+                "ITEM"
+              ],
+              "score": 0.30196502804756165
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.42189741134643555,
+      "created_at": "2026-04-11T17:12:33.339428+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00196",
+    "words": [
+      "ACT",
+      "GROWL",
+      "REHEARSE",
+      "DANCE",
+      "GARDEN",
+      "EVALUATE",
+      "DIRECTOR",
+      "EXAM",
+      "SHOUT",
+      "AUDITION",
+      "BULB",
+      "ONION",
+      "ASSESS",
+      "WEED",
+      "PROTEST",
+      "ANALYZE"
+    ],
+    "groups": [
+      {
+        "category": "TESTING ACTIONS",
+        "words": [
+          "EXAM",
+          "ASSESS",
+          "ANALYZE",
+          "EVALUATE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5485360622406006
+      },
+      {
+        "category": "WORDS THAT CAN BE VERBS",
+        "words": [
+          "GROWL",
+          "PROTEST",
+          "SHOUT",
+          "DANCE"
+        ],
+        "color": "green",
+        "similarity_score": 0.4095746576786041
+      },
+      {
+        "category": "GARDEN ITEMS",
+        "words": [
+          "WEED",
+          "ONION",
+          "GARDEN",
+          "BULB"
+        ],
+        "color": "blue",
+        "similarity_score": 0.37708616256713867
+      },
+      {
+        "category": "WORDS RELATED TO THEATER",
+        "words": [
+          "ACT",
+          "REHEARSE",
+          "AUDITION",
+          "DIRECTOR"
+        ],
+        "color": "purple",
+        "similarity_score": 0.33715498447418213
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "EVALUATE",
+                "EXAM",
+                "ASSESS",
+                "ANALYZE"
+              ],
+              "score": 0.5485360622406006
+            },
+            {
+              "words": [
+                "ACT",
+                "DANCE",
+                "SHOUT",
+                "PROTEST"
+              ],
+              "score": 0.4212639331817627
+            },
+            {
+              "words": [
+                "GARDEN",
+                "BULB",
+                "ONION",
+                "WEED"
+              ],
+              "score": 0.37708625197410583
+            },
+            {
+              "words": [
+                "GROWL",
+                "REHEARSE",
+                "DIRECTOR",
+                "AUDITION"
+              ],
+              "score": 0.2489766925573349
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "EVALUATE",
+                "EXAM",
+                "ASSESS",
+                "ANALYZE"
+              ],
+              "score": 0.5485360622406006
+            },
+            {
+              "words": [
+                "ACT",
+                "GROWL",
+                "SHOUT",
+                "PROTEST"
+              ],
+              "score": 0.40823182463645935
+            },
+            {
+              "words": [
+                "GARDEN",
+                "BULB",
+                "ONION",
+                "WEED"
+              ],
+              "score": 0.37708625197410583
+            },
+            {
+              "words": [
+                "REHEARSE",
+                "DANCE",
+                "DIRECTOR",
+                "AUDITION"
+              ],
+              "score": 0.34713029861450195
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4180879592895508,
+      "created_at": "2026-04-11T17:12:42.438765+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00215",
+    "words": [
+      "SLEIGH",
+      "CHECKERED",
+      "HAT",
+      "CLOTH",
+      "SPOON",
+      "COAT",
+      "TIDE",
+      "SPECKLED",
+      "COSTUME",
+      "ICICLE",
+      "STRIPED",
+      "SNOW",
+      "SPOTTY",
+      "MASK",
+      "FROST",
+      "CLOAK"
+    ],
+    "groups": [
+      {
+        "category": "THINGS RELATED TO DRESSING UP",
+        "words": [
+          "COSTUME",
+          "MASK",
+          "HAT",
+          "CLOAK"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5621423125267029
+      },
+      {
+        "category": "PATTERNS IN ANIMALS",
+        "words": [
+          "SPOTTY",
+          "STRIPED",
+          "CHECKERED",
+          "SPECKLED"
+        ],
+        "color": "green",
+        "similarity_score": 0.5324977040290833
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH WINTER",
+        "words": [
+          "SNOW",
+          "FROST",
+          "SLEIGH",
+          "ICICLE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.48919352889060974
+      },
+      {
+        "category": "THINGS THAT CAN BE TURNED",
+        "words": [
+          "TIDE",
+          "COAT",
+          "CLOTH",
+          "SPOON"
+        ],
+        "color": "purple",
+        "similarity_score": 0.31168246269226074
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "COAT",
+                "COSTUME",
+                "MASK",
+                "CLOAK"
+              ],
+              "score": 0.5701084733009338
+            },
+            {
+              "words": [
+                "CHECKERED",
+                "SPECKLED",
+                "STRIPED",
+                "SPOTTY"
+              ],
+              "score": 0.5324977040290833
+            },
+            {
+              "words": [
+                "SLEIGH",
+                "ICICLE",
+                "SNOW",
+                "FROST"
+              ],
+              "score": 0.48919355869293213
+            },
+            {
+              "words": [
+                "HAT",
+                "CLOTH",
+                "SPOON",
+                "TIDE"
+              ],
+              "score": 0.2642265260219574
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "HAT",
+                "COAT",
+                "COSTUME",
+                "MASK"
+              ],
+              "score": 0.5537077784538269
+            },
+            {
+              "words": [
+                "CHECKERED",
+                "SPECKLED",
+                "STRIPED",
+                "SPOTTY"
+              ],
+              "score": 0.5324977040290833
+            },
+            {
+              "words": [
+                "SLEIGH",
+                "ICICLE",
+                "SNOW",
+                "FROST"
+              ],
+              "score": 0.48919355869293213
+            },
+            {
+              "words": [
+                "CLOTH",
+                "SPOON",
+                "TIDE",
+                "CLOAK"
+              ],
+              "score": 0.3112061321735382
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.47387900948524475,
+      "created_at": "2026-04-11T17:15:49.283525+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00272",
+    "words": [
+      "YOGA",
+      "GANDALF",
+      "HARRY",
+      "JAR",
+      "LEAF",
+      "BATH",
+      "BEACH",
+      "SAND",
+      "BAG",
+      "BOX",
+      "MOSS",
+      "BOTTLE",
+      "FRODO",
+      "SPA",
+      "GRASS",
+      "ARAGORN"
+    ],
+    "groups": [
+      {
+        "category": "FANTASY CHARACTERS",
+        "words": [
+          "HARRY",
+          "FRODO",
+          "GANDALF",
+          "ARAGORN"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5352128148078918
+      },
+      {
+        "category": "THINGS THAT CAN BE FILLED",
+        "words": [
+          "BOTTLE",
+          "BOX",
+          "BAG",
+          "JAR"
+        ],
+        "color": "green",
+        "similarity_score": 0.47040459513664246
+      },
+      {
+        "category": "THINGS FOUND IN NATURE",
+        "words": [
+          "MOSS",
+          "GRASS",
+          "LEAF",
+          "SAND"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4221244752407074
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH RELAXATION",
+        "words": [
+          "SPA",
+          "YOGA",
+          "BATH",
+          "BEACH"
+        ],
+        "color": "purple",
+        "similarity_score": 0.42159608006477356
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "GANDALF",
+                "HARRY",
+                "FRODO",
+                "ARAGORN"
+              ],
+              "score": 0.5352128148078918
+            },
+            {
+              "words": [
+                "JAR",
+                "BAG",
+                "BOX",
+                "BOTTLE"
+              ],
+              "score": 0.4704047441482544
+            },
+            {
+              "words": [
+                "BATH",
+                "BEACH",
+                "SAND",
+                "SPA"
+              ],
+              "score": 0.46348491311073303
+            },
+            {
+              "words": [
+                "YOGA",
+                "LEAF",
+                "MOSS",
+                "GRASS"
+              ],
+              "score": 0.36776426434516907
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BATH",
+                "BEACH",
+                "SAND",
+                "SPA"
+              ],
+              "score": 0.46348491311073303
+            },
+            {
+              "words": [
+                "GANDALF",
+                "HARRY",
+                "FRODO",
+                "ARAGORN"
+              ],
+              "score": 0.5352128148078918
+            },
+            {
+              "words": [
+                "JAR",
+                "BAG",
+                "BOX",
+                "BOTTLE"
+              ],
+              "score": 0.4704047441482544
+            },
+            {
+              "words": [
+                "YOGA",
+                "LEAF",
+                "MOSS",
+                "GRASS"
+              ],
+              "score": 0.36776426434516907
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4623344838619232,
+      "created_at": "2026-04-11T17:25:24.633245+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00287",
+    "words": [
+      "SCULPTURE",
+      "BASILISK",
+      "MUSIC",
+      "DRAGON",
+      "FURNITURE",
+      "ARCHITECTURE",
+      "EXCITEMENT",
+      "LITERATURE",
+      "MERMAID",
+      "ART",
+      "FRENZY",
+      "UNICORN",
+      "ADVENTURE",
+      "ADRENALINE",
+      "FOOD",
+      "LAMP"
+    ],
+    "groups": [
+      {
+        "category": "THRILLING EXPERIENCES",
+        "words": [
+          "ADRENALINE",
+          "EXCITEMENT",
+          "ADVENTURE",
+          "FRENZY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5086272358894348
+      },
+      {
+        "category": "THINGS THAT AFFECT MOOD",
+        "words": [
+          "MUSIC",
+          "ART",
+          "FOOD",
+          "LITERATURE"
+        ],
+        "color": "green",
+        "similarity_score": 0.4794718027114868
+      },
+      {
+        "category": "WORDS RELATED TO DESIGN",
+        "words": [
+          "FURNITURE",
+          "LAMP",
+          "SCULPTURE",
+          "ARCHITECTURE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.42756786942481995
+      },
+      {
+        "category": "MYTHICAL CREATURES",
+        "words": [
+          "UNICORN",
+          "DRAGON",
+          "MERMAID",
+          "BASILISK"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4133822023868561
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SCULPTURE",
+                "MUSIC",
+                "LITERATURE",
+                "ART"
+              ],
+              "score": 0.5318557620048523
+            },
+            {
+              "words": [
+                "EXCITEMENT",
+                "FRENZY",
+                "ADVENTURE",
+                "ADRENALINE"
+              ],
+              "score": 0.5086274743080139
+            },
+            {
+              "words": [
+                "BASILISK",
+                "DRAGON",
+                "MERMAID",
+                "UNICORN"
+              ],
+              "score": 0.4133822023868561
+            },
+            {
+              "words": [
+                "FURNITURE",
+                "ARCHITECTURE",
+                "FOOD",
+                "LAMP"
+              ],
+              "score": 0.3827019929885864
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SCULPTURE",
+                "MUSIC",
+                "LITERATURE",
+                "ART"
+              ],
+              "score": 0.5318557620048523
+            },
+            {
+              "words": [
+                "EXCITEMENT",
+                "FRENZY",
+                "ADVENTURE",
+                "ADRENALINE"
+              ],
+              "score": 0.5086274743080139
+            },
+            {
+              "words": [
+                "BASILISK",
+                "DRAGON",
+                "MERMAID",
+                "UNICORN"
+              ],
+              "score": 0.4133822023868561
+            },
+            {
+              "words": [
+                "FURNITURE",
+                "ARCHITECTURE",
+                "FOOD",
+                "LAMP"
+              ],
+              "score": 0.3827019929885864
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4572622776031494,
+      "created_at": "2026-04-11T17:27:55.263336+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00296",
+    "words": [
+      "FUEL",
+      "BENCH",
+      "FLOUR",
+      "CHEESE",
+      "SKATEBOARD",
+      "SUGAR",
+      "MAYO",
+      "BICYCLE",
+      "MOTORCYCLE",
+      "CHAIR",
+      "COUCH",
+      "STOOL",
+      "TRICYCLE",
+      "SPICE",
+      "SALT",
+      "CREAM"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE RIDDEN",
+        "words": [
+          "BICYCLE",
+          "SKATEBOARD",
+          "MOTORCYCLE",
+          "TRICYCLE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5772537589073181
+      },
+      {
+        "category": "PLACES TO SIT",
+        "words": [
+          "CHAIR",
+          "STOOL",
+          "COUCH",
+          "BENCH"
+        ],
+        "color": "green",
+        "similarity_score": 0.47559717297554016
+      },
+      {
+        "category": "FOOD ITEMS THAT CAN BE WHIPPED",
+        "words": [
+          "CREAM",
+          "MAYO",
+          "FLOUR",
+          "CHEESE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.44543859362602234
+      },
+      {
+        "category": "THINGS THAT CAN BE ADDED",
+        "words": [
+          "SUGAR",
+          "SALT",
+          "FUEL",
+          "SPICE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.41900038719177246
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SKATEBOARD",
+                "BICYCLE",
+                "MOTORCYCLE",
+                "TRICYCLE"
+              ],
+              "score": 0.5772537589073181
+            },
+            {
+              "words": [
+                "FLOUR",
+                "SUGAR",
+                "SPICE",
+                "SALT"
+              ],
+              "score": 0.47823283076286316
+            },
+            {
+              "words": [
+                "BENCH",
+                "CHAIR",
+                "COUCH",
+                "STOOL"
+              ],
+              "score": 0.4755972623825073
+            },
+            {
+              "words": [
+                "FUEL",
+                "CHEESE",
+                "MAYO",
+                "CREAM"
+              ],
+              "score": 0.37754151225090027
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "FUEL",
+                "FLOUR",
+                "SUGAR",
+                "SALT"
+              ],
+              "score": 0.45246878266334534
+            },
+            {
+              "words": [
+                "SKATEBOARD",
+                "BICYCLE",
+                "MOTORCYCLE",
+                "TRICYCLE"
+              ],
+              "score": 0.5772537589073181
+            },
+            {
+              "words": [
+                "BENCH",
+                "CHAIR",
+                "COUCH",
+                "STOOL"
+              ],
+              "score": 0.4755972623825073
+            },
+            {
+              "words": [
+                "CHEESE",
+                "MAYO",
+                "SPICE",
+                "CREAM"
+              ],
+              "score": 0.4323762357234955
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.47932249307632446,
+      "created_at": "2026-04-11T17:29:17.952047+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00310",
+    "words": [
+      "DRYER",
+      "GOLF",
+      "JET",
+      "NAPKINS",
+      "WASH",
+      "DETERGENT",
+      "VOLLEY",
+      "CLOTH",
+      "TENNIS",
+      "BREEZE",
+      "GUST",
+      "FAN",
+      "SHIRT",
+      "CLOTHES",
+      "PAPER",
+      "HOCKEY"
+    ],
+    "groups": [
+      {
+        "category": "WORDS THAT CAN BE FOLLOWED BY 'BALL'",
+        "words": [
+          "VOLLEY",
+          "GOLF",
+          "TENNIS",
+          "HOCKEY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5204108953475952
+      },
+      {
+        "category": "LAUNDRY SUPPLIES",
+        "words": [
+          "DETERGENT",
+          "DRYER",
+          "WASH",
+          "CLOTHES"
+        ],
+        "color": "green",
+        "similarity_score": 0.4610023498535156
+      },
+      {
+        "category": "THINGS RELATED TO AIR",
+        "words": [
+          "BREEZE",
+          "GUST",
+          "FAN",
+          "JET"
+        ],
+        "color": "blue",
+        "similarity_score": 0.45654764771461487
+      },
+      {
+        "category": "ITEMS THAT CAN BE FOLDED",
+        "words": [
+          "PAPER",
+          "SHIRT",
+          "CLOTH",
+          "NAPKINS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3995194435119629
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "NAPKINS",
+                "DETERGENT",
+                "CLOTH",
+                "CLOTHES"
+              ],
+              "score": 0.528389036655426
+            },
+            {
+              "words": [
+                "GOLF",
+                "VOLLEY",
+                "TENNIS",
+                "HOCKEY"
+              ],
+              "score": 0.5204108357429504
+            },
+            {
+              "words": [
+                "JET",
+                "BREEZE",
+                "GUST",
+                "FAN"
+              ],
+              "score": 0.45654770731925964
+            },
+            {
+              "words": [
+                "DRYER",
+                "WASH",
+                "SHIRT",
+                "PAPER"
+              ],
+              "score": 0.3092125654220581
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "WASH",
+                "CLOTH",
+                "SHIRT",
+                "CLOTHES"
+              ],
+              "score": 0.4914303719997406
+            },
+            {
+              "words": [
+                "GOLF",
+                "VOLLEY",
+                "TENNIS",
+                "HOCKEY"
+              ],
+              "score": 0.5204108357429504
+            },
+            {
+              "words": [
+                "JET",
+                "BREEZE",
+                "GUST",
+                "FAN"
+              ],
+              "score": 0.45654770731925964
+            },
+            {
+              "words": [
+                "DRYER",
+                "NAPKINS",
+                "DETERGENT",
+                "PAPER"
+              ],
+              "score": 0.4014395773410797
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.45937007665634155,
+      "created_at": "2026-04-11T17:31:27.713039+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00321",
+    "words": [
+      "LANTERN",
+      "TWEAK",
+      "MASK",
+      "CAVE",
+      "TAPIR",
+      "NIGHTFALL",
+      "ADJUST",
+      "SHADOW",
+      "OKAPI",
+      "KINKAJOU",
+      "SHRINE",
+      "QUOKKA",
+      "TROVE",
+      "ALTER",
+      "DARKNESS",
+      "MODIFY"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE MANIPULATED",
+        "words": [
+          "TWEAK",
+          "ADJUST",
+          "MODIFY",
+          "ALTER"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5954017043113708
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH NIGHT",
+        "words": [
+          "SHADOW",
+          "DARKNESS",
+          "LANTERN",
+          "NIGHTFALL"
+        ],
+        "color": "green",
+        "similarity_score": 0.47602108120918274
+      },
+      {
+        "category": "UNIQUE ANIMALS",
+        "words": [
+          "TAPIR",
+          "OKAPI",
+          "QUOKKA",
+          "KINKAJOU"
+        ],
+        "color": "blue",
+        "similarity_score": 0.378353089094162
+      },
+      {
+        "category": "ANCIENT ARTIFACTS",
+        "words": [
+          "CAVE",
+          "TROVE",
+          "SHRINE",
+          "MASK"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3320564031600952
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "TWEAK",
+                "ADJUST",
+                "ALTER",
+                "MODIFY"
+              ],
+              "score": 0.5954015851020813
+            },
+            {
+              "words": [
+                "MASK",
+                "NIGHTFALL",
+                "SHADOW",
+                "DARKNESS"
+              ],
+              "score": 0.49616944789886475
+            },
+            {
+              "words": [
+                "TAPIR",
+                "OKAPI",
+                "KINKAJOU",
+                "QUOKKA"
+              ],
+              "score": 0.3783531188964844
+            },
+            {
+              "words": [
+                "LANTERN",
+                "CAVE",
+                "SHRINE",
+                "TROVE"
+              ],
+              "score": 0.33798539638519287
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "MASK",
+                "NIGHTFALL",
+                "SHADOW",
+                "DARKNESS"
+              ],
+              "score": 0.49616944789886475
+            },
+            {
+              "words": [
+                "TWEAK",
+                "ADJUST",
+                "ALTER",
+                "MODIFY"
+              ],
+              "score": 0.5954015851020813
+            },
+            {
+              "words": [
+                "TAPIR",
+                "OKAPI",
+                "KINKAJOU",
+                "QUOKKA"
+              ],
+              "score": 0.3783531188964844
+            },
+            {
+              "words": [
+                "LANTERN",
+                "CAVE",
+                "SHRINE",
+                "TROVE"
+              ],
+              "score": 0.33798539638519287
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4454580843448639,
+      "created_at": "2026-04-11T17:33:10.541358+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00322",
+    "words": [
+      "INNOVATE",
+      "DEVELOP",
+      "THRONE",
+      "ZEBRA",
+      "DIAPER",
+      "CROWN",
+      "CANDY",
+      "QUEEN",
+      "STROLLER",
+      "PACIFIER",
+      "BAG",
+      "TIGER",
+      "CULTIVATE",
+      "GROW",
+      "ONESIE",
+      "PRINCE"
+    ],
+    "groups": [
+      {
+        "category": "WORDS RELATED TO ROYALTY",
+        "words": [
+          "QUEEN",
+          "THRONE",
+          "CROWN",
+          "PRINCE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5307362675666809
+      },
+      {
+        "category": "PROCESSES OF GROWTH",
+        "words": [
+          "INNOVATE",
+          "GROW",
+          "DEVELOP",
+          "CULTIVATE"
+        ],
+        "color": "green",
+        "similarity_score": 0.522651195526123
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH BABY CARE",
+        "words": [
+          "DIAPER",
+          "PACIFIER",
+          "ONESIE",
+          "STROLLER"
+        ],
+        "color": "blue",
+        "similarity_score": 0.46870729327201843
+      },
+      {
+        "category": "THINGS WITH STRIPES",
+        "words": [
+          "ZEBRA",
+          "CANDY",
+          "BAG",
+          "TIGER"
+        ],
+        "color": "purple",
+        "similarity_score": 0.33718398213386536
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "THRONE",
+                "CROWN",
+                "QUEEN",
+                "PRINCE"
+              ],
+              "score": 0.5307361483573914
+            },
+            {
+              "words": [
+                "INNOVATE",
+                "DEVELOP",
+                "CULTIVATE",
+                "GROW"
+              ],
+              "score": 0.522651195526123
+            },
+            {
+              "words": [
+                "DIAPER",
+                "PACIFIER",
+                "BAG",
+                "ONESIE"
+              ],
+              "score": 0.48444876074790955
+            },
+            {
+              "words": [
+                "ZEBRA",
+                "CANDY",
+                "STROLLER",
+                "TIGER"
+              ],
+              "score": 0.29595157504081726
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "DIAPER",
+                "STROLLER",
+                "PACIFIER",
+                "BAG"
+              ],
+              "score": 0.46624264121055603
+            },
+            {
+              "words": [
+                "THRONE",
+                "CROWN",
+                "QUEEN",
+                "PRINCE"
+              ],
+              "score": 0.5307361483573914
+            },
+            {
+              "words": [
+                "INNOVATE",
+                "DEVELOP",
+                "CULTIVATE",
+                "GROW"
+              ],
+              "score": 0.522651195526123
+            },
+            {
+              "words": [
+                "ZEBRA",
+                "CANDY",
+                "TIGER",
+                "ONESIE"
+              ],
+              "score": 0.3185889720916748
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.46481966972351074,
+      "created_at": "2026-04-11T17:33:20.748934+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00346",
+    "words": [
+      "SILENCE",
+      "HEART",
+      "HAPPY",
+      "TRUST",
+      "BOARD",
+      "NAPKINS",
+      "FLIGHT",
+      "BALLOON",
+      "TABLE",
+      "SPIRIT",
+      "YARD",
+      "PLATE",
+      "SUCCESS",
+      "MAT",
+      "PATH",
+      "CLOSET"
+    ],
+    "groups": [
+      {
+        "category": "TABLE SETTINGS",
+        "words": [
+          "TABLE",
+          "PLATE",
+          "MAT",
+          "NAPKINS"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.34989309310913086
+      },
+      {
+        "category": "EMOTIONS AND CONCEPTS",
+        "words": [
+          "HEART",
+          "SILENCE",
+          "TRUST",
+          "SPIRIT"
+        ],
+        "color": "green",
+        "similarity_score": 0.33869490027427673
+      },
+      {
+        "category": "DOUBLE LETTER WORDS",
+        "words": [
+          "FLIGHT",
+          "SUCCESS",
+          "HAPPY",
+          "BALLOON"
+        ],
+        "color": "blue",
+        "similarity_score": 0.29858532547950745
+      },
+      {
+        "category": "AREAS TO CLEAR",
+        "words": [
+          "BOARD",
+          "CLOSET",
+          "YARD",
+          "PATH"
+        ],
+        "color": "purple",
+        "similarity_score": 0.2743174433708191
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "BOARD",
+                "NAPKINS",
+                "TABLE",
+                "MAT"
+              ],
+              "score": 0.3597436249256134
+            },
+            {
+              "words": [
+                "HEART",
+                "FLIGHT",
+                "BALLOON",
+                "SPIRIT"
+              ],
+              "score": 0.34670308232307434
+            },
+            {
+              "words": [
+                "SILENCE",
+                "HAPPY",
+                "TRUST",
+                "SUCCESS"
+              ],
+              "score": 0.3132803738117218
+            },
+            {
+              "words": [
+                "YARD",
+                "PLATE",
+                "PATH",
+                "CLOSET"
+              ],
+              "score": 0.23841190338134766
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "HEART",
+                "FLIGHT",
+                "BALLOON",
+                "SPIRIT"
+              ],
+              "score": 0.34670308232307434
+            },
+            {
+              "words": [
+                "NAPKINS",
+                "TABLE",
+                "PLATE",
+                "MAT"
+              ],
+              "score": 0.349893182516098
+            },
+            {
+              "words": [
+                "SILENCE",
+                "HAPPY",
+                "TRUST",
+                "SUCCESS"
+              ],
+              "score": 0.3132803738117218
+            },
+            {
+              "words": [
+                "BOARD",
+                "YARD",
+                "PATH",
+                "CLOSET"
+              ],
+              "score": 0.2743173837661743
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.3153727054595947,
+      "created_at": "2026-04-11T17:37:15.506077+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00351",
+    "words": [
+      "STRAW",
+      "DUET",
+      "PIPE",
+      "CHECKERS",
+      "SPOON",
+      "PARTNER",
+      "CAKE",
+      "COUPLE",
+      "CHESS",
+      "PAWN",
+      "BOWLING",
+      "CONFETTI",
+      "TEAM",
+      "BATON",
+      "BALLOON",
+      "FORK"
+    ],
+    "groups": [
+      {
+        "category": "WORDS RELATED TO GAMES",
+        "words": [
+          "CHECKERS",
+          "PAWN",
+          "BOWLING",
+          "CHESS"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.49183955788612366
+      },
+      {
+        "category": "ACTIVITIES WITH A PARTNER",
+        "words": [
+          "DUET",
+          "PARTNER",
+          "TEAM",
+          "COUPLE"
+        ],
+        "color": "green",
+        "similarity_score": 0.41973045468330383
+      },
+      {
+        "category": "OBJECTS THAT CAN BE BENT",
+        "words": [
+          "PIPE",
+          "SPOON",
+          "STRAW",
+          "FORK"
+        ],
+        "color": "blue",
+        "similarity_score": 0.40141353011131287
+      },
+      {
+        "category": "PARTY SUPPLIES",
+        "words": [
+          "BALLOON",
+          "CONFETTI",
+          "CAKE",
+          "BATON"
+        ],
+        "color": "purple",
+        "similarity_score": 0.36986684799194336
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CHECKERS",
+                "CHESS",
+                "PAWN",
+                "BOWLING"
+              ],
+              "score": 0.49183955788612366
+            },
+            {
+              "words": [
+                "DUET",
+                "PARTNER",
+                "COUPLE",
+                "TEAM"
+              ],
+              "score": 0.4197305142879486
+            },
+            {
+              "words": [
+                "STRAW",
+                "SPOON",
+                "CONFETTI",
+                "BALLOON"
+              ],
+              "score": 0.41866299510002136
+            },
+            {
+              "words": [
+                "PIPE",
+                "CAKE",
+                "BATON",
+                "FORK"
+              ],
+              "score": 0.2772129476070404
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "STRAW",
+                "SPOON",
+                "BATON",
+                "FORK"
+              ],
+              "score": 0.4105413854122162
+            },
+            {
+              "words": [
+                "CHECKERS",
+                "CHESS",
+                "PAWN",
+                "BOWLING"
+              ],
+              "score": 0.49183955788612366
+            },
+            {
+              "words": [
+                "DUET",
+                "PARTNER",
+                "COUPLE",
+                "TEAM"
+              ],
+              "score": 0.4197305142879486
+            },
+            {
+              "words": [
+                "PIPE",
+                "CAKE",
+                "CONFETTI",
+                "BALLOON"
+              ],
+              "score": 0.3481096923351288
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.42071259021759033,
+      "created_at": "2026-04-11T17:38:03.196998+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00355",
+    "words": [
+      "OUTBACK",
+      "SAFARI",
+      "GALLERY",
+      "WALLABY",
+      "DIDGERIDOO",
+      "KANGAROO",
+      "BOOMERANG",
+      "COLLECTION",
+      "CURATOR",
+      "CROCODYLUS",
+      "CORD",
+      "KNOT",
+      "CROCODILE",
+      "RIBBON",
+      "EXHIBIT",
+      "STRING"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE TIED",
+        "words": [
+          "KNOT",
+          "STRING",
+          "CORD",
+          "RIBBON"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4838757812976837
+      },
+      {
+        "category": "OBJECTS IN A MUSEUM",
+        "words": [
+          "CURATOR",
+          "EXHIBIT",
+          "COLLECTION",
+          "GALLERY"
+        ],
+        "color": "green",
+        "similarity_score": 0.45786312222480774
+      },
+      {
+        "category": "AUSTRALIAN WILDLIFE",
+        "words": [
+          "WALLABY",
+          "OUTBACK",
+          "CROCODILE",
+          "SAFARI"
+        ],
+        "color": "blue",
+        "similarity_score": 0.372011661529541
+      },
+      {
+        "category": "ABORIGINAL CULTURAL ITEMS",
+        "words": [
+          "BOOMERANG",
+          "DIDGERIDOO",
+          "KANGAROO",
+          "CROCODYLUS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.358669638633728
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "WALLABY",
+                "KANGAROO",
+                "CROCODYLUS",
+                "CROCODILE"
+              ],
+              "score": 0.5557789206504822
+            },
+            {
+              "words": [
+                "CORD",
+                "KNOT",
+                "RIBBON",
+                "STRING"
+              ],
+              "score": 0.48387572169303894
+            },
+            {
+              "words": [
+                "GALLERY",
+                "COLLECTION",
+                "CURATOR",
+                "EXHIBIT"
+              ],
+              "score": 0.4578632116317749
+            },
+            {
+              "words": [
+                "OUTBACK",
+                "SAFARI",
+                "DIDGERIDOO",
+                "BOOMERANG"
+              ],
+              "score": 0.25263649225234985
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "OUTBACK",
+                "WALLABY",
+                "KANGAROO",
+                "CROCODILE"
+              ],
+              "score": 0.5521871447563171
+            },
+            {
+              "words": [
+                "CORD",
+                "KNOT",
+                "RIBBON",
+                "STRING"
+              ],
+              "score": 0.48387572169303894
+            },
+            {
+              "words": [
+                "GALLERY",
+                "COLLECTION",
+                "CURATOR",
+                "EXHIBIT"
+              ],
+              "score": 0.4578632116317749
+            },
+            {
+              "words": [
+                "SAFARI",
+                "DIDGERIDOO",
+                "BOOMERANG",
+                "CROCODYLUS"
+              ],
+              "score": 0.2887214124202728
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.41810503602027893,
+      "created_at": "2026-04-11T17:38:40.654150+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00376",
+    "words": [
+      "CHAIN",
+      "PLUNGE",
+      "CARGO",
+      "VESSEL",
+      "FALL",
+      "BARGE",
+      "FREIGHT",
+      "SLIP",
+      "CORD",
+      "TWIRL",
+      "TUMBLE",
+      "SWIRL",
+      "RELATION",
+      "SWAY",
+      "FLING",
+      "TIE"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH SHIPPING",
+        "words": [
+          "CARGO",
+          "VESSEL",
+          "FREIGHT",
+          "BARGE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5220663547515869
+      },
+      {
+        "category": "THINGS THAT CAN FALL",
+        "words": [
+          "SLIP",
+          "PLUNGE",
+          "TUMBLE",
+          "FALL"
+        ],
+        "color": "green",
+        "similarity_score": 0.44436466693878174
+      },
+      {
+        "category": "WORDS RELATED TO MOVEMENT",
+        "words": [
+          "TWIRL",
+          "SWIRL",
+          "FLING",
+          "SWAY"
+        ],
+        "color": "blue",
+        "similarity_score": 0.44301357865333557
+      },
+      {
+        "category": "FORMS OF CONNECTION",
+        "words": [
+          "CHAIN",
+          "CORD",
+          "TIE",
+          "RELATION"
+        ],
+        "color": "purple",
+        "similarity_score": 0.36971864104270935
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CARGO",
+                "VESSEL",
+                "BARGE",
+                "FREIGHT"
+              ],
+              "score": 0.5220664143562317
+            },
+            {
+              "words": [
+                "TUMBLE",
+                "SWIRL",
+                "SWAY",
+                "FLING"
+              ],
+              "score": 0.4957580864429474
+            },
+            {
+              "words": [
+                "CHAIN",
+                "CORD",
+                "RELATION",
+                "TIE"
+              ],
+              "score": 0.3697187006473541
+            },
+            {
+              "words": [
+                "PLUNGE",
+                "FALL",
+                "SLIP",
+                "TWIRL"
+              ],
+              "score": 0.319580078125
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "TWIRL",
+                "TUMBLE",
+                "SWIRL",
+                "SWAY"
+              ],
+              "score": 0.45587483048439026
+            },
+            {
+              "words": [
+                "CARGO",
+                "VESSEL",
+                "BARGE",
+                "FREIGHT"
+              ],
+              "score": 0.5220664143562317
+            },
+            {
+              "words": [
+                "PLUNGE",
+                "FALL",
+                "SLIP",
+                "FLING"
+              ],
+              "score": 0.3788575828075409
+            },
+            {
+              "words": [
+                "CHAIN",
+                "CORD",
+                "RELATION",
+                "TIE"
+              ],
+              "score": 0.3697187006473541
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4447908103466034,
+      "created_at": "2026-04-11T17:42:00.888295+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00387",
+    "words": [
+      "BOUNCE",
+      "SWIM",
+      "FORWARD",
+      "BASKETBALL",
+      "DANCE",
+      "BACK",
+      "CHILDHOOD",
+      "LEAP",
+      "AHEAD",
+      "PARENTING",
+      "ADOLESCENCE",
+      "FLY",
+      "ADULTHOOD",
+      "JUMPING",
+      "BOUNCER",
+      "ON"
+    ],
+    "groups": [
+      {
+        "category": "LIFE STAGES",
+        "words": [
+          "CHILDHOOD",
+          "ADOLESCENCE",
+          "ADULTHOOD",
+          "PARENTING"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5694143176078796
+      },
+      {
+        "category": "THINGS RELATED TO MOVEMENT",
+        "words": [
+          "DANCE",
+          "FLY",
+          "SWIM",
+          "LEAP"
+        ],
+        "color": "green",
+        "similarity_score": 0.4762674570083618
+      },
+      {
+        "category": "THINGS THAT CAN BOUNCE",
+        "words": [
+          "BASKETBALL",
+          "JUMPING",
+          "BOUNCE",
+          "BOUNCER"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4495643675327301
+      },
+      {
+        "category": "WORDS THAT CAN BE FOLLOWED BY 'GO'",
+        "words": [
+          "AHEAD",
+          "FORWARD",
+          "BACK",
+          "ON"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4361354410648346
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CHILDHOOD",
+                "PARENTING",
+                "ADOLESCENCE",
+                "ADULTHOOD"
+              ],
+              "score": 0.5694141983985901
+            },
+            {
+              "words": [
+                "BOUNCE",
+                "DANCE",
+                "LEAP",
+                "JUMPING"
+              ],
+              "score": 0.5386435389518738
+            },
+            {
+              "words": [
+                "FORWARD",
+                "BACK",
+                "AHEAD",
+                "ON"
+              ],
+              "score": 0.43613556027412415
+            },
+            {
+              "words": [
+                "SWIM",
+                "BASKETBALL",
+                "FLY",
+                "BOUNCER"
+              ],
+              "score": 0.3454216718673706
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BOUNCE",
+                "LEAP",
+                "JUMPING",
+                "BOUNCER"
+              ],
+              "score": 0.5061229467391968
+            },
+            {
+              "words": [
+                "CHILDHOOD",
+                "PARENTING",
+                "ADOLESCENCE",
+                "ADULTHOOD"
+              ],
+              "score": 0.5694141983985901
+            },
+            {
+              "words": [
+                "SWIM",
+                "BASKETBALL",
+                "DANCE",
+                "FLY"
+              ],
+              "score": 0.44383785128593445
+            },
+            {
+              "words": [
+                "FORWARD",
+                "BACK",
+                "AHEAD",
+                "ON"
+              ],
+              "score": 0.43613556027412415
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.48284536600112915,
+      "created_at": "2026-04-11T17:43:52.304974+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00408",
+    "words": [
+      "SPOON",
+      "GAMES",
+      "BLANKET",
+      "FIRE",
+      "THEME",
+      "CAKE",
+      "VOLCANO",
+      "GRILL",
+      "KNIFE",
+      "DECOR",
+      "DISH",
+      "PLATE",
+      "GUNPOWDER",
+      "FORK",
+      "MUSIC",
+      "FOOD"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH MEALS",
+        "words": [
+          "PLATE",
+          "SPOON",
+          "FORK",
+          "DISH"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.3999391794204712
+      },
+      {
+        "category": "THINGS THAT CAN BE DANGEROUS",
+        "words": [
+          "FIRE",
+          "KNIFE",
+          "VOLCANO",
+          "GUNPOWDER"
+        ],
+        "color": "green",
+        "similarity_score": 0.3691434860229492
+      },
+      {
+        "category": "THINGS RELATED TO A PARTY",
+        "words": [
+          "CAKE",
+          "MUSIC",
+          "DECOR",
+          "THEME"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3576282262802124
+      },
+      {
+        "category": "PICKNICKING ESSENTIALS",
+        "words": [
+          "BLANKET",
+          "GRILL",
+          "FOOD",
+          "GAMES"
+        ],
+        "color": "purple",
+        "similarity_score": 0.323170930147171
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "GAMES",
+                "FIRE",
+                "MUSIC",
+                "FOOD"
+              ],
+              "score": 0.4320305585861206
+            },
+            {
+              "words": [
+                "SPOON",
+                "KNIFE",
+                "PLATE",
+                "FORK"
+              ],
+              "score": 0.4126416742801666
+            },
+            {
+              "words": [
+                "CAKE",
+                "VOLCANO",
+                "GRILL",
+                "GUNPOWDER"
+              ],
+              "score": 0.3235999047756195
+            },
+            {
+              "words": [
+                "BLANKET",
+                "THEME",
+                "DECOR",
+                "DISH"
+              ],
+              "score": 0.2699303925037384
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "GAMES",
+                "CAKE",
+                "MUSIC",
+                "FOOD"
+              ],
+              "score": 0.4065078794956207
+            },
+            {
+              "words": [
+                "SPOON",
+                "KNIFE",
+                "PLATE",
+                "FORK"
+              ],
+              "score": 0.4126416742801666
+            },
+            {
+              "words": [
+                "FIRE",
+                "VOLCANO",
+                "GRILL",
+                "GUNPOWDER"
+              ],
+              "score": 0.3913157284259796
+            },
+            {
+              "words": [
+                "BLANKET",
+                "THEME",
+                "DECOR",
+                "DISH"
+              ],
+              "score": 0.2699303925037384
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.36247044801712036,
+      "created_at": "2026-04-11T17:47:06.779778+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00413",
+    "words": [
+      "MERMAID",
+      "SHELF",
+      "LANTERN",
+      "JUG",
+      "TROPHY",
+      "FROG",
+      "BOWL",
+      "UNICORN",
+      "LAMP",
+      "SHADOW",
+      "CUP",
+      "SPEAKER",
+      "KRAKEN",
+      "OWL",
+      "BOWL",
+      "DRAGON"
+    ],
+    "groups": [
+      {
+        "category": "CONTAINERS",
+        "words": [
+          "CUP",
+          "JUG",
+          "BOWL",
+          "BOWL"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5094374418258667
+      },
+      {
+        "category": "MYTHICAL CREATURES",
+        "words": [
+          "UNICORN",
+          "DRAGON",
+          "MERMAID",
+          "KRAKEN"
+        ],
+        "color": "green",
+        "similarity_score": 0.42361295223236084
+      },
+      {
+        "category": "NIGHTTIME SYMBOLS",
+        "words": [
+          "OWL",
+          "LANTERN",
+          "SHADOW",
+          "FROG"
+        ],
+        "color": "blue",
+        "similarity_score": 0.40135669708251953
+      },
+      {
+        "category": "MOUNTABLE OBJECTS",
+        "words": [
+          "SHELF",
+          "SPEAKER",
+          "LAMP",
+          "TROPHY"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3177706003189087
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "TROPHY",
+                "BOWL",
+                "CUP",
+                "BOWL"
+              ],
+              "score": 0.5587121844291687
+            },
+            {
+              "words": [
+                "FROG",
+                "UNICORN",
+                "OWL",
+                "DRAGON"
+              ],
+              "score": 0.49236980080604553
+            },
+            {
+              "words": [
+                "MERMAID",
+                "LANTERN",
+                "LAMP",
+                "SHADOW"
+              ],
+              "score": 0.41192957758903503
+            },
+            {
+              "words": [
+                "SHELF",
+                "JUG",
+                "SPEAKER",
+                "KRAKEN"
+              ],
+              "score": 0.2759666442871094
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "FROG",
+                "UNICORN",
+                "OWL",
+                "DRAGON"
+              ],
+              "score": 0.49236980080604553
+            },
+            {
+              "words": [
+                "TROPHY",
+                "BOWL",
+                "CUP",
+                "BOWL"
+              ],
+              "score": 0.5587121844291687
+            },
+            {
+              "words": [
+                "LANTERN",
+                "LAMP",
+                "SHADOW",
+                "SPEAKER"
+              ],
+              "score": 0.38777437806129456
+            },
+            {
+              "words": [
+                "MERMAID",
+                "SHELF",
+                "JUG",
+                "KRAKEN"
+              ],
+              "score": 0.3329990804195404
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.41304442286491394,
+      "created_at": "2026-04-11T17:47:54.764051+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00418",
+    "words": [
+      "DRINKS",
+      "BICYCLE",
+      "TOYS",
+      "SHOES",
+      "SATIN",
+      "GAMES",
+      "SUNSHINE",
+      "MARBLE",
+      "VELVET",
+      "SILK",
+      "FOOD",
+      "CHAIN",
+      "TINS",
+      "CARS",
+      "FURNITURE",
+      "NAILS"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT ARE SMOOTH",
+        "words": [
+          "SATIN",
+          "MARBLE",
+          "SILK",
+          "VELVET"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5234646797180176
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH A PICNIC",
+        "words": [
+          "FOOD",
+          "DRINKS",
+          "GAMES",
+          "SUNSHINE"
+        ],
+        "color": "green",
+        "similarity_score": 0.42932596802711487
+      },
+      {
+        "category": "PACKAGED ITEMS",
+        "words": [
+          "TOYS",
+          "SHOES",
+          "TINS",
+          "FURNITURE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.39124855399131775
+      },
+      {
+        "category": "METAL OBJECTS",
+        "words": [
+          "BICYCLE",
+          "CARS",
+          "NAILS",
+          "CHAIN"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3097473084926605
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "SATIN",
+                "MARBLE",
+                "VELVET",
+                "SILK"
+              ],
+              "score": 0.5234648585319519
+            },
+            {
+              "words": [
+                "DRINKS",
+                "TOYS",
+                "GAMES",
+                "CARS"
+              ],
+              "score": 0.4761783182621002
+            },
+            {
+              "words": [
+                "SHOES",
+                "TINS",
+                "FURNITURE",
+                "NAILS"
+              ],
+              "score": 0.410544753074646
+            },
+            {
+              "words": [
+                "BICYCLE",
+                "SUNSHINE",
+                "FOOD",
+                "CHAIN"
+              ],
+              "score": 0.30953413248062134
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "DRINKS",
+                "TOYS",
+                "GAMES",
+                "CARS"
+              ],
+              "score": 0.4761783182621002
+            },
+            {
+              "words": [
+                "SATIN",
+                "MARBLE",
+                "VELVET",
+                "SILK"
+              ],
+              "score": 0.5234648585319519
+            },
+            {
+              "words": [
+                "SHOES",
+                "TINS",
+                "FURNITURE",
+                "NAILS"
+              ],
+              "score": 0.410544753074646
+            },
+            {
+              "words": [
+                "BICYCLE",
+                "SUNSHINE",
+                "FOOD",
+                "CHAIN"
+              ],
+              "score": 0.30953413248062134
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4134466350078583,
+      "created_at": "2026-04-11T17:48:39.266787+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00504",
+    "words": [
+      "FENCE",
+      "TOWER",
+      "SLIPPERY",
+      "BUMPY",
+      "GARDEN",
+      "SILKY",
+      "PARK",
+      "SMOOTH",
+      "CASTLE",
+      "HILARIOUS",
+      "WALL",
+      "BRIDGE",
+      "JOKE",
+      "BEACH",
+      "GIGGLE",
+      "COMEDY"
+    ],
+    "groups": [
+      {
+        "category": "ADJECTIVES DESCRIBING TEXTURES",
+        "words": [
+          "SMOOTH",
+          "SLIPPERY",
+          "SILKY",
+          "BUMPY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4680260419845581
+      },
+      {
+        "category": "THINGS THAT MAKE YOU LAUGH",
+        "words": [
+          "JOKE",
+          "GIGGLE",
+          "HILARIOUS",
+          "COMEDY"
+        ],
+        "color": "green",
+        "similarity_score": 0.4580220878124237
+      },
+      {
+        "category": "THINGS THAT CAN BE BUILT",
+        "words": [
+          "BRIDGE",
+          "TOWER",
+          "WALL",
+          "FENCE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.43643951416015625
+      },
+      {
+        "category": "THINGS TO SEE ON A TRIP",
+        "words": [
+          "CASTLE",
+          "GARDEN",
+          "BEACH",
+          "PARK"
+        ],
+        "color": "purple",
+        "similarity_score": 0.40514782071113586
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SLIPPERY",
+                "BUMPY",
+                "SILKY",
+                "SMOOTH"
+              ],
+              "score": 0.4680260419845581
+            },
+            {
+              "words": [
+                "TOWER",
+                "CASTLE",
+                "WALL",
+                "BRIDGE"
+              ],
+              "score": 0.45820140838623047
+            },
+            {
+              "words": [
+                "HILARIOUS",
+                "JOKE",
+                "GIGGLE",
+                "COMEDY"
+              ],
+              "score": 0.45802178978919983
+            },
+            {
+              "words": [
+                "FENCE",
+                "GARDEN",
+                "PARK",
+                "BEACH"
+              ],
+              "score": 0.3878251314163208
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "TOWER",
+                "CASTLE",
+                "WALL",
+                "BRIDGE"
+              ],
+              "score": 0.45820140838623047
+            },
+            {
+              "words": [
+                "SLIPPERY",
+                "BUMPY",
+                "SILKY",
+                "SMOOTH"
+              ],
+              "score": 0.4680260419845581
+            },
+            {
+              "words": [
+                "HILARIOUS",
+                "JOKE",
+                "GIGGLE",
+                "COMEDY"
+              ],
+              "score": 0.45802178978919983
+            },
+            {
+              "words": [
+                "FENCE",
+                "GARDEN",
+                "PARK",
+                "BEACH"
+              ],
+              "score": 0.3878251314163208
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4419088661670685,
+      "created_at": "2026-04-11T18:02:27.546109+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00511",
+    "words": [
+      "FOOD",
+      "SKI",
+      "SECRET",
+      "SPILL",
+      "PLAY",
+      "HIDE",
+      "SWIM",
+      "FLEE",
+      "FRIENDS",
+      "MEMORIES",
+      "GRILL",
+      "FLIGHT",
+      "JOKES",
+      "EXPLORE",
+      "RUN",
+      "GARDEN"
+    ],
+    "groups": [
+      {
+        "category": "THINGS YOU CAN DO ON VACATION",
+        "words": [
+          "SWIM",
+          "SKI",
+          "EXPLORE",
+          "PLAY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4270516633987427
+      },
+      {
+        "category": "THINGS RELATED TO ESCAPE",
+        "words": [
+          "FLEE",
+          "RUN",
+          "HIDE",
+          "FLIGHT"
+        ],
+        "color": "green",
+        "similarity_score": 0.3878948390483856
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH FOOD",
+        "words": [
+          "GRILL",
+          "FOOD",
+          "GARDEN",
+          "SPILL"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3311156928539276
+      },
+      {
+        "category": "THINGS THAT CAN BE SHARED OR EXPERIENCED",
+        "words": [
+          "SECRET",
+          "MEMORIES",
+          "JOKES",
+          "FRIENDS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.33024102449417114
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "SKI",
+                "SWIM",
+                "FLEE",
+                "RUN"
+              ],
+              "score": 0.45844459533691406
+            },
+            {
+              "words": [
+                "FOOD",
+                "FRIENDS",
+                "MEMORIES",
+                "JOKES"
+              ],
+              "score": 0.3554660379886627
+            },
+            {
+              "words": [
+                "PLAY",
+                "FLIGHT",
+                "EXPLORE",
+                "GARDEN"
+              ],
+              "score": 0.3350285589694977
+            },
+            {
+              "words": [
+                "SECRET",
+                "SPILL",
+                "HIDE",
+                "GRILL"
+              ],
+              "score": 0.31432095170021057
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 0,
+          "groups": [
+            {
+              "words": [
+                "SKI",
+                "SWIM",
+                "FLEE",
+                "RUN"
+              ],
+              "score": 0.45844459533691406
+            },
+            {
+              "words": [
+                "FOOD",
+                "MEMORIES",
+                "FLIGHT",
+                "JOKES"
+              ],
+              "score": 0.3455718457698822
+            },
+            {
+              "words": [
+                "SECRET",
+                "SPILL",
+                "HIDE",
+                "FRIENDS"
+              ],
+              "score": 0.3435373306274414
+            },
+            {
+              "words": [
+                "PLAY",
+                "GRILL",
+                "EXPLORE",
+                "GARDEN"
+              ],
+              "score": 0.3104976713657379
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.36907583475112915,
+      "created_at": "2026-04-11T18:03:43.678237+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00529",
+    "words": [
+      "BATTERY",
+      "SAND",
+      "BALL",
+      "ENGINE",
+      "TIRE",
+      "WHEEL",
+      "FUEL",
+      "FAIL",
+      "CANDY",
+      "FLOP",
+      "FRISBEE",
+      "DONUT",
+      "BELT",
+      "FLUKE",
+      "BAGEL",
+      "BUST"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT CAN BE A LETDOWN",
+        "words": [
+          "BUST",
+          "FLUKE",
+          "FAIL",
+          "FLOP"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.39805904030799866
+      },
+      {
+        "category": "THINGS ASSOCIATED WITH CARS",
+        "words": [
+          "ENGINE",
+          "FUEL",
+          "BATTERY",
+          "WHEEL"
+        ],
+        "color": "green",
+        "similarity_score": 0.37872958183288574
+      },
+      {
+        "category": "THINGS THAT CAN BE THROWN",
+        "words": [
+          "BALL",
+          "FRISBEE",
+          "CANDY",
+          "SAND"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3677169978618622
+      },
+      {
+        "category": "THINGS WITH A HOLE",
+        "words": [
+          "BAGEL",
+          "DONUT",
+          "BELT",
+          "TIRE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3250633478164673
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "ENGINE",
+                "TIRE",
+                "WHEEL",
+                "FUEL"
+              ],
+              "score": 0.4493844509124756
+            },
+            {
+              "words": [
+                "SAND",
+                "CANDY",
+                "DONUT",
+                "BAGEL"
+              ],
+              "score": 0.42739737033843994
+            },
+            {
+              "words": [
+                "FAIL",
+                "FLOP",
+                "FLUKE",
+                "BUST"
+              ],
+              "score": 0.39805904030799866
+            },
+            {
+              "words": [
+                "BATTERY",
+                "BALL",
+                "FRISBEE",
+                "BELT"
+              ],
+              "score": 0.2789549231529236
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 1,
+          "groups": [
+            {
+              "words": [
+                "SAND",
+                "CANDY",
+                "DONUT",
+                "BAGEL"
+              ],
+              "score": 0.42739737033843994
+            },
+            {
+              "words": [
+                "ENGINE",
+                "TIRE",
+                "WHEEL",
+                "FUEL"
+              ],
+              "score": 0.4493844509124756
+            },
+            {
+              "words": [
+                "FAIL",
+                "FLOP",
+                "FLUKE",
+                "BUST"
+              ],
+              "score": 0.39805904030799866
+            },
+            {
+              "words": [
+                "BATTERY",
+                "BALL",
+                "FRISBEE",
+                "BELT"
+              ],
+              "score": 0.2789549231529236
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.36739224195480347,
+      "created_at": "2026-04-11T18:06:49.957782+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00552",
+    "words": [
+      "REGGAE",
+      "WORM",
+      "RABBIT",
+      "SNAKE",
+      "PULVERIZE",
+      "SMASH",
+      "PARROT",
+      "SQUISH",
+      "MONKEY",
+      "LIZARD",
+      "MASH",
+      "TOAD",
+      "FROG",
+      "JAZZ",
+      "HIPHOP",
+      "FUNK"
+    ],
+    "groups": [
+      {
+        "category": "THINGS FOUND IN A JUNGLE",
+        "words": [
+          "PARROT",
+          "LIZARD",
+          "MONKEY",
+          "FROG"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5558805465698242
+      },
+      {
+        "category": "ANIMALS THAT CAN BURROW",
+        "words": [
+          "WORM",
+          "RABBIT",
+          "TOAD",
+          "SNAKE"
+        ],
+        "color": "green",
+        "similarity_score": 0.4795176088809967
+      },
+      {
+        "category": "STYLES OF MUSIC",
+        "words": [
+          "FUNK",
+          "JAZZ",
+          "HIPHOP",
+          "REGGAE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.47546181082725525
+      },
+      {
+        "category": "THINGS THAT CAN BE SQUASHED",
+        "words": [
+          "MASH",
+          "SMASH",
+          "SQUISH",
+          "PULVERIZE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4008105993270874
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SNAKE",
+                "LIZARD",
+                "TOAD",
+                "FROG"
+              ],
+              "score": 0.6055289506912231
+            },
+            {
+              "words": [
+                "REGGAE",
+                "JAZZ",
+                "HIPHOP",
+                "FUNK"
+              ],
+              "score": 0.4754618704319
+            },
+            {
+              "words": [
+                "WORM",
+                "RABBIT",
+                "PARROT",
+                "MONKEY"
+              ],
+              "score": 0.46377110481262207
+            },
+            {
+              "words": [
+                "PULVERIZE",
+                "SMASH",
+                "SQUISH",
+                "MASH"
+              ],
+              "score": 0.40081068873405457
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SNAKE",
+                "LIZARD",
+                "TOAD",
+                "FROG"
+              ],
+              "score": 0.6055289506912231
+            },
+            {
+              "words": [
+                "REGGAE",
+                "JAZZ",
+                "HIPHOP",
+                "FUNK"
+              ],
+              "score": 0.4754618704319
+            },
+            {
+              "words": [
+                "WORM",
+                "RABBIT",
+                "PARROT",
+                "MONKEY"
+              ],
+              "score": 0.46377110481262207
+            },
+            {
+              "words": [
+                "PULVERIZE",
+                "SMASH",
+                "SQUISH",
+                "MASH"
+              ],
+              "score": 0.40081068873405457
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4779176414012909,
+      "created_at": "2026-04-11T18:10:30.519174+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "INF-00565",
+    "words": [
+      "BREW",
+      "PIG",
+      "LAMB",
+      "SHRUB",
+      "BULB",
+      "SEEDLING",
+      "LATTE",
+      "ROOT",
+      "HERB",
+      "MULCH",
+      "SPROUT",
+      "ESPRESSO",
+      "MOCHA",
+      "LEAF",
+      "COW",
+      "SHEEP"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH COFFEE",
+        "words": [
+          "ESPRESSO",
+          "LATTE",
+          "MOCHA",
+          "BREW"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5495337843894958
+      },
+      {
+        "category": "ANIMALS ON A FARM",
+        "words": [
+          "COW",
+          "PIG",
+          "SHEEP",
+          "LAMB"
+        ],
+        "color": "green",
+        "similarity_score": 0.5221222639083862
+      },
+      {
+        "category": "THINGS FOUND IN A GARDEN",
+        "words": [
+          "SHRUB",
+          "MULCH",
+          "HERB",
+          "LEAF"
+        ],
+        "color": "blue",
+        "similarity_score": 0.45191287994384766
+      },
+      {
+        "category": "PLANT PARTS",
+        "words": [
+          "BULB",
+          "SEEDLING",
+          "ROOT",
+          "SPROUT"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4075677692890167
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "BREW",
+                "LATTE",
+                "ESPRESSO",
+                "MOCHA"
+              ],
+              "score": 0.5495337843894958
+            },
+            {
+              "words": [
+                "PIG",
+                "LAMB",
+                "COW",
+                "SHEEP"
+              ],
+              "score": 0.5221222043037415
+            },
+            {
+              "words": [
+                "SHRUB",
+                "SEEDLING",
+                "SPROUT",
+                "LEAF"
+              ],
+              "score": 0.5097127556800842
+            },
+            {
+              "words": [
+                "BULB",
+                "ROOT",
+                "HERB",
+                "MULCH"
+              ],
+              "score": 0.28050658106803894
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SHRUB",
+                "SEEDLING",
+                "SPROUT",
+                "LEAF"
+              ],
+              "score": 0.5097127556800842
+            },
+            {
+              "words": [
+                "PIG",
+                "LAMB",
+                "COW",
+                "SHEEP"
+              ],
+              "score": 0.5221222043037415
+            },
+            {
+              "words": [
+                "BREW",
+                "LATTE",
+                "ESPRESSO",
+                "MOCHA"
+              ],
+              "score": 0.5495337843894958
+            },
+            {
+              "words": [
+                "BULB",
+                "ROOT",
+                "HERB",
+                "MULCH"
+              ],
+              "score": 0.28050658106803894
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4827841520309448,
+      "created_at": "2026-04-11T18:12:22.831789+00:00",
+      "accepted": false
+    }
+  }
+]

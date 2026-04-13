@@ -4,30 +4,79 @@ import json
 import random
 from typing import Optional
 
-from src.config import DRY_RUN, ANTHROPIC_API_KEY, CLAUDE_MODEL, CLAUDE_MAX_TOKENS
+from src.config import (
+    DRY_RUN, LLM_PROVIDER,
+    OPENAI_API_KEY, OPENAI_MODEL,
+    ANTHROPIC_API_KEY, CLAUDE_MODEL, CLAUDE_MAX_TOKENS,
+)
 
 
 class LLMClient:
-    """Wrapper around the Anthropic Claude API."""
+    """Unified LLM client supporting OpenAI, Anthropic, and Mock."""
 
-    def __init__(self, dry_run: Optional[bool] = None):
+    def __init__(self, dry_run: Optional[bool] = None, provider: Optional[str] = None):
         self.dry_run = dry_run if dry_run is not None else DRY_RUN
+        self.provider = provider or LLM_PROVIDER
         self._client = None
-        if not self.dry_run:
+
+        if self.dry_run:
+            self.provider = "mock"
+            return
+
+        if self.provider == "openai":
+            from openai import OpenAI
+            self._client = OpenAI(api_key=OPENAI_API_KEY)
+            self.model = OPENAI_MODEL
+        elif self.provider == "anthropic":
             import anthropic
             self._client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+            self.model = CLAUDE_MODEL
+        else:
+            self.provider = "mock"
 
     def complete(self, system: str, user: str, temperature: float = 0.7) -> str:
-        if self.dry_run:
+        if self.provider == "mock":
             return MockLLMClient.respond(system, user)
-        response = self._client.messages.create(
-            model=CLAUDE_MODEL,
-            max_tokens=CLAUDE_MAX_TOKENS,
-            temperature=temperature,
-            system=system,
-            messages=[{"role": "user", "content": user}],
-        )
-        return response.content[0].text
+
+        if self.provider == "openai":
+            response = self._client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                temperature=temperature,
+                response_format={"type": "json_object"},
+            )
+            return _strip_markdown(response.choices[0].message.content)
+
+        if self.provider == "anthropic":
+            response = self._client.messages.create(
+                model=self.model,
+                max_tokens=CLAUDE_MAX_TOKENS,
+                temperature=temperature,
+                system=system,
+                messages=[{"role": "user", "content": user}],
+            )
+            return _strip_markdown(response.content[0].text)
+
+        return MockLLMClient.respond(system, user)
+
+
+def _strip_markdown(text: str) -> str:
+    """Strip markdown code fences (```json ... ```) that some LLMs wrap around JSON."""
+    if not text:
+        return text
+    text = text.strip()
+    if text.startswith("```"):
+        # Remove opening fence (```json or just ```)
+        lines = text.split("\n")
+        lines = lines[1:]
+        # Remove closing fence
+        if lines and lines[-1].strip().startswith("```"):
+            lines = lines[:-1]
+        text = "\n".join(lines).strip()
+    return text
 
 
 class MockLLMClient:

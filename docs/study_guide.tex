@@ -1,0 +1,693 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{float}
+
+% Colors
+\definecolor{yellow_conn}{HTML}{F9DF6D}
+\definecolor{green_conn}{HTML}{A0C35A}
+\definecolor{blue_conn}{HTML}{B0C4EF}
+\definecolor{purple_conn}{HTML}{BA81C5}
+\definecolor{codebg}{HTML}{F5F5F0}
+\definecolor{noteblue}{HTML}{E8F0FE}
+
+\hypersetup{colorlinks=true, linkcolor=blue!60!black, urlcolor=blue!60!black}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{STA 561D}
+\lhead{Infinite Connections --- Study Guide}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+\lstset{
+    basicstyle=\small\ttfamily,
+    backgroundcolor=\color{codebg},
+    frame=single,
+    framerule=0pt,
+    breaklines=true,
+    columns=fullflexible,
+}
+
+\newtcolorbox{keyidea}{
+    colback=noteblue, colframe=blue!40!black,
+    fonttitle=\bfseries, title=Key Idea, boxrule=0.5pt
+}
+
+\newtcolorbox{formula}{
+    colback=yellow_conn!20, colframe=orange!50!black,
+    fonttitle=\bfseries, title=Formula, boxrule=0.5pt
+}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Infinite Connections}\\[6pt]
+\Large Comprehensive Study Guide\\[4pt]
+\large AI-Generated NYT Connections Puzzles}
+\author{STA 561D --- Duke University}
+\date{Spring 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\tableofcontents
+\newpage
+
+% =========================================================================
+\section{The Connections Puzzle}
+% =========================================================================
+
+\subsection{What Is It?}
+
+NYT Connections is a daily word puzzle published by \emph{The New York Times}. The player is given \textbf{16 words} and must sort them into \textbf{4 groups of 4}, where each group shares a hidden connection. Groups are color-coded by difficulty:
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Color & Difficulty & Example \\
+\midrule
+\colorbox{yellow_conn}{Yellow} & Easiest & WAYS TO SAY HELLO: Hi, Hey, Howdy, Yo \\
+\colorbox{green_conn}{Green} & Medium & PLANETS: Mars, Venus, Saturn, Jupiter \\
+\colorbox{blue_conn}{Blue} & Hard & FIRE \_\_\_: Work, Fly, Place, Side \\
+\colorbox{purple_conn}{Purple} & Hardest & TAYLOR SWIFT ALBUMS: Folklore, Reputation, Midnights, Fearless \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Players get 4 mistakes before losing. A guess of 3 correct out of 4 triggers ``One away!'' feedback.
+
+\subsection{Why Is Generation Hard?}
+
+\begin{enumerate}[nosep]
+    \item \textbf{Unique solution.} There are $\binom{16}{4} \times \binom{12}{4} \times \binom{8}{4} = 2{,}627{,}625$ ways to partition 16 words into groups of 4. Exactly \emph{one} must be correct.
+    \item \textbf{Difficulty gradient.} Groups must range from obvious to subtle.
+    \item \textbf{Deception.} Good puzzles contain plausible-but-wrong groupings (``false groups'') that mislead solvers.
+    \item \textbf{Diversity.} Categories should span synonyms, wordplay, fill-in-the-blank, pop culture, etc.
+\end{enumerate}
+
+\subsection{The NYT Dataset}
+
+We work with a ground truth dataset of \textbf{554 NYT Connections puzzles} (June 2023 -- December 2024).
+
+\begin{table}[H]
+\centering
+\caption{NYT dataset summary.}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Metric & Value \\
+\midrule
+Total puzzles & 554 \\
+Unique words & 4,918 \\
+Unique categories & 2,054 \\
+Multi-word entries & 112 \\
+Puzzles with difficulty ratings & 227 \\
+Difficulty mean $\pm$ std & $2.94 \pm 0.64$ \\
+Most frequent word & BALL (15 appearances) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Category type distribution across all 2,216 category slots:
+\begin{itemize}[nosep]
+    \item Common property: 1,013 (45.7\%) --- e.g., ``THINGS WITH WHEELS''
+    \item Synonyms / Slang: 846 (38.2\%) --- e.g., ``WAYS TO SAY GOODBYE''
+    \item Fill-in-the-blank: 202 (9.1\%) --- e.g., ``FIRE \_\_\_''
+    \item Pop culture: 125 (5.6\%) --- e.g., ``BEYONCE SONGS''
+    \item Wordplay / Hidden pattern: 30 (1.4\%) --- e.g., ``B-\_\_\_''
+\end{itemize}
+
+% =========================================================================
+\section{Foundation: Sentence Embeddings and Cosine Similarity}
+% =========================================================================
+
+Every component in this project relies on \textbf{sentence embeddings} --- dense vector representations of words that capture semantic meaning.
+
+\subsection{The MPNET Model}
+
+We use \texttt{all-mpnet-base-v2} from the \texttt{sentence-transformers} library. It maps each word or short phrase to a \textbf{768-dimensional vector}:
+\[
+    \text{embed}: \text{word} \rightarrow \mathbb{R}^{768}
+\]
+
+Words with similar meanings have vectors that point in similar directions. ``PIANO'' and ``GUITAR'' are close in embedding space; ``PIANO'' and ``TRUCK'' are far apart.
+
+\subsection{Cosine Similarity}
+
+\begin{formula}
+Given two embedding vectors $\mathbf{a}, \mathbf{b} \in \mathbb{R}^{768}$:
+\[
+    \cos(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \, \|\mathbf{b}\|}
+\]
+Range: $[-1, 1]$, where $1$ = identical direction, $0$ = orthogonal, $-1$ = opposite.
+\end{formula}
+
+In practice, MPNET embeddings are normalized, so cosine similarity reduces to the dot product.
+
+\subsection{Average Pairwise Similarity}
+
+For a group of 4 words with embeddings $\{\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3, \mathbf{e}_4\}$, there are $\binom{4}{2} = 6$ pairs:
+\begin{formula}
+\[
+    \bar{s} = \frac{1}{6} \sum_{i < j} \cos(\mathbf{e}_i, \mathbf{e}_j)
+\]
+\end{formula}
+
+This is the simplest measure of group cohesion. Higher $\bar{s}$ = words are more related.
+
+\begin{keyidea}
+Average pairwise cosine similarity is the fundamental building block. It is used for:
+\begin{itemize}[nosep]
+    \item Selecting the best 4 words from an 8-word candidate pool
+    \item Scoring groups in the embedding solver
+    \item Assigning difficulty colors
+    \item Evaluating puzzle quality
+\end{itemize}
+\end{keyidea}
+
+% =========================================================================
+\section{Puzzle Generation Pipeline}
+% =========================================================================
+
+The pipeline creates puzzles through six stages. The LLM provides creativity; MPNET provides consistency.
+
+\subsection{Stage 1: Group Creation (LLM + Embedding Selection)}
+
+Each puzzle is built \textbf{one group at a time} across 4 LLM calls.
+
+\begin{algorithm}[H]
+\caption{Iterative Group Creation}
+\begin{algorithmic}[1]
+\State $\text{groups} \gets []$
+\For{$i = 1$ to $4$}
+    \State $\text{seeds} \gets \text{sample 4 random words from NYT word bank}$
+    \State \textbf{LLM call}: generate category name + 8 candidate words (story-injected)
+    \State $\text{pool} \gets 8$ candidate words
+    \State $\text{best4}, \text{score} \gets \textsc{SelectBest}(\text{pool}, n=4)$ \Comment{MPNET}
+    \State Remove any words already in previous groups
+    \State Append $(\text{category}, \text{best4}, \text{score})$ to groups
+\EndFor
+\State \Return groups
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{Embedding Selection: 8 $\rightarrow$ 4}
+
+The LLM proposes 8 candidates; we use MPNET to select the 4 most internally similar:
+
+\begin{algorithm}[H]
+\caption{SelectBest: Choose $k$ most cohesive words from $n$}
+\begin{algorithmic}[1]
+\Require Words $W = \{w_1, \ldots, w_n\}$, target size $k$
+\State Encode all words: $\mathbf{E} = \{\text{embed}(w_i)\}$
+\State $\text{best\_score} \gets -1$
+\For{each $C \in \binom{W}{k}$} \Comment{$\binom{8}{4} = 70$ combinations}
+    \State $s \gets$ average pairwise cosine similarity of $C$
+    \If{$s > \text{best\_score}$}
+        \State $\text{best\_score} \gets s$; $\text{best\_combo} \gets C$
+    \EndIf
+\EndFor
+\State \Return best\_combo, best\_score
+\end{algorithmic}
+\end{algorithm}
+
+\begin{keyidea}
+The LLM is not allowed to pick the final 4 words. LLMs are bad at estimating semantic similarity and make inconsistent selections. MPNET selection is deterministic and correlates with human difficulty perception.
+\end{keyidea}
+
+\subsubsection{Story Injection for Diversity}
+
+Without intervention, the LLM generates the same $\sim$20 categories repeatedly (BOARD GAMES, FRUITS, COLORS, \ldots). The \textbf{story injection} technique solves this:
+
+\begin{quote}
+\emph{``First, write a short story (2--3 sentences) using these words: [4 random words from the NYT word bank]. Then use that story as inspiration for creating your category.''}
+\end{quote}
+
+The random seed words force the LLM into different creative directions each time.
+
+\subsection{Stage 2: False-Group Method (Primary)}
+
+This produces the highest-quality puzzles. A user study found that false-group puzzles beat NYT originals in user preference 42.86\% of the time.
+
+\begin{algorithm}[H]
+\caption{False-Group Pipeline}
+\begin{algorithmic}[1]
+\State \textbf{LLM call}: Generate root group $R = (c_R, \{w_1, w_2, w_3, w_4\})$
+\State \quad Each $w_i$ must have an alternate meaning $m_i$
+\State $\text{groups} \gets []$
+\For{each $(w_i, m_i) \in R$}
+    \State \textbf{LLM call}: Generate category inspired by meaning $m_i$, with 8 candidates
+    \State $\text{best4} \gets \textsc{SelectBest}(\text{candidates}, 4)$ \Comment{MPNET}
+    \State Append to groups
+\EndFor
+\State \Return groups \Comment{Root group $R$ is the decoy --- discarded}
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Example:} Root group ``THINGS THAT ARE ROUND'' $\rightarrow$ \{BALL, GLOBE, RING, WHEEL\}.
+\begin{itemize}[nosep]
+    \item BALL $\xrightarrow{\text{alternate}}$ ``a formal dance event'' $\rightarrow$ generates DANCE category
+    \item GLOBE $\xrightarrow{\text{alternate}}$ ``a theater or news org'' $\rightarrow$ generates THEATER category
+    \item RING $\xrightarrow{\text{alternate}}$ ``the sound a phone makes'' $\rightarrow$ generates SOUNDS category
+    \item WHEEL $\xrightarrow{\text{alternate}}$ ``to turn or rotate'' $\rightarrow$ generates MOVEMENT category
+\end{itemize}
+
+The solver sees 16 words that \emph{look like} they could form a ``ROUND THINGS'' group, but that group doesn't exist. This creates natural deception.
+
+\subsection{Stage 3: Editor Pass}
+
+A second LLM call reviews the complete puzzle:
+\begin{itemize}[nosep]
+    \item Checks if each category name accurately describes its 4 words
+    \item Rewrites inaccurate names
+    \item Flags groups where a word doesn't fit
+\end{itemize}
+
+\subsection{Stage 4: Difficulty Color Assignment}
+
+\begin{formula}
+For each group, compute average pairwise cosine similarity $\bar{s}$. Sort groups by $\bar{s}$ descending:
+\[
+    \text{highest } \bar{s} \rightarrow \text{Yellow},\quad
+    \text{next} \rightarrow \text{Green},\quad
+    \text{next} \rightarrow \text{Blue},\quad
+    \text{lowest } \bar{s} \rightarrow \text{Purple}
+\]
+\end{formula}
+
+\textbf{Intuition:} High semantic similarity = words obviously relate = easy. Low similarity = the connection is subtle or relies on wordplay = hard.
+
+Reference thresholds from the literature (validated against NYT data):
+
+\begin{table}[H]
+\centering
+\caption{Color thresholds: paper values vs.\ our empirical measurements on 554 NYT puzzles.}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+& \multicolumn{2}{c}{Paper (expected)} & \multicolumn{2}{c}{Our measurement} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Color & Mean $\bar{s}$ & Variance & Mean $\bar{s}$ & Std \\
+\midrule
+\colorbox{yellow_conn}{Yellow} & 0.40 & 0.0285 & 0.389 & 0.089 \\
+\colorbox{green_conn}{Green}   & 0.35 & 0.0214 & 0.315 & 0.060 \\
+\colorbox{blue_conn}{Blue}     & 0.29 & 0.0123 & 0.268 & 0.050 \\
+\colorbox{purple_conn}{Purple} & 0.27 & 0.0108 & 0.225 & 0.049 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+NYT's color ordering matches pure similarity ranking only \textbf{43.9\%} of the time, confirming that difficulty has a knowledge/wordplay component that embeddings alone cannot capture.
+
+\subsection{Stage 5: Deduplication}
+
+Each generated puzzle's 16-word set is compared against all 554 known NYT puzzles:
+\[
+    \text{overlap}(P_\text{gen}, P_\text{nyt}) = |W_\text{gen} \cap W_\text{nyt}|
+\]
+If $\text{overlap} > 6$ for any NYT puzzle, the generated puzzle is flagged as a duplicate.
+
+\subsection{Pipeline Summary}
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Stage & Who does it & Why \\
+\midrule
+Group creation & LLM (creative) & Invents categories and candidate words \\
+Word selection & MPNET (deterministic) & Picks the most cohesive 4 from 8 \\
+Editor pass & LLM (quality check) & Fixes inaccurate category names \\
+Color assignment & MPNET (scoring) & Maps similarity to difficulty \\
+Deduplication & Set intersection & Prevents copying NYT puzzles \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% =========================================================================
+\section{Solver Algorithms}
+% =========================================================================
+
+Three independent solvers verify that each puzzle has exactly one valid solution.
+
+\subsection{Solver 1: Embedding Solver (Greedy)}
+
+\textbf{Source:} ``Missed Connections'' paper (arXiv:2404.11730).
+
+\begin{algorithm}[H]
+\caption{Embedding Solver}
+\begin{algorithmic}[1]
+\Require 16 words $W$
+\State Encode all words: $\mathbf{E} = \{\text{embed}(w_i)\}_{i=1}^{16}$
+\State Compute $16 \times 16$ cosine similarity matrix $S$
+\State Score all $\binom{16}{4} = 1{,}820$ possible groups by $\bar{s}$
+\State Sort groups by score (descending)
+\State $\text{selected} \gets []$; $\text{used} \gets \emptyset$
+\For{each $(\text{group}, \text{score})$ in sorted order}
+    \If{group has no overlap with used}
+        \State Append group to selected; add words to used
+    \EndIf
+    \If{$|\text{selected}| = 4$} \textbf{break} \EndIf
+\EndFor
+\State \Return selected
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Complexity:} $O\bigl(\binom{16}{4}\bigr) = O(1{,}820)$ group evaluations + sorting.\\
+\textbf{Runtime:} $\sim$0.019s per puzzle.\\
+\textbf{Accuracy:} 2.0\% full-puzzle solve rate on 554 NYT puzzles.
+
+\textbf{Limitation:} Greedy selection can ``use up'' key words in a wrong group, causing cascading errors. The solver never backtracks.
+
+\subsection{Solver 2: Clustering Solver (Beam Search)}
+
+\textbf{Source:} ``Deceptively Simple'' paper (arXiv:2412.01621).
+
+This solver uses a more sophisticated scoring function and beam search to avoid greedy errors.
+
+\subsubsection{Group Similarity Score ($G$)}
+
+\begin{formula}
+For a group of 4 word embeddings $\{\mathbf{e}_1, \ldots, \mathbf{e}_4\}$:
+\[
+    G = 0.4 \cdot I + 0.3 \cdot s + 0.3 \cdot V
+\]
+where:
+\begin{align}
+    I &= -\sum_{i=1}^{4} \|\mathbf{e}_i - \boldsymbol{\mu}\|^2
+    & \text{(negative inertia, } \boldsymbol{\mu} = \text{centroid)} \\[4pt]
+    s &= \min_{i < j} \cos(\mathbf{e}_i, \mathbf{e}_j)
+    & \text{(minimum pairwise similarity)} \\[4pt]
+    V &= \frac{\text{mean}(P)}{1 + \text{var}(P)}
+    & \text{(stability-weighted mean)}
+\end{align}
+$P = \{\cos(\mathbf{e}_i, \mathbf{e}_j) : i < j\}$ is the set of all 6 pairwise similarities.
+\end{formula}
+
+\textbf{Intuition for each component:}
+\begin{itemize}[nosep]
+    \item $I$ (inertia): How tightly clustered are the words? Higher $|I|$ means tighter clustering. The negative sign makes ``tighter = higher score.''
+    \item $s$ (min similarity): Penalizes groups where even one pair is weakly related. A group is only as strong as its weakest link.
+    \item $V$ (stability): Rewards consistent similarity across all pairs. A group where all pairs have similarity 0.3 scores higher than one with similarities \{0.5, 0.5, 0.5, 0.1, 0.1, 0.1\}, even if the means are equal.
+\end{itemize}
+
+\subsubsection{Penalty Score ($P$)}
+
+\begin{formula}
+After selecting a candidate group $C$ with centroid $\boldsymbol{\mu}_C$, compute how strongly the remaining words $R$ are attracted to it:
+\[
+    P = \frac{1}{|R|} \sum_{r \in R} \cos(\boldsymbol{\mu}_C, \mathbf{r})
+\]
+Lower penalty = better separation between this group and everything else.
+\end{formula}
+
+\subsubsection{Beam Search}
+
+\begin{algorithm}[H]
+\caption{Clustering Solver (Beam Search)}
+\begin{algorithmic}[1]
+\Require 16 words $W$, beam width $b = 10$
+\State $\text{beam} \gets [(\text{groups}=[], \text{remaining}=W, \text{score}=0)]$
+\For{step $= 1$ to $4$}
+    \State $\text{candidates} \gets []$
+    \For{each state $(\text{groups}, \text{remaining}, \text{cumul})$ in beam}
+        \For{each group $C \in \binom{\text{remaining}}{4}$}
+            \State $g \gets G(C)$ \Comment{Group Similarity Score}
+            \State $p \gets P(C, \text{remaining} \setminus C)$ \Comment{Penalty Score}
+            \State $\text{new\_score} \gets \text{cumul} + g - p$
+            \State Add $(\text{groups} \cup \{C\},\ \text{remaining} \setminus C,\ \text{new\_score})$ to candidates
+        \EndFor
+    \EndFor
+    \State Sort candidates by score (descending)
+    \State $\text{beam} \gets$ top $b$ candidates
+\EndFor
+\State \Return best complete solution from beam
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Complexity:} At each step, up to $b \times \binom{|\text{remaining}|}{4}$ evaluations. Step 1: $10 \times 1{,}820$; Step 2: $10 \times 495$; Step 3: $10 \times 70$; Step 4: $10 \times 1$.\\
+\textbf{Runtime:} $\sim$0.95s per puzzle ($\sim$50$\times$ slower than embedding solver).\\
+\textbf{Accuracy:} 3.4\% full-puzzle solve rate.
+
+\subsection{Solver 3: LLM Solver (Chain-of-Thought)}
+
+\textbf{Source:} ``Missed Connections'' paper.
+
+Presents all 16 words to Claude with a chain-of-thought prompt:
+\begin{enumerate}[nosep]
+    \item Look for obvious groupings first
+    \item Consider alternate meanings and wordplay
+    \item Every word belongs to exactly one group
+    \item Each group has exactly 4 words
+\end{enumerate}
+
+This is the most ``human-like'' solver but expensive (requires an API call per puzzle). Used as a tiebreaker only.
+
+\subsection{Solver Performance Comparison}
+
+\begin{table}[H]
+\centering
+\caption{Benchmark on 554 NYT puzzles.}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+& Embedding & Clustering \\
+\midrule
+Full solve rate & 2.0\% (11/554) & 3.4\% (19/554) \\
+Avg groups correct & 0.57 / 4 & 0.71 / 4 \\
+\midrule
+\colorbox{yellow_conn}{Yellow} accuracy & 24.5\% & 28.0\% \\
+\colorbox{green_conn}{Green} accuracy & 17.7\% & 22.6\% \\
+\colorbox{blue_conn}{Blue} accuracy & 9.8\% & 13.0\% \\
+\colorbox{purple_conn}{Purple} accuracy & 5.1\% & 7.6\% \\
+\midrule
+Runtime (554 puzzles) & 10.6\,s & 525\,s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Both solvers show the expected difficulty gradient. The clustering solver outperforms across all colors at $\sim$50$\times$ the compute cost. They agreed on a full solve for only 7 puzzles (1.3\%), confirming they find complementary solutions.
+
+% =========================================================================
+\section{Roundtable Validation}
+% =========================================================================
+
+\begin{keyidea}
+This is the project's most original contribution. The papers each address generation OR solving; we combine them by using solver agreement as a quality gate for generated puzzles.
+\end{keyidea}
+
+\subsection{The Core Idea}
+
+A valid Connections puzzle must have \textbf{exactly one correct solution}. If two independent solvers, using completely different algorithms, both find the same grouping --- and that grouping matches the intended answer --- then the puzzle is unambiguous.
+
+If they disagree, the puzzle has competing interpretations and should be discarded.
+
+\subsection{Validation Logic}
+
+\begin{algorithm}[H]
+\caption{Roundtable Validation}
+\begin{algorithmic}[1]
+\Require Puzzle $P$ with intended groups $A$
+\State $S_1 \gets \textsc{EmbeddingSolver}(P.\text{words})$
+\State $S_2 \gets \textsc{ClusteringSolver}(P.\text{words})$
+\State Normalize $S_1, S_2$ to sets of frozensets (order-independent)
+\State $\text{agree} \gets (S_1 = S_2)$ \Comment{Same 4 groups?}
+\State $c_1 \gets |\{g \in S_1 : g \in A\}|$ \Comment{How many match the answer?}
+\State $c_2 \gets |\{g \in S_2 : g \in A\}|$
+\State $\text{valid} \gets \text{agree} \textbf{ and } (c_1 = 4 \textbf{ or } c_2 = 4)$
+\State \Return valid, agree, $c_1$, $c_2$
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Why Two Solvers?}
+
+The embedding solver and clustering solver use different algorithms:
+\begin{itemize}[nosep]
+    \item Embedding: greedy, optimizes average pairwise similarity
+    \item Clustering: beam search, optimizes $G - P$ composite score
+\end{itemize}
+
+They have different failure modes. When both converge to the same answer, it is strong evidence that the answer is unique.
+
+% =========================================================================
+\section{Evaluation Metrics}
+% =========================================================================
+
+\subsection{Group Similarity Score ($G$)}
+
+Identical to the clustering solver's scoring function (Section 4.2.1). Used as an independent quality metric for generated groups.
+
+\subsection{Penalty Score ($P$)}
+
+Identical to Section 4.2.2. Measures group--group separation.
+
+\subsection{Puzzle-Level Quality}
+
+For a complete puzzle:
+\begin{itemize}[nosep]
+    \item \textbf{Overall avg similarity:} mean of $\bar{s}$ across all 4 groups
+    \item \textbf{Similarity spread:} $\max(\bar{s}) - \min(\bar{s})$ across groups. Should be positive (yellow $>$ purple).
+    \item \textbf{Solver agreement rate:} fraction of generated puzzles where solvers converge
+    \item \textbf{Category diversity:} number of unique category names across the dataset
+\end{itemize}
+
+% =========================================================================
+\section{System Architecture}
+% =========================================================================
+
+\subsection{Data Flow}
+
+\begin{center}
+\begin{tabular}{@{}c@{}}
+\texttt{LLM (Claude)} $\xrightarrow{\text{8 candidates}}$
+\texttt{MPNET (select 4)} $\xrightarrow{\text{groups}}$
+\texttt{Editor (LLM)} $\xrightarrow{\text{reviewed}}$
+\texttt{Difficulty (MPNET)} \\[8pt]
+$\downarrow$ \\[4pt]
+\texttt{Roundtable Validator} $\xrightarrow{\text{agree?}}$
+$\begin{cases} \text{Yes} \rightarrow \text{Accept puzzle} \\ \text{No} \rightarrow \text{Discard} \end{cases}$
+\end{tabular}
+\end{center}
+
+\subsection{Dry-Run Mode}
+
+All LLM calls go through \texttt{LLMClient}, which checks:
+\begin{lstlisting}
+if self.dry_run:
+    return MockLLMClient.respond(system, user)  # no API call
+\end{lstlisting}
+
+\texttt{MockLLMClient} detects the request type from prompt keywords and returns realistic hardcoded responses. MPNET always runs for real --- only the LLM is mocked.
+
+\begin{table}[H]
+\centering
+\caption{What is real vs.\ mocked in dry-run mode.}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Component & Dry-run & Real mode \\
+\midrule
+Category ideas + word pools & Mock & Claude API \\
+Word selection (8 $\to$ 4) & Real MPNET & Real MPNET \\
+Editor pass & Mock & Claude API \\
+Difficulty colors & Real MPNET & Real MPNET \\
+Embedding solver & Real MPNET & Real MPNET \\
+Clustering solver & Real MPNET & Real MPNET \\
+LLM solver & Mock & Claude API \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{File Map}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Key source files and their responsibilities.}
+\begin{tabular}{@{}lp{8cm}@{}}
+\toprule
+File & Role \\
+\midrule
+\texttt{src/config.py} & DRY\_RUN flag, paths, thresholds, model names \\
+\texttt{src/llm\_client.py} & LLM abstraction + MockLLMClient \\
+\texttt{src/generator/pipeline.py} & Orchestrates all 6 generation stages \\
+\texttt{src/generator/group\_creator.py} & LLM calls + MPNET embedding selection \\
+\texttt{src/generator/prompts.py} & All prompt templates \\
+\texttt{src/generator/difficulty.py} & Color assignment via cosine similarity \\
+\texttt{src/generator/deduplicator.py} & Overlap check vs.\ NYT puzzles \\
+\texttt{src/solvers/embedding\_solver.py} & Greedy solver \\
+\texttt{src/solvers/clustering\_solver.py} & Beam search solver \\
+\texttt{src/solvers/roundtable.py} & Multi-solver convergence validator \\
+\texttt{src/evaluation/metrics.py} & $G$, $P$, and quality scores \\
+\texttt{tests/test\_pipeline.py} & 31 tests covering all modules \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% =========================================================================
+\section{Key Formulas Reference Card}
+% =========================================================================
+
+\begin{tcolorbox}[colback=codebg, colframe=black!50, title=\textbf{All Formulas in One Place}]
+
+\textbf{Cosine similarity:}
+$\displaystyle \cos(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \, \|\mathbf{b}\|}$
+\vspace{6pt}
+
+\textbf{Average pairwise similarity (4 words):}
+$\displaystyle \bar{s} = \frac{1}{6}\sum_{i<j} \cos(\mathbf{e}_i, \mathbf{e}_j)$
+\vspace{6pt}
+
+\textbf{Group Similarity Score:}
+$\displaystyle G = 0.4 \cdot \underbrace{\bigl(-\textstyle\sum_i \|\mathbf{e}_i - \boldsymbol{\mu}\|^2\bigr)}_{I\text{ (neg.\ inertia)}} + 0.3 \cdot \underbrace{\min_{i<j}\cos(\mathbf{e}_i,\mathbf{e}_j)}_{s\text{ (weakest link)}} + 0.3 \cdot \underbrace{\frac{\text{mean}(P)}{1+\text{var}(P)}}_{V\text{ (stability)}}$
+\vspace{6pt}
+
+\textbf{Penalty Score:}
+$\displaystyle P = \frac{1}{|R|}\sum_{r \in R} \cos(\boldsymbol{\mu}_C, \mathbf{r})$
+\vspace{6pt}
+
+\textbf{Beam search objective:} maximize $\displaystyle\sum_{\text{groups}} (G - P)$
+\vspace{6pt}
+
+\textbf{Color assignment:} sort groups by $\bar{s}$ descending $\to$ Yellow, Green, Blue, Purple
+\vspace{6pt}
+
+\textbf{Validation:} $\text{valid} = (\text{solver}_1 \equiv \text{solver}_2) \wedge (\exists\, \text{solver with 4/4 correct})$
+
+\end{tcolorbox}
+
+% =========================================================================
+\section{What Is Original vs.\ From the Literature}
+% =========================================================================
+
+\begin{table}[H]
+\centering
+\small
+\caption{Provenance of each component.}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Component & Status & Source of ideas \\
+\midrule
+Embedding solver & Reimplementation & ``Missed Connections'' (2404.11730) \\
+Clustering solver ($G$-$P$ + beam) & Reimplementation & ``Deceptively Simple'' (2412.01621) \\
+False-group pipeline & Reimplementation & ``Making New Connections'' (2407.11240) \\
+Story injection & Reimplementation & ``Making New Connections'' \\
+Color thresholds & Constants from paper & ``Making New Connections'' Table 1 \\
+LLM solver (CoT) & Reimplementation & ``Missed Connections'' \\
+\midrule
+Roundtable validator & \textbf{Novel} & Original to this project \\
+Prompt templates & \textbf{Novel} & Original text \\
+MockLLMClient / dry-run & \textbf{Novel} & Original engineering \\
+Web app & \textbf{Novel} & Original code \\
+End-to-end integration & \textbf{Novel} & Papers do generation OR solving; we combine them \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All code is written from scratch. No code was copied from any reference repository.
+
+% =========================================================================
+\section{References}
+% =========================================================================
+
+\begin{enumerate}[nosep, label={[\arabic*]}]
+    \item A.\ Conneau et al., ``Making New Connections: LLM-based puzzle generation,'' arXiv:2407.11240, 2024. \emph{(Generation pipeline, false groups, story injection, color thresholds.)}
+    \item M.\ Todd et al., ``Missed Connections: Lateral thinking in LLMs,'' arXiv:2404.11730, 2024. \emph{(Embedding solver, LLM solver baselines, CoT prompts.)}
+    \item R.\ Li et al., ``Deceptively Simple: A scoring and search approach,'' arXiv:2412.01621, 2024. \emph{($G = 0.4I + 0.3s + 0.3V$ formula, penalty score, beam search.)}
+    \item J.\ Patel et al., ``Connecting the Dots: A knowledge taxonomy,'' arXiv:2406.11012, 2024. \emph{(Category types, human evaluation methodology.)}
+\end{enumerate}
+
+\end{document}

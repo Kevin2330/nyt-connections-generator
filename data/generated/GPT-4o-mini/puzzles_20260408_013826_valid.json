@@ -1,0 +1,167 @@
+[
+  {
+    "id": "INF-00001",
+    "words": [
+      "DECORATIONS",
+      "BOARD",
+      "CONFETTI",
+      "CAKE",
+      "BRIGHTNESS",
+      "TOKEN",
+      "VOLUME",
+      "PAWN",
+      "EERIE",
+      "SINISTER",
+      "TEXTURE",
+      "TEMPERATURE",
+      "BALLOONS",
+      "CARDS",
+      "SHADOW",
+      "GLOOM"
+    ],
+    "groups": [
+      {
+        "category": "WORDS RELATED TO DARKNESS",
+        "words": [
+          "SHADOW",
+          "EERIE",
+          "SINISTER",
+          "GLOOM"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.4719432592391968
+      },
+      {
+        "category": "PARTY SUPPLIES",
+        "words": [
+          "BALLOONS",
+          "CONFETTI",
+          "CAKE",
+          "DECORATIONS"
+        ],
+        "color": "green",
+        "similarity_score": 0.4397861957550049
+      },
+      {
+        "category": "GAME PIECES",
+        "words": [
+          "PAWN",
+          "BOARD",
+          "TOKEN",
+          "CARDS"
+        ],
+        "color": "blue",
+        "similarity_score": 0.3761984407901764
+      },
+      {
+        "category": "ADJUSTABLE PARAMETERS",
+        "words": [
+          "VOLUME",
+          "TEXTURE",
+          "BRIGHTNESS",
+          "TEMPERATURE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.35419511795043945
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "EERIE",
+                "SINISTER",
+                "SHADOW",
+                "GLOOM"
+              ],
+              "score": 0.4719431400299072
+            },
+            {
+              "words": [
+                "DECORATIONS",
+                "CONFETTI",
+                "CAKE",
+                "BALLOONS"
+              ],
+              "score": 0.43978622555732727
+            },
+            {
+              "words": [
+                "BOARD",
+                "TOKEN",
+                "PAWN",
+                "CARDS"
+              ],
+              "score": 0.3761983811855316
+            },
+            {
+              "words": [
+                "BRIGHTNESS",
+                "VOLUME",
+                "TEXTURE",
+                "TEMPERATURE"
+              ],
+              "score": 0.3541949689388275
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "DECORATIONS",
+                "CONFETTI",
+                "CAKE",
+                "BALLOONS"
+              ],
+              "score": 0.43978622555732727
+            },
+            {
+              "words": [
+                "EERIE",
+                "SINISTER",
+                "SHADOW",
+                "GLOOM"
+              ],
+              "score": 0.4719431400299072
+            },
+            {
+              "words": [
+                "BOARD",
+                "TOKEN",
+                "PAWN",
+                "CARDS"
+              ],
+              "score": 0.3761983811855316
+            },
+            {
+              "words": [
+                "BRIGHTNESS",
+                "VOLUME",
+                "TEXTURE",
+                "TEMPERATURE"
+              ],
+              "score": 0.3541949689388275
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4105307459831238,
+      "created_at": "2026-04-08T01:38:25.841586+00:00",
+      "accepted": true
+    }
+  }
+]

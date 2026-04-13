@@ -1,0 +1,6410 @@
+[
+  {
+    "category": "WORDS RELATED TO LAYERS",
+    "words": [
+      "CLOTHES",
+      "CAKES",
+      "ONIONS",
+      "PAINT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.30428436398506165,
+    "source_puzzle_id": "INF-00001"
+  },
+  {
+    "category": "WORDS RELATED TO COMEDY",
+    "words": [
+      "JOKE",
+      "SATIRE",
+      "BANTER",
+      "WIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3998326063156128,
+    "source_puzzle_id": "INF-00002"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH EXCITEMENT",
+    "words": [
+      "JUBILANT",
+      "VIBRANT",
+      "WILD",
+      "FESTIVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39179086685180664,
+    "source_puzzle_id": "INF-00003"
+  },
+  {
+    "category": "FOODS THAT CAN BE SQUARED",
+    "words": [
+      "SYRUP",
+      "CHEESE",
+      "SAND",
+      "FISH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32207155227661133,
+    "source_puzzle_id": "INF-00005"
+  },
+  {
+    "category": "THINGS THAT CAN BE SHOT",
+    "words": [
+      "ARROW",
+      "CANNON",
+      "DART",
+      "BULLET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4095974862575531,
+    "source_puzzle_id": "INF-00006"
+  },
+  {
+    "category": "HOLIDAY ITEMS",
+    "words": [
+      "CAROL",
+      "GIFT",
+      "REINDEER",
+      "WREATH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3784697353839874,
+    "source_puzzle_id": "INF-00007"
+  },
+  {
+    "category": "THINGS FOUND IN A GARAGE",
+    "words": [
+      "WRENCH",
+      "LADDER",
+      "TIRE",
+      "SCREWDRIVER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3786415159702301,
+    "source_puzzle_id": "INF-00008"
+  },
+  {
+    "category": "SOCIAL MEDIA INTERACTIONS",
+    "words": [
+      "FOLLOW",
+      "POST",
+      "TAG",
+      "COMMENT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3205053508281708,
+    "source_puzzle_id": "INF-00009"
+  },
+  {
+    "category": "SLANG TERMS",
+    "words": [
+      "BOMB",
+      "LIT",
+      "SICK",
+      "FIRE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33504652976989746,
+    "source_puzzle_id": "INF-00010"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH GOLF",
+    "words": [
+      "PUTTER",
+      "BIRDIE",
+      "FAIRWAY",
+      "EAGLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41181501746177673,
+    "source_puzzle_id": "INF-00011"
+  },
+  {
+    "category": "COMFORTING ITEMS",
+    "words": [
+      "SOUP",
+      "TEA",
+      "CANDLE",
+      "FIRE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35898181796073914,
+    "source_puzzle_id": "INF-00012"
+  },
+  {
+    "category": "THINGS THAT CAN BE MISSED",
+    "words": [
+      "WARNINGS",
+      "FLAWS",
+      "MISTAKES",
+      "SIGNS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35617443919181824,
+    "source_puzzle_id": "INF-00013"
+  },
+  {
+    "category": "ACTIONS IN BUSINESS",
+    "words": [
+      "STRATEGIZE",
+      "INVEST",
+      "NEGOTIATE",
+      "FINANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3422318994998932,
+    "source_puzzle_id": "INF-00014"
+  },
+  {
+    "category": "THINGS THAT CAN BREAK",
+    "words": [
+      "GLASS",
+      "BONE",
+      "TOY",
+      "WINDOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3221668303012848,
+    "source_puzzle_id": "INF-00015"
+  },
+  {
+    "category": "ACTIONS IN NATURE",
+    "words": [
+      "SOAR",
+      "DIVE",
+      "CLIMB",
+      "SWIM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4147855341434479,
+    "source_puzzle_id": "INF-00017"
+  },
+  {
+    "category": "SCIENCE TERMS",
+    "words": [
+      "MOLECULE",
+      "HYPOTHESIS",
+      "EXPERIMENT",
+      "VARIABLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3327634036540985,
+    "source_puzzle_id": "INF-00018"
+  },
+  {
+    "category": "DINING ITEMS",
+    "words": [
+      "MENU",
+      "FORK",
+      "PLATE",
+      "DESSERT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.396257609128952,
+    "source_puzzle_id": "INF-00019"
+  },
+  {
+    "category": "FOOD DECORATIONS",
+    "words": [
+      "GARNISH",
+      "FROSTING",
+      "TOPPING",
+      "EMBELLISHMENT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36814168095588684,
+    "source_puzzle_id": "INF-00020"
+  },
+  {
+    "category": "THINGS THAT ARE OUTDATED",
+    "words": [
+      "VHS",
+      "FLIPPHONE",
+      "TYPEWRITER",
+      "CASSETTE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37623706459999084,
+    "source_puzzle_id": "INF-00022"
+  },
+  {
+    "category": "THINGS THAT CAN ROLL",
+    "words": [
+      "BALL",
+      "WHEEL",
+      "TIRE",
+      "SPHERE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4638434648513794,
+    "source_puzzle_id": "INF-00023"
+  },
+  {
+    "category": "FASHION ACCESSORIES",
+    "words": [
+      "SCARF",
+      "HAT",
+      "GLOVES",
+      "SUNGLASSES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4806766211986542,
+    "source_puzzle_id": "INF-00024"
+  },
+  {
+    "category": "FORM ELEMENTS",
+    "words": [
+      "FORM",
+      "BOX",
+      "ITEM",
+      "FIELD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32325616478919983,
+    "source_puzzle_id": "INF-00025"
+  },
+  {
+    "category": "THINGS RELATED TO SOCIAL MEDIA",
+    "words": [
+      "POST",
+      "TWEET",
+      "CONTENT",
+      "SHARE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31825029850006104,
+    "source_puzzle_id": "INF-00026"
+  },
+  {
+    "category": "THINGS THAT CAN BE DELIVERED",
+    "words": [
+      "PARCEL",
+      "MESSAGE",
+      "PACKAGE",
+      "LETTER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3861248195171356,
+    "source_puzzle_id": "INF-00027"
+  },
+  {
+    "category": "SUMMER FUN",
+    "words": [
+      "POOL",
+      "BARBECUE",
+      "PICNIC",
+      "SANDCASTLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3800502121448517,
+    "source_puzzle_id": "INF-00028"
+  },
+  {
+    "category": "MATH TERMS",
+    "words": [
+      "QUADRATIC",
+      "INTEGRAL",
+      "CALCULUS",
+      "POLYNOMIAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3467133939266205,
+    "source_puzzle_id": "INF-00029"
+  },
+  {
+    "category": "LUXURIOUS ESCAPES",
+    "words": [
+      "RESORT",
+      "RETREAT",
+      "OASIS",
+      "HIDEAWAY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4060184061527252,
+    "source_puzzle_id": "INF-00030"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH ROMANCE",
+    "words": [
+      "DINNER",
+      "KISS",
+      "DATE",
+      "CHOCOLATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3617483377456665,
+    "source_puzzle_id": "INF-00031"
+  },
+  {
+    "category": "THINGS THAT CAN BE PINK",
+    "words": [
+      "COTTON",
+      "FROSTING",
+      "LACE",
+      "BUBBLEGUM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3727298080921173,
+    "source_puzzle_id": "INF-00032"
+  },
+  {
+    "category": "KITCHEN UTENSILS",
+    "words": [
+      "WHISK",
+      "PAN",
+      "SPATULA",
+      "CHOP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.384472519159317,
+    "source_puzzle_id": "INF-00033"
+  },
+  {
+    "category": "NOISY OBJECTS",
+    "words": [
+      "BELL",
+      "WHISTLE",
+      "HORN",
+      "RATTLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4456551969051361,
+    "source_puzzle_id": "INF-00034"
+  },
+  {
+    "category": "COMEDIAN NAMES",
+    "words": [
+      "CHAPLIN",
+      "CARLIN",
+      "FERRIS",
+      "MURPHY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3365366756916046,
+    "source_puzzle_id": "INF-00035"
+  },
+  {
+    "category": "TRAVEL ITEMS",
+    "words": [
+      "SUITCASE",
+      "LUGGAGE",
+      "FLIGHT",
+      "ITINERARY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.45655402541160583,
+    "source_puzzle_id": "INF-00036"
+  },
+  {
+    "category": "UNUSUAL ANIMALS",
+    "words": [
+      "KINKAJOU",
+      "PANGOLIN",
+      "MANATEE",
+      "SLOTH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3913451135158539,
+    "source_puzzle_id": "INF-00037"
+  },
+  {
+    "category": "MAGICAL PHRASES",
+    "words": [
+      "HOCUS",
+      "POCUS",
+      "SIMSALABIM",
+      "WIZARD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29887285828590393,
+    "source_puzzle_id": "INF-00038"
+  },
+  {
+    "category": "THINGS THAT CAN BE LIFTED",
+    "words": [
+      "FIST",
+      "SPOON",
+      "WALL",
+      "HAND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3819708526134491,
+    "source_puzzle_id": "INF-00039"
+  },
+  {
+    "category": "FORMS OF EXPRESSION",
+    "words": [
+      "POEM",
+      "SONG",
+      "DANCE",
+      "RHYME"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44861900806427,
+    "source_puzzle_id": "INF-00040"
+  },
+  {
+    "category": "DOG BEHAVIORS",
+    "words": [
+      "BARK",
+      "FETCH",
+      "CHASE",
+      "GROOM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.30272912979125977,
+    "source_puzzle_id": "INF-00041"
+  },
+  {
+    "category": "WORDS RELATED TO MOVEMENT",
+    "words": [
+      "RUN",
+      "DASH",
+      "RACE",
+      "HURRY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34769073128700256,
+    "source_puzzle_id": "INF-00042"
+  },
+  {
+    "category": "EMOTIONAL CONCEPTS",
+    "words": [
+      "HEART",
+      "TRUST",
+      "SILENCE",
+      "SPIRIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33869490027427673,
+    "source_puzzle_id": "INF-00043"
+  },
+  {
+    "category": "OPENABLE OBJECTS",
+    "words": [
+      "DOOR",
+      "WINDOW",
+      "BOX",
+      "GATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4527144432067871,
+    "source_puzzle_id": "INF-00044"
+  },
+  {
+    "category": "EVIL CONCEPTS",
+    "words": [
+      "CURSE",
+      "SIN",
+      "DARKNESS",
+      "MALEVOLENCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36178645491600037,
+    "source_puzzle_id": "INF-00045"
+  },
+  {
+    "category": "THINGS THAT CAN BURST",
+    "words": [
+      "BUBBLE",
+      "BALLOON",
+      "SACK",
+      "PACK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4019416570663452,
+    "source_puzzle_id": "INF-00046"
+  },
+  {
+    "category": "SURPRISES",
+    "words": [
+      "TWIST",
+      "SURPRISE",
+      "SHAKEUP",
+      "JOLT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36985722184181213,
+    "source_puzzle_id": "INF-00047"
+  },
+  {
+    "category": "THINGS THAT CAN FIZZ",
+    "words": [
+      "VIAL",
+      "SODA",
+      "BOTTLE",
+      "CLOUD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41649147868156433,
+    "source_puzzle_id": "INF-00048"
+  },
+  {
+    "category": "WORDS RELATED TO SURFING",
+    "words": [
+      "WAVE",
+      "PIPE",
+      "SWELL",
+      "TUBE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33675312995910645,
+    "source_puzzle_id": "INF-00049"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH CELEBRATION",
+    "words": [
+      "FESTIVE",
+      "FROLIC",
+      "EXTRAVAGANZA",
+      "REVELRY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39800867438316345,
+    "source_puzzle_id": "INF-00050"
+  },
+  {
+    "category": "WORDS THAT CAN BE FOLLOWED BY 'M'",
+    "words": [
+      "DREAM",
+      "STREAM",
+      "TEAM",
+      "BEAM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.28956571221351624,
+    "source_puzzle_id": "INF-00051"
+  },
+  {
+    "category": "GAMES",
+    "words": [
+      "RANDOM",
+      "RACE",
+      "GAME",
+      "PUZZLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36311158537864685,
+    "source_puzzle_id": "INF-00052"
+  },
+  {
+    "category": "GROUPS OF ANIMALS",
+    "words": [
+      "HERD",
+      "SWARM",
+      "FLOCK",
+      "GAGGLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4410001039505005,
+    "source_puzzle_id": "INF-00053"
+  },
+  {
+    "category": "WORDS THAT CAN BE FOLLOWED BY 'LABEL'",
+    "words": [
+      "BRAND",
+      "PRODUCT",
+      "NAME",
+      "ADDRESS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3585209548473358,
+    "source_puzzle_id": "INF-00054"
+  },
+  {
+    "category": "ABSTRACTIONS THAT CAN BREAK",
+    "words": [
+      "HEART",
+      "PROMISE",
+      "SILENCE",
+      "TRUST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3378497362136841,
+    "source_puzzle_id": "INF-00055"
+  },
+  {
+    "category": "THINGS RELATED TO CONSTRUCTION",
+    "words": [
+      "BEAM",
+      "JOIST",
+      "TRUSS",
+      "FRAME"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3609250485897064,
+    "source_puzzle_id": "INF-00056"
+  },
+  {
+    "category": "SOUND-MAKING OBJECTS",
+    "words": [
+      "BEE",
+      "DRONE",
+      "BELL",
+      "SIREN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3657042980194092,
+    "source_puzzle_id": "INF-00057"
+  },
+  {
+    "category": "GARDEN TOOLS",
+    "words": [
+      "HOSE",
+      "TROWEL",
+      "SHOVEL",
+      "HOG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3689507246017456,
+    "source_puzzle_id": "INF-00058"
+  },
+  {
+    "category": "THINGS THAT CAN BE THROWN",
+    "words": [
+      "FRISBEE",
+      "DART",
+      "BOOMERANG",
+      "JAVELIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4366115629673004,
+    "source_puzzle_id": "INF-00060"
+  },
+  {
+    "category": "THINGS THAT ARE FUN",
+    "words": [
+      "BUBBLES",
+      "BALLOON",
+      "KITES",
+      "HOPSCOTCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4138026237487793,
+    "source_puzzle_id": "INF-00061"
+  },
+  {
+    "category": "POINTY OBJECTS",
+    "words": [
+      "SPIKE",
+      "TACK",
+      "PIN",
+      "NEEDLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3645695447921753,
+    "source_puzzle_id": "INF-00062"
+  },
+  {
+    "category": "THINGS YOU MIGHT DO IN A CONVERSATION",
+    "words": [
+      "REPLY",
+      "ARGUE",
+      "INTERJECT",
+      "CONCEDE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3327532708644867,
+    "source_puzzle_id": "INF-00063"
+  },
+  {
+    "category": "THINGS THAT CAN SPIN",
+    "words": [
+      "TWIRL",
+      "SWIRL",
+      "WHEEL",
+      "GYRO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4145301282405853,
+    "source_puzzle_id": "INF-00064"
+  },
+  {
+    "category": "FOOD ITEMS",
+    "words": [
+      "RATATOUILLE",
+      "BEEF",
+      "SUSHI",
+      "PIZZA"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3802994191646576,
+    "source_puzzle_id": "INF-00065"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH PERFORMANCE",
+    "words": [
+      "STAGE",
+      "COSTUME",
+      "SCRIPT",
+      "ACTOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35301676392555237,
+    "source_puzzle_id": "INF-00066"
+  },
+  {
+    "category": "SPORTS MEASUREMENTS",
+    "words": [
+      "LAP",
+      "CUP",
+      "TROPHY",
+      "SCORE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3856421411037445,
+    "source_puzzle_id": "INF-00068"
+  },
+  {
+    "category": "THINGS THAT MOVE FAST",
+    "words": [
+      "LIGHTNING",
+      "BULLET",
+      "JET",
+      "HURRICANE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35900139808654785,
+    "source_puzzle_id": "INF-00069"
+  },
+  {
+    "category": "ACTIVITIES WITH RHYTHM",
+    "words": [
+      "MUSIC",
+      "DRINK",
+      "GAMES",
+      "DANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3938726484775543,
+    "source_puzzle_id": "INF-00070"
+  },
+  {
+    "category": "INTANGIBLE CONCEPTS",
+    "words": [
+      "HEART",
+      "SILENCE",
+      "SPIRIT",
+      "TRUST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33869490027427673,
+    "source_puzzle_id": "INF-00071"
+  },
+  {
+    "category": "THINGS THAT BOUNCE",
+    "words": [
+      "BALL",
+      "BOUNCE",
+      "JUMP",
+      "PONG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3942904770374298,
+    "source_puzzle_id": "INF-00072"
+  },
+  {
+    "category": "THINGS THAT CAN BE PERFORMED",
+    "words": [
+      "SING",
+      "SHOUT",
+      "CLAP",
+      "ACT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4044584035873413,
+    "source_puzzle_id": "INF-00074"
+  },
+  {
+    "category": "THINGS YOU CAN FIND IN A KITCHEN",
+    "words": [
+      "SPOON",
+      "PLATE",
+      "FORK",
+      "KNIFE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4126415550708771,
+    "source_puzzle_id": "INF-00075"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A BACKPACK",
+    "words": [
+      "JOURNAL",
+      "HEADPHONES",
+      "FLASHLIGHT",
+      "PEN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3117607533931732,
+    "source_puzzle_id": "INF-00076"
+  },
+  {
+    "category": "NAMES FOLLOWED BY 'HENRY'",
+    "words": [
+      "CHESTER",
+      "FORD",
+      "JAMES",
+      "TAYLOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2959446907043457,
+    "source_puzzle_id": "INF-00077"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH GAMES",
+    "words": [
+      "BOARD",
+      "CARD",
+      "TOKEN",
+      "PAWN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38811206817626953,
+    "source_puzzle_id": "INF-00078"
+  },
+  {
+    "category": "CIRCUS PERFORMERS",
+    "words": [
+      "ACROBAT",
+      "CLOWN",
+      "RINGMASTER",
+      "JUGGLER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40318846702575684,
+    "source_puzzle_id": "INF-00079"
+  },
+  {
+    "category": "WORDS WITH 'RING'",
+    "words": [
+      "CIRCLE",
+      "RING",
+      "DING",
+      "RINGER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44276073575019836,
+    "source_puzzle_id": "INF-00080"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND AT A PICNIC",
+    "words": [
+      "SANDWICH",
+      "JUICE",
+      "FRUIT",
+      "CHEESE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4457217752933502,
+    "source_puzzle_id": "INF-00081"
+  },
+  {
+    "category": "SENSORY ACTIONS",
+    "words": [
+      "HEAR",
+      "LISTEN",
+      "EAVESDROP",
+      "RECEIVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3644293248653412,
+    "source_puzzle_id": "INF-00082"
+  },
+  {
+    "category": "FOODS THAT CAN BE MIXED",
+    "words": [
+      "BATTER",
+      "COCKTAIL",
+      "SALAD",
+      "DOUGH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3601156771183014,
+    "source_puzzle_id": "INF-00083"
+  },
+  {
+    "category": "THINGS YOU CAN CATCH OR THROW",
+    "words": [
+      "BALL",
+      "TRAIN",
+      "THROW",
+      "FEEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29629677534103394,
+    "source_puzzle_id": "INF-00084"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH HALLOWEEN",
+    "words": [
+      "GHOST",
+      "SPOOKY",
+      "WITCH",
+      "HAUNT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.46662095189094543,
+    "source_puzzle_id": "INF-00085"
+  },
+  {
+    "category": "SHADES OF RED",
+    "words": [
+      "PASTEL",
+      "CRIMSON",
+      "VIOLET",
+      "CARMINE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43744125962257385,
+    "source_puzzle_id": "INF-00086"
+  },
+  {
+    "category": "COZY NIGHT IN ITEMS",
+    "words": [
+      "BLANKET",
+      "CANDLE",
+      "SOFA",
+      "FIREPLACE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3839063346385956,
+    "source_puzzle_id": "INF-00088"
+  },
+  {
+    "category": "TYPES OF BEARS",
+    "words": [
+      "PANDA",
+      "GRIZZLY",
+      "KOALA",
+      "CUB"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44388696551322937,
+    "source_puzzle_id": "INF-00089"
+  },
+  {
+    "category": "DANCE MOVES",
+    "words": [
+      "WALTZ",
+      "SALSA",
+      "CHA-CHA",
+      "RUMBA"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38155999779701233,
+    "source_puzzle_id": "INF-00090"
+  },
+  {
+    "category": "CRAFT SUPPLIES",
+    "words": [
+      "BRUSH",
+      "PAINT",
+      "CANVAS",
+      "PAPER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43809857964515686,
+    "source_puzzle_id": "INF-00091"
+  },
+  {
+    "category": "FANTASY ADVENTURE ELEMENTS",
+    "words": [
+      "DRAGON",
+      "QUEST",
+      "SWORD",
+      "BATTLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4117073714733124,
+    "source_puzzle_id": "INF-00092"
+  },
+  {
+    "category": "RIVER FEATURES",
+    "words": [
+      "RAFT",
+      "FLOOD",
+      "WATERFALL",
+      "ISLAND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41528499126434326,
+    "source_puzzle_id": "INF-00093"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH NOBILITY",
+    "words": [
+      "CROWN",
+      "PALACE",
+      "THRONE",
+      "DUCHESS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4776182174682617,
+    "source_puzzle_id": "INF-00095"
+  },
+  {
+    "category": "SPINNING OBJECTS",
+    "words": [
+      "GYRO",
+      "TURBINE",
+      "HURRICANE",
+      "VORTEX"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3568049669265747,
+    "source_puzzle_id": "INF-00096"
+  },
+  {
+    "category": "STYLES OF DRESS",
+    "words": [
+      "CASUAL",
+      "FORMAL",
+      "ATHLETIC",
+      "PREPPY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38407352566719055,
+    "source_puzzle_id": "INF-00097"
+  },
+  {
+    "category": "WORDS MEANING TO LEAD",
+    "words": [
+      "DIRECT",
+      "NAVIGATE",
+      "STEER",
+      "FACILITATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34777140617370605,
+    "source_puzzle_id": "INF-00098"
+  },
+  {
+    "category": "WORDS THAT CAN FOLLOW 'SHIP'",
+    "words": [
+      "MENT",
+      "LAPSE",
+      "SASS",
+      "TEND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.24833716452121735,
+    "source_puzzle_id": "INF-00099"
+  },
+  {
+    "category": "CREATIVE ACTIVITIES",
+    "words": [
+      "WRITE",
+      "DRAW",
+      "PAINT",
+      "PLAY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42638036608695984,
+    "source_puzzle_id": "INF-00100"
+  },
+  {
+    "category": "THANKSGIVING ITEMS",
+    "words": [
+      "FEAST",
+      "HARVEST",
+      "AUTUMN",
+      "PUMPKIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3965907394886017,
+    "source_puzzle_id": "INF-00101"
+  },
+  {
+    "category": "THINGS THAT RISE",
+    "words": [
+      "BALLOON",
+      "TEMPERATURE",
+      "CLOUD",
+      "SUN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3591454029083252,
+    "source_puzzle_id": "INF-00102"
+  },
+  {
+    "category": "THINGS YOU CAN CHEW",
+    "words": [
+      "GUM",
+      "BAGEL",
+      "CANDY",
+      "COOKIE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.47670862078666687,
+    "source_puzzle_id": "INF-00103"
+  },
+  {
+    "category": "THINGS THAT CAN MAKE A NOISE",
+    "words": [
+      "BANG",
+      "CLAP",
+      "WHISTLE",
+      "HONK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3828698396682739,
+    "source_puzzle_id": "INF-00104"
+  },
+  {
+    "category": "AMUSEMENT PARK RIDES",
+    "words": [
+      "ROLLERCOASTER",
+      "FERRISWHEEL",
+      "BUMPERCARS",
+      "CAROUSEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4589043855667114,
+    "source_puzzle_id": "INF-00105"
+  },
+  {
+    "category": "FORMS OF COMMUNICATION",
+    "words": [
+      "LETTER",
+      "TEXT",
+      "EMAIL",
+      "MESSAGE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.47684112191200256,
+    "source_puzzle_id": "INF-00106"
+  },
+  {
+    "category": "PUNCTUATION",
+    "words": [
+      "COMMA",
+      "COLON",
+      "SEMI-COLON",
+      "EXCLAMATION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39181604981422424,
+    "source_puzzle_id": "INF-00107"
+  },
+  {
+    "category": "FUN ACTIVITIES",
+    "words": [
+      "DRIVE",
+      "GAMES",
+      "PARK",
+      "RIDE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3857271671295166,
+    "source_puzzle_id": "INF-00108"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH SOCIAL MEDIA",
+    "words": [
+      "POST",
+      "TAG",
+      "FOLLOW",
+      "COMMENT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3205053210258484,
+    "source_puzzle_id": "INF-00109"
+  },
+  {
+    "category": "URBAN ART",
+    "words": [
+      "SKYSCRAPER",
+      "ART",
+      "STREET",
+      "MURAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3665410578250885,
+    "source_puzzle_id": "INF-00110"
+  },
+  {
+    "category": "BREAKABLE MATERIALS",
+    "words": [
+      "GLASS",
+      "BONE",
+      "WATER",
+      "SOIL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3653523027896881,
+    "source_puzzle_id": "INF-00111"
+  },
+  {
+    "category": "CONCEPTS THAT CAN CHANGE",
+    "words": [
+      "MOOD",
+      "COLOR",
+      "STYLE",
+      "DIRECTION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3708154261112213,
+    "source_puzzle_id": "INF-00112"
+  },
+  {
+    "category": "PICNIC ESSENTIALS",
+    "words": [
+      "BLANKET",
+      "SANDWICH",
+      "CHAIR",
+      "UTENSILS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3179253041744232,
+    "source_puzzle_id": "INF-00113"
+  },
+  {
+    "category": "THINGS YOU CAN DELIVER",
+    "words": [
+      "LETTER",
+      "PACKAGE",
+      "PARCEL",
+      "CARGO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4049716889858246,
+    "source_puzzle_id": "INF-00114"
+  },
+  {
+    "category": "MEETING SPOTS",
+    "words": [
+      "CAF\u00c9",
+      "PARK",
+      "STADIUM",
+      "BEACH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3909572660923004,
+    "source_puzzle_id": "INF-00115"
+  },
+  {
+    "category": "ADDITIVES",
+    "words": [
+      "SUGAR",
+      "VITAMINS",
+      "SALT",
+      "NUMBERS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32441842555999756,
+    "source_puzzle_id": "INF-00116"
+  },
+  {
+    "category": "THINGS RELATED TO THEATRE",
+    "words": [
+      "ACT",
+      "PLAY",
+      "ROLE",
+      "STAGE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42025184631347656,
+    "source_puzzle_id": "INF-00117"
+  },
+  {
+    "category": "ADJECTIVES WITH 'TIME'",
+    "words": [
+      "WASTED",
+      "HAPPY",
+      "GOOD",
+      "FINE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40112993121147156,
+    "source_puzzle_id": "INF-00119"
+  },
+  {
+    "category": "SYNONYMS FOR CHAOS",
+    "words": [
+      "RUSH",
+      "CHAOS",
+      "FRENZY",
+      "HURRY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3799924850463867,
+    "source_puzzle_id": "INF-00121"
+  },
+  {
+    "category": "INGREDIENTS",
+    "words": [
+      "SPOON",
+      "BATTER",
+      "SUGAR",
+      "COFFEE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36808013916015625,
+    "source_puzzle_id": "INF-00122"
+  },
+  {
+    "category": "ANIMAL FEATURES",
+    "words": [
+      "TUSK",
+      "FUR",
+      "FEATHER",
+      "WING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41095855832099915,
+    "source_puzzle_id": "INF-00123"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH A GAME",
+    "words": [
+      "TILES",
+      "PAWNS",
+      "CARDS",
+      "BOARD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39579907059669495,
+    "source_puzzle_id": "INF-00124"
+  },
+  {
+    "category": "ENTERTAINMENT FORMS",
+    "words": [
+      "PLAY",
+      "DANCE",
+      "STAGE",
+      "SHOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42134979367256165,
+    "source_puzzle_id": "INF-00125"
+  },
+  {
+    "category": "THINGS THAT BURST",
+    "words": [
+      "BUBBLE",
+      "BALLOON",
+      "PIMPLE",
+      "BLISTER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4471590518951416,
+    "source_puzzle_id": "INF-00126"
+  },
+  {
+    "category": "WORDS THAT CAN FOLLOW 'HOUSE'",
+    "words": [
+      "FULL",
+      "PARTY",
+      "DIVIDED",
+      "GUEST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2905573844909668,
+    "source_puzzle_id": "INF-00127"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A BACKYARD",
+    "words": [
+      "GARDEN",
+      "FENCE",
+      "SHED",
+      "BIRDHOUSE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3927735388278961,
+    "source_puzzle_id": "INF-00128"
+  },
+  {
+    "category": "THINGS THAT ARE SOFT",
+    "words": [
+      "PILLOW",
+      "COTTON",
+      "FEATHER",
+      "PLUSH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.475172758102417,
+    "source_puzzle_id": "INF-00129"
+  },
+  {
+    "category": "CARTOON CHARACTERS",
+    "words": [
+      "STOOGE",
+      "SCOOBY",
+      "POGO",
+      "GARFIELD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36471542716026306,
+    "source_puzzle_id": "INF-00130"
+  },
+  {
+    "category": "NATURE ELEMENTS",
+    "words": [
+      "FENCE",
+      "BIRD",
+      "TREES",
+      "FLOWER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32688918709754944,
+    "source_puzzle_id": "INF-00131"
+  },
+  {
+    "category": "THINGS THAT SPIN",
+    "words": [
+      "WHEEL",
+      "DISK",
+      "GYRO",
+      "CIRCLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38425537943840027,
+    "source_puzzle_id": "INF-00132"
+  },
+  {
+    "category": "GAMING TERMS",
+    "words": [
+      "CONSOLE",
+      "DLC",
+      "PATCH",
+      "MULTIPLAYER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3721323013305664,
+    "source_puzzle_id": "INF-00133"
+  },
+  {
+    "category": "WORDS THAT CAN FOLLOW 'FORE'",
+    "words": [
+      "WARN",
+      "TELL",
+      "SEE",
+      "PLAY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36917510628700256,
+    "source_puzzle_id": "INF-00134"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH SPORTS",
+    "words": [
+      "TEAM",
+      "COACH",
+      "PLAYER",
+      "LEAGUE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.451426237821579,
+    "source_puzzle_id": "INF-00136"
+  },
+  {
+    "category": "THINGS THAT CAN BE TIGHT",
+    "words": [
+      "GRIP",
+      "CLAMP",
+      "BIND",
+      "CLASP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.45019838213920593,
+    "source_puzzle_id": "INF-00137"
+  },
+  {
+    "category": "THEFT TERMS",
+    "words": [
+      "HEIST",
+      "LIFT",
+      "BURGLED",
+      "SNEAK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31435585021972656,
+    "source_puzzle_id": "INF-00138"
+  },
+  {
+    "category": "COOKING INGREDIENTS",
+    "words": [
+      "SALT",
+      "SPICE",
+      "HERB",
+      "FLOUR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4379013776779175,
+    "source_puzzle_id": "INF-00139"
+  },
+  {
+    "category": "CONCEPTS OF ADAPTATION",
+    "words": [
+      "CAMOUFLAGE",
+      "MIMICRY",
+      "FUR",
+      "WINGS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35215404629707336,
+    "source_puzzle_id": "INF-00140"
+  },
+  {
+    "category": "FLUFFY THINGS",
+    "words": [
+      "PILLOW",
+      "BUNNY",
+      "WHALE",
+      "KITTEN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38412609696388245,
+    "source_puzzle_id": "INF-00142"
+  },
+  {
+    "category": "THINGS THAT CAN BE FOUND IN A HOSPITAL",
+    "words": [
+      "SCALPEL",
+      "X-RAY",
+      "GAUZE",
+      "STETHOSCOPE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37117448449134827,
+    "source_puzzle_id": "INF-00143"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH MILITARY TRAINING",
+    "words": [
+      "CADET",
+      "BARRACKS",
+      "SQUAD",
+      "TACTICS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39890825748443604,
+    "source_puzzle_id": "INF-00144"
+  },
+  {
+    "category": "BACKPACK ESSENTIALS",
+    "words": [
+      "WATERBOTTLE",
+      "HEADLAMP",
+      "FIRSTAID",
+      "RAINCOAT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.264734148979187,
+    "source_puzzle_id": "INF-00145"
+  },
+  {
+    "category": "THINGS YOU CAN DO WITH A TOOL",
+    "words": [
+      "BREAK",
+      "SPLIT",
+      "CLEAR",
+      "REMOVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34984707832336426,
+    "source_puzzle_id": "INF-00146"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A HOUSE",
+    "words": [
+      "CURTAIN",
+      "RUG",
+      "FURNACE",
+      "LAMP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3363006114959717,
+    "source_puzzle_id": "INF-00147"
+  },
+  {
+    "category": "THINGS THAT CAN CHANGE",
+    "words": [
+      "RULE",
+      "STYLE",
+      "COURSE",
+      "ATTITUDE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33460256457328796,
+    "source_puzzle_id": "INF-00148"
+  },
+  {
+    "category": "NATURE PHENOMENA",
+    "words": [
+      "RIVER",
+      "FOG",
+      "WAVE",
+      "TIDE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.345080703496933,
+    "source_puzzle_id": "INF-00149"
+  },
+  {
+    "category": "MECHANISMS FOR CLOSING",
+    "words": [
+      "LOCK",
+      "CLOSURE",
+      "LATCH",
+      "SEAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4266667366027832,
+    "source_puzzle_id": "INF-00150"
+  },
+  {
+    "category": "WORDS OF AUTHORITY",
+    "words": [
+      "REIGN",
+      "MASTER",
+      "CONDUCT",
+      "MANAGE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2754785120487213,
+    "source_puzzle_id": "INF-00151"
+  },
+  {
+    "category": "NATURAL LANDSCAPES",
+    "words": [
+      "RIVER",
+      "MOUNTAIN",
+      "FOREST",
+      "CREEK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.45818665623664856,
+    "source_puzzle_id": "INF-00152"
+  },
+  {
+    "category": "KITCHEN ACTIONS",
+    "words": [
+      "SIZZLE",
+      "BAKE",
+      "MARINATE",
+      "GRILL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36929383873939514,
+    "source_puzzle_id": "INF-00153"
+  },
+  {
+    "category": "ABSTRACT BREAKABLES",
+    "words": [
+      "SILENCE",
+      "SPIRIT",
+      "TRUST",
+      "HEART"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33869490027427673,
+    "source_puzzle_id": "INF-00154"
+  },
+  {
+    "category": "THINGS THAT CAN FLIP",
+    "words": [
+      "KEY",
+      "TRICK",
+      "COIN",
+      "BUTTON"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3640059530735016,
+    "source_puzzle_id": "INF-00156"
+  },
+  {
+    "category": "THINGS THAT CAN BE THROWN",
+    "words": [
+      "JAVELIN",
+      "FRISBEE",
+      "DART",
+      "BOOMERANG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4366115629673004,
+    "source_puzzle_id": "INF-00157"
+  },
+  {
+    "category": "EXCLAMATIONS",
+    "words": [
+      "YIKES",
+      "GEEZ",
+      "OMIGOSH",
+      "AHH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3985479772090912,
+    "source_puzzle_id": "INF-00158"
+  },
+  {
+    "category": "LARGE STRUCTURES",
+    "words": [
+      "BUILDING",
+      "CITY",
+      "STADIUM",
+      "FIELD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.399761438369751,
+    "source_puzzle_id": "INF-00160"
+  },
+  {
+    "category": "WORDS RELATED TO TIME",
+    "words": [
+      "MINUTE",
+      "DAWN",
+      "DUSK",
+      "EPOCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38323405385017395,
+    "source_puzzle_id": "INF-00161"
+  },
+  {
+    "category": "LITERARY PLACES",
+    "words": [
+      "NARNIA",
+      "HOGWARTS",
+      "WONDERLAND",
+      "RIVENDELL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.47024068236351013,
+    "source_puzzle_id": "INF-00162"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH GAMBLING",
+    "words": [
+      "WAGER",
+      "POT",
+      "CHIPS",
+      "BLUFF"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2902334928512573,
+    "source_puzzle_id": "INF-00164"
+  },
+  {
+    "category": "WORDS RELATED TO INTERRUPTIONS",
+    "words": [
+      "DISTRACT",
+      "INTERRUPT",
+      "BOTHER",
+      "PAUSE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3882100582122803,
+    "source_puzzle_id": "INF-00165"
+  },
+  {
+    "category": "ABSTRACT BREAKS",
+    "words": [
+      "HEART",
+      "SILENCE",
+      "TRUST",
+      "SPIRIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33869490027427673,
+    "source_puzzle_id": "INF-00166"
+  },
+  {
+    "category": "RIDES AND ATTRACTIONS",
+    "words": [
+      "ROLLERCOASTER",
+      "POPBOTTLE",
+      "FERRISWHEEL",
+      "BALLOON"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41632702946662903,
+    "source_puzzle_id": "INF-00168"
+  },
+  {
+    "category": "THINGS THAT CAN BE ADJUSTED",
+    "words": [
+      "HEAT",
+      "SPICE",
+      "PRESSURE",
+      "FLAVOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37099120020866394,
+    "source_puzzle_id": "INF-00169"
+  },
+  {
+    "category": "SCIENTIFIC TERMS",
+    "words": [
+      "HYPOTHESIS",
+      "EXPERIMENT",
+      "THEOREM",
+      "ANALYSIS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38886401057243347,
+    "source_puzzle_id": "INF-00170"
+  },
+  {
+    "category": "SUGGESTIVE ACTIONS",
+    "words": [
+      "FLIRTING",
+      "SUGGESTING",
+      "WINKING",
+      "PROPOSING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4263433516025543,
+    "source_puzzle_id": "INF-00171"
+  },
+  {
+    "category": "WORDS DESCRIBING INTENSITY",
+    "words": [
+      "SHALLOW",
+      "DEEP",
+      "PROFOUND",
+      "LEVEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3704557716846466,
+    "source_puzzle_id": "INF-00172"
+  },
+  {
+    "category": "THINGS FOUND IN NATURE",
+    "words": [
+      "WIND",
+      "WATER",
+      "FROST",
+      "SAND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38632869720458984,
+    "source_puzzle_id": "INF-00173"
+  },
+  {
+    "category": "SPORTS TERMS",
+    "words": [
+      "HOOP",
+      "GRIDIRON",
+      "SLAM",
+      "RUNNER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3206729590892792,
+    "source_puzzle_id": "INF-00174"
+  },
+  {
+    "category": "NATURAL MATERIALS",
+    "words": [
+      "MUD",
+      "WATER",
+      "FIRE",
+      "DUST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4233664572238922,
+    "source_puzzle_id": "INF-00175"
+  },
+  {
+    "category": "WORDS THAT CAN BE FOUND IN A LIBRARY",
+    "words": [
+      "SHELF",
+      "STACK",
+      "INDEX",
+      "ARCHIVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3010682761669159,
+    "source_puzzle_id": "INF-00176"
+  },
+  {
+    "category": "MATH TERMS",
+    "words": [
+      "SUM",
+      "RATIO",
+      "DIVIDE",
+      "EQUAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35925474762916565,
+    "source_puzzle_id": "INF-00179"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH NOBILITY",
+    "words": [
+      "CROWN",
+      "THRONE",
+      "PALACE",
+      "EMBLEM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.45014703273773193,
+    "source_puzzle_id": "INF-00180"
+  },
+  {
+    "category": "THINGS RELATED TO SPORTS",
+    "words": [
+      "HOOP",
+      "RACQUET",
+      "GLOVE",
+      "BALL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.429532915353775,
+    "source_puzzle_id": "INF-00181"
+  },
+  {
+    "category": "GIFT SHOP ITEMS",
+    "words": [
+      "SOUVENIR",
+      "PLUSH",
+      "ART",
+      "DECOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3538435697555542,
+    "source_puzzle_id": "INF-00182"
+  },
+  {
+    "category": "COMPETITIVE TERMS",
+    "words": [
+      "LEAGUE",
+      "TOURNAMENT",
+      "CHAMPION",
+      "BRACKET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4635193347930908,
+    "source_puzzle_id": "INF-00183"
+  },
+  {
+    "category": "WORDS RELATED TO WRITING",
+    "words": [
+      "PEN",
+      "PAGE",
+      "INK",
+      "TEXT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3756653368473053,
+    "source_puzzle_id": "INF-00184"
+  },
+  {
+    "category": "LARGE THINGS",
+    "words": [
+      "GIANT",
+      "TOWER",
+      "MOUNTAIN",
+      "WHALE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4013194739818573,
+    "source_puzzle_id": "INF-00185"
+  },
+  {
+    "category": "NATURAL ACTIONS",
+    "words": [
+      "SWIM",
+      "FLY",
+      "BLOOM",
+      "DIVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3695331811904907,
+    "source_puzzle_id": "INF-00186"
+  },
+  {
+    "category": "OBJECTS IN A HOUSEHOLD",
+    "words": [
+      "CARPET",
+      "LAMP",
+      "MOP",
+      "PILLOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3835872411727905,
+    "source_puzzle_id": "INF-00187"
+  },
+  {
+    "category": "PARTY SUPPLIES",
+    "words": [
+      "BALLOONS",
+      "CONFETTI",
+      "DECORATIONS",
+      "COSTUMES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4651159346103668,
+    "source_puzzle_id": "INF-00189"
+  },
+  {
+    "category": "THINGS THAT CAN BE DECORATED",
+    "words": [
+      "ROOM",
+      "GIFT",
+      "LAMP",
+      "WALL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38626620173454285,
+    "source_puzzle_id": "INF-00190"
+  },
+  {
+    "category": "WAYS TO IMPROVE",
+    "words": [
+      "TRAIN",
+      "STUDY",
+      "REHEARSE",
+      "PREPARE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41815629601478577,
+    "source_puzzle_id": "INF-00191"
+  },
+  {
+    "category": "EMAIL TERMS",
+    "words": [
+      "ATTACHMENT",
+      "SPAM",
+      "THREAD",
+      "SUBJECT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34716519713401794,
+    "source_puzzle_id": "INF-00192"
+  },
+  {
+    "category": "FAIR ATTRACTIONS",
+    "words": [
+      "CARNIVAL",
+      "FERRIS",
+      "RIDE",
+      "BOOTH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3261648118495941,
+    "source_puzzle_id": "INF-00193"
+  },
+  {
+    "category": "NATURAL RESOURCES",
+    "words": [
+      "OIL",
+      "COAL",
+      "SAND",
+      "MINERALS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.49589428305625916,
+    "source_puzzle_id": "INF-00194"
+  },
+  {
+    "category": "THINGS THAT CAN BE FILLED",
+    "words": [
+      "BIN",
+      "BOX",
+      "BAG",
+      "VAULT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4444175064563751,
+    "source_puzzle_id": "INF-00197"
+  },
+  {
+    "category": "FAIRY TALE ELEMENTS",
+    "words": [
+      "PRINCESS",
+      "WIZARD",
+      "DRAGON",
+      "ENCHANTED"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4402712881565094,
+    "source_puzzle_id": "INF-00198"
+  },
+  {
+    "category": "BUSINESS TERMS",
+    "words": [
+      "FIRM",
+      "REVENUE",
+      "MERGER",
+      "PROFIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36945757269859314,
+    "source_puzzle_id": "INF-00199"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH DRAMA",
+    "words": [
+      "TRAGEDY",
+      "COMEDY",
+      "CHARACTER",
+      "MONOLOGUE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42252445220947266,
+    "source_puzzle_id": "INF-00200"
+  },
+  {
+    "category": "NATURAL OBJECTS",
+    "words": [
+      "FOSSIL",
+      "MOSS",
+      "CORAL",
+      "STONE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3429650068283081,
+    "source_puzzle_id": "INF-00201"
+  },
+  {
+    "category": "THINGS THAT CAN BE CAPTURED",
+    "words": [
+      "PHOTO",
+      "VIDEO",
+      "PLOT",
+      "SCENE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31583669781684875,
+    "source_puzzle_id": "INF-00202"
+  },
+  {
+    "category": "FICTIONAL LOCATIONS",
+    "words": [
+      "NARNIA",
+      "WONDERLAND",
+      "HOGWARTS",
+      "MORDOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4776979386806488,
+    "source_puzzle_id": "INF-00203"
+  },
+  {
+    "category": "KITCHEN ACTIONS",
+    "words": [
+      "CHOP",
+      "BAKE",
+      "STIR",
+      "SAUTE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4040035903453827,
+    "source_puzzle_id": "INF-00204"
+  },
+  {
+    "category": "FAST MOVEMENTS",
+    "words": [
+      "SPEED",
+      "FLY",
+      "DASH",
+      "JET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3667600154876709,
+    "source_puzzle_id": "INF-00205"
+  },
+  {
+    "category": "ABSTRACT CONCEPTS",
+    "words": [
+      "HEART",
+      "PROMISE",
+      "SILENCE",
+      "TRUST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3378497362136841,
+    "source_puzzle_id": "INF-00206"
+  },
+  {
+    "category": "WORDS THAT DESCRIBE PEOPLE",
+    "words": [
+      "UNIQUE",
+      "FUNKY",
+      "WILD",
+      "QUIRKY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4415952265262604,
+    "source_puzzle_id": "INF-00207"
+  },
+  {
+    "category": "KITCHEN ACTIONS",
+    "words": [
+      "BAKE",
+      "WHISK",
+      "STIR",
+      "SAUTE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.419609397649765,
+    "source_puzzle_id": "INF-00208"
+  },
+  {
+    "category": "THINGS THAT HANG",
+    "words": [
+      "MISTLETOE",
+      "DOOR",
+      "GATE",
+      "CHANDELIER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3773910701274872,
+    "source_puzzle_id": "INF-00209"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH NATURE",
+    "words": [
+      "MOUNTAIN",
+      "RIVER",
+      "FOREST",
+      "OCEAN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4176712930202484,
+    "source_puzzle_id": "INF-00210"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND AT THE BEACH",
+    "words": [
+      "SAND",
+      "TOWEL",
+      "SEASHELL",
+      "ICECREAM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3953563868999481,
+    "source_puzzle_id": "INF-00211"
+  },
+  {
+    "category": "THINGS THAT CAN BE RAISED",
+    "words": [
+      "GLASSES",
+      "WINE",
+      "ROOF",
+      "SAND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.26826319098472595,
+    "source_puzzle_id": "INF-00212"
+  },
+  {
+    "category": "WORDS THAT CAN BE FOLLOWED BY 'FURY'",
+    "words": [
+      "SHEER",
+      "NATURAL",
+      "WHITE",
+      "WILD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37665149569511414,
+    "source_puzzle_id": "INF-00213"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH TIME",
+    "words": [
+      "DECADE",
+      "EPOCH",
+      "CENTURY",
+      "TIMELINE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4556150734424591,
+    "source_puzzle_id": "INF-00214"
+  },
+  {
+    "category": "LUXURIOUS PROPERTIES",
+    "words": [
+      "MANSION",
+      "JET",
+      "VILLA",
+      "RESORT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3427487313747406,
+    "source_puzzle_id": "INF-00216"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH TIME",
+    "words": [
+      "HOURGLASS",
+      "TIMER",
+      "CALENDAR",
+      "EPOCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3467148244380951,
+    "source_puzzle_id": "INF-00217"
+  },
+  {
+    "category": "THINGS THAT CAN BE FOUND IN NATURE",
+    "words": [
+      "MEADOW",
+      "GROVE",
+      "WILDFLOWER",
+      "CREEK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4425300359725952,
+    "source_puzzle_id": "INF-00218"
+  },
+  {
+    "category": "GARDEN TOOLS",
+    "words": [
+      "SHOVEL",
+      "PATIO",
+      "SPADE",
+      "SOIL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39200568199157715,
+    "source_puzzle_id": "INF-00219"
+  },
+  {
+    "category": "THINGS THAT SHIFT",
+    "words": [
+      "HERO",
+      "SHIFT",
+      "GRAM",
+      "GEAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2725624740123749,
+    "source_puzzle_id": "INF-00220"
+  },
+  {
+    "category": "THEATER TERMS",
+    "words": [
+      "ACT",
+      "SCENE",
+      "DIALOGUE",
+      "MONOLOGUE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40601369738578796,
+    "source_puzzle_id": "INF-00221"
+  },
+  {
+    "category": "THINGS THAT CAN BE TURNED",
+    "words": [
+      "KNOB",
+      "PAGE",
+      "DIAL",
+      "WHEEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.28801658749580383,
+    "source_puzzle_id": "INF-00222"
+  },
+  {
+    "category": "THINGS THAT CAN BE FOUND IN A CLOCK",
+    "words": [
+      "GEARS",
+      "DIAL",
+      "TICK",
+      "CHIME"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2944366931915283,
+    "source_puzzle_id": "INF-00223"
+  },
+  {
+    "category": "THINGS RELATED TO COOKING MISHAPS",
+    "words": [
+      "BURN",
+      "SPILL",
+      "MIX",
+      "CRUMBLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3324747383594513,
+    "source_puzzle_id": "INF-00224"
+  },
+  {
+    "category": "KITCHEN UTENSILS",
+    "words": [
+      "WHISK",
+      "SPATULA",
+      "COLANDER",
+      "TONGS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4600435793399811,
+    "source_puzzle_id": "INF-00225"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH FITNESS",
+    "words": [
+      "GYM",
+      "SWEAT",
+      "LIFT",
+      "CARDIO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4493437707424164,
+    "source_puzzle_id": "INF-00226"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH MAGIC TRICKS",
+    "words": [
+      "WAND",
+      "DISAPPEAR",
+      "ILLUSION",
+      "CLOAK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.343003511428833,
+    "source_puzzle_id": "INF-00227"
+  },
+  {
+    "category": "THINGS THAT CAN BREAK OR BE BROKEN",
+    "words": [
+      "HEART",
+      "BONE",
+      "TRUST",
+      "SPINE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3557772636413574,
+    "source_puzzle_id": "INF-00228"
+  },
+  {
+    "category": "THINGS YOU DO IN A GARDEN",
+    "words": [
+      "WEED",
+      "SEED",
+      "RAKE",
+      "SOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3431302011013031,
+    "source_puzzle_id": "INF-00229"
+  },
+  {
+    "category": "THINGS RELATED TO TRAVEL",
+    "words": [
+      "PLANE",
+      "BAG",
+      "SEAT",
+      "TICKET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37146398425102234,
+    "source_puzzle_id": "INF-00230"
+  },
+  {
+    "category": "THINGS THAT CAN BE TOSSED",
+    "words": [
+      "FRISBEE",
+      "DART",
+      "BEANBAG",
+      "BALL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41456881165504456,
+    "source_puzzle_id": "INF-00231"
+  },
+  {
+    "category": "THINGS THAT CAN BE BALANCED",
+    "words": [
+      "TIGHTROPE",
+      "YOGA",
+      "EQUILIBRIUM",
+      "JUGGLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29628250002861023,
+    "source_puzzle_id": "INF-00232"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH CARE",
+    "words": [
+      "NURTURE",
+      "PARENT",
+      "LOVE",
+      "SOUL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.333999902009964,
+    "source_puzzle_id": "INF-00233"
+  },
+  {
+    "category": "THINGS FOUND ON A PLAYGROUND",
+    "words": [
+      "SWING",
+      "SLIDE",
+      "CLIMBER",
+      "LADDER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35404717922210693,
+    "source_puzzle_id": "INF-00234"
+  },
+  {
+    "category": "THINGS THAT CAN BE CHANGED",
+    "words": [
+      "PLAN",
+      "ROUTE",
+      "DIRECTION",
+      "STYLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36248865723609924,
+    "source_puzzle_id": "INF-00235"
+  },
+  {
+    "category": "WEIGHT TERMS",
+    "words": [
+      "BALANCE",
+      "HEAVY",
+      "LIGHT",
+      "GRAVITY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3757789134979248,
+    "source_puzzle_id": "INF-00236"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A KITCHEN",
+    "words": [
+      "SPATULA",
+      "WHISK",
+      "COLANDER",
+      "BOWL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4253886938095093,
+    "source_puzzle_id": "INF-00237"
+  },
+  {
+    "category": "THINGS FOUND IN A BEDROOM",
+    "words": [
+      "PILLOW",
+      "BLANKET",
+      "LAMP",
+      "SHEET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41178640723228455,
+    "source_puzzle_id": "INF-00238"
+  },
+  {
+    "category": "THINGS THAT CAN BE BLACK",
+    "words": [
+      "RAVEN",
+      "JET",
+      "CROW",
+      "CHAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36986732482910156,
+    "source_puzzle_id": "INF-00239"
+  },
+  {
+    "category": "CHILDHOOD EXPERIENCES",
+    "words": [
+      "PLAYGROUND",
+      "IMAGINATION",
+      "LAUGHTER",
+      "ADVENTURE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4327033758163452,
+    "source_puzzle_id": "INF-00240"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH ENGLAND",
+    "words": [
+      "TEA",
+      "SCONES",
+      "PUB",
+      "BISCUITS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4051550626754761,
+    "source_puzzle_id": "INF-00241"
+  },
+  {
+    "category": "CATEGORIES OF CULTURE",
+    "words": [
+      "MUSIC",
+      "FASHION",
+      "ART",
+      "SPORT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44944557547569275,
+    "source_puzzle_id": "INF-00242"
+  },
+  {
+    "category": "FOOD AND DRINK ITEMS",
+    "words": [
+      "LATTE",
+      "SCONES",
+      "CROISSANT",
+      "CAFE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42900994420051575,
+    "source_puzzle_id": "INF-00243"
+  },
+  {
+    "category": "THINGS THAT CAN BE WRAPPED",
+    "words": [
+      "GIFT",
+      "CANDY",
+      "BUNDLE",
+      "PARCEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3346312344074249,
+    "source_puzzle_id": "INF-00244"
+  },
+  {
+    "category": "FILM ELEMENTS",
+    "words": [
+      "CAMEO",
+      "SCENE",
+      "SCRIPT",
+      "CAST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39450952410697937,
+    "source_puzzle_id": "INF-00245"
+  },
+  {
+    "category": "DANGEROUS ITEMS",
+    "words": [
+      "KNIFE",
+      "THREAT",
+      "AMBUSH",
+      "BOMB"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39932188391685486,
+    "source_puzzle_id": "INF-00246"
+  },
+  {
+    "category": "THINGS RELATED TO ADVENTURE",
+    "words": [
+      "VOYAGE",
+      "JOURNEY",
+      "ODYSSEY",
+      "EXPEDITION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.5129056572914124,
+    "source_puzzle_id": "INF-00247"
+  },
+  {
+    "category": "DETECTIVE TOOLS",
+    "words": [
+      "CLUE",
+      "SHADOW",
+      "SKETCH",
+      "INTERROGATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31524771451950073,
+    "source_puzzle_id": "INF-00248"
+  },
+  {
+    "category": "FLEA MARKET FINDS",
+    "words": [
+      "ANTIQUE",
+      "VINTAGE",
+      "COLLECTIBLE",
+      "ARTIFACT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44717004895210266,
+    "source_puzzle_id": "INF-00249"
+  },
+  {
+    "category": "THINGS RELATED TO SECURITY",
+    "words": [
+      "SHIELD",
+      "GUARD",
+      "ALARM",
+      "DEFENSE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4197863042354584,
+    "source_puzzle_id": "INF-00250"
+  },
+  {
+    "category": "THINGS THAT CAN BE STACKED",
+    "words": [
+      "CUPS",
+      "CUSHIONS",
+      "BAGS",
+      "POTS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3774377405643463,
+    "source_puzzle_id": "INF-00251"
+  },
+  {
+    "category": "SPORTS ACTIONS",
+    "words": [
+      "PLAY",
+      "DRIVE",
+      "RACE",
+      "SWIM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3552677631378174,
+    "source_puzzle_id": "INF-00252"
+  },
+  {
+    "category": "THINGS THAT CAN BE BROKEN",
+    "words": [
+      "NUT",
+      "SHELL",
+      "PASSWORD",
+      "MYSTERY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.30104365944862366,
+    "source_puzzle_id": "INF-00253"
+  },
+  {
+    "category": "EDIBLE ITEMS",
+    "words": [
+      "GUM",
+      "CORN",
+      "SNACK",
+      "NUT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43487241864204407,
+    "source_puzzle_id": "INF-00254"
+  },
+  {
+    "category": "PERSONAL CARE BRANDS",
+    "words": [
+      "AXE",
+      "DOVE",
+      "HEAD",
+      "SHOULDERS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3348597288131714,
+    "source_puzzle_id": "INF-00255"
+  },
+  {
+    "category": "THINGS THAT CAN FALL",
+    "words": [
+      "WATER",
+      "DIVE",
+      "JUMP",
+      "FALL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3644595444202423,
+    "source_puzzle_id": "INF-00256"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH THEATRE",
+    "words": [
+      "SCRIPT",
+      "STAGE",
+      "DIRECTOR",
+      "ACTOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3964656591415405,
+    "source_puzzle_id": "INF-00257"
+  },
+  {
+    "category": "MUSICAL ELEMENTS",
+    "words": [
+      "RHYTHM",
+      "MELODY",
+      "HARMONY",
+      "TUNE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.464819073677063,
+    "source_puzzle_id": "INF-00258"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND AT A PICNIC",
+    "words": [
+      "SANDWICH",
+      "JUICE",
+      "FRUIT",
+      "SNACK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4347139298915863,
+    "source_puzzle_id": "INF-00259"
+  },
+  {
+    "category": "FITNESS TERMS",
+    "words": [
+      "RIPPED",
+      "CARDIO",
+      "SHRED",
+      "SWEAT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37695828080177307,
+    "source_puzzle_id": "INF-00260"
+  },
+  {
+    "category": "EVENING ACTIVITIES",
+    "words": [
+      "MOVIE",
+      "PARTY",
+      "BBQ",
+      "DANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34752023220062256,
+    "source_puzzle_id": "INF-00261"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH WOLVES",
+    "words": [
+      "HUNT",
+      "HOWL",
+      "FANGS",
+      "PREDATOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3945234715938568,
+    "source_puzzle_id": "INF-00262"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A BACKPACK",
+    "words": [
+      "MAP",
+      "FLASHLIGHT",
+      "JOURNAL",
+      "GPS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2900746166706085,
+    "source_puzzle_id": "INF-00263"
+  },
+  {
+    "category": "THINGS THAT CAN FLOW",
+    "words": [
+      "RIVER",
+      "STREAM",
+      "FLOOD",
+      "WATERFALL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.49174046516418457,
+    "source_puzzle_id": "INF-00264"
+  },
+  {
+    "category": "CHARACTERISTICS OF SPIDERS",
+    "words": [
+      "FANG",
+      "VENOM",
+      "CREEPY",
+      "PREDATOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3549869954586029,
+    "source_puzzle_id": "INF-00265"
+  },
+  {
+    "category": "THINGS YOU CAN HOLD",
+    "words": [
+      "BALL",
+      "PHONE",
+      "SANDWICH",
+      "EGG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34697386622428894,
+    "source_puzzle_id": "INF-00266"
+  },
+  {
+    "category": "CLASSIC CHILDHOOD ITEMS",
+    "words": [
+      "TOY",
+      "CANDY",
+      "PUPPY",
+      "DOLLS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.400722473859787,
+    "source_puzzle_id": "INF-00267"
+  },
+  {
+    "category": "LIQUID CONTAINERS",
+    "words": [
+      "COCKTAIL",
+      "GALLON",
+      "TANGO",
+      "BOTTLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3376021087169647,
+    "source_puzzle_id": "INF-00268"
+  },
+  {
+    "category": "THINGS THAT SPIN",
+    "words": [
+      "GYRO",
+      "WHEEL",
+      "PINWHEEL",
+      "DISK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38489508628845215,
+    "source_puzzle_id": "INF-00269"
+  },
+  {
+    "category": "THINGS THAT SYMBOLIZE POWER",
+    "words": [
+      "CROWN",
+      "THRONE",
+      "BANNER",
+      "ORB"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39832210540771484,
+    "source_puzzle_id": "INF-00270"
+  },
+  {
+    "category": "SOCIAL MEDIA TERMS",
+    "words": [
+      "POST",
+      "ENGAGEMENT",
+      "CONTENT",
+      "UPDATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.306795209646225,
+    "source_puzzle_id": "INF-00271"
+  },
+  {
+    "category": "ITEMS FOR SCHOOL",
+    "words": [
+      "PEN",
+      "JACKET",
+      "HEADPHONES",
+      "FLASHLIGHT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3233782947063446,
+    "source_puzzle_id": "INF-00273"
+  },
+  {
+    "category": "THINGS YOU CAN HEAR",
+    "words": [
+      "CHIME",
+      "WHISPER",
+      "BANG",
+      "SQUEAK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3759096562862396,
+    "source_puzzle_id": "INF-00274"
+  },
+  {
+    "category": "NATURAL FEATURES",
+    "words": [
+      "CAVERN",
+      "RIVER",
+      "FOREST",
+      "PATH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35181617736816406,
+    "source_puzzle_id": "INF-00275"
+  },
+  {
+    "category": "FOREST CREATURES & PLANTS",
+    "words": [
+      "MUSHROOM",
+      "SQUIRREL",
+      "FUNGUS",
+      "FIREWOOD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41602322459220886,
+    "source_puzzle_id": "INF-00276"
+  },
+  {
+    "category": "THINGS FOUND IN A KITCHEN",
+    "words": [
+      "SPOON",
+      "FORK",
+      "PLATE",
+      "MUG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42354920506477356,
+    "source_puzzle_id": "INF-00277"
+  },
+  {
+    "category": "CIRCUS PERFORMERS AND TREATS",
+    "words": [
+      "CLOWN",
+      "JUGGLER",
+      "RINGMASTER",
+      "COTTONCANDY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41210484504699707,
+    "source_puzzle_id": "INF-00278"
+  },
+  {
+    "category": "WORDS THAT CAN BE MANAGED",
+    "words": [
+      "PROJECT",
+      "TEAM",
+      "SCHEDULE",
+      "TASK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39232221245765686,
+    "source_puzzle_id": "INF-00279"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH URGENCY",
+    "words": [
+      "RUSH",
+      "HASTEN",
+      "EXPEDITE",
+      "SPEED"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41409799456596375,
+    "source_puzzle_id": "INF-00280"
+  },
+  {
+    "category": "THINGS FOUND IN A LAB",
+    "words": [
+      "FLASK",
+      "TUBE",
+      "PLATE",
+      "BEAKER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34248045086860657,
+    "source_puzzle_id": "INF-00281"
+  },
+  {
+    "category": "ADJECTIVES FOR PEOPLE",
+    "words": [
+      "ELEGANT",
+      "DAPPER",
+      "CLUMSY",
+      "SLEEK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4229919910430908,
+    "source_puzzle_id": "INF-00282"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH TIME",
+    "words": [
+      "EPOCH",
+      "MOMENT",
+      "DECADE",
+      "TIMELINE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3722686767578125,
+    "source_puzzle_id": "INF-00283"
+  },
+  {
+    "category": "OUTDOOR ACTIVITIES",
+    "words": [
+      "CAMPFIRE",
+      "HIKER",
+      "BUSHCRAFT",
+      "FOSSIL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3339942395687103,
+    "source_puzzle_id": "INF-00284"
+  },
+  {
+    "category": "COMPETITION STRATEGIES",
+    "words": [
+      "ADVANTAGE",
+      "FLEET",
+      "RACE",
+      "STRATEGY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3201054632663727,
+    "source_puzzle_id": "INF-00285"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH SUMMER",
+    "words": [
+      "BBQ",
+      "VACATION",
+      "PICNIC",
+      "SANDCASTLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.376348614692688,
+    "source_puzzle_id": "INF-00286"
+  },
+  {
+    "category": "THINGS AT A PARTY",
+    "words": [
+      "CONCERT",
+      "DANCE",
+      "DJ",
+      "GUEST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3543550968170166,
+    "source_puzzle_id": "INF-00288"
+  },
+  {
+    "category": "OBJECTS THAT CAN BE STACKED",
+    "words": [
+      "BLOCKS",
+      "SHELVES",
+      "STACKS",
+      "TILES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40325531363487244,
+    "source_puzzle_id": "INF-00289"
+  },
+  {
+    "category": "SUDDEN NOISES",
+    "words": [
+      "THUMP",
+      "POP",
+      "CLAP",
+      "BANG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39073798060417175,
+    "source_puzzle_id": "INF-00290"
+  },
+  {
+    "category": "ANIMAL NAMES",
+    "words": [
+      "DEER",
+      "EAGLE",
+      "IGUANA",
+      "JAGUAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43948349356651306,
+    "source_puzzle_id": "INF-00291"
+  },
+  {
+    "category": "WORDS THAT CAN MEAN SLOW",
+    "words": [
+      "LAG",
+      "DAWDLE",
+      "LOITER",
+      "TARDY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3289475739002228,
+    "source_puzzle_id": "INF-00292"
+  },
+  {
+    "category": "PET CARE",
+    "words": [
+      "LEASH",
+      "FOOD",
+      "GROOMING",
+      "WALK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3156072199344635,
+    "source_puzzle_id": "INF-00293"
+  },
+  {
+    "category": "SOUNDS",
+    "words": [
+      "BEEP",
+      "RATTLE",
+      "THUMP",
+      "CLUCK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41686534881591797,
+    "source_puzzle_id": "INF-00294"
+  },
+  {
+    "category": "THINGS FOUND IN NATURE",
+    "words": [
+      "TREE",
+      "WILDFLOWER",
+      "BIRD",
+      "SUNSET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3238259553909302,
+    "source_puzzle_id": "INF-00295"
+  },
+  {
+    "category": "WORDS RELATED TO ANIMAL NOISES",
+    "words": [
+      "QUACK",
+      "HISS",
+      "BELLOW",
+      "WHINNY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3543541431427002,
+    "source_puzzle_id": "INF-00297"
+  },
+  {
+    "category": "THINGS THAT RING",
+    "words": [
+      "BELL",
+      "ALARM",
+      "CHIME",
+      "DING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4304007291793823,
+    "source_puzzle_id": "INF-00298"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH GREEN",
+    "words": [
+      "LIME",
+      "AVOCADO",
+      "OLIVE",
+      "EMERALD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4511352777481079,
+    "source_puzzle_id": "INF-00299"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH CELEBRATIONS",
+    "words": [
+      "CAKE",
+      "PARTY",
+      "FESTIVITIES",
+      "TOASTS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44829532504081726,
+    "source_puzzle_id": "INF-00300"
+  },
+  {
+    "category": "COLLECTIONS",
+    "words": [
+      "DOZEN",
+      "BUNCH",
+      "PAIR",
+      "LOT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38269540667533875,
+    "source_puzzle_id": "INF-00301"
+  },
+  {
+    "category": "URBAN ELEMENTS",
+    "words": [
+      "SKYSCRAPER",
+      "SUBWAY",
+      "BISTRO",
+      "BILLBOARD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3933631479740143,
+    "source_puzzle_id": "INF-00302"
+  },
+  {
+    "category": "THINGS THAT CAN BE ROLLED OR MOVED",
+    "words": [
+      "BALL",
+      "BOWL",
+      "TANK",
+      "FISH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3666573464870453,
+    "source_puzzle_id": "INF-00303"
+  },
+  {
+    "category": "THINGS THAT CAN BE BROKEN",
+    "words": [
+      "PROMISE",
+      "HEART",
+      "SILENCE",
+      "TRUST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3378497362136841,
+    "source_puzzle_id": "INF-00304"
+  },
+  {
+    "category": "THINGS THAT CAN BE WARMED",
+    "words": [
+      "HUG",
+      "BLANKET",
+      "SUN",
+      "COFFEE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31453725695610046,
+    "source_puzzle_id": "INF-00305"
+  },
+  {
+    "category": "ROLLABLE OBJECTS",
+    "words": [
+      "PAPER",
+      "WHEELS",
+      "CIGARS",
+      "BANDAGES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3177539110183716,
+    "source_puzzle_id": "INF-00306"
+  },
+  {
+    "category": "THINGS YOU MIGHT DO AT HOME",
+    "words": [
+      "RELAX",
+      "SLEEP",
+      "WATCH",
+      "READ"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37408915162086487,
+    "source_puzzle_id": "INF-00307"
+  },
+  {
+    "category": "BRANDS WITH S IN NAME",
+    "words": [
+      "STAPLES",
+      "SAMSUNG",
+      "SIRIUS",
+      "SIRLOIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3134288489818573,
+    "source_puzzle_id": "INF-00308"
+  },
+  {
+    "category": "GAME TERMS",
+    "words": [
+      "BOARD",
+      "CARD",
+      "PLAYER",
+      "TOKEN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33942940831184387,
+    "source_puzzle_id": "INF-00309"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH BREWING",
+    "words": [
+      "BARLEY",
+      "YEAST",
+      "FERMENT",
+      "DRAUGHT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.429127961397171,
+    "source_puzzle_id": "INF-00311"
+  },
+  {
+    "category": "CIRCUS PERFORMERS",
+    "words": [
+      "CLOWN",
+      "JUGGLER",
+      "BALLOON",
+      "STUNT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4097555875778198,
+    "source_puzzle_id": "INF-00312"
+  },
+  {
+    "category": "GAMBLING TERMS",
+    "words": [
+      "POT",
+      "CHIPS",
+      "HOUSE",
+      "CARD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.28634214401245117,
+    "source_puzzle_id": "INF-00313"
+  },
+  {
+    "category": "THINGS THAT CAN BE TURNED",
+    "words": [
+      "KEY",
+      "SCREW",
+      "HANDLE",
+      "KNOB"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3508740961551666,
+    "source_puzzle_id": "INF-00314"
+  },
+  {
+    "category": "THINGS THAT CAN BE BUILT",
+    "words": [
+      "BRIDGE",
+      "GARDEN",
+      "ROAD",
+      "FENCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40499019622802734,
+    "source_puzzle_id": "INF-00315"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH FALL",
+    "words": [
+      "HARVEST",
+      "PUMPKIN",
+      "ACORN",
+      "CIDER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35411110520362854,
+    "source_puzzle_id": "INF-00316"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND AT A PARTY",
+    "words": [
+      "DANCE",
+      "MUSIC",
+      "GAMES",
+      "LAUGHTER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4235316812992096,
+    "source_puzzle_id": "INF-00317"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND AT A PARTY",
+    "words": [
+      "SNACKS",
+      "DRINKS",
+      "GAMES",
+      "MUSIC"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4436696469783783,
+    "source_puzzle_id": "INF-00318"
+  },
+  {
+    "category": "THINGS THAT CAN FALL",
+    "words": [
+      "RAIN",
+      "LEAF",
+      "SNOW",
+      "TEAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3607182204723358,
+    "source_puzzle_id": "INF-00319"
+  },
+  {
+    "category": "FAMOUS SCULPTURES OR ART PIECES",
+    "words": [
+      "DAVID",
+      "THE THINKER",
+      "THE BIRD",
+      "THE DISCUS THROWER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3299034833908081,
+    "source_puzzle_id": "INF-00320"
+  },
+  {
+    "category": "SOUNDS",
+    "words": [
+      "SHOUT",
+      "ROAR",
+      "CLAP",
+      "HONK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4433497488498688,
+    "source_puzzle_id": "INF-00323"
+  },
+  {
+    "category": "FORMS OF COMMUNICATION",
+    "words": [
+      "POST",
+      "NOTE",
+      "GIFT",
+      "LINK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2684020698070526,
+    "source_puzzle_id": "INF-00324"
+  },
+  {
+    "category": "THINGS THAT CAN BE TRIMMED",
+    "words": [
+      "LAWN",
+      "FENCE",
+      "WEEDS",
+      "TREES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4002056419849396,
+    "source_puzzle_id": "INF-00325"
+  },
+  {
+    "category": "THINGS THAT MAKE NOISE",
+    "words": [
+      "HONK",
+      "BANG",
+      "HISS",
+      "CLAP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3561515808105469,
+    "source_puzzle_id": "INF-00326"
+  },
+  {
+    "category": "TIME MEASUREMENT",
+    "words": [
+      "HOUR",
+      "MINUTE",
+      "PAUSE",
+      "DURATION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4821043312549591,
+    "source_puzzle_id": "INF-00327"
+  },
+  {
+    "category": "WORDS RELATED TO DINING",
+    "words": [
+      "PLATE",
+      "KNIFE",
+      "FORK",
+      "SPOON"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41264161467552185,
+    "source_puzzle_id": "INF-00328"
+  },
+  {
+    "category": "ACTIONS THAT MOVE SMOOTHLY",
+    "words": [
+      "SLIDE",
+      "SWIM",
+      "FLOAT",
+      "DANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3945522606372833,
+    "source_puzzle_id": "INF-00329"
+  },
+  {
+    "category": "THINGS YOU MIGHT DO WITH YOUR HANDS",
+    "words": [
+      "GRAB",
+      "PUSH",
+      "HOLD",
+      "CATCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4212796986103058,
+    "source_puzzle_id": "INF-00330"
+  },
+  {
+    "category": "THINGS FOUND AT THE BEACH",
+    "words": [
+      "SAND",
+      "WAVE",
+      "SURF",
+      "TOWEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37153688073158264,
+    "source_puzzle_id": "INF-00331"
+  },
+  {
+    "category": "THINGS THAT CAN GROW",
+    "words": [
+      "PLANT",
+      "HAIR",
+      "MOLD",
+      "CROPS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37379327416419983,
+    "source_puzzle_id": "INF-00332"
+  },
+  {
+    "category": "GENRES OR ELEMENTS OF STORIES",
+    "words": [
+      "NARRATIVE",
+      "FANTASY",
+      "DREAM",
+      "ADVENTURE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38679882884025574,
+    "source_puzzle_id": "INF-00333"
+  },
+  {
+    "category": "THINGS THAT CAN BE BROKEN",
+    "words": [
+      "HEART",
+      "PROMISE",
+      "SILENCE",
+      "TRUST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3378497362136841,
+    "source_puzzle_id": "INF-00334"
+  },
+  {
+    "category": "TEAM SPORTS TERMS",
+    "words": [
+      "LEAGUE",
+      "MATCH",
+      "TEAM",
+      "PLAY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41482672095298767,
+    "source_puzzle_id": "INF-00335"
+  },
+  {
+    "category": "CONCEPTS OF CONNECTION",
+    "words": [
+      "RELATIONSHIP",
+      "BONDING",
+      "INTERACTION",
+      "FRIENDSHIP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4539298117160797,
+    "source_puzzle_id": "INF-00336"
+  },
+  {
+    "category": "THINGS RELATED TO GOLF",
+    "words": [
+      "FAIRWAY",
+      "PUTTER",
+      "BIRDIE",
+      "PAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35900643467903137,
+    "source_puzzle_id": "INF-00337"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH ELEVATION",
+    "words": [
+      "PEAK",
+      "SUMMIT",
+      "RIDGE",
+      "CREST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40910330414772034,
+    "source_puzzle_id": "INF-00338"
+  },
+  {
+    "category": "THINGS THAT MAKE SOUND",
+    "words": [
+      "BELL",
+      "ALARM",
+      "DOORBELL",
+      "WHISTLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4802030324935913,
+    "source_puzzle_id": "INF-00339"
+  },
+  {
+    "category": "THINGS WITH STRIPES",
+    "words": [
+      "ZEBRA",
+      "BEE",
+      "CANDY",
+      "TIGER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36206725239753723,
+    "source_puzzle_id": "INF-00340"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH MOVEMENT",
+    "words": [
+      "DASH",
+      "GLIDE",
+      "SPEED",
+      "FLY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3682643473148346,
+    "source_puzzle_id": "INF-00341"
+  },
+  {
+    "category": "THINGS THAT CAN BE BROKEN",
+    "words": [
+      "EGG",
+      "NUT",
+      "SHELL",
+      "DOOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3769821226596832,
+    "source_puzzle_id": "INF-00342"
+  },
+  {
+    "category": "PLACES TO BE",
+    "words": [
+      "STREET",
+      "PARK",
+      "BEACH",
+      "GARDEN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.411672443151474,
+    "source_puzzle_id": "INF-00343"
+  },
+  {
+    "category": "SOMETHING YOU MIGHT DO",
+    "words": [
+      "FISH",
+      "TRAVEL",
+      "DINE",
+      "EXPLORE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3292461037635803,
+    "source_puzzle_id": "INF-00344"
+  },
+  {
+    "category": "OPTICAL INSTRUMENTS",
+    "words": [
+      "LENS",
+      "SPYGLASS",
+      "CAMERA",
+      "RADAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3904378414154053,
+    "source_puzzle_id": "INF-00345"
+  },
+  {
+    "category": "THINGS THAT MOVE",
+    "words": [
+      "TREE",
+      "WIND",
+      "FAN",
+      "WATER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3198922276496887,
+    "source_puzzle_id": "INF-00347"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH FAIRS",
+    "words": [
+      "CARNIVAL",
+      "RIDE",
+      "MIDWAY",
+      "BOOTH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3479008972644806,
+    "source_puzzle_id": "INF-00348"
+  },
+  {
+    "category": "CIRCUS PERFORMERS",
+    "words": [
+      "CLOWN",
+      "JUGGLER",
+      "RINGMASTER",
+      "BALLOON"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4148392379283905,
+    "source_puzzle_id": "INF-00349"
+  },
+  {
+    "category": "WORDS RELATED TO MATH",
+    "words": [
+      "SUM",
+      "SQUARE",
+      "ADD",
+      "EQUATION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3105578124523163,
+    "source_puzzle_id": "INF-00350"
+  },
+  {
+    "category": "ANIMAL NOISES",
+    "words": [
+      "BARK",
+      "MEOW",
+      "QUACK",
+      "HISS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32788988947868347,
+    "source_puzzle_id": "INF-00352"
+  },
+  {
+    "category": "GARDEN TOOLS AND LIFE",
+    "words": [
+      "SHOVEL",
+      "MULCH",
+      "TROWEL",
+      "WORM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41555193066596985,
+    "source_puzzle_id": "INF-00353"
+  },
+  {
+    "category": "GRAPHIC DESIGN TERMS",
+    "words": [
+      "VECTOR",
+      "BOLD",
+      "FONT",
+      "COLOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3267652094364166,
+    "source_puzzle_id": "INF-00354"
+  },
+  {
+    "category": "THINGS YOU CAN WRITE ON",
+    "words": [
+      "NOTEBOOK",
+      "DIARY",
+      "LETTER",
+      "MANIFESTO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38172271847724915,
+    "source_puzzle_id": "INF-00356"
+  },
+  {
+    "category": "THINGS THAT CAN BE SHELLED",
+    "words": [
+      "EGG",
+      "NUT",
+      "SHELL",
+      "WALNUT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42879679799079895,
+    "source_puzzle_id": "INF-00357"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH THEATER",
+    "words": [
+      "STAGE",
+      "AUDIENCE",
+      "DRAMA",
+      "REHEARSAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4413761794567108,
+    "source_puzzle_id": "INF-00358"
+  },
+  {
+    "category": "THINGS THAT CAN FLEX",
+    "words": [
+      "RULER",
+      "PIPE",
+      "FENCE",
+      "ROAD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32567456364631653,
+    "source_puzzle_id": "INF-00359"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH TRAVEL",
+    "words": [
+      "PLANE",
+      "TRAIN",
+      "BOAT",
+      "ROAD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4224744141101837,
+    "source_puzzle_id": "INF-00360"
+  },
+  {
+    "category": "THINGS THAT CAN BE GOLDEN",
+    "words": [
+      "GOLD",
+      "SUN",
+      "SAND",
+      "WHEAT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33829212188720703,
+    "source_puzzle_id": "INF-00361"
+  },
+  {
+    "category": "WORDS RELATED TO COMMUNICATION",
+    "words": [
+      "SPEECH",
+      "DISCUSS",
+      "ANNOUNCE",
+      "DEBATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4244794547557831,
+    "source_puzzle_id": "INF-00362"
+  },
+  {
+    "category": "THINGS THAT CAN BREAK OR BE BROKEN",
+    "words": [
+      "HEART",
+      "SILENCE",
+      "NEWS",
+      "WIND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2766762375831604,
+    "source_puzzle_id": "INF-00363"
+  },
+  {
+    "category": "WORDS RELATED TO COMPUTING",
+    "words": [
+      "HACKER",
+      "SERVER",
+      "NETWORK",
+      "FIREWALL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4260317087173462,
+    "source_puzzle_id": "INF-00364"
+  },
+  {
+    "category": "LUXURY ITEMS",
+    "words": [
+      "CRYSTAL",
+      "MARBLE",
+      "SPARKLE",
+      "BUBBLES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41651391983032227,
+    "source_puzzle_id": "INF-00365"
+  },
+  {
+    "category": "THINGS THAT CAN CHANGE COLOR",
+    "words": [
+      "RAINBOW",
+      "FADING",
+      "PRISM",
+      "SPECTRUM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3606286346912384,
+    "source_puzzle_id": "INF-00366"
+  },
+  {
+    "category": "THINGS YOU MIGHT HEAR IN A THEATER",
+    "words": [
+      "OVATION",
+      "SCRIPT",
+      "CAST",
+      "PRODUCTION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32112357020378113,
+    "source_puzzle_id": "INF-00367"
+  },
+  {
+    "category": "WORDS THAT CAN FOLLOW 'OVER'",
+    "words": [
+      "OVERCAST",
+      "OVERTHINK",
+      "OVERWORK",
+      "OVERFLOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41363635659217834,
+    "source_puzzle_id": "INF-00368"
+  },
+  {
+    "category": "SPINNING ACTIONS",
+    "words": [
+      "TWIRL",
+      "TORNADO",
+      "DIZZY",
+      "FIDGET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32548853754997253,
+    "source_puzzle_id": "INF-00369"
+  },
+  {
+    "category": "ANIMALS",
+    "words": [
+      "WOLF",
+      "BEAR",
+      "TIGER",
+      "OWL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4605884552001953,
+    "source_puzzle_id": "INF-00370"
+  },
+  {
+    "category": "WORDS THAT CAN EXPRESS DISBELIEF",
+    "words": [
+      "NO WAY",
+      "RIDICULOUS",
+      "UNBELIEVABLE",
+      "YOU'VE GOT TO BE KIDDING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3286744952201843,
+    "source_puzzle_id": "INF-00371"
+  },
+  {
+    "category": "PLACES OF CONTAINMENT",
+    "words": [
+      "STADIUM",
+      "BUNKER",
+      "SHELTER",
+      "BARRIER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33691075444221497,
+    "source_puzzle_id": "INF-00372"
+  },
+  {
+    "category": "NIGHTLIFE ACTIVITIES",
+    "words": [
+      "DANCE",
+      "BAR",
+      "CLUB",
+      "MUSIC"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3565986454486847,
+    "source_puzzle_id": "INF-00373"
+  },
+  {
+    "category": "THINGS RELATED TO THE MOON",
+    "words": [
+      "CRATER",
+      "LUNAR",
+      "ECLIPSE",
+      "CRESCENT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4162237346172333,
+    "source_puzzle_id": "INF-00374"
+  },
+  {
+    "category": "DATING ACTIONS",
+    "words": [
+      "FLIRT",
+      "DATE",
+      "KISS",
+      "COURTSHIP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.5264077186584473,
+    "source_puzzle_id": "INF-00375"
+  },
+  {
+    "category": "WORDS RELATED TO DISCOVERY",
+    "words": [
+      "TROVE",
+      "FIND",
+      "REVEAL",
+      "DISCOVER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3880467116832733,
+    "source_puzzle_id": "INF-00377"
+  },
+  {
+    "category": "BOATING TERMS",
+    "words": [
+      "ANCHOR",
+      "SAIL",
+      "RUDDER",
+      "CAPTAIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4403482973575592,
+    "source_puzzle_id": "INF-00378"
+  },
+  {
+    "category": "WORDS RELATED TO WRITING",
+    "words": [
+      "NARRATIVE",
+      "PROSE",
+      "PLOT",
+      "MANUSCRIPT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3991551101207733,
+    "source_puzzle_id": "INF-00379"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH KIDS' PLAY",
+    "words": [
+      "TOY",
+      "DOLL",
+      "MARBLES",
+      "CRAYONS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4039168655872345,
+    "source_puzzle_id": "INF-00380"
+  },
+  {
+    "category": "TIME UNITS",
+    "words": [
+      "CALENDAR",
+      "DECADE",
+      "TIMELINE",
+      "EPOCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36978229880332947,
+    "source_puzzle_id": "INF-00381"
+  },
+  {
+    "category": "PHYSICAL ACTIONS",
+    "words": [
+      "PULL",
+      "PUSH",
+      "LIFT",
+      "SQUEEZE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4395349323749542,
+    "source_puzzle_id": "INF-00382"
+  },
+  {
+    "category": "WORDS RELATED TO DESERTS",
+    "words": [
+      "DUNES",
+      "CACTUS",
+      "SAND",
+      "OASIS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4213641583919525,
+    "source_puzzle_id": "INF-00383"
+  },
+  {
+    "category": "THINGS THAT HANG",
+    "words": [
+      "SWING",
+      "HANG",
+      "CRADLE",
+      "RACK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31927695870399475,
+    "source_puzzle_id": "INF-00384"
+  },
+  {
+    "category": "COMPUTER TERMS",
+    "words": [
+      "HACK",
+      "CODE",
+      "ALGORITHM",
+      "SCRIPT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4264812469482422,
+    "source_puzzle_id": "INF-00385"
+  },
+  {
+    "category": "THINGS FOUND IN A CHURCH",
+    "words": [
+      "ALTAR",
+      "PRAYER",
+      "HYMNS",
+      "SCRIPTURE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4760840833187103,
+    "source_puzzle_id": "INF-00386"
+  },
+  {
+    "category": "NAMES OF FAMOUS PEOPLE",
+    "words": [
+      "EINSTEIN",
+      "HAMILTON",
+      "FLEMING",
+      "ROOSEVELT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32555827498435974,
+    "source_puzzle_id": "INF-00388"
+  },
+  {
+    "category": "THINGS THAT CAN BE BUILT",
+    "words": [
+      "HOUSE",
+      "BRIDGE",
+      "WALL",
+      "SKYSCRAPER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3961072862148285,
+    "source_puzzle_id": "INF-00389"
+  },
+  {
+    "category": "THINGS THAT SHOW OFF",
+    "words": [
+      "SHOWBOAT",
+      "SWAGGER",
+      "FLAUNT",
+      "PRANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4477175176143646,
+    "source_puzzle_id": "INF-00390"
+  },
+  {
+    "category": "THINGS THAT CAN BE STRAPPED",
+    "words": [
+      "BACKPACK",
+      "SEATBELT",
+      "HARNESSES",
+      "LUGGAGE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40299761295318604,
+    "source_puzzle_id": "INF-00391"
+  },
+  {
+    "category": "THINGS FOUND IN A BAR",
+    "words": [
+      "TUMBLER",
+      "STIRRER",
+      "BOTTLE",
+      "PITCHER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4242621660232544,
+    "source_puzzle_id": "INF-00392"
+  },
+  {
+    "category": "FOOD PREPARATION TECHNIQUES",
+    "words": [
+      "SAUTE",
+      "SIMMER",
+      "MARINATE",
+      "ROAST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42775988578796387,
+    "source_puzzle_id": "INF-00393"
+  },
+  {
+    "category": "ILLNESSES AND INJURIES",
+    "words": [
+      "FISH",
+      "COLD",
+      "FEVER",
+      "BREAK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3464381694793701,
+    "source_puzzle_id": "INF-00394"
+  },
+  {
+    "category": "ESCAPE ACTIONS",
+    "words": [
+      "RUN",
+      "DASH",
+      "EVASION",
+      "BOLT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37077662348747253,
+    "source_puzzle_id": "INF-00395"
+  },
+  {
+    "category": "SOUNDS IN NATURE",
+    "words": [
+      "WHISPER",
+      "RUSTLE",
+      "CHIRP",
+      "BUZZ"
+    ],
+    "color": "purple",
+    "similarity_score": 0.375264048576355,
+    "source_puzzle_id": "INF-00396"
+  },
+  {
+    "category": "ABSTRACT CONCEPTS",
+    "words": [
+      "HEART",
+      "SILENCE",
+      "TRUST",
+      "SPIRIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33869490027427673,
+    "source_puzzle_id": "INF-00397"
+  },
+  {
+    "category": "THINGS YOU CAN ADJUST",
+    "words": [
+      "VOLUME",
+      "BRIGHTNESS",
+      "SPEED",
+      "FREQUENCY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36908888816833496,
+    "source_puzzle_id": "INF-00398"
+  },
+  {
+    "category": "THINGS IN A SCIENCE LAB",
+    "words": [
+      "BEAKER",
+      "MICROSCOPE",
+      "TESTTUBE",
+      "FLASK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.30512547492980957,
+    "source_puzzle_id": "INF-00399"
+  },
+  {
+    "category": "FAMOUS SCULPTURES",
+    "words": [
+      "DAVID",
+      "MICHELANGELO",
+      "VENUS",
+      "VENUS DE MILO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36498260498046875,
+    "source_puzzle_id": "INF-00400"
+  },
+  {
+    "category": "SPORTS TERMS",
+    "words": [
+      "GOAL",
+      "MATCH",
+      "COACH",
+      "REFEREE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4227818250656128,
+    "source_puzzle_id": "INF-00401"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH DOGS",
+    "words": [
+      "BARK",
+      "FETCH",
+      "LEASH",
+      "GROOM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3489833176136017,
+    "source_puzzle_id": "INF-00402"
+  },
+  {
+    "category": "MYSTERY ELEMENTS",
+    "words": [
+      "CLUE",
+      "SUSPECT",
+      "INTERROGATE",
+      "ALIBI"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41107451915740967,
+    "source_puzzle_id": "INF-00403"
+  },
+  {
+    "category": "THINGS THAT CONNECT",
+    "words": [
+      "BRIDGE",
+      "CHAIN",
+      "TIE",
+      "NETWORK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3619842529296875,
+    "source_puzzle_id": "INF-00404"
+  },
+  {
+    "category": "THINGS THAT CAN BE SCRATCHED",
+    "words": [
+      "SURFACE",
+      "SKIN",
+      "PAINT",
+      "CAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32144078612327576,
+    "source_puzzle_id": "INF-00405"
+  },
+  {
+    "category": "NOCTURNAL ANIMALS",
+    "words": [
+      "OWL",
+      "RAVEN",
+      "WIND",
+      "BREEZE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3665867745876312,
+    "source_puzzle_id": "INF-00406"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A HOUSE",
+    "words": [
+      "COUCH",
+      "LAMP",
+      "RUG",
+      "CURTAIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41475358605384827,
+    "source_puzzle_id": "INF-00407"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH AUSTRALIA",
+    "words": [
+      "KOALA",
+      "DIDGERIDOO",
+      "EUCALYPTUS",
+      "OUTBACK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3437108099460602,
+    "source_puzzle_id": "INF-00409"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH A RESTAURANT",
+    "words": [
+      "MENU",
+      "ENTREE",
+      "DESSERT",
+      "TABLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38055673241615295,
+    "source_puzzle_id": "INF-00410"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH HAIR",
+    "words": [
+      "COMB",
+      "SHAMPOO",
+      "BRUSH",
+      "CURL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43025973439216614,
+    "source_puzzle_id": "INF-00411"
+  },
+  {
+    "category": "THINGS THAT CAN BE THROWN",
+    "words": [
+      "BALL",
+      "ROCK",
+      "DART",
+      "FRISBEE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3736976683139801,
+    "source_puzzle_id": "INF-00412"
+  },
+  {
+    "category": "THINGS THAT CAN BE SMALL",
+    "words": [
+      "SPARROW",
+      "NUT",
+      "PEA",
+      "BEE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37401282787323,
+    "source_puzzle_id": "INF-00414"
+  },
+  {
+    "category": "FORMS OF COMMUNICATION",
+    "words": [
+      "WHISPER",
+      "GESTURE",
+      "SING",
+      "SIGN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3298056721687317,
+    "source_puzzle_id": "INF-00415"
+  },
+  {
+    "category": "COMPUTER INTERFACE ELEMENTS",
+    "words": [
+      "MOUSE",
+      "ICON",
+      "FILE",
+      "BUTTON"
+    ],
+    "color": "purple",
+    "similarity_score": 0.375795841217041,
+    "source_puzzle_id": "INF-00416"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH THEATER",
+    "words": [
+      "PLAY",
+      "ACT",
+      "CAST",
+      "ROLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4211374819278717,
+    "source_puzzle_id": "INF-00417"
+  },
+  {
+    "category": "TOYS AND TREATS",
+    "words": [
+      "TOY",
+      "DOLL",
+      "CANDY",
+      "BUBBLES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43222954869270325,
+    "source_puzzle_id": "INF-00419"
+  },
+  {
+    "category": "THINGS THAT CAN BE FOUND IN A GAME",
+    "words": [
+      "DICE",
+      "PAWN",
+      "ROLL",
+      "TURN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4008178412914276,
+    "source_puzzle_id": "INF-00420"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH ELEGANCE",
+    "words": [
+      "SILK",
+      "OPULENCE",
+      "LUXURY",
+      "FASHION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4317041337490082,
+    "source_puzzle_id": "INF-00421"
+  },
+  {
+    "category": "THINGS THAT CAN BE GOLD",
+    "words": [
+      "CHAIN",
+      "RING",
+      "COIN",
+      "JEWEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37501776218414307,
+    "source_puzzle_id": "INF-00422"
+  },
+  {
+    "category": "CAR SOUNDS",
+    "words": [
+      "HONK",
+      "BEEP",
+      "VROOM",
+      "SQUEAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42631080746650696,
+    "source_puzzle_id": "INF-00423"
+  },
+  {
+    "category": "THINGS THAT ARE ADDITIONAL",
+    "words": [
+      "FEATURE",
+      "ACCESSORY",
+      "EXTRA",
+      "OPTION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3842445909976959,
+    "source_puzzle_id": "INF-00424"
+  },
+  {
+    "category": "SYNONYMS FOR SMOOTH",
+    "words": [
+      "FLUID",
+      "SLEEK",
+      "PLUSH",
+      "SOFT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35923099517822266,
+    "source_puzzle_id": "INF-00425"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH THE SKY",
+    "words": [
+      "CLOUDS",
+      "SUN",
+      "STARS",
+      "MOON"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43589094281196594,
+    "source_puzzle_id": "INF-00426"
+  },
+  {
+    "category": "WORDS THAT CAN BE MODIFIED BY 'BRIGHT'",
+    "words": [
+      "LIGHT",
+      "COLOR",
+      "FUTURE",
+      "EYES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32666531205177307,
+    "source_puzzle_id": "INF-00427"
+  },
+  {
+    "category": "TRAIN STATION ITEMS",
+    "words": [
+      "TICKET",
+      "TRAIN",
+      "LUGGAGE",
+      "BOARDING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3330082893371582,
+    "source_puzzle_id": "INF-00428"
+  },
+  {
+    "category": "TRANSPARENT OBJECTS",
+    "words": [
+      "WINDOW",
+      "LENS",
+      "GLASS",
+      "SPECTACLES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4397852420806885,
+    "source_puzzle_id": "INF-00429"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH NATURE",
+    "words": [
+      "WILLOW",
+      "FROG",
+      "CREEK",
+      "BIRCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37369823455810547,
+    "source_puzzle_id": "INF-00430"
+  },
+  {
+    "category": "ARTISTIC TERMS",
+    "words": [
+      "CANVAS",
+      "BRUSH",
+      "EASEL",
+      "MUSE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.320099800825119,
+    "source_puzzle_id": "INF-00431"
+  },
+  {
+    "category": "SANDWICH INGREDIENTS",
+    "words": [
+      "BUN",
+      "TOAST",
+      "MAYO",
+      "PICKLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3256271779537201,
+    "source_puzzle_id": "INF-00432"
+  },
+  {
+    "category": "NATURAL PHENOMENA",
+    "words": [
+      "FOG",
+      "TROUBLE",
+      "BLADE",
+      "STORM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31224972009658813,
+    "source_puzzle_id": "INF-00433"
+  },
+  {
+    "category": "INTENSE WORDS",
+    "words": [
+      "PASSION",
+      "POWER",
+      "STRENGTH",
+      "GRIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.47659990191459656,
+    "source_puzzle_id": "INF-00434"
+  },
+  {
+    "category": "HEALTHY SNACKS",
+    "words": [
+      "BAGEL",
+      "YOGURT",
+      "FRUIT",
+      "SANDWICH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43823495507240295,
+    "source_puzzle_id": "INF-00435"
+  },
+  {
+    "category": "WORDS THAT CAN FOLLOW 'ASSOCIATION'",
+    "words": [
+      "RULE",
+      "NETWORK",
+      "GAME",
+      "PANEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29639580845832825,
+    "source_puzzle_id": "INF-00436"
+  },
+  {
+    "category": "AMUSEMENT PARK ATTRACTIONS",
+    "words": [
+      "ROLLER",
+      "SWING",
+      "TILT-A-WHIRL",
+      "SPIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3762960731983185,
+    "source_puzzle_id": "INF-00437"
+  },
+  {
+    "category": "WORDS WITH THE LETTER 'E'",
+    "words": [
+      "ELEPHANT",
+      "CANDLE",
+      "FIREPLACE",
+      "ELEVATOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3357783257961273,
+    "source_puzzle_id": "INF-00438"
+  },
+  {
+    "category": "SPORTS EQUIPMENT",
+    "words": [
+      "BAT",
+      "BALL",
+      "RACKET",
+      "FIELD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3516305685043335,
+    "source_puzzle_id": "INF-00439"
+  },
+  {
+    "category": "THINGS FOUND IN A KITCHEN",
+    "words": [
+      "SPATULA",
+      "CUTLERY",
+      "SPOON",
+      "PLATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4733333885669708,
+    "source_puzzle_id": "INF-00440"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH MYSTERY",
+    "words": [
+      "CLUE",
+      "INTRIGUE",
+      "ENIGMA",
+      "RIDDLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4198952615261078,
+    "source_puzzle_id": "INF-00441"
+  },
+  {
+    "category": "THINGS FOUND IN A GARAGE",
+    "words": [
+      "LADDERS",
+      "BICYCLE",
+      "CART",
+      "STORAGE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.32324114441871643,
+    "source_puzzle_id": "INF-00442"
+  },
+  {
+    "category": "FLOATING OBJECTS",
+    "words": [
+      "BOAT",
+      "BALLOON",
+      "BUBBLE",
+      "RAFT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4913822114467621,
+    "source_puzzle_id": "INF-00443"
+  },
+  {
+    "category": "THINGS YOU CAN SPREAD",
+    "words": [
+      "BUTTER",
+      "CREAM",
+      "HUMMUS",
+      "SALSA"
+    ],
+    "color": "purple",
+    "similarity_score": 0.45623019337654114,
+    "source_puzzle_id": "INF-00444"
+  },
+  {
+    "category": "THINGS THAT ARE STRETCHABLE",
+    "words": [
+      "SPANDRELS",
+      "ELASTIC",
+      "FLEX",
+      "PANTYHOSE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36330199241638184,
+    "source_puzzle_id": "INF-00445"
+  },
+  {
+    "category": "SOFT SOUNDS",
+    "words": [
+      "WHISPER",
+      "MURMUR",
+      "HONK",
+      "BUZZ"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3512442111968994,
+    "source_puzzle_id": "INF-00446"
+  },
+  {
+    "category": "THEATER ELEMENTS",
+    "words": [
+      "SEAT",
+      "AUDIENCE",
+      "STAGE",
+      "TICKET"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37444964051246643,
+    "source_puzzle_id": "INF-00447"
+  },
+  {
+    "category": "THINGS THAT CAN BE HELD",
+    "words": [
+      "HANDLE",
+      "TOOL",
+      "BAG",
+      "PEN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.31905585527420044,
+    "source_puzzle_id": "INF-00448"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH PERFORMANCES",
+    "words": [
+      "ACTOR",
+      "STAGE",
+      "REHEARSAL",
+      "DIRECTOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43214312195777893,
+    "source_puzzle_id": "INF-00449"
+  },
+  {
+    "category": "FEMALE CHARACTERS",
+    "words": [
+      "LARA",
+      "PROMISING",
+      "KILLER",
+      "HURT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2698127329349518,
+    "source_puzzle_id": "INF-00450"
+  },
+  {
+    "category": "PAYMENTS",
+    "words": [
+      "TAX",
+      "FEE",
+      "WAGE",
+      "COST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4111960232257843,
+    "source_puzzle_id": "INF-00451"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH GOLF",
+    "words": [
+      "PUTT",
+      "FAIRWAY",
+      "BIRDIE",
+      "CADDIE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40308329463005066,
+    "source_puzzle_id": "INF-00452"
+  },
+  {
+    "category": "ADJECTIVES FOR AGENT",
+    "words": [
+      "ORANGE",
+      "COLD",
+      "ACTIVE",
+      "MORTAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3131917417049408,
+    "source_puzzle_id": "INF-00453"
+  },
+  {
+    "category": "TRAFFIC TERMS",
+    "words": [
+      "LIGHT",
+      "LANE",
+      "ROAD",
+      "SPEED"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33499205112457275,
+    "source_puzzle_id": "INF-00454"
+  },
+  {
+    "category": "GAMING TERMS",
+    "words": [
+      "CHARACTER",
+      "QUEST",
+      "ITEM",
+      "ENEMY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3740403354167938,
+    "source_puzzle_id": "INF-00455"
+  },
+  {
+    "category": "THINGS YOU CAN KNOCK",
+    "words": [
+      "WALL",
+      "PANE",
+      "KNUCKLE",
+      "HEAD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29282161593437195,
+    "source_puzzle_id": "INF-00456"
+  },
+  {
+    "category": "THINGS THAT CAN CAUSE A REACTION",
+    "words": [
+      "JOLT",
+      "SURGE",
+      "FLARE",
+      "BOOST"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44513610005378723,
+    "source_puzzle_id": "INF-00457"
+  },
+  {
+    "category": "ANIMAL PARTS",
+    "words": [
+      "FUR",
+      "FEATHER",
+      "BONE",
+      "TUSK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42755231261253357,
+    "source_puzzle_id": "INF-00458"
+  },
+  {
+    "category": "FAIR ATTRACTIONS",
+    "words": [
+      "CARNIVAL",
+      "RIDE",
+      "GAME",
+      "PRIZE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3403162658214569,
+    "source_puzzle_id": "INF-00459"
+  },
+  {
+    "category": "TRAFFIC TERMS",
+    "words": [
+      "CROSSWALK",
+      "PEDESTRIAN",
+      "HIGHWAY",
+      "DETOUR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40333008766174316,
+    "source_puzzle_id": "INF-00460"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH AUTUMN",
+    "words": [
+      "HARVEST",
+      "CIDER",
+      "FESTIVAL",
+      "CORN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3262537717819214,
+    "source_puzzle_id": "INF-00461"
+  },
+  {
+    "category": "NAMES ASSOCIATED WITH NATURE",
+    "words": [
+      "CEDAR",
+      "SAGE",
+      "WILLOW",
+      "BIRCH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42793723940849304,
+    "source_puzzle_id": "INF-00462"
+  },
+  {
+    "category": "THINGS THAT CAN SUPPORT",
+    "words": [
+      "PILLAR",
+      "BRIDGE",
+      "BASE",
+      "PLATFORM"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3568838834762573,
+    "source_puzzle_id": "INF-00463"
+  },
+  {
+    "category": "THINGS RELATED TO IMAGINATION",
+    "words": [
+      "FABLE",
+      "MYTH",
+      "TALE",
+      "SAGA"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44074392318725586,
+    "source_puzzle_id": "INF-00464"
+  },
+  {
+    "category": "THINGS YOU MIGHT SIGN",
+    "words": [
+      "LETTER",
+      "DOCUMENT",
+      "FORM",
+      "APPLICATION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41844460368156433,
+    "source_puzzle_id": "INF-00465"
+  },
+  {
+    "category": "VIDEO GAME TERMS",
+    "words": [
+      "LEVEL",
+      "BOSS",
+      "QUEST",
+      "NPC"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3207260072231293,
+    "source_puzzle_id": "INF-00466"
+  },
+  {
+    "category": "SPORTS TERMINOLOGY",
+    "words": [
+      "COACH",
+      "GRIDIRON",
+      "CATCH",
+      "FIELD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34075435996055603,
+    "source_puzzle_id": "INF-00467"
+  },
+  {
+    "category": "FORMS OF MESSAGE",
+    "words": [
+      "EMAIL",
+      "SMS",
+      "CHAT",
+      "LETTER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42932286858558655,
+    "source_puzzle_id": "INF-00468"
+  },
+  {
+    "category": "SUMMER ACTIVITIES",
+    "words": [
+      "SUN",
+      "PICNIC",
+      "CAMPFIRE",
+      "FESTIVAL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39967966079711914,
+    "source_puzzle_id": "INF-00469"
+  },
+  {
+    "category": "THINGS RELATED TO WATER",
+    "words": [
+      "RIPPLE",
+      "WAVE",
+      "SURF",
+      "POOL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4037887752056122,
+    "source_puzzle_id": "INF-00470"
+  },
+  {
+    "category": "GAME ELEMENTS",
+    "words": [
+      "CARDS",
+      "BOARD",
+      "PAWN",
+      "PLAY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3820168077945709,
+    "source_puzzle_id": "INF-00471"
+  },
+  {
+    "category": "THINGS YOU CAN GRILL",
+    "words": [
+      "STEAK",
+      "BURGERS",
+      "CHICKEN",
+      "FISH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.47676923871040344,
+    "source_puzzle_id": "INF-00472"
+  },
+  {
+    "category": "WORDS THAT ARE ALSO NAMES",
+    "words": [
+      "MORGAN",
+      "BILL",
+      "SANDY",
+      "FAY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4039376676082611,
+    "source_puzzle_id": "INF-00473"
+  },
+  {
+    "category": "THINGS THAT CAN BE SQUISHED",
+    "words": [
+      "SPONGE",
+      "GEL",
+      "FROSTING",
+      "PUDDING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4384126663208008,
+    "source_puzzle_id": "INF-00474"
+  },
+  {
+    "category": "MINOR EXPRESSIONS OF FRUSTRATION",
+    "words": [
+      "DARN",
+      "DRAT",
+      "GOSH",
+      "SHOOT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3323187232017517,
+    "source_puzzle_id": "INF-00475"
+  },
+  {
+    "category": "PHYSICAL REACTIONS",
+    "words": [
+      "BLANCH",
+      "LAUGHING",
+      "SHIVER",
+      "TREMOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3101438581943512,
+    "source_puzzle_id": "INF-00476"
+  },
+  {
+    "category": "THINGS THAT CAN BE DRY",
+    "words": [
+      "DESERT",
+      "TOWEL",
+      "WINE",
+      "CLOTH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.38859131932258606,
+    "source_puzzle_id": "INF-00477"
+  },
+  {
+    "category": "BEACH ITEMS",
+    "words": [
+      "SAND",
+      "SEASHELL",
+      "COCONUT",
+      "TOWEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4088795483112335,
+    "source_puzzle_id": "INF-00478"
+  },
+  {
+    "category": "SURFACES THAT CAN BE POLISHED",
+    "words": [
+      "FLOOR",
+      "GLASS",
+      "WINDOW",
+      "FURNITURE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3624247610569,
+    "source_puzzle_id": "INF-00479"
+  },
+  {
+    "category": "THINGS THAT CAN BE OPENED",
+    "words": [
+      "DOORS",
+      "GATES",
+      "BOXES",
+      "BAGS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40410736203193665,
+    "source_puzzle_id": "INF-00480"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH STRATEGY",
+    "words": [
+      "PLAN",
+      "TACTIC",
+      "SCHEME",
+      "CAMPAIGN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3911494016647339,
+    "source_puzzle_id": "INF-00481"
+  },
+  {
+    "category": "THINGS THAT CAN BE TAPED",
+    "words": [
+      "DUCT",
+      "MASKING",
+      "DOUBLE-SIDED",
+      "PACKING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2892681360244751,
+    "source_puzzle_id": "INF-00482"
+  },
+  {
+    "category": "MYSTERY ELEMENTS",
+    "words": [
+      "CLUE",
+      "MOTIVE",
+      "SUSPECT",
+      "MYSTERY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4312368631362915,
+    "source_puzzle_id": "INF-00483"
+  },
+  {
+    "category": "GOLDEN THINGS",
+    "words": [
+      "GOLD",
+      "SUN",
+      "WHEAT",
+      "SAND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33829212188720703,
+    "source_puzzle_id": "INF-00484"
+  },
+  {
+    "category": "THINGS FOUND ON A BEACH",
+    "words": [
+      "SAND",
+      "WAVE",
+      "TIDE",
+      "SURF"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36335834860801697,
+    "source_puzzle_id": "INF-00485"
+  },
+  {
+    "category": "THINGS THAT CAN DRIP",
+    "words": [
+      "OIL",
+      "BLOOD",
+      "INK",
+      "WAX"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36062464118003845,
+    "source_puzzle_id": "INF-00486"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND AT A PICNIC",
+    "words": [
+      "SANDWICH",
+      "JUICE",
+      "FRUIT",
+      "CHEESE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4457217752933502,
+    "source_puzzle_id": "INF-00487"
+  },
+  {
+    "category": "MOVIE CHARACTERS",
+    "words": [
+      "BELLE",
+      "FRODO",
+      "GOLLUM",
+      "ELSA"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3409598171710968,
+    "source_puzzle_id": "INF-00488"
+  },
+  {
+    "category": "KITCHEN ACTIONS",
+    "words": [
+      "STIR",
+      "BOIL",
+      "GRATE",
+      "SEAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4291883409023285,
+    "source_puzzle_id": "INF-00489"
+  },
+  {
+    "category": "OUTDOOR STRUCTURES",
+    "words": [
+      "GARDEN",
+      "FENCE",
+      "PLAYHOUSE",
+      "HEDGE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40776947140693665,
+    "source_puzzle_id": "INF-00490"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH NOISE",
+    "words": [
+      "MURMUR",
+      "RUMBLE",
+      "JANGLE",
+      "ROAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4151369631290436,
+    "source_puzzle_id": "INF-00491"
+  },
+  {
+    "category": "THINGS YOU CAN DO AT HOME",
+    "words": [
+      "READ",
+      "WATCH",
+      "SLEEP",
+      "WORK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37409618496894836,
+    "source_puzzle_id": "INF-00492"
+  },
+  {
+    "category": "SUPERSTITIONS",
+    "words": [
+      "KISSOFDEATH",
+      "OMEN",
+      "CURSE",
+      "FATE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35358962416648865,
+    "source_puzzle_id": "INF-00493"
+  },
+  {
+    "category": "THINGS FOUND IN NATURE",
+    "words": [
+      "GRAPES",
+      "MOUNTAINS",
+      "TREES",
+      "FLOWERS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4305473864078522,
+    "source_puzzle_id": "INF-00494"
+  },
+  {
+    "category": "THINGS THAT CAN BE PILED",
+    "words": [
+      "CUPS",
+      "SANDWICHES",
+      "CARDS",
+      "CHIPS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40507444739341736,
+    "source_puzzle_id": "INF-00495"
+  },
+  {
+    "category": "THINGS THAT CAN BE LICENSED",
+    "words": [
+      "BUSINESS",
+      "FRANCHISE",
+      "PRODUCT",
+      "TRADEMARK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39782974123954773,
+    "source_puzzle_id": "INF-00496"
+  },
+  {
+    "category": "THINGS YOU MIGHT ENCOUNTER AT A PICNIC",
+    "words": [
+      "SANDWICH",
+      "JUICE",
+      "GRILL",
+      "FRUIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4031718671321869,
+    "source_puzzle_id": "INF-00497"
+  },
+  {
+    "category": "AMUSEMENT PARK RIDES",
+    "words": [
+      "ROLLERCOASTER",
+      "CAROUSEL",
+      "SWING",
+      "FERRIS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3516363203525543,
+    "source_puzzle_id": "INF-00498"
+  },
+  {
+    "category": "CHARACTERS IN LITERATURE",
+    "words": [
+      "WILLY",
+      "BUNNY",
+      "PIP",
+      "JONAH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3619173467159271,
+    "source_puzzle_id": "INF-00499"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH CAKES",
+    "words": [
+      "BATTER",
+      "ICING",
+      "FILLING",
+      "SUGAR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3862980306148529,
+    "source_puzzle_id": "INF-00500"
+  },
+  {
+    "category": "ACTIONS",
+    "words": [
+      "SWITCH",
+      "RIDE",
+      "FLIP",
+      "LIFT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3475149869918823,
+    "source_puzzle_id": "INF-00501"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH A VACATION",
+    "words": [
+      "FLIGHT",
+      "ITINERARY",
+      "BAGGAGE",
+      "EXCURSION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39371395111083984,
+    "source_puzzle_id": "INF-00502"
+  },
+  {
+    "category": "THINGS THAT REQUIRE SKILL",
+    "words": [
+      "DANCE",
+      "PLAY",
+      "WRITE",
+      "SING"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4082978665828705,
+    "source_puzzle_id": "INF-00503"
+  },
+  {
+    "category": "THANKSGIVING THEMES",
+    "words": [
+      "FEAST",
+      "HARVEST",
+      "PILGRIM",
+      "AUTUMN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3659675419330597,
+    "source_puzzle_id": "INF-00505"
+  },
+  {
+    "category": "THINGS THAT CAN BE CLEANED",
+    "words": [
+      "CAR",
+      "FLOOR",
+      "TOILET",
+      "POOL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3253057897090912,
+    "source_puzzle_id": "INF-00506"
+  },
+  {
+    "category": "THINGS TO DO AT A THEATER",
+    "words": [
+      "INTERMISSION",
+      "SEAT",
+      "TICKET",
+      "ENCORE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3370862901210785,
+    "source_puzzle_id": "INF-00507"
+  },
+  {
+    "category": "LUXURY TRAVEL",
+    "words": [
+      "RESORT",
+      "EXCURSION",
+      "SPA",
+      "CRUISE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3463965654373169,
+    "source_puzzle_id": "INF-00508"
+  },
+  {
+    "category": "WORDS THAT CAN FOLLOW 'MAJOR'",
+    "words": [
+      "KEY",
+      "ROLE",
+      "EVENT",
+      "RISK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29793068766593933,
+    "source_puzzle_id": "INF-00509"
+  },
+  {
+    "category": "THINGS THAT CAN BE THROWN",
+    "words": [
+      "BALL",
+      "FRISBEE",
+      "DART",
+      "PEN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39232316613197327,
+    "source_puzzle_id": "INF-00510"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH GOVERNMENT",
+    "words": [
+      "VOTE",
+      "SENATE",
+      "BILL",
+      "ELECTION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41335752606391907,
+    "source_puzzle_id": "INF-00512"
+  },
+  {
+    "category": "SPEEDY THINGS",
+    "words": [
+      "FLASH",
+      "QUICK",
+      "SWIFT",
+      "ZIPPY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.2783697247505188,
+    "source_puzzle_id": "INF-00513"
+  },
+  {
+    "category": "THINGS THAT CAN BE GIVEN",
+    "words": [
+      "MEAL",
+      "DISH",
+      "TREAT",
+      "GIFT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3235084116458893,
+    "source_puzzle_id": "INF-00514"
+  },
+  {
+    "category": "THINGS THAT ARE OPEN",
+    "words": [
+      "WINDOWS",
+      "DOORS",
+      "SPACES",
+      "GATES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4035090506076813,
+    "source_puzzle_id": "INF-00515"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH RELAXATION",
+    "words": [
+      "TEA",
+      "SNOOZE",
+      "YOGA",
+      "PILLOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3171967566013336,
+    "source_puzzle_id": "INF-00516"
+  },
+  {
+    "category": "CREATIVE ACTIONS",
+    "words": [
+      "INNOVATE",
+      "COMPOSE",
+      "PUBLISH",
+      "DEVELOP"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4423210918903351,
+    "source_puzzle_id": "INF-00517"
+  },
+  {
+    "category": "THINGS THAT CAN BE SHARED",
+    "words": [
+      "FILE",
+      "NOTE",
+      "EMAIL",
+      "INFO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29899001121520996,
+    "source_puzzle_id": "INF-00518"
+  },
+  {
+    "category": "SUMMER ITEMS",
+    "words": [
+      "BEACHBALL",
+      "SANDALS",
+      "SWIMSUIT",
+      "FLIPFLOPS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3673771917819977,
+    "source_puzzle_id": "INF-00519"
+  },
+  {
+    "category": "THINGS THAT CAN BE LIFTED",
+    "words": [
+      "FLAG",
+      "PROTEST",
+      "BANNER",
+      "VOICE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3224637806415558,
+    "source_puzzle_id": "INF-00520"
+  },
+  {
+    "category": "SHAPES",
+    "words": [
+      "BENDS",
+      "CURVES",
+      "TWISTS",
+      "FOLDS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44733402132987976,
+    "source_puzzle_id": "INF-00521"
+  },
+  {
+    "category": "THINGS THAT CAN SNAP",
+    "words": [
+      "ANCHOR",
+      "STRING",
+      "WIRE",
+      "CHAIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40480318665504456,
+    "source_puzzle_id": "INF-00522"
+  },
+  {
+    "category": "BOARD GAME COMPONENTS",
+    "words": [
+      "PAWN",
+      "BOARD",
+      "TOKEN",
+      "DECK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.42055758833885193,
+    "source_puzzle_id": "INF-00523"
+  },
+  {
+    "category": "THINGS THAT CAN BE RED",
+    "words": [
+      "ROSE",
+      "FIRE",
+      "BLOOD",
+      "RUBY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3114391267299652,
+    "source_puzzle_id": "INF-00524"
+  },
+  {
+    "category": "THINGS YOU MIGHT FIND IN A KITCHEN",
+    "words": [
+      "SPATULA",
+      "KNIFE",
+      "WHISK",
+      "COLANDER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.43156304955482483,
+    "source_puzzle_id": "INF-00525"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH BOWLING",
+    "words": [
+      "STRIKE",
+      "LANE",
+      "PIN",
+      "BOWLER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34644436836242676,
+    "source_puzzle_id": "INF-00526"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH THEATRE",
+    "words": [
+      "SCRIPT",
+      "ACTOR",
+      "DIALOGUE",
+      "DIRECTOR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4307464063167572,
+    "source_puzzle_id": "INF-00527"
+  },
+  {
+    "category": "THINGS THAT LEAVE MARKS",
+    "words": [
+      "MARK",
+      "SCAR",
+      "ECHO",
+      "SHADOW"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35940125584602356,
+    "source_puzzle_id": "INF-00528"
+  },
+  {
+    "category": "SIGNS OR INDICATORS",
+    "words": [
+      "SIGN",
+      "MARK",
+      "INDICATOR",
+      "DIRECTIVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33521685004234314,
+    "source_puzzle_id": "INF-00530"
+  },
+  {
+    "category": "SLOWER ANIMALS",
+    "words": [
+      "TURTLE",
+      "KOALA",
+      "WALRUS",
+      "DOLPHIN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4745160639286041,
+    "source_puzzle_id": "INF-00531"
+  },
+  {
+    "category": "FAMILY RELATIONSHIPS",
+    "words": [
+      "PARENT",
+      "SIBLING",
+      "GENE",
+      "LOVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3351637125015259,
+    "source_puzzle_id": "INF-00532"
+  },
+  {
+    "category": "ART MOVEMENTS",
+    "words": [
+      "BAROQUE",
+      "CUBISM",
+      "SURREALISM",
+      "FRESCO"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41951867938041687,
+    "source_puzzle_id": "INF-00533"
+  },
+  {
+    "category": "DRASTIC EVENTS",
+    "words": [
+      "CRASH",
+      "SHOCK",
+      "TWIST",
+      "EXPLODE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35498371720314026,
+    "source_puzzle_id": "INF-00534"
+  },
+  {
+    "category": "GARDENING TOOLS",
+    "words": [
+      "SEED",
+      "SHOVEL",
+      "RAKE",
+      "SPADE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40640929341316223,
+    "source_puzzle_id": "INF-00535"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH THE BEACH",
+    "words": [
+      "WAVE",
+      "SURF",
+      "COAST",
+      "SAND"
+    ],
+    "color": "purple",
+    "similarity_score": 0.39002716541290283,
+    "source_puzzle_id": "INF-00536"
+  },
+  {
+    "category": "THINGS THAT COME IN PAIRS",
+    "words": [
+      "SHOES",
+      "EYES",
+      "GLASSES",
+      "DRUMSTICKS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4552752673625946,
+    "source_puzzle_id": "INF-00537"
+  },
+  {
+    "category": "NOSTALGIC NIGHTTIME",
+    "words": [
+      "SLEEPOVER",
+      "MEMORIES",
+      "FRIENDS",
+      "FAMILY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3927689492702484,
+    "source_puzzle_id": "INF-00538"
+  },
+  {
+    "category": "WORDS RELATED TO SPEED",
+    "words": [
+      "HASTEN",
+      "SCURRY",
+      "BOLT",
+      "HURRY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3423004150390625,
+    "source_puzzle_id": "INF-00539"
+  },
+  {
+    "category": "VARIABLES",
+    "words": [
+      "WEATHER",
+      "TEMPERATURE",
+      "SPEED",
+      "TRAFFIC"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3788185119628906,
+    "source_puzzle_id": "INF-00540"
+  },
+  {
+    "category": "HAND ACTIONS",
+    "words": [
+      "GRAB",
+      "CLAP",
+      "HOLD",
+      "FINGER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36753347516059875,
+    "source_puzzle_id": "INF-00541"
+  },
+  {
+    "category": "PHRASES WITH 'OUT'",
+    "words": [
+      "DINE",
+      "CLEAN",
+      "DRY",
+      "PASS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3072618246078491,
+    "source_puzzle_id": "INF-00542"
+  },
+  {
+    "category": "THINGS THAT CAN BE BROKEN",
+    "words": [
+      "HEART",
+      "TRUST",
+      "SILENCE",
+      "SPIRIT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.33869490027427673,
+    "source_puzzle_id": "INF-00543"
+  },
+  {
+    "category": "THINGS FOUND IN A WOODED AREA",
+    "words": [
+      "MUSHROOM",
+      "FERN",
+      "BIRD",
+      "WILDFLOWER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35631313920021057,
+    "source_puzzle_id": "INF-00544"
+  },
+  {
+    "category": "UNEXPECTED GUESTS",
+    "words": [
+      "VISITOR",
+      "INTRUDER",
+      "STRANGER",
+      "SQUATTER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.46375665068626404,
+    "source_puzzle_id": "INF-00545"
+  },
+  {
+    "category": "NATURE ELEMENTS",
+    "words": [
+      "FOUNTAIN",
+      "FLOWER",
+      "TREES",
+      "BIRD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3330882787704468,
+    "source_puzzle_id": "INF-00546"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH FAIRY TALES",
+    "words": [
+      "WIZARD",
+      "ENCHANTED",
+      "GOBLIN",
+      "POTION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.507220447063446,
+    "source_puzzle_id": "INF-00547"
+  },
+  {
+    "category": "BALANCING MECHANISMS",
+    "words": [
+      "SCALES",
+      "BALANCER",
+      "LEVER",
+      "KEEL"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35891178250312805,
+    "source_puzzle_id": "INF-00548"
+  },
+  {
+    "category": "BASEBALL TERMS",
+    "words": [
+      "BULLPEN",
+      "CATCHER",
+      "UMPIRE",
+      "GLOVE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.5092408061027527,
+    "source_puzzle_id": "INF-00549"
+  },
+  {
+    "category": "GARDEN FEATURES",
+    "words": [
+      "FENCE",
+      "GATE",
+      "SHRUB",
+      "BIRD"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3639845848083496,
+    "source_puzzle_id": "INF-00550"
+  },
+  {
+    "category": "THINGS IN A HOME",
+    "words": [
+      "SOFA",
+      "LAMP",
+      "BED",
+      "RUG"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4475187063217163,
+    "source_puzzle_id": "INF-00551"
+  },
+  {
+    "category": "WORDS THAT CAN BE CATEGORIZED",
+    "words": [
+      "CLASS",
+      "GROUP",
+      "SECTION",
+      "CATEGORY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37464892864227295,
+    "source_puzzle_id": "INF-00553"
+  },
+  {
+    "category": "ITEMS IN A BACKPACK",
+    "words": [
+      "NOTEBOOK",
+      "PEN",
+      "BOOK",
+      "HEADPHONES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3122641146183014,
+    "source_puzzle_id": "INF-00554"
+  },
+  {
+    "category": "CIRCUS PERFORMERS",
+    "words": [
+      "CLOWN",
+      "JUGGLER",
+      "RINGMASTER",
+      "STUNT"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4165070056915283,
+    "source_puzzle_id": "INF-00555"
+  },
+  {
+    "category": "THINGS THAT CAN CAUSE A REACTION",
+    "words": [
+      "FIRE",
+      "DANGER",
+      "SHOCK",
+      "EXPLOSION"
+    ],
+    "color": "purple",
+    "similarity_score": 0.44310900568962097,
+    "source_puzzle_id": "INF-00556"
+  },
+  {
+    "category": "ELECTRONIC DEVICES",
+    "words": [
+      "MUSIC",
+      "PHONE",
+      "COMPUTER",
+      "TV"
+    ],
+    "color": "purple",
+    "similarity_score": 0.41363048553466797,
+    "source_puzzle_id": "INF-00557"
+  },
+  {
+    "category": "THINGS THAT CAN BE TRACKED",
+    "words": [
+      "EXPENSES",
+      "HEALTH",
+      "INVENTORY",
+      "ATTENDANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36023616790771484,
+    "source_puzzle_id": "INF-00558"
+  },
+  {
+    "category": "ELEGANT ADJECTIVES",
+    "words": [
+      "STYLE",
+      "CHIC",
+      "GLAM",
+      "SLEEK"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4102764427661896,
+    "source_puzzle_id": "INF-00559"
+  },
+  {
+    "category": "FASHION TERMS",
+    "words": [
+      "TUXEDO",
+      "BOLERO",
+      "ACCESSORY",
+      "COUTURE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35554489493370056,
+    "source_puzzle_id": "INF-00560"
+  },
+  {
+    "category": "TOYS AND TREATS",
+    "words": [
+      "DOLLS",
+      "PUPPET",
+      "CRAYON",
+      "CANDY"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3550335466861725,
+    "source_puzzle_id": "INF-00561"
+  },
+  {
+    "category": "THINGS FOUND IN A HOUSE",
+    "words": [
+      "LAMP",
+      "RUG",
+      "PILLOW",
+      "VASE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4099207818508148,
+    "source_puzzle_id": "INF-00562"
+  },
+  {
+    "category": "THEATER TERMS",
+    "words": [
+      "DRAMA",
+      "PERFORM",
+      "STAGE",
+      "AUDIENCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4183376133441925,
+    "source_puzzle_id": "INF-00563"
+  },
+  {
+    "category": "ANIMALS WITH DISTINCTIVE NAMES",
+    "words": [
+      "COYOTE",
+      "WOMBAT",
+      "KINKAJOU",
+      "CAPYBARA"
+    ],
+    "color": "purple",
+    "similarity_score": 0.40410104393959045,
+    "source_puzzle_id": "INF-00564"
+  },
+  {
+    "category": "TREASURE HUNT TERMS",
+    "words": [
+      "CHEST",
+      "CLUE",
+      "SWORD",
+      "RIDDLE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.34458744525909424,
+    "source_puzzle_id": "INF-00566"
+  },
+  {
+    "category": "WORDS ASSOCIATED WITH GAME NIGHT",
+    "words": [
+      "DICE",
+      "CHIPS",
+      "CARDS",
+      "PLAYERS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.36632654070854187,
+    "source_puzzle_id": "INF-00567"
+  },
+  {
+    "category": "THINGS THAT CAN BE TOSSED",
+    "words": [
+      "PANCAKE",
+      "COIN",
+      "DOLL",
+      "FISH"
+    ],
+    "color": "purple",
+    "similarity_score": 0.29466259479522705,
+    "source_puzzle_id": "INF-00568"
+  },
+  {
+    "category": "STAGES OF PREPARATION",
+    "words": [
+      "CHOP",
+      "MARINATE",
+      "WHISK",
+      "STIR"
+    ],
+    "color": "purple",
+    "similarity_score": 0.35882410407066345,
+    "source_puzzle_id": "INF-00569"
+  },
+  {
+    "category": "THINGS ASSOCIATED WITH ART",
+    "words": [
+      "PAINT",
+      "SCULPT",
+      "SKETCH",
+      "DESIGN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4606170654296875,
+    "source_puzzle_id": "INF-00570"
+  },
+  {
+    "category": "THINGS THAT CAN BE FOUND IN A DECK OF CARDS",
+    "words": [
+      "HEARTS",
+      "CLUBS",
+      "DIAMONDS",
+      "SPADES"
+    ],
+    "color": "purple",
+    "similarity_score": 0.424345999956131,
+    "source_puzzle_id": "INF-00571"
+  },
+  {
+    "category": "MATH TERMS",
+    "words": [
+      "MEAN",
+      "AVERAGE",
+      "RATIO",
+      "VARIANCE"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3148532211780548,
+    "source_puzzle_id": "INF-00572"
+  },
+  {
+    "category": "MEASURING TOOLS",
+    "words": [
+      "RULER",
+      "GAUGE",
+      "COMPASS",
+      "THERMOMETER"
+    ],
+    "color": "purple",
+    "similarity_score": 0.37361207604408264,
+    "source_puzzle_id": "INF-00573"
+  },
+  {
+    "category": "THINGS THAT CAN BE STOPPED",
+    "words": [
+      "CLOCK",
+      "MACHINE",
+      "TIME",
+      "PROCESS"
+    ],
+    "color": "purple",
+    "similarity_score": 0.3205675184726715,
+    "source_puzzle_id": "INF-00574"
+  },
+  {
+    "category": "FRIED FOODS",
+    "words": [
+      "OKRA",
+      "ZUCCHINI",
+      "AVOCADO",
+      "CORN"
+    ],
+    "color": "purple",
+    "similarity_score": 0.4841269254684448,
+    "source_puzzle_id": "INF-00575"
+  }
+]

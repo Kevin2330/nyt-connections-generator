@@ -1,0 +1,167 @@
+[
+  {
+    "id": "INF-00001",
+    "words": [
+      "MEDITATION",
+      "BELL",
+      "MASSAGE",
+      "SPA",
+      "KNOB",
+      "HORN",
+      "LEVER",
+      "WHISTLE",
+      "CARAMEL",
+      "CHEWY",
+      "DIAL",
+      "HANDLE",
+      "YOGA",
+      "SIREN",
+      "GUMMY",
+      "MARSHMALLOW"
+    ],
+    "groups": [
+      {
+        "category": "THINGS ASSOCIATED WITH CANDY",
+        "words": [
+          "GUMMY",
+          "CARAMEL",
+          "CHEWY",
+          "MARSHMALLOW"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.46942034363746643
+      },
+      {
+        "category": "THINGS THAT HELP YOU UNWIND",
+        "words": [
+          "YOGA",
+          "MASSAGE",
+          "SPA",
+          "MEDITATION"
+        ],
+        "color": "green",
+        "similarity_score": 0.45643654465675354
+      },
+      {
+        "category": "THINGS THAT CAN SIGNAL",
+        "words": [
+          "WHISTLE",
+          "BELL",
+          "HORN",
+          "SIREN"
+        ],
+        "color": "blue",
+        "similarity_score": 0.43914613127708435
+      },
+      {
+        "category": "THINGS THAT CAN BE CONTROLLED",
+        "words": [
+          "LEVER",
+          "DIAL",
+          "KNOB",
+          "HANDLE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.40153932571411133
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "CARAMEL",
+                "CHEWY",
+                "GUMMY",
+                "MARSHMALLOW"
+              ],
+              "score": 0.46942034363746643
+            },
+            {
+              "words": [
+                "MEDITATION",
+                "MASSAGE",
+                "SPA",
+                "YOGA"
+              ],
+              "score": 0.45643678307533264
+            },
+            {
+              "words": [
+                "BELL",
+                "HORN",
+                "WHISTLE",
+                "SIREN"
+              ],
+              "score": 0.4391463100910187
+            },
+            {
+              "words": [
+                "KNOB",
+                "LEVER",
+                "DIAL",
+                "HANDLE"
+              ],
+              "score": 0.40153932571411133
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "BELL",
+                "HORN",
+                "WHISTLE",
+                "SIREN"
+              ],
+              "score": 0.4391463100910187
+            },
+            {
+              "words": [
+                "MEDITATION",
+                "MASSAGE",
+                "SPA",
+                "YOGA"
+              ],
+              "score": 0.45643678307533264
+            },
+            {
+              "words": [
+                "CARAMEL",
+                "CHEWY",
+                "GUMMY",
+                "MARSHMALLOW"
+              ],
+              "score": 0.46942034363746643
+            },
+            {
+              "words": [
+                "KNOB",
+                "LEVER",
+                "DIAL",
+                "HANDLE"
+              ],
+              "score": 0.40153932571411133
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4416355788707733,
+      "created_at": "2026-04-08T01:41:17.928254+00:00",
+      "accepted": true
+    }
+  }
+]

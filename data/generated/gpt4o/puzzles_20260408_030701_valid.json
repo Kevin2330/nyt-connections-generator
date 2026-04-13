@@ -1,0 +1,167 @@
+[
+  {
+    "id": "INF-00001",
+    "words": [
+      "PAPRIKA",
+      "JOEY",
+      "CHILI",
+      "JALAPENO",
+      "BOTTLE",
+      "JONATHAN",
+      "SPOTTY",
+      "DANNY",
+      "DRONE",
+      "GLIDER",
+      "SCATTER",
+      "BUBBLE",
+      "PEPPER",
+      "NICKY",
+      "HELICOPTER",
+      "KITE"
+    ],
+    "groups": [
+      {
+        "category": "THINGS THAT FLY",
+        "words": [
+          "HELICOPTER",
+          "DRONE",
+          "GLIDER",
+          "KITE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5932677984237671
+      },
+      {
+        "category": "THINGS THAT MIGHT BE SPICY",
+        "words": [
+          "PEPPER",
+          "CHILI",
+          "JALAPENO",
+          "PAPRIKA"
+        ],
+        "color": "green",
+        "similarity_score": 0.5818246006965637
+      },
+      {
+        "category": "BOY BAND MEMBERS",
+        "words": [
+          "DANNY",
+          "JOEY",
+          "JONATHAN",
+          "NICKY"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4861902892589569
+      },
+      {
+        "category": "WORDS WITH DOUBLE LETTERS",
+        "words": [
+          "SPOTTY",
+          "SCATTER",
+          "BOTTLE",
+          "BUBBLE"
+        ],
+        "color": "purple",
+        "similarity_score": 0.29697689414024353
+      }
+    ],
+    "metadata": {
+      "generation_method": "iterative",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "DRONE",
+                "GLIDER",
+                "HELICOPTER",
+                "KITE"
+              ],
+              "score": 0.5932677984237671
+            },
+            {
+              "words": [
+                "PAPRIKA",
+                "CHILI",
+                "JALAPENO",
+                "PEPPER"
+              ],
+              "score": 0.5818247199058533
+            },
+            {
+              "words": [
+                "JOEY",
+                "JONATHAN",
+                "DANNY",
+                "NICKY"
+              ],
+              "score": 0.48619017004966736
+            },
+            {
+              "words": [
+                "BOTTLE",
+                "SPOTTY",
+                "SCATTER",
+                "BUBBLE"
+              ],
+              "score": 0.2969769239425659
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "JOEY",
+                "JONATHAN",
+                "DANNY",
+                "NICKY"
+              ],
+              "score": 0.48619017004966736
+            },
+            {
+              "words": [
+                "DRONE",
+                "GLIDER",
+                "HELICOPTER",
+                "KITE"
+              ],
+              "score": 0.5932677984237671
+            },
+            {
+              "words": [
+                "PAPRIKA",
+                "CHILI",
+                "JALAPENO",
+                "PEPPER"
+              ],
+              "score": 0.5818247199058533
+            },
+            {
+              "words": [
+                "BOTTLE",
+                "SPOTTY",
+                "SCATTER",
+                "BUBBLE"
+              ],
+              "score": 0.2969769239425659
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4895649254322052,
+      "created_at": "2026-04-08T03:07:00.607832+00:00",
+      "accepted": true
+    }
+  }
+]

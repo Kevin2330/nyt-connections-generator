@@ -6,9 +6,16 @@ import os
 # Set DRY_RUN=false (case-insensitive) to use real Claude API.
 DRY_RUN = os.environ.get("DRY_RUN", "true").lower() != "false"
 
+# LLM provider: "openai", "anthropic", or "mock"
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai")
+
+# OpenAI API settings (cheapest option)
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+OPENAI_MODEL = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+
 # Claude API settings
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-CLAUDE_MODEL = "claude-sonnet-4-20250514"
+CLAUDE_MODEL = os.environ.get("LLM_MODEL", "claude-sonnet-4-20250514")
 CLAUDE_MAX_TOKENS = 4096
 
 # Embedding model
