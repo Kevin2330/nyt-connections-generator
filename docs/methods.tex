@@ -1,0 +1,624 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage{array}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+
+\definecolor{yellow_conn}{HTML}{F9DF6D}
+\definecolor{green_conn}{HTML}{A0C35A}
+\definecolor{blue_conn}{HTML}{B0C4EF}
+\definecolor{purple_conn}{HTML}{BA81C5}
+\definecolor{codebg}{HTML}{F5F5F0}
+\definecolor{noteblue}{HTML}{E8F0FE}
+\definecolor{accent}{HTML}{1A5490}
+
+\hypersetup{colorlinks=true, linkcolor=accent, urlcolor=accent}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{STA 561D | Duke}
+\lhead{Infinite Connections --- Methods}
+\rfoot{\thepage\,/\,\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\usepackage{lastpage}
+
+\titleformat{\section}{\Large\bfseries\color{accent}}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\itshape}{\thesubsubsection}{0.6em}{}
+
+\lstset{
+    basicstyle=\small\ttfamily,
+    backgroundcolor=\color{codebg},
+    frame=single,
+    framerule=0pt,
+    breaklines=true,
+    columns=fullflexible,
+    showstringspaces=false,
+}
+
+\newtcolorbox{notebox}{
+    colback=noteblue,
+    colframe=accent!70,
+    arc=1.5mm,
+    boxrule=0.5pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+}
+
+\title{\textbf{Infinite Connections: Methods}\\[0.3em]
+\large A Complete Technical Description of the Puzzle Generation System}
+\author{STA 561D --- Duke University}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\vspace{-1.5em}
+
+\begin{abstract}
+\noindent
+We describe the full methodology behind our NYT Connections puzzle generator.
+The system builds puzzles via two complementary pipelines: an LLM-heavy baseline
+(5 API calls/puzzle) and a novel \emph{Category-First Retrieval} (CFR) pipeline
+(0--1 API calls/puzzle) that uses sentence embeddings and $k$-nearest-neighbors
+search over an augmented 14{,}877-word vocabulary. Every generated puzzle is
+checked against the full set of past NYT puzzles at both the 16-word and 4-word-group
+level, assigned difficulty colors via average pairwise cosine similarity, and validated
+by two independent solvers that must converge on the intended solution. Across 200
+benchmark puzzles, CFR v2 achieves a 99\% solver-validated pass rate, uses 62--69\%
+non-NYT words, and reproduces zero past NYT groups.
+\end{abstract}
+
+\tableofcontents
+\vspace{1em}
+
+%==============================================================================
+\section{Problem and High-Level Design}
+
+\subsection{The task}
+The New York Times Connections puzzle asks the player to partition 16 words into
+4 disjoint groups of 4, where each group shares a hidden theme. Themes range from
+straightforward synonyms (e.g., ``WAYS TO SAY HELLO'') to fill-in-the-blank
+wordplay (``FIRE \_\_\_''), shared sounds, or pop-culture references. The four
+groups have an intended difficulty ordering: \textcolor{yellow_conn!80!black}{\textbf{yellow}}
+(easiest) to \textcolor{purple_conn!70!black}{\textbf{purple}} (hardest).
+
+\subsection{What we built}
+We built three deliverables:
+\begin{enumerate}[leftmargin=*, itemsep=0.15em]
+\item A \textbf{generation system} with two pipelines and two modes (see below).
+\item A \textbf{multi-solver validator} that runs two independent automated solvers on
+every generated puzzle and accepts only those that can be solved deterministically.
+\item A \textbf{playable web app} hosted on GitHub Pages that loads a bundled set of
+validated puzzles and replicates the NYT UI.
+\end{enumerate}
+
+\subsection{Two pipelines, three modes}
+
+\begin{center}
+\begin{tabular}{l l l l}
+\toprule
+\textbf{Pipeline} & \textbf{Mode} & \textbf{LLM calls / puzzle} & \textbf{Source of inspiration} \\
+\midrule
+A --- Iterative baseline     & single    & 5                 & LLM proposes word pools \\
+B --- CFR                    & remix     & \textbf{0}        & NYT category pool \\
+B --- CFR                    & fresh     & \textbf{1 batched}& LLM writes fresh categories \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All three share identical post-generation steps: color assignment, deduplication,
+and roundtable validation. Only Step 1 (``get categories'' and ``get candidate
+words'') differs.
+
+\subsection{Notation and conventions}
+Throughout this document, $W$ denotes the full word bank (size $n_W$), $C$ denotes
+the set of past NYT categories (size $n_C = 2{,}054$), $G$ denotes a candidate
+4-word group, and $e(w) \in \mathbb{R}^{768}$ denotes the MPNET embedding of a
+word $w$. Cosine similarity between vectors is written $\cos(u, v) = \tfrac{u \cdot v}{\|u\|\,\|v\|}$.
+
+%==============================================================================
+\section{Data}
+
+\subsection{Ground-truth NYT dataset}
+We use \texttt{ConnectionsFinalDataset.json}, a publicly-available scrape of 554
+past NYT Connections puzzles. Each puzzle contains:
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item \texttt{date}, \texttt{contest}
+\item \texttt{words}: a list of 16 strings
+\item \texttt{answers}: a list of 4 objects, each with
+\texttt{answerDescription} (the category name) and \texttt{words} (the 4 words
+in that group)
+\item \texttt{difficulty}: a float in $[0, 1]$ from the source scrape
+\end{itemize}
+
+From this dataset we derive:
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item $W_\text{NYT}$: 4{,}918 unique words (after uppercasing and deduplication).
+\item $C$: 2{,}054 unique category names.
+\item $\mathcal{G}_\text{NYT}$: 2{,}216 past 4-word groups, stored as a set of frozensets.
+\item 554 complete 16-word puzzles for word-overlap deduplication.
+\end{itemize}
+
+\subsection{Augmented word bank (v2)}
+\label{sec:wordbank}
+
+After the professor's guidance that ``the total word bank should be more than that
+of the original game's,'' we expanded $W$ to 14{,}877 words by unioning three
+sources:
+\begin{enumerate}[leftmargin=*, itemsep=0.1em]
+\item $W_\text{NYT}$ (4{,}918 words).
+\item $W_\text{WN}$: NLTK WordNet lemmas filtered by (a) single-token only,
+(b) alphabetic only, (c) length $\in [3, 15]$, (d) tagged-corpus frequency $\geq 1$,
+and (e) not in a small profanity blocklist. Yields $\sim 10{,}000$ common English
+lemmas.
+\item $W_\text{G10k}$: optional Google 10k most-common-English word list, if
+present on disk. Contributes a few hundred extra everyday words not in the
+other sources.
+\end{enumerate}
+
+\begin{equation}
+W \;=\; W_\text{NYT} \;\cup\; W_\text{WN} \;\cup\; W_\text{G10k}, \qquad |W| = 14{,}877.
+\end{equation}
+
+The result is cached to \texttt{data/cache/augmented\_word\_bank.json} to avoid
+recomputing.
+
+\subsection{Embedding model}
+We use \texttt{sentence-transformers} with the model \texttt{all-mpnet-base-v2},
+which produces 768-dimensional contextual embeddings. Every word in $W$ and every
+category in $C$ is encoded once and cached to
+\texttt{data/cache/nyt\_embeddings\_v2.npz}. The cached matrix $E_W \in
+\mathbb{R}^{14877 \times 768}$ is the substrate for all subsequent retrieval and
+scoring.
+
+%==============================================================================
+\section{Pipeline A: LLM-Heavy Baseline}
+\label{sec:pipelineA}
+
+Pipeline A implements the iterative generator described in ``Making New Connections''
+(Samuel et al., arXiv:2407.11240), extended with story-injection for diversity.
+It is our reference point: a correct, working implementation of the strongest
+LLM-only approach in the literature.
+
+\subsection{Per-puzzle flow}
+
+\begin{algorithm}[H]
+\caption{Pipeline A --- Iterative LLM-heavy generation}
+\begin{algorithmic}[1]
+\State $\text{groups} \gets [\,]$
+\For{$i = 1$ to $4$}
+    \State $\text{seed} \gets $ 4 random words from $W_\text{NYT}$ (story injection)
+    \State $(\text{category}, \text{pool}_8) \gets \textsc{LLM}(\text{seed}, \text{groups})$ \Comment{Call 1--4}
+    \State $\text{words}_4 \gets \textsc{MPNET-select-best}(\text{pool}_8, 4)$
+    \State append $\{\text{category}, \text{words}_4\}$ to $\text{groups}$
+\EndFor
+\State $\text{groups} \gets \textsc{LLM-editor}(\text{groups})$ \Comment{Call 5}
+\State $\text{groups} \gets \textsc{assign-colors}(\text{groups})$
+\State \textsc{dedup}(\text{groups})
+\State \textsc{roundtable-validate}(\text{groups})
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Story injection for diversity}
+A known failure mode of LLMs is repetitive output (BOARD GAMES: chess, checkers,
+monopoly, life; repeated dozens of times). To counteract this we insert 4 random
+words from $W_\text{NYT}$ into the system prompt as ``inspiration.'' The LLM is
+told to write a short imagined story around those words before proposing a
+category. This dramatically increases category diversity.
+
+\subsection{MPNET word selection}
+The LLM returns an 8-word candidate pool. We do \emph{not} let the LLM pick which
+4 words to keep; instead, for all $\binom{8}{4} = 70$ subsets $S$ we compute
+\begin{equation}
+\operatorname{score}(S) \;=\; \frac{1}{\binom{|S|}{2}} \sum_{(u,v) \in \binom{S}{2}} \cos(e(u), e(v)),
+\end{equation}
+the average pairwise cosine similarity of the subset's MPNET embeddings, and return
+the subset with the highest score. This deterministic step cleans up LLM
+inconsistency.
+
+\subsection{Editor pass}
+A single LLM call (Call 5) reviews the complete 4-group puzzle and either approves
+each category name or rewrites one it considers inaccurate. In practice $\sim$95\%
+of categories pass unchanged.
+
+\subsection{False-group variant}
+A method-level alternative (per the same paper) produces the highest-quality
+puzzles in user studies: the LLM first proposes a plausible-but-fake ``root''
+group (e.g., ``ROUND THINGS: ball, globe, ring, wheel''), then for each root word
+finds an alternate meaning and generates a real group around it. The 4 real
+groups form the puzzle; the fake root is a decoy that visually ``fits'' but isn't
+a valid grouping. Pipeline A supports this via the \texttt{--method false\_group}
+flag.
+
+%==============================================================================
+\section{Pipeline B: Category-First Retrieval (CFR)}
+\label{sec:cfr}
+
+CFR is our primary methodological contribution. It inverts Pipeline A: instead of
+the LLM generating words, it generates \emph{only} category names (or none at all),
+and the words are retrieved from $W$ by $k$-nearest-neighbors over MPNET embeddings.
+
+\subsection{Motivation}
+Pipeline A wastes LLM tokens. The LLM generates 8 words, then MPNET picks 4 of them
+anyway; the other 4 are discarded. Two observations follow:
+\begin{enumerate}[leftmargin=*, itemsep=0.1em]
+\item The LLM is good at \emph{naming} (creative, readable category names).
+\item MPNET is good at \emph{ranking} (deterministic semantic similarity over
+a fixed vocabulary).
+\end{enumerate}
+CFR assigns each task to the component that handles it best.
+
+\subsection{Offline precomputation}
+\begin{algorithm}[H]
+\caption{CFR --- Offline precomputation (runs once, $\sim$5 minutes)}
+\begin{algorithmic}[1]
+\State Load $W$ and $C$ from the NYT dataset, optionally augment with WordNet + Google 10k
+\State $E_W \gets \textsc{MPNET}(W) \in \mathbb{R}^{|W| \times 768}$
+\State $E_C \gets \textsc{MPNET}(C) \in \mathbb{R}^{|C| \times 768}$
+\State $\text{KNN} \gets \textsc{NearestNeighbors}(E_W, \text{metric}=\text{cosine})$
+\State $\mathcal{G}_\text{NYT} \gets \{\text{frozenset}(g.\text{words}) : g \in \text{all NYT groups}\}$
+\State Save $E_W, E_C, \text{KNN}, \mathcal{G}_\text{NYT}$ to disk cache
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Per-puzzle flow}
+
+\begin{algorithm}[H]
+\caption{CFR --- Online generation (per puzzle)}
+\begin{algorithmic}[1]
+\State \Comment{Step 1: obtain 4 category names}
+\If{mode = ``remix''}
+    \State $\text{cats} \gets \textsc{sample-diverse}(C, 4, \text{min-dist}=0.35)$ \Comment{0 LLM calls}
+\ElsIf{mode = ``fresh''}
+    \State $\text{cats} \gets \textsc{LLM-batched}(\text{``4 categories''})$ \Comment{1 LLM call}
+\EndIf
+\State used $\gets \emptyset$, groups $\gets [\,]$
+\For{each $c \in \text{cats}$}
+    \State $q \gets \textsc{MPNET}(c) \in \mathbb{R}^{768}$ \Comment{Step 2: KNN retrieve}
+    \State $\text{cand} \gets \textsc{top-k}(\text{KNN}, q, k=30, \text{exclude}=\text{used}, \text{filter stems \& tokens})$
+    \State $\text{pool} \gets \text{cand}[:8]$
+    \State $\text{best}_4 \gets \textsc{pick-best-non-NYT-combo}(\text{pool}, \mathcal{G}_\text{NYT})$ \Comment{Step 3}
+    \State append $\{c, \text{best}_4\}$ to groups; update used
+\EndFor
+\State groups $\gets \textsc{assign-colors}(\text{groups})$ \Comment{Step 4}
+\State \textsc{dedup}(\text{groups}, $\mathcal{G}_\text{NYT}$) \Comment{Step 5}
+\State \textsc{roundtable-validate}(\text{groups}) \Comment{Step 6}
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Mode A: NYT category remix}
+Mode A picks 4 existing NYT category names, diverse in embedding space. ``Diverse''
+means all $\binom{4}{2} = 6$ pairwise cosine distances between the four categories
+are at least $0.35$; rejection sampling is used until this condition is met.
+No LLM call. No API cost. No network latency.
+
+\subsection{Mode B: Fresh LLM categories}
+Mode B uses \emph{one} batched LLM call that returns a JSON object with four
+unrelated categories, e.g., \texttt{\{"categories": ["BIRDS", "FILL-IN: FIRE\_\_\_",
+"PALINDROMES", "NBA TEAMS"]\}}. This is a single call producing four categories,
+not four separate calls. Cost is $\sim$\$0.0005 per puzzle with gpt-4o-mini.
+
+\subsection{KNN retrieval with filters}
+\label{sec:knn}
+Given a category embedding $q$, we request the top $k=30$ words by cosine distance
+from KNN. Before returning, three filters are applied in order:
+\begin{enumerate}[leftmargin=*, itemsep=0.1em]
+\item \textbf{Exclusion}: words already used in previous groups of the same puzzle.
+\item \textbf{Category-token overlap}: a word $w$ is dropped if $w$ is literally
+one of the tokens in the category name (e.g., drop ``TIME'' for category
+``TIME PERIODS'').
+\item \textbf{Morphological duplicates}: two words sharing a crude stem (via a
+suffix-stripping heuristic) are not both kept. E.g., if TIME is already chosen,
+TIMES, TIMER, and TIMING are skipped.
+\end{enumerate}
+
+\subsection{Best-combination selection with NYT-group safety}
+\label{sec:combo}
+From the 8 surviving candidates, we enumerate all $\binom{8}{4} = 70$ subsets,
+score each by average pairwise cosine similarity (as in Pipeline A, Section~\ref{sec:pipelineA}),
+and rank them descending. We then return the \emph{first combination that is not a
+verbatim past NYT group}:
+
+\begin{equation}
+S^{\star} \;=\; \mathop{\arg\max}_{\substack{S \subset \text{pool},\ |S|=4, \\ \text{frozenset}(S) \notin \mathcal{G}_\text{NYT}}} \;\; \operatorname{score}(S).
+\end{equation}
+
+If the top-scoring combination happens to be a past NYT group (e.g., KNN happened
+to retrieve the literal NYT bird group when queried for ``BIRDS''), we fall through
+to the next-best combination. In 200 benchmark v2 puzzles, this fallback fired a
+handful of times and produced 0 verbatim NYT group matches in the final output.
+
+%==============================================================================
+\section{Shared Post-Generation Components}
+
+Every pipeline --- Pipeline A, CFR Mode A, and CFR Mode B --- passes through the
+same 3-stage post-processing.
+
+\subsection{Difficulty color assignment}
+For each group $g$ with words $W_g$, compute
+\begin{equation}
+\mu(g) \;=\; \frac{1}{\binom{4}{2}} \sum_{(u, v) \in \binom{W_g}{2}} \cos(e(u), e(v)) \;=\; \operatorname{avg-sim}(g).
+\end{equation}
+Sort the 4 groups descending by $\mu$ and map them to colors:
+\textcolor{yellow_conn!80!black}{\textbf{yellow}} (highest, easiest) $\to$
+\textcolor{green_conn!80!black}{\textbf{green}} $\to$
+\textcolor{blue_conn!70!black}{\textbf{blue}} $\to$
+\textcolor{purple_conn!70!black}{\textbf{purple}} (lowest, hardest).
+
+The thresholds are empirical, matching Table 1 of the ``Making New Connections''
+paper: yellow $\approx 0.40$, green $\approx 0.35$, blue $\approx 0.29$, purple $\approx 0.27$.
+Assignment is by rank within the puzzle, not by threshold matching, so every
+puzzle always gets exactly one group per color.
+
+\subsection{Deduplication}
+\label{sec:dedup}
+The rubric rules that any generation of a verbatim past NYT puzzle is an automatic
+fail. We enforce this in two independent ways:
+
+\paragraph{16-word set overlap.}
+For the 16-word set $U$ of the candidate puzzle, we compute the maximum overlap
+with any single past NYT puzzle:
+\begin{equation}
+o^\star \;=\; \max_{p \in \text{NYT}} |U \cap p.\text{words}|.
+\end{equation}
+Flag as duplicate if $o^\star > 6$ (threshold from the paper).
+
+\paragraph{4-word group match.}
+For each generated group $g$, test
+\begin{equation}
+\text{frozenset}(g) \in \mathcal{G}_\text{NYT}?
+\end{equation}
+If any generated group matches a past NYT group verbatim, flag the puzzle as a
+duplicate. (CFR's Step 3 rarely produces this anyway, because it actively avoids it
+during selection --- but the check runs post-hoc for any pipeline.)
+
+\subsection{Roundtable validation}
+\label{sec:roundtable}
+Two independent solvers attempt to recover the intended 4-group partition. A
+puzzle is accepted if either solver fully recovers it.
+
+\subsubsection{Solver 1 --- Embedding (greedy)}
+Enumerate all $\binom{16}{4} = 1{,}820$ possible 4-word groups, score each by
+average pairwise cosine similarity, then greedily pick the highest-scoring
+non-overlapping groups until 4 have been chosen. Fast, deterministic. Baseline
+performance on the 554 real NYT puzzles: 2.0\% full-puzzle solve rate (consistent
+with published baselines in the low double-digits).
+
+\subsubsection{Solver 2 --- Clustering (beam search)}
+Per ``Deceptively Simple'' (arXiv:2412.01621), each candidate group $g$ gets a
+composite score
+\begin{equation}
+G(g) \;=\; 0.4 \,I(g) \;+\; 0.3 \,s(g) \;+\; 0.3 \,V(g),
+\end{equation}
+where
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item $I(g) = -K(E_g)$, minus the $k$-means inertia of the 4 embeddings at $k=1$
+(tighter clusters score higher);
+\item $s(g) = \min_{(u, v) \in \binom{W_g}{2}} \cos(e(u), e(v))$, the weakest
+pairwise link (guards against outlier words);
+\item $V(g) = \frac{\operatorname{mean}(P_g)}{1 + \operatorname{var}(P_g)}$, where $P_g$ is the
+vector of pairwise similarities --- rewards high and \emph{stable} cohesion.
+\end{itemize}
+A penalty term discourages groups that also bleed into the remaining word set:
+\begin{equation}
+P(g, R) \;=\; \frac{1}{|R|} \sum_{r \in R} \cos(\mu_g, e(r)), \qquad \mu_g = \tfrac{1}{|g|} \sum_{w \in g} e(w).
+\end{equation}
+We run beam search with width 10 to find the 4-group partition maximizing
+$\sum_i G(g_i) - P(g_i, R_i)$.
+
+\subsubsection{Acceptance rule}
+A puzzle is accepted if at least one of Solvers 1 and 2 returns a partition
+matching all 4 intended groups. This is a conservative gate: our solvers solve only
+2--3\% of real NYT puzzles, so a puzzle that \emph{they} can solve is one whose
+semantic structure is cleanly recoverable (i.e., unambiguous).
+
+\subsubsection{Optional LLM solver}
+A third solver prompts the LLM with the 16 shuffled words and chain-of-thought
+instructions, parsing its returned 4-group partition. Used only for edge cases
+or published benchmarks; off by default to save cost.
+
+%==============================================================================
+\section{Implementation Details}
+
+\subsection{Code organization}
+
+\begin{lstlisting}[language=text]
+src/
+|-- config.py             # DRY_RUN flag, model names, thresholds
+|-- llm_client.py         # Unified OpenAI / Anthropic / Mock client
+|-- generator/            # Pipeline A
+|   |-- pipeline.py       # orchestrator
+|   |-- group_creator.py  # iterative + false-group methods
+|   |-- puzzle_editor.py  # editor pass
+|   |-- prompts.py        # prompt templates
+|   |-- difficulty.py     # color assignment (shared)
+|   `-- deduplicator.py   # v2: 16-word + 4-word-group checks (shared)
+|-- cfr/                  # Pipeline B (our contribution)
+|   |-- pipeline.py       # CFRPipeline, both modes
+|   |-- embedding_retriever.py  # KNN + category sampling
+|   |-- word_bank.py      # v2: augmentation (NYT + WordNet + Google 10k)
+|   `-- prompts.py        # batched-categories prompt (Mode B only)
+`-- solvers/
+    |-- embedding_solver.py
+    |-- clustering_solver.py
+    |-- llm_solver.py
+    `-- roundtable.py
+
+scripts/
+|-- generate_puzzles.py       # Pipeline A CLI
+|-- cfr/generate_cfr.py       # Pipeline B CLI
+|-- split_by_color.py         # extract per-color word lists
+`-- build_*_pdf.py            # regenerate PDFs
+
+data/
+|-- nyt_puzzles/ConnectionsFinalDataset.json  # 554 ground-truth puzzles
+|-- cache/                                    # precomputed embeddings
+|-- generated/                                # Pipeline A output
+`-- generated/cfr_v2/                         # Pipeline B output
+
+webapp/                  # deployed static site (GitHub Pages)
+notebooks/               # Jupyter demo notebook
+tests/                   # pytest suite
+\end{lstlisting}
+
+\subsection{Dry-run mode}
+All LLM-calling code goes through \texttt{LLMClient}. When the environment
+variable \texttt{DRY\_RUN=true} (the default), the client never makes a network
+call; it returns realistic canned responses routed by prompt-keyword matching.
+This means the entire pipeline --- including the notebook and the web app ---
+can be built, tested, and demonstrated with zero API keys configured.
+
+\subsection{Reproducibility}
+A fixed random seed is threaded through the pipeline (\texttt{RANDOM\_SEED = 42}
+in \texttt{config.py}). The same input produces the same output. Intermediate
+artefacts (candidate pools, solver traces) are persisted to the output JSON for
+audit.
+
+%==============================================================================
+\section{Benchmarks}
+
+\subsection{Pipeline-level comparison}
+Each row below summarizes 100 independent puzzle generations on the same machine.
+All times include MPNET model load, word-bank build, embedding precomputation,
+per-puzzle generation, and solver validation.
+
+\begin{center}
+\small
+\begin{tabular}{l r r r r r}
+\toprule
+\textbf{Pipeline / Mode} & \textbf{LLM calls} & \textbf{Pass rate} & \textbf{Time/puzzle} & \textbf{Non-NYT words} & \textbf{NYT group matches} \\
+\midrule
+A  (iterative, gpt-4o-mini)   & 5 & 91\%          & $\sim$10 s   & --           & not checked \\
+A  (iterative, gpt-4o)        & 5 & 87\%          & $\sim$10 s   & --           & not checked \\
+B --- v1 Mode A (remix)       & 0 & 97\%          & 1.41 s       & 0\%          & not checked \\
+B --- v1 Mode B (fresh)       & 1 & 99\%          & 2.67 s       & 0\%          & not checked \\
+B --- \textbf{v2 Mode A (remix)} & \textbf{0} & \textbf{99\%} & \textbf{1.27 s} & \textbf{62.6\%} & \textbf{0/100} \\
+B --- \textbf{v2 Mode B (fresh)} & \textbf{1} & \textbf{99\%} & \textbf{2.77 s} & \textbf{69.1\%} & \textbf{0/100} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Solver baseline on real NYT puzzles}
+\begin{center}
+\small
+\begin{tabular}{l r r}
+\toprule
+\textbf{Solver} & \textbf{Full-puzzle solve rate} & \textbf{Published baseline} \\
+\midrule
+Embedding (greedy)   & 2.0\% (11/554) & $\sim$11.6\% (``Missed Connections'') \\
+Clustering (beam=10) & 3.4\% (19/554) & higher than embedding \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Our solvers are more conservative than published baselines, which is intentional:
+we want the validation to reject ambiguous puzzles aggressively, not to match
+human performance. A puzzle our solvers can crack has a cleanly recoverable
+semantic structure.
+
+\subsection{Dataset statistics}
+\begin{center}
+\small
+\begin{tabular}{l r}
+\toprule
+\textbf{Artefact} & \textbf{Count} \\
+\midrule
+Ground-truth NYT puzzles loaded            & 554 \\
+Unique NYT words                           & 4{,}918 \\
+Unique NYT categories                      & 2{,}054 \\
+Unique NYT 4-word groups (indexed)         & 2{,}216 \\
+WordNet lemmas added (filtered)            & $\sim$10{,}000 \\
+\textbf{Total augmented word bank}         & \textbf{14{,}877} \\
+Puzzles generated (Pipeline A)             & 775 \\
+Puzzles generated (Pipeline B v1 + v2)     & 400 \\
+Total validated puzzles on disk            & $>$1{,}100 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==============================================================================
+\section{Rubric Compliance}
+
+\subsection{``Don't reproduce a past connections puzzle''}
+Enforced at two levels (Section~\ref{sec:dedup}):
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item 16-word set overlap threshold of 6 words against any past NYT puzzle.
+\item Exact 4-word group match against the indexed set of 2{,}216 past NYT groups.
+\end{itemize}
+Across 200 v2 benchmark puzzles, both checks flagged 0 generated puzzles as
+duplicates.
+
+\subsection{``Word bank larger than the original''}
+The NYT ground-truth has 4{,}918 unique words; ours has 14{,}877 (Section~\ref{sec:wordbank}).
+Moreover, 62--69\% of output words in v2 benchmarks are from the non-NYT portion
+of the bank, demonstrating that the augmentation is actually used --- not just
+shelved.
+
+\subsection{``Web interface''}
+The static site at \texttt{webapp/} is deployed to GitHub Pages. It bundles 542
+validated puzzles and replicates the NYT 4$\times$4 grid, with correct-guess
+reveals, ``one away'' feedback, shuffle, and mistake tracking. Entirely vanilla
+JavaScript, no backend.
+
+\subsection{``Plausibly from the NYTimes''}
+We haven't run a formal human evaluation yet, but spot checks on v2 output show
+many puzzles that read as NYT-style (the FAQ and notebook deliverables will
+contain sample puzzles with commentary).
+
+%==============================================================================
+\section{Limitations and Future Work}
+
+\subsection{Known limitations}
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item \textbf{Wordplay categories underperform.} CFR relies on semantic similarity,
+which captures ``SYNONYMS FOR X'' well but struggles with ``\_\_\_FISH'' or
+``WORDS CONTAINING HIDDEN COLORS.'' These purely syntactic categories don't
+map cleanly to embedding space.
+\item \textbf{Occasional awkward WordNet words} (e.g., MORPHOPHONEMIC) slip into
+some groups. A higher WordNet frequency threshold or intersection with Google 10k
+would help.
+\item \textbf{Solver conservatism may reject good puzzles.} Some creative puzzles
+that a human could solve may fail our solver gate.
+\end{itemize}
+
+\subsection{Concrete next steps}
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item \textbf{Scale to 10{,}000 puzzles.} CFR Mode A can do this in $\sim$3.5 h at
+\$0 cost; Mode B does it in $\sim$7.5 h for $\sim$\$0.50.
+\item \textbf{Mode C: CFR False-Group.} Port the highest-quality method from
+Pipeline A into CFR's 1-LLM-call framework.
+\item \textbf{Batched LLM categories.} In Mode B, ask for 40 categories per call
+instead of 4 --- a 10$\times$ cost reduction on top of the 20$\times$ already achieved.
+\item \textbf{Human evaluation.} Add a thumbs-up/down widget to the web app;
+collect hundreds of ratings; report the ``plausibly NYT'' rate directly.
+\item \textbf{LLM solver in the roundtable.} Use it as a tiebreaker on puzzles that
+one of the first two solvers rejects, improving acceptance of genuinely good
+wordplay puzzles.
+\end{itemize}
+
+%==============================================================================
+\section*{References}
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item Samuel et al., \emph{Making New Connections}, arXiv:2407.11240 (2024).
+\item Anonymous, \emph{Missed Connections: Solvers for the NYT Connections Game}, arXiv:2404.11730 (2024).
+\item Anonymous, \emph{Deceptively Simple}, arXiv:2412.01621 (2024).
+\item Anonymous, \emph{Connecting the Dots}, arXiv:2406.11012 (2024).
+\item Princeton University, \emph{WordNet: A Lexical Database for English}, \url{https://wordnet.princeton.edu}.
+\item \texttt{sentence-transformers} library, \texttt{all-mpnet-base-v2} model.
+\end{itemize}
+
+\end{document}

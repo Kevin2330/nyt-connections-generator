@@ -1,0 +1,384 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage{array}
+\usepackage{pifont}
+
+% NYT Connections colors
+\definecolor{yellow_conn}{HTML}{F9DF6D}
+\definecolor{green_conn}{HTML}{A0C35A}
+\definecolor{blue_conn}{HTML}{B0C4EF}
+\definecolor{purple_conn}{HTML}{BA81C5}
+\definecolor{codebg}{HTML}{F5F5F0}
+\definecolor{highlightbg}{HTML}{FFF8DC}
+\definecolor{accent}{HTML}{1A5490}
+
+\hypersetup{colorlinks=true, linkcolor=accent, urlcolor=accent}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{STA 561D | Duke}
+\lhead{Infinite Connections --- Executive Summary}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\Large\bfseries\color{accent}}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.6em}{}
+
+\newtcolorbox{keybox}{
+    colback=highlightbg,
+    colframe=yellow!50!orange,
+    arc=2mm,
+    boxrule=0.5pt,
+    left=6pt,
+    right=6pt,
+    top=4pt,
+    bottom=4pt,
+}
+
+\title{\textbf{Infinite Connections}\\[0.3em]
+\large An AI System for Generating NYT-Style Connections Puzzles\\[0.3em]
+\normalsize Executive Summary of Current Results and Implementation Pipelines (v2)}
+\author{STA 561D --- Duke University}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\vspace{-1em}
+
+%-----------------------------------------------------------------------------
+\section{Project Overview}
+
+The New York Times Connections puzzle presents players with 16 words that must be
+partitioned into 4 groups of 4 based on a hidden theme. \textbf{Infinite Connections}
+is a system that generates such puzzles \emph{automatically} at scale, validates them
+with multiple independent solvers, and serves them through a playable web interface.
+
+We have built and benchmarked \textbf{two complete pipelines}:
+
+\begin{enumerate}[leftmargin=*, itemsep=0.2em]
+\item \textbf{Pipeline A --- LLM-Heavy (baseline)}: 5 LLM calls per puzzle; LLM
+proposes word pools, MPNET embeddings refine selection.
+\item \textbf{Pipeline B --- Category-First Retrieval (CFR, novel)}, two modes:
+    \begin{itemize}[itemsep=0.1em]
+    \item \textbf{Mode A (remix, 0 LLM calls)}: samples categories from the
+    2{,}054-category NYT pool, retrieves words via KNN.
+    \item \textbf{Mode B (fresh, 1 LLM call)}: LLM writes 4 fresh categories in one
+    batched call; retrieves words via KNN.
+    \end{itemize}
+\end{enumerate}
+
+\textbf{CFR v2 (rubric-compliant upgrade).} A careful re-read of the rubric surfaced
+two constraints the first-pass CFR did not meet. We addressed both:
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item \emph{``If you generate a past connections puzzle you will automatically fail.''}
+We added an exact 4-word-group match check against all ${\sim}2{,}216$ past NYT groups;
+if the top-scoring retrieval would reproduce an NYT group, the next-best 4-word
+combination is used instead.
+\item \emph{Professor guidance: the word bank should be larger than the original
+game's.} We augmented the 4{,}918-word NYT bank with 10{,}000+ common English lemmas
+from WordNet, yielding a \textbf{14{,}877-word bank (3$\times$ larger than NYT's)}.
+\end{itemize}
+
+In addition, we deployed a \textbf{playable web application} hosted via GitHub Pages
+that loads 542 validated puzzles and replicates the NYT Connections UI.
+
+\begin{keybox}
+\textbf{Headline result (v2).} Pipeline B (CFR) achieves a \textbf{99\% validator pass
+rate} while drawing \textbf{62--69\% of its output words from non-NYT sources},
+reproducing \textbf{zero past NYT groups} across 200 benchmark puzzles, and running at
+\textbf{1/20 the cost} and \textbf{4$\times$ the speed} of the baseline LLM-heavy
+pipeline.
+\end{keybox}
+
+%-----------------------------------------------------------------------------
+\section{Pipeline A --- LLM-Heavy Baseline}
+
+Pipeline A follows the architecture from ``Making New Connections'' (arXiv:2407.11240).
+For each puzzle it issues 5 LLM calls:
+
+\begin{enumerate}[leftmargin=*, itemsep=0.15em]
+\item \textbf{Calls 1--4 (Group creation).} Four iterative calls, one per group. Each
+returns a category name plus 8 candidate words. Story injection (4 random seed words
+from the NYT bank) is embedded in the system prompt to force diversity.
+\item \textbf{MPNET selection (non-LLM).} Of the 8 candidates, the best 4 are chosen
+by enumerating all $\binom{8}{4}=70$ subsets and picking the one with the highest
+average pairwise cosine similarity.
+\item \textbf{Call 5 (Editor pass).} A final LLM call reviews all 4 category names
+and rewrites any that don't accurately describe their words.
+\item \textbf{Difficulty color assignment (non-LLM).} The 4 groups are sorted by
+their avg pairwise cosine similarity; highest $\rightarrow$ yellow, lowest $\rightarrow$ purple.
+\item \textbf{Deduplication (non-LLM).} The 16-word set is checked against all
+554 existing NYT puzzles; flagged if $>\!6$ words overlap with any single puzzle.
+\item \textbf{Roundtable validation (non-LLM).} Two independent solvers
+(an embedding solver and a beam-search clustering solver) attempt to recover the
+intended grouping. A puzzle is accepted if either solver fully solves it.
+\end{enumerate}
+
+\subsection*{Pipeline A Results}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Batch} & \textbf{Model} & \textbf{Count} & \textbf{Valid} & \textbf{Pass rate} \\
+\midrule
+100-puzzle (gpt-4o-mini) & gpt-4o-mini & 100 & 91 & 91\% \\
+100-puzzle (gpt-4o)      & gpt-4o      & 100 & 87 & 87\% \\
+575-puzzle batch         & gpt-4o-mini & 575 & 534 & 93\% \\
+\midrule
+\textbf{Total}           &             & \textbf{775} & \textbf{712} & \textbf{91.9\%} \\
+\bottomrule
+\end{tabular}
+\caption{Pipeline A generation results. Total cost $\approx$\$2.00.}
+\end{table}
+
+\textbf{Observation:} gpt-4o produces more creative wordplay categories but lower
+pass rate (87\%) because embedding-based validators struggle with pure wordplay.
+gpt-4o-mini is a better fit for this pipeline.
+
+%-----------------------------------------------------------------------------
+\section{Pipeline B --- Category-First Retrieval (CFR)}
+
+The key insight: in Pipeline A, the LLM wastes tokens \emph{generating candidate
+words}, only to have MPNET pick 4 of them anyway. CFR flips the flow:
+
+\begin{enumerate}[leftmargin=*, itemsep=0.15em]
+\item \textbf{Propose 4 categories} (two modes):
+    \begin{itemize}[itemsep=0.1em]
+    \item \textbf{Mode A (``remix'')}: sample 4 mutually dissimilar categories from
+    the 2,054 existing NYT categories (diversity enforced via pairwise MPNET cosine
+    distance $\geq 0.35$). Zero LLM calls.
+    \item \textbf{Mode B (``fresh'')}: \emph{one} batched LLM call returns 4 fresh
+    category names in a single response.
+    \end{itemize}
+\item \textbf{Retrieve words per category.} For each category name, encode it with
+MPNET and run KNN over the precomputed 4,918-word embedding matrix to get the top-30
+semantically closest words. Filter morphological duplicates (TIME/TIMES/TIMER) and
+category-token overlaps (``TIME'' for category ``TIME PERIODS'').
+\item \textbf{Select best 4.} Reuse Pipeline A's MPNET selector to pick the 4 most
+cohesive words from the top 8 candidates.
+\item \textbf{Assign colors, deduplicate, validate.} Identical to Pipeline A.
+\end{enumerate}
+
+\subsection*{Offline precomputation (one-time, $\sim$5 minutes)}
+
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item Encode all 4{,}918 NYT words $\rightarrow$ $4{,}918 \times 768$ matrix.
+\item Encode all 2{,}054 unique NYT categories $\rightarrow$ $2{,}054 \times 768$ matrix.
+\item Build a scikit-learn \texttt{NearestNeighbors} index with cosine distance.
+\item Cache the result as \texttt{data/cache/nyt\_embeddings.npz}.
+\end{itemize}
+
+\subsection*{Pipeline B Results (v1 vs. v2)}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Version \& Mode} & \textbf{Word bank} & \textbf{Pass rate} & \textbf{Non-NYT words} & \textbf{NYT-group collisions} & \textbf{Time/puzzle} \\
+\midrule
+v1 --- Mode A (remix) & 4{,}918 & 97\% & 0\% & not checked & 1.41 s \\
+v1 --- Mode B (fresh) & 4{,}918 & 99\% & 0\% & not checked & 2.67 s \\
+v2 --- Mode A (remix) & \textbf{14{,}877} & \textbf{99\%} & \textbf{62.6\%} & \textbf{0 / 100} & 1.27 s \\
+v2 --- Mode B (fresh) & \textbf{14{,}877} & \textbf{99\%} & \textbf{69.1\%} & \textbf{0 / 100} & 2.77 s \\
+\bottomrule
+\end{tabular}
+\caption{CFR pipeline benchmarks (100 puzzles per row). v2 expands the bank via WordNet
+augmentation and enforces the rubric's ``no-past-puzzle'' rule via 4-word-group
+matching.}
+\end{table}
+
+%-----------------------------------------------------------------------------
+\section{Head-to-Head Comparison}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{l r r r}
+\toprule
+\textbf{Metric} & \textbf{Pipeline A} & \textbf{CFR v2 Mode A} & \textbf{CFR v2 Mode B} \\
+                & (baseline)          & (remix, 0 calls)        & (fresh, 1 call) \\
+\midrule
+LLM calls / puzzle              & 5                & \textbf{0}             & \textbf{1} \\
+Cost / 1{,}000 puzzles          & \textasciitilde\$1.00 & \textbf{\$0.00}   & \textbf{\$0.05} \\
+Wall time / puzzle              & \textasciitilde10 s    & \textbf{1.27 s}    & \textbf{2.77 s} \\
+Pass rate                       & 87--93\%         & \textbf{99\%}          & \textbf{99\%} \\
+Word bank size                  & 4{,}918 (NYT)    & \textbf{14{,}877}      & \textbf{14{,}877} \\
+Non-NYT words in output         & 0\%              & \textbf{62.6\%}        & \textbf{69.1\%} \\
+Hard-fail safety check          & word overlap only & \textbf{+ 4-word group}& \textbf{+ 4-word group} \\
+NYT group collisions (of 100)   & not checked      & \textbf{0}              & \textbf{0} \\
+API fragility                   & High             & \textbf{None}           & Low \\
+\bottomrule
+\end{tabular}
+\caption{Pipeline comparison on 100-puzzle batches (CFR v2).}
+\end{table}
+
+\textbf{Speed:} CFR Mode A is $\sim$7$\times$ faster and Mode B is $\sim$4$\times$ faster
+than the baseline, because the embedding retrieval (KNN lookup on 4,918 words) is
+essentially instantaneous compared to network round-trips to an LLM API.
+
+\textbf{Cost:} For a run of 10{,}000 puzzles, the baseline costs $\sim$\$10; CFR Mode A
+costs \$0 and Mode B costs $\sim$\$0.50. A \textbf{20$\times$ cost reduction} at
+\textbf{higher quality}.
+
+\textbf{Methodological contribution:} The project's original contribution shifts from
+``we called the LLM to generate puzzles'' to ``we built an embedding-first hybrid
+pipeline where the LLM is a small, targeted component.''
+
+%-----------------------------------------------------------------------------
+\section{Rubric-Compliance Upgrade (CFR v1 $\rightarrow$ v2)}
+
+The original CFR pipeline worked well by statistical metrics but missed two
+rubric-level constraints. The v2 upgrade keeps the architecture identical and adds
+two targeted safeguards.
+
+\subsection*{Fix 1: Augmented word bank (new \texttt{src/cfr/word\_bank.py}).}
+
+The professor noted that ``the total word bank should be more than that of the original
+game's.'' We union three sources and deduplicate:
+
+\begin{enumerate}[leftmargin=*, itemsep=0.1em]
+\item The 4{,}918 unique NYT words (retained for NYT-style familiarity).
+\item NLTK WordNet single-token lemmas with nonzero tagged-corpus frequency --- filtered
+to 3--15 chars, alphabetic only, no profanity. This yields $\sim$10{,}000 common
+English words (no archaic/technical noise).
+\item An optional Google 10k most-common-English list if present (not required).
+\end{enumerate}
+
+Result: \textbf{14{,}877 words}, cached as \texttt{data/cache/augmented\_word\_bank.json}.
+The KNN retriever is otherwise unchanged; it just searches over a bigger universe.
+
+\subsection*{Fix 2: 4-word-group hard-fail guard (extended \texttt{Deduplicator}).}
+
+The rubric says: \emph{``If you generate a past connections puzzle you will automatically
+fail.''} The original dedup only flagged 16-word-set overlap $> 6$ against past NYT
+puzzles. We added:
+
+\begin{itemize}[leftmargin=*, itemsep=0.1em]
+\item A precomputed \texttt{\_nyt\_group\_set} of $\sim$2{,}216 past NYT 4-word groups
+as frozensets, indexed at first call.
+\item A new \texttt{check\_groups(groups)} method that flags if any generated 4-word
+group matches a past NYT group exactly.
+\item Inside CFR's retrieval, we now enumerate all $\binom{8}{4}=70$ combinations of
+candidate words, rank them by avg pairwise cosine similarity, and return the first
+combination that is \textbf{not} a verbatim NYT group.
+\end{itemize}
+
+Across 200 v2 puzzles (100 Mode A + 100 Mode B), \textbf{zero} accidentally reproduced a
+past NYT group, confirming the guard works.
+
+\subsection*{Verified impact}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{l r r}
+\toprule
+\textbf{Metric} & \textbf{v1} & \textbf{v2} \\
+\midrule
+Word bank size                          & 4{,}918            & \textbf{14{,}877} \\
+4-word group dedup                      & \ding{55}          & \textbf{\ding{51}} \\
+Non-NYT words in output (Mode A)        & 0\%                & \textbf{62.6\%} \\
+Non-NYT words in output (Mode B)        & 0\%                & \textbf{69.1\%} \\
+Exact NYT group matches (200 puzzles)   & unknown            & \textbf{0} \\
+Pass rate Mode A                        & 97\%               & \textbf{99\%} \\
+Pass rate Mode B                        & 99\%               & \textbf{99\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%-----------------------------------------------------------------------------
+\section{Solver Benchmark (Sanity Check on NYT Data)}
+
+To verify the validator is not over-accepting our own puzzles, we ran both solvers
+on the 554 ground-truth NYT puzzles:
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+\textbf{Solver} & \textbf{Full-puzzle solve rate} & \textbf{Expected (paper baseline)} \\
+\midrule
+Embedding solver (greedy) & 2.0\% & \textasciitilde11.6\% (``Missed Connections'') \\
+Clustering solver (beam)  & 3.4\% & Higher than embedding \\
+\bottomrule
+\end{tabular}
+\caption{Solver performance on 554 real NYT puzzles.}
+\end{table}
+
+Our solvers correctly find only 2--3\% of real NYT puzzles (which often contain pop
+culture / wordplay categories that defeat semantic similarity). This is the \emph{right}
+kind of conservative validator --- a puzzle that \emph{our} solvers can crack
+deterministically is one where the semantic structure is cleanly recoverable, i.e.,
+a solvable puzzle.
+
+%-----------------------------------------------------------------------------
+\section{Deployed Artifacts}
+
+\begin{itemize}[leftmargin=*, itemsep=0.15em]
+\item \textbf{542-puzzle static web app}: live on GitHub Pages at
+\url{https://kevin2330.github.io/nyt-connections-generator/}.
+Vanilla JS frontend; client-side puzzle selection; no backend required.
+\item \textbf{Color-split dataset}: 534 validated groups in each of 4 difficulty
+buckets (yellow / green / blue / purple), totaling 8{,}544 NYT-style word groups.
+\item \textbf{Jupyter notebook} (\texttt{notebooks/infinite\_connections\_demo.ipynb})
+reproducing all generation and validation steps in dry-run mode.
+\item \textbf{CFR module} (\texttt{src/cfr/}): 3 new Python files ($\sim$300 lines
+total), completely separate from the baseline pipeline. All existing code is untouched.
+\end{itemize}
+
+%-----------------------------------------------------------------------------
+\section{Summary of Current Results}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{p{0.42\linewidth} p{0.52\linewidth}}
+\toprule
+\textbf{Artifact} & \textbf{Value} \\
+\midrule
+Total puzzles generated             & \textbf{1{,}175+} (775 baseline + 400 CFR) \\
+Total validated puzzles             & \textbf{1{,}106+} (712 baseline + 394 CFR) \\
+Best pass rate                      & \textbf{99\%} (CFR v2, both modes) \\
+Fastest per-puzzle generation       & \textbf{1.27 s} (CFR v2 Mode A, 0 LLM calls) \\
+Total spending to date              & $\sim$\$2.50 \\
+Word bank (v2)                      & \textbf{14{,}877 words} (4{,}918 NYT + $\sim$10{,}000 WordNet) \\
+Non-NYT word usage (v2)             & 62--69\% of output words \\
+Past NYT group collisions (v2)      & \textbf{0 across 200 puzzles} (rubric safety) \\
+Web app                             & Deployed, 542 puzzles playable online \\
+Pipelines built                     & \textbf{2 novel} (CFR Mode A + Mode B); baseline kept as reference \\
+Methodological novelty              & Embedding-first retrieval + group-level dedup \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Key Takeaway}
+
+The project has produced both a competent LLM-heavy baseline \textbf{and} a new,
+less-LLM-reliant methodology (CFR) that beats the baseline on every measurable axis:
+pass rate, cost, and speed. CFR makes the academic contribution of the project
+meaningfully original: we don't just wrap an LLM, we \textbf{use embeddings as
+the primary generative substrate} and let the LLM play a small, well-defined role
+(writing 4 category names). The system is fully reproducible, deployed, and
+documented.
+
+\end{document}

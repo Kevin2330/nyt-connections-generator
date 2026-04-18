@@ -1,0 +1,169 @@
+[
+  {
+    "id": "CFR-00052",
+    "words": [
+      "MOTORCAR",
+      "CAR",
+      "SALOON",
+      "SEDAN",
+      "SUBARU",
+      "AUTOMOBILE",
+      "VEHICLE",
+      "WALL",
+      "SCOTCH",
+      "BARTENDER",
+      "WALLOPING",
+      "CARS",
+      "COCKTAIL",
+      "ENGINE",
+      "WALLABY",
+      "WRETCH"
+    ],
+    "groups": [
+      {
+        "category": "SPORTS CARS",
+        "words": [
+          "CAR",
+          "VEHICLE",
+          "MOTORCAR",
+          "AUTOMOBILE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.7848803400993347
+      },
+      {
+        "category": "MARTINI SPECIFICATIONS",
+        "words": [
+          "COCKTAIL",
+          "SALOON",
+          "BARTENDER",
+          "SCOTCH"
+        ],
+        "color": "green",
+        "similarity_score": 0.5166763067245483
+      },
+      {
+        "category": "PARTS OF A CAR",
+        "words": [
+          "CARS",
+          "SEDAN",
+          "SUBARU",
+          "ENGINE"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4841899573802948
+      },
+      {
+        "category": "WALLOP",
+        "words": [
+          "WALLOPING",
+          "WALL",
+          "WALLABY",
+          "WRETCH"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4334352910518646
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CAR",
+                "AUTOMOBILE",
+                "VEHICLE",
+                "CARS"
+              ],
+              "score": 0.7893008589744568
+            },
+            {
+              "words": [
+                "SALOON",
+                "SCOTCH",
+                "BARTENDER",
+                "COCKTAIL"
+              ],
+              "score": 0.5166763663291931
+            },
+            {
+              "words": [
+                "MOTORCAR",
+                "SEDAN",
+                "SUBARU",
+                "ENGINE"
+              ],
+              "score": 0.508683979511261
+            },
+            {
+              "words": [
+                "WALL",
+                "WALLOPING",
+                "WALLABY",
+                "WRETCH"
+              ],
+              "score": 0.4334352910518646
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "CAR",
+                "AUTOMOBILE",
+                "VEHICLE",
+                "CARS"
+              ],
+              "score": 0.7893008589744568
+            },
+            {
+              "words": [
+                "SALOON",
+                "SCOTCH",
+                "BARTENDER",
+                "COCKTAIL"
+              ],
+              "score": 0.5166763663291931
+            },
+            {
+              "words": [
+                "MOTORCAR",
+                "SEDAN",
+                "SUBARU",
+                "ENGINE"
+              ],
+              "score": 0.508683979511261
+            },
+            {
+              "words": [
+                "WALL",
+                "WALLOPING",
+                "WALLABY",
+                "WRETCH"
+              ],
+              "score": 0.4334352910518646
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "dedup_reason": "",
+      "exact_group_match": false,
+      "overall_difficulty": 0.5547954440116882,
+      "created_at": "2026-04-18T03:30:51.984537+00:00",
+      "accepted": false
+    }
+  }
+]

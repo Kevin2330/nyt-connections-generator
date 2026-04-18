@@ -1,0 +1,827 @@
+[
+  {
+    "id": "CFR-00001",
+    "words": [
+      "PLUMBER",
+      "PAL",
+      "MAINTAIN",
+      "BUDDY",
+      "LUNGES",
+      "MANAGE",
+      "CONTAIN",
+      "CATERER",
+      "BROTHER",
+      "CONTROL",
+      "SQUAT",
+      "EXERCISE",
+      "BARTENDER",
+      "STRETCH",
+      "CHEF",
+      "FELLOW"
+    ],
+    "groups": [
+      {
+        "category": "RESTAURANT WORKERS",
+        "words": [
+          "CATERER",
+          "BARTENDER",
+          "CHEF",
+          "PLUMBER"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5714790225028992
+      },
+      {
+        "category": "FRIEND",
+        "words": [
+          "BUDDY",
+          "PAL",
+          "BROTHER",
+          "FELLOW"
+        ],
+        "color": "green",
+        "similarity_score": 0.521723747253418
+      },
+      {
+        "category": "YOGA POSES",
+        "words": [
+          "SQUAT",
+          "LUNGES",
+          "EXERCISE",
+          "STRETCH"
+        ],
+        "color": "blue",
+        "similarity_score": 0.5054755806922913
+      },
+      {
+        "category": "REGULATE",
+        "words": [
+          "CONTROL",
+          "MANAGE",
+          "MAINTAIN",
+          "CONTAIN"
+        ],
+        "color": "purple",
+        "similarity_score": 0.5023835897445679
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "PLUMBER",
+                "CATERER",
+                "BARTENDER",
+                "CHEF"
+              ],
+              "score": 0.571479082107544
+            },
+            {
+              "words": [
+                "PAL",
+                "BUDDY",
+                "BROTHER",
+                "FELLOW"
+              ],
+              "score": 0.5217236876487732
+            },
+            {
+              "words": [
+                "LUNGES",
+                "SQUAT",
+                "EXERCISE",
+                "STRETCH"
+              ],
+              "score": 0.5054755210876465
+            },
+            {
+              "words": [
+                "MAINTAIN",
+                "MANAGE",
+                "CONTAIN",
+                "CONTROL"
+              ],
+              "score": 0.5023835301399231
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "PLUMBER",
+                "CATERER",
+                "BARTENDER",
+                "CHEF"
+              ],
+              "score": 0.571479082107544
+            },
+            {
+              "words": [
+                "LUNGES",
+                "SQUAT",
+                "EXERCISE",
+                "STRETCH"
+              ],
+              "score": 0.5054755210876465
+            },
+            {
+              "words": [
+                "PAL",
+                "BUDDY",
+                "BROTHER",
+                "FELLOW"
+              ],
+              "score": 0.5217236876487732
+            },
+            {
+              "words": [
+                "MAINTAIN",
+                "MANAGE",
+                "CONTAIN",
+                "CONTROL"
+              ],
+              "score": 0.5023835301399231
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5252654552459717,
+      "created_at": "2026-04-16T18:42:54.330690+00:00",
+      "accepted": true
+    }
+  },
+  {
+    "id": "CFR-00002",
+    "words": [
+      "HOUSE",
+      "SPEEDY",
+      "COTTAGE",
+      "WALLET",
+      "PAYDAY",
+      "BALM",
+      "FASTER",
+      "CONDO",
+      "TOILETRIES",
+      "LOTION",
+      "TOILET PAPER",
+      "SLOW",
+      "SPEED",
+      "MONEYPENNY",
+      "PAYPAL",
+      "APARTMENT"
+    ],
+    "groups": [
+      {
+        "category": "FAST ___",
+        "words": [
+          "SPEED",
+          "FASTER",
+          "SLOW",
+          "SPEEDY"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.696333110332489
+      },
+      {
+        "category": "DEODORANTS",
+        "words": [
+          "TOILETRIES",
+          "LOTION",
+          "TOILET PAPER",
+          "BALM"
+        ],
+        "color": "green",
+        "similarity_score": 0.5726699829101562
+      },
+      {
+        "category": "RESIDE",
+        "words": [
+          "APARTMENT",
+          "HOUSE",
+          "COTTAGE",
+          "CONDO"
+        ],
+        "color": "blue",
+        "similarity_score": 0.5469825267791748
+      },
+      {
+        "category": "NON-CASH WAY TO PAY",
+        "words": [
+          "PAYPAL",
+          "MONEYPENNY",
+          "PAYDAY",
+          "WALLET"
+        ],
+        "color": "purple",
+        "similarity_score": 0.47233083844184875
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "SPEEDY",
+                "FASTER",
+                "SLOW",
+                "SPEED"
+              ],
+              "score": 0.6963329315185547
+            },
+            {
+              "words": [
+                "BALM",
+                "TOILETRIES",
+                "LOTION",
+                "TOILET PAPER"
+              ],
+              "score": 0.5726699233055115
+            },
+            {
+              "words": [
+                "HOUSE",
+                "COTTAGE",
+                "CONDO",
+                "APARTMENT"
+              ],
+              "score": 0.5469823479652405
+            },
+            {
+              "words": [
+                "WALLET",
+                "PAYDAY",
+                "MONEYPENNY",
+                "PAYPAL"
+              ],
+              "score": 0.47233080863952637
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "BALM",
+                "TOILETRIES",
+                "LOTION",
+                "TOILET PAPER"
+              ],
+              "score": 0.5726699233055115
+            },
+            {
+              "words": [
+                "HOUSE",
+                "COTTAGE",
+                "CONDO",
+                "APARTMENT"
+              ],
+              "score": 0.5469823479652405
+            },
+            {
+              "words": [
+                "SPEEDY",
+                "FASTER",
+                "SLOW",
+                "SPEED"
+              ],
+              "score": 0.6963329315185547
+            },
+            {
+              "words": [
+                "WALLET",
+                "PAYDAY",
+                "MONEYPENNY",
+                "PAYPAL"
+              ],
+              "score": 0.47233080863952637
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5720791220664978,
+      "created_at": "2026-04-16T18:42:56.625911+00:00",
+      "accepted": true
+    }
+  },
+  {
+    "id": "CFR-00003",
+    "words": [
+      "JOHN",
+      "BLINDFOLD",
+      "NUCLEUS",
+      "MASK",
+      "SPORTS",
+      "JACK",
+      "VISIBLE",
+      "JACKIE",
+      "CELL",
+      "ORGANISM",
+      "CLEATS",
+      "ADIDAS",
+      "MOLECULE",
+      "JACKKNIFE",
+      "HIDDEN",
+      "BICYCLE"
+    ],
+    "groups": [
+      {
+        "category": "___JACK",
+        "words": [
+          "JACK",
+          "JACKKNIFE",
+          "JOHN",
+          "JACKIE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5464351177215576
+      },
+      {
+        "category": "BIOLOGICAL BUILDING BLOCKS",
+        "words": [
+          "ORGANISM",
+          "CELL",
+          "MOLECULE",
+          "NUCLEUS"
+        ],
+        "color": "green",
+        "similarity_score": 0.472676157951355
+      },
+      {
+        "category": "HIDE FROM VIEW",
+        "words": [
+          "HIDDEN",
+          "BLINDFOLD",
+          "VISIBLE",
+          "MASK"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4688434600830078
+      },
+      {
+        "category": "TRACK AND FIELD EQUIPMENT",
+        "words": [
+          "SPORTS",
+          "ADIDAS",
+          "BICYCLE",
+          "CLEATS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.42543840408325195
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "JOHN",
+                "JACK",
+                "JACKIE",
+                "JACKKNIFE"
+              ],
+              "score": 0.5464351773262024
+            },
+            {
+              "words": [
+                "NUCLEUS",
+                "CELL",
+                "ORGANISM",
+                "MOLECULE"
+              ],
+              "score": 0.4726761281490326
+            },
+            {
+              "words": [
+                "BLINDFOLD",
+                "MASK",
+                "VISIBLE",
+                "HIDDEN"
+              ],
+              "score": 0.4688434600830078
+            },
+            {
+              "words": [
+                "SPORTS",
+                "CLEATS",
+                "ADIDAS",
+                "BICYCLE"
+              ],
+              "score": 0.42543843388557434
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "SPORTS",
+                "CLEATS",
+                "ADIDAS",
+                "BICYCLE"
+              ],
+              "score": 0.42543843388557434
+            },
+            {
+              "words": [
+                "JOHN",
+                "JACK",
+                "JACKIE",
+                "JACKKNIFE"
+              ],
+              "score": 0.5464351773262024
+            },
+            {
+              "words": [
+                "NUCLEUS",
+                "CELL",
+                "ORGANISM",
+                "MOLECULE"
+              ],
+              "score": 0.4726761281490326
+            },
+            {
+              "words": [
+                "BLINDFOLD",
+                "MASK",
+                "VISIBLE",
+                "HIDDEN"
+              ],
+              "score": 0.4688434600830078
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4783482849597931,
+      "created_at": "2026-04-16T18:42:57.833557+00:00",
+      "accepted": true
+    }
+  },
+  {
+    "id": "CFR-00004",
+    "words": [
+      "INTELLIGENCE",
+      "GIFT",
+      "MANNER",
+      "SECURITY",
+      "LOCK",
+      "DECORATIONS",
+      "LEADERSHIP",
+      "FESTIVITY",
+      "PASSWORD",
+      "WHEN",
+      "TIMES",
+      "SECURE",
+      "STOCKING",
+      "HISTORY",
+      "BEING",
+      "PAST"
+    ],
+    "groups": [
+      {
+        "category": "THEY HAVE KEYS",
+        "words": [
+          "LOCK",
+          "SECURITY",
+          "SECURE",
+          "PASSWORD"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5312778353691101
+      },
+      {
+        "category": "CHRISTMAS-RELATED",
+        "words": [
+          "FESTIVITY",
+          "STOCKING",
+          "DECORATIONS",
+          "GIFT"
+        ],
+        "color": "green",
+        "similarity_score": 0.5082350373268127
+      },
+      {
+        "category": "ABILITY TO DO SOMETHING WELL",
+        "words": [
+          "INTELLIGENCE",
+          "LEADERSHIP",
+          "BEING",
+          "MANNER"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4841803312301636
+      },
+      {
+        "category": "TIME PERIODS",
+        "words": [
+          "TIMES",
+          "HISTORY",
+          "PAST",
+          "WHEN"
+        ],
+        "color": "purple",
+        "similarity_score": 0.3917808532714844
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "SECURITY",
+                "LOCK",
+                "PASSWORD",
+                "SECURE"
+              ],
+              "score": 0.5312778353691101
+            },
+            {
+              "words": [
+                "GIFT",
+                "DECORATIONS",
+                "FESTIVITY",
+                "STOCKING"
+              ],
+              "score": 0.5082350969314575
+            },
+            {
+              "words": [
+                "INTELLIGENCE",
+                "MANNER",
+                "LEADERSHIP",
+                "BEING"
+              ],
+              "score": 0.4841803014278412
+            },
+            {
+              "words": [
+                "WHEN",
+                "TIMES",
+                "HISTORY",
+                "PAST"
+              ],
+              "score": 0.3917808532714844
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "INTELLIGENCE",
+                "MANNER",
+                "LEADERSHIP",
+                "BEING"
+              ],
+              "score": 0.4841803014278412
+            },
+            {
+              "words": [
+                "SECURITY",
+                "LOCK",
+                "PASSWORD",
+                "SECURE"
+              ],
+              "score": 0.5312778353691101
+            },
+            {
+              "words": [
+                "GIFT",
+                "DECORATIONS",
+                "FESTIVITY",
+                "STOCKING"
+              ],
+              "score": 0.5082350969314575
+            },
+            {
+              "words": [
+                "WHEN",
+                "TIMES",
+                "HISTORY",
+                "PAST"
+              ],
+              "score": 0.3917808532714844
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.4788685142993927,
+      "created_at": "2026-04-16T18:42:59.447428+00:00",
+      "accepted": true
+    }
+  },
+  {
+    "id": "CFR-00005",
+    "words": [
+      "BUMPY",
+      "ALPHABET",
+      "BREW",
+      "HOLEY",
+      "COOKWARE",
+      "DRINKS",
+      "STIRRER",
+      "LETTER",
+      "STARRY",
+      "WINERY",
+      "TEAPOT",
+      "SKILLET",
+      "LEACHY",
+      "TEXT",
+      "STOUT",
+      "TYPE"
+    ],
+    "groups": [
+      {
+        "category": "FOUND IN A KITCHEN",
+        "words": [
+          "SKILLET",
+          "COOKWARE",
+          "STIRRER",
+          "TEAPOT"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.5762384533882141
+      },
+      {
+        "category": "TWO LETTERS + NUMBER",
+        "words": [
+          "ALPHABET",
+          "TEXT",
+          "LETTER",
+          "TYPE"
+        ],
+        "color": "green",
+        "similarity_score": 0.5025760531425476
+      },
+      {
+        "category": "WAYS TO ORDER A BEER",
+        "words": [
+          "BREW",
+          "DRINKS",
+          "STOUT",
+          "WINERY"
+        ],
+        "color": "blue",
+        "similarity_score": 0.49413809180259705
+      },
+      {
+        "category": "PEACHY KEEN",
+        "words": [
+          "LEACHY",
+          "STARRY",
+          "BUMPY",
+          "HOLEY"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4571397006511688
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "COOKWARE",
+                "STIRRER",
+                "TEAPOT",
+                "SKILLET"
+              ],
+              "score": 0.5762384533882141
+            },
+            {
+              "words": [
+                "ALPHABET",
+                "LETTER",
+                "TEXT",
+                "TYPE"
+              ],
+              "score": 0.5025759935379028
+            },
+            {
+              "words": [
+                "BREW",
+                "DRINKS",
+                "WINERY",
+                "STOUT"
+              ],
+              "score": 0.4941382110118866
+            },
+            {
+              "words": [
+                "BUMPY",
+                "HOLEY",
+                "STARRY",
+                "LEACHY"
+              ],
+              "score": 0.4571397304534912
+            }
+          ]
+        },
+        "clustering": {
+          "solved": true,
+          "groups_correct": 4,
+          "groups": [
+            {
+              "words": [
+                "BREW",
+                "DRINKS",
+                "WINERY",
+                "STOUT"
+              ],
+              "score": 0.4941382110118866
+            },
+            {
+              "words": [
+                "COOKWARE",
+                "STIRRER",
+                "TEAPOT",
+                "SKILLET"
+              ],
+              "score": 0.5762384533882141
+            },
+            {
+              "words": [
+                "ALPHABET",
+                "LETTER",
+                "TEXT",
+                "TYPE"
+              ],
+              "score": 0.5025759935379028
+            },
+            {
+              "words": [
+                "BUMPY",
+                "HOLEY",
+                "STARRY",
+                "LEACHY"
+              ],
+              "score": 0.4571397304534912
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5075230598449707,
+      "created_at": "2026-04-16T18:43:01.211838+00:00",
+      "accepted": true
+    }
+  }
+]

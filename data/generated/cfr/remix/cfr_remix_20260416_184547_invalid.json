@@ -1,0 +1,497 @@
+[
+  {
+    "id": "CFR-00010",
+    "words": [
+      "SAXOPHONE",
+      "OBOE",
+      "AMUSE",
+      "FLUTE",
+      "SPELLING",
+      "GLYPH",
+      "GREEK",
+      "LAUGH",
+      "GIGGLE",
+      "HUMOR",
+      "SPELT",
+      "LATIN",
+      "DIALECT",
+      "SYMBOL",
+      "CLARINET",
+      "ALPHABET"
+    ],
+    "groups": [
+      {
+        "category": "INSTRUMENTS YOU BLOW INTO",
+        "words": [
+          "FLUTE",
+          "SAXOPHONE",
+          "OBOE",
+          "CLARINET"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.7539497017860413
+      },
+      {
+        "category": "FUNNY ___",
+        "words": [
+          "HUMOR",
+          "LAUGH",
+          "GIGGLE",
+          "AMUSE"
+        ],
+        "color": "green",
+        "similarity_score": 0.5530721545219421
+      },
+      {
+        "category": "EGYPTIAN SYMBOLS",
+        "words": [
+          "SYMBOL",
+          "GLYPH",
+          "GREEK",
+          "LATIN"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4303570091724396
+      },
+      {
+        "category": "WORDS PRONOUNCED DIFFERENTLY WITH ACCENT MARKS",
+        "words": [
+          "DIALECT",
+          "ALPHABET",
+          "SPELT",
+          "SPELLING"
+        ],
+        "color": "purple",
+        "similarity_score": 0.4062677323818207
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SAXOPHONE",
+                "OBOE",
+                "FLUTE",
+                "CLARINET"
+              ],
+              "score": 0.7539497017860413
+            },
+            {
+              "words": [
+                "AMUSE",
+                "LAUGH",
+                "GIGGLE",
+                "HUMOR"
+              ],
+              "score": 0.5530721545219421
+            },
+            {
+              "words": [
+                "GLYPH",
+                "LATIN",
+                "SYMBOL",
+                "ALPHABET"
+              ],
+              "score": 0.4733591079711914
+            },
+            {
+              "words": [
+                "SPELLING",
+                "GREEK",
+                "SPELT",
+                "DIALECT"
+              ],
+              "score": 0.36165106296539307
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "SAXOPHONE",
+                "OBOE",
+                "FLUTE",
+                "CLARINET"
+              ],
+              "score": 0.7539497017860413
+            },
+            {
+              "words": [
+                "GREEK",
+                "LATIN",
+                "DIALECT",
+                "ALPHABET"
+              ],
+              "score": 0.46074268221855164
+            },
+            {
+              "words": [
+                "AMUSE",
+                "LAUGH",
+                "GIGGLE",
+                "HUMOR"
+              ],
+              "score": 0.5530721545219421
+            },
+            {
+              "words": [
+                "SPELLING",
+                "GLYPH",
+                "SPELT",
+                "SYMBOL"
+              ],
+              "score": 0.39449551701545715
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.5359116196632385,
+      "created_at": "2026-04-16T18:43:39.829245+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "CFR-00036",
+    "words": [
+      "MOTIVATE",
+      "TUXEDO",
+      "CORE",
+      "DECORATIONS",
+      "INSPIRE",
+      "STEAL",
+      "VANITY",
+      "BASIC",
+      "BASE",
+      "PUSH",
+      "INSPIRATION",
+      "ADHERE",
+      "PROMOTE",
+      "COPY",
+      "LAVISH",
+      "MAIN"
+    ],
+    "groups": [
+      {
+        "category": "PRIMARY",
+        "words": [
+          "MAIN",
+          "BASIC",
+          "CORE",
+          "BASE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.45838412642478943
+      },
+      {
+        "category": "SYNONYMS FOR IMITATE",
+        "words": [
+          "COPY",
+          "STEAL",
+          "INSPIRATION",
+          "INSPIRE"
+        ],
+        "color": "green",
+        "similarity_score": 0.45045140385627747
+      },
+      {
+        "category": "ENCOURAGE, WITH \"ON\"",
+        "words": [
+          "MOTIVATE",
+          "PROMOTE",
+          "ADHERE",
+          "PUSH"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4380302429199219
+      },
+      {
+        "category": "FANCY ___",
+        "words": [
+          "TUXEDO",
+          "VANITY",
+          "LAVISH",
+          "DECORATIONS"
+        ],
+        "color": "purple",
+        "similarity_score": 0.416489839553833
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": false,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "MOTIVATE",
+                "INSPIRE",
+                "INSPIRATION",
+                "PROMOTE"
+              ],
+              "score": 0.5145736932754517
+            },
+            {
+              "words": [
+                "CORE",
+                "BASIC",
+                "BASE",
+                "MAIN"
+              ],
+              "score": 0.45838403701782227
+            },
+            {
+              "words": [
+                "TUXEDO",
+                "DECORATIONS",
+                "VANITY",
+                "LAVISH"
+              ],
+              "score": 0.416489839553833
+            },
+            {
+              "words": [
+                "STEAL",
+                "PUSH",
+                "ADHERE",
+                "COPY"
+              ],
+              "score": 0.31019753217697144
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "MOTIVATE",
+                "INSPIRE",
+                "ADHERE",
+                "PROMOTE"
+              ],
+              "score": 0.5054526329040527
+            },
+            {
+              "words": [
+                "TUXEDO",
+                "DECORATIONS",
+                "VANITY",
+                "LAVISH"
+              ],
+              "score": 0.416489839553833
+            },
+            {
+              "words": [
+                "CORE",
+                "BASIC",
+                "BASE",
+                "MAIN"
+              ],
+              "score": 0.45838403701782227
+            },
+            {
+              "words": [
+                "STEAL",
+                "PUSH",
+                "INSPIRATION",
+                "COPY"
+              ],
+              "score": 0.35138365626335144
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.44083890318870544,
+      "created_at": "2026-04-16T18:44:16.407924+00:00",
+      "accepted": false
+    }
+  },
+  {
+    "id": "CFR-00052",
+    "words": [
+      "VEHICLE",
+      "RACE CAR",
+      "SCOTCH",
+      "ENGINE",
+      "MOTOR",
+      "BMW",
+      "CAR",
+      "PLOP",
+      "CHAMPAGNE",
+      "GIN",
+      "WHOOP",
+      "CARS",
+      "COCKTAIL",
+      "MUSTANG",
+      "BELLYFLOP",
+      "FLOP"
+    ],
+    "groups": [
+      {
+        "category": "SPORTS CARS",
+        "words": [
+          "RACE CAR",
+          "CAR",
+          "VEHICLE",
+          "BMW"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.655218243598938
+      },
+      {
+        "category": "MARTINI SPECIFICATIONS",
+        "words": [
+          "COCKTAIL",
+          "SCOTCH",
+          "GIN",
+          "CHAMPAGNE"
+        ],
+        "color": "green",
+        "similarity_score": 0.5831945538520813
+      },
+      {
+        "category": "PARTS OF A CAR",
+        "words": [
+          "CARS",
+          "ENGINE",
+          "MOTOR",
+          "MUSTANG"
+        ],
+        "color": "blue",
+        "similarity_score": 0.4924418032169342
+      },
+      {
+        "category": "WALLOP",
+        "words": [
+          "WHOOP",
+          "PLOP",
+          "BELLYFLOP",
+          "FLOP"
+        ],
+        "color": "purple",
+        "similarity_score": 0.41526365280151367
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_remix",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "VEHICLE",
+                "RACE CAR",
+                "CAR",
+                "CARS"
+              ],
+              "score": 0.7239148020744324
+            },
+            {
+              "words": [
+                "SCOTCH",
+                "CHAMPAGNE",
+                "GIN",
+                "COCKTAIL"
+              ],
+              "score": 0.5831946730613708
+            },
+            {
+              "words": [
+                "ENGINE",
+                "MOTOR",
+                "BMW",
+                "MUSTANG"
+              ],
+              "score": 0.49876442551612854
+            },
+            {
+              "words": [
+                "PLOP",
+                "WHOOP",
+                "BELLYFLOP",
+                "FLOP"
+              ],
+              "score": 0.41526368260383606
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "VEHICLE",
+                "RACE CAR",
+                "CAR",
+                "CARS"
+              ],
+              "score": 0.7239148020744324
+            },
+            {
+              "words": [
+                "SCOTCH",
+                "CHAMPAGNE",
+                "GIN",
+                "COCKTAIL"
+              ],
+              "score": 0.5831946730613708
+            },
+            {
+              "words": [
+                "ENGINE",
+                "MOTOR",
+                "BMW",
+                "MUSTANG"
+              ],
+              "score": 0.49876442551612854
+            },
+            {
+              "words": [
+                "PLOP",
+                "WHOOP",
+                "BELLYFLOP",
+                "FLOP"
+              ],
+              "score": 0.41526368260383606
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "overall_difficulty": 0.536529541015625,
+      "created_at": "2026-04-16T18:44:42.785753+00:00",
+      "accepted": false
+    }
+  }
+]

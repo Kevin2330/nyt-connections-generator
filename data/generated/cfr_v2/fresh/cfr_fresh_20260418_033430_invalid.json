@@ -1,0 +1,169 @@
+[
+  {
+    "id": "CFR-00064",
+    "words": [
+      "KITTEN",
+      "PET",
+      "CAT",
+      "FELINE",
+      "FLUFFY",
+      "CONTEMPLATION",
+      "KITTY",
+      "REEVALUATE",
+      "FURRY",
+      "QUOTATION",
+      "CONSIDERATION",
+      "MOTTO",
+      "QUOTE",
+      "CONTEMPLATE",
+      "EPIGRAM",
+      "KITTENISH"
+    ],
+    "groups": [
+      {
+        "category": "WORDS THAT RHYME WITH KITTEN",
+        "words": [
+          "KITTENISH",
+          "KITTY",
+          "CAT",
+          "FELINE"
+        ],
+        "color": "yellow",
+        "similarity_score": 0.7208609580993652
+      },
+      {
+        "category": "SYNONYMS FOR CONSIDER",
+        "words": [
+          "CONSIDERATION",
+          "CONTEMPLATE",
+          "REEVALUATE",
+          "CONTEMPLATION"
+        ],
+        "color": "green",
+        "similarity_score": 0.5377199053764343
+      },
+      {
+        "category": "FICTIONAL CATS",
+        "words": [
+          "KITTEN",
+          "FURRY",
+          "FLUFFY",
+          "PET"
+        ],
+        "color": "blue",
+        "similarity_score": 0.5207660794258118
+      },
+      {
+        "category": "SARDONIC QUOTES",
+        "words": [
+          "QUOTE",
+          "QUOTATION",
+          "MOTTO",
+          "EPIGRAM"
+        ],
+        "color": "purple",
+        "similarity_score": 0.49844205379486084
+      }
+    ],
+    "metadata": {
+      "generation_method": "cfr_fresh",
+      "solver_agreement": true,
+      "solvers_used": [
+        "embedding",
+        "clustering"
+      ],
+      "solver_results": {
+        "embedding": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "KITTEN",
+                "CAT",
+                "FELINE",
+                "KITTY"
+              ],
+              "score": 0.814720094203949
+            },
+            {
+              "words": [
+                "CONTEMPLATION",
+                "REEVALUATE",
+                "CONSIDERATION",
+                "CONTEMPLATE"
+              ],
+              "score": 0.5377199053764343
+            },
+            {
+              "words": [
+                "PET",
+                "FLUFFY",
+                "FURRY",
+                "KITTENISH"
+              ],
+              "score": 0.5037123560905457
+            },
+            {
+              "words": [
+                "QUOTATION",
+                "MOTTO",
+                "QUOTE",
+                "EPIGRAM"
+              ],
+              "score": 0.49844205379486084
+            }
+          ]
+        },
+        "clustering": {
+          "solved": false,
+          "groups_correct": 2,
+          "groups": [
+            {
+              "words": [
+                "KITTEN",
+                "CAT",
+                "FELINE",
+                "KITTY"
+              ],
+              "score": 0.814720094203949
+            },
+            {
+              "words": [
+                "CONTEMPLATION",
+                "REEVALUATE",
+                "CONSIDERATION",
+                "CONTEMPLATE"
+              ],
+              "score": 0.5377199053764343
+            },
+            {
+              "words": [
+                "PET",
+                "FLUFFY",
+                "FURRY",
+                "KITTENISH"
+              ],
+              "score": 0.5037123560905457
+            },
+            {
+              "words": [
+                "QUOTATION",
+                "MOTTO",
+                "QUOTE",
+                "EPIGRAM"
+              ],
+              "score": 0.49844205379486084
+            }
+          ]
+        }
+      },
+      "dedup_check": true,
+      "dedup_reason": "",
+      "exact_group_match": false,
+      "overall_difficulty": 0.5694472789764404,
+      "created_at": "2026-04-18T03:32:26.019519+00:00",
+      "accepted": false
+    }
+  }
+]
