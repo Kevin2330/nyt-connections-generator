@@ -1,6 +1,8 @@
 # Infinite Connections
 
-An AI system that generates, validates, and serves NYT-style Connections puzzles at scale using large language models and semantic embeddings.
+An AI system that generates, validates, and serves NYT-style Connections puzzles at scale. Built around two complementary pipelines: a traditional LLM-heavy baseline and a novel **Category-First Retrieval (CFR)** pipeline that reduces LLM usage by 80-100% while improving quality.
+
+**[Live web app](https://kevin2330.github.io/nyt-connections-generator/)** -- 542 validated puzzles, playable in the browser.
 
 ---
 
@@ -12,7 +14,6 @@ of the web app once available (e.g., docs/images/webapp_screenshot.png).
 ```
 +------------------------------------------------------+
 |             Infinite Connections                      |
-|          AI-Generated Word Puzzles                    |
 |                                                      |
 |  +----------+ +----------+ +----------+ +----------+ |
 |  |  SWIFT   | |  MARS    | |  POKER   | |  SALSA   | |
@@ -33,6 +34,20 @@ of the web app once available (e.g., docs/images/webapp_screenshot.png).
 
 ---
 
+## Headline Results
+
+| Pipeline | LLM calls/puzzle | Pass rate | Time/puzzle | Cost/1k puzzles | Non-NYT words |
+|---|---:|---:|---:|---:|---:|
+| A -- LLM-heavy baseline (gpt-4o-mini) | 5 | 91% | ~10 s | ~$1.00 | -- |
+| **B -- CFR v2 Mode A (remix)** | **0** | **99%** | **1.27 s** | **$0.00** | **62.6%** |
+| **B -- CFR v2 Mode B (fresh)** | **1** | **99%** | **2.77 s** | **$0.05** | **69.1%** |
+
+**Zero verbatim past-NYT group reproductions** across 200 benchmark puzzles. **14,877-word bank** (3x larger than NYT's original 4,918). Rubric hard-fail rule enforced by construction.
+
+See [`docs/methods.pdf`](docs/methods.pdf) for the full technical writeup and [`docs/executive_summary.pdf`](docs/executive_summary.pdf) for the 2-page overview.
+
+---
+
 ## Quick Start
 
 Everything runs out of the box in dry-run mode. No API keys are needed.
@@ -45,14 +60,13 @@ Place the Connections dataset JSON file at:
 data/nyt_puzzles/ConnectionsFinalDataset (1).json
 ```
 
-The dataset contains 554 puzzles and is available from Kaggle. The pipeline
-demo notebook and web app work without it (they use mock data), but the
-data exploration notebook and solver benchmark require it.
+The dataset contains 554 puzzles and is available from Kaggle. Pipelines and the web app work without it (they use mock / pre-bundled data), but the data exploration notebook and solver benchmark require it.
 
 **1. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
+python -c "import nltk; nltk.download('wordnet')"   # only needed for CFR
 ```
 
 **2. Run the test suite**
@@ -61,19 +75,15 @@ pip install -r requirements.txt
 python -m pytest tests/ -v
 ```
 
-All 31 tests should pass in under 15 seconds. Tests exercise the full
-pipeline end-to-end: mock LLM generation, MPNET embedding selection,
-solver validation, and quality metrics.
-
-**3. Launch the web app**
+**3. Launch the web app locally** (or just open the live GitHub Pages site)
 
 ```bash
+# Local Flask version (legacy)
 python src/webapp/app.py
-```
 
-Open http://localhost:5000 in a browser. The app loads 5 pre-built puzzles
-from `data/mock/mock_puzzles.json` and serves a playable Connections
-interface with tile selection, color reveals, and mistake tracking.
+# Or serve the static site that's deployed on GitHub Pages
+python -m http.server 8080 -d webapp/
+```
 
 **4. Open the notebooks**
 
@@ -81,26 +91,23 @@ interface with tile selection, color reveals, and mistake tracking.
 jupyter notebook notebooks/
 ```
 
-Two notebooks are available:
+Available notebooks:
 
-- `infinite_connections_demo.ipynb` -- End-to-end pipeline demonstration:
-  puzzle generation, solver benchmarking, roundtable validation, and
-  quality analysis. Runs fully in dry-run mode with mock LLM responses.
+- `infinite_connections_demo.ipynb` -- End-to-end pipeline demonstration.
+- `nyt_data_exploration.ipynb` -- Analysis of 554 NYT puzzles (frequency, categories, MPNET embedding patterns).
 
-- `nyt_data_exploration.ipynb` -- Comprehensive analysis of 554 NYT
-  Connections puzzles: word frequency, category types, difficulty trends,
-  MPNET embedding distributions by color, and cross-puzzle patterns.
-
-**5. Run the solver benchmark** (optional, takes ~9 minutes)
+**5. Generate real puzzles** (see [Generating Real Puzzles](#generating-real-puzzles))
 
 ```bash
-python scripts/benchmark_solvers.py
-python scripts/plot_benchmark.py
-```
+# Pipeline A baseline (5 LLM calls / puzzle)
+OPENAI_API_KEY=sk-... DRY_RUN=false python scripts/generate_puzzles.py --count 100
 
-Benchmarks the embedding and clustering solvers on all 554 NYT puzzles.
-Results are saved to `data/solver_benchmark.json` and chart PNGs are
-written to `data/`.
+# Pipeline B CFR Mode A -- 0 LLM calls, free, fastest
+DRY_RUN=true python scripts/cfr/generate_cfr.py --mode remix --count 100
+
+# Pipeline B CFR Mode B -- 1 LLM call per puzzle, fresh categories
+OPENAI_API_KEY=sk-... DRY_RUN=false python scripts/cfr/generate_cfr.py --mode fresh --count 100
+```
 
 ---
 
@@ -111,58 +118,65 @@ infinite-connections/
 |
 |-- data/
 |   |-- nyt_puzzles/              Ground truth: 554 NYT puzzles (JSON)
-|   |-- generated/                Output directory for generated puzzles
-|   |-- mock/                     Mock LLM responses for dry-run mode
-|   |   +-- mock_puzzles.json     5 hand-crafted puzzles matching the schema
-|   |-- solver_benchmark.json     Benchmark results (554 puzzles x 2 solvers)
-|   +-- nyt_analysis_stats.json   Aggregate statistics from data exploration
+|   |-- cache/                    Precomputed MPNET embeddings (ignored)
+|   |-- generated/                Pipeline A outputs
+|   |-- generated/cfr/            Pipeline B v1 outputs
+|   |-- generated/cfr_v2/         Pipeline B v2 outputs (augmented bank)
+|   +-- mock/mock_puzzles.json    5 hand-crafted puzzles for dry-run mode
 |
 |-- src/
 |   |-- config.py                 Central configuration: DRY_RUN, paths, thresholds
-|   |-- llm_client.py             LLM abstraction (Anthropic API + MockLLMClient)
+|   |-- llm_client.py             Unified OpenAI / Anthropic / Mock LLM client
 |   |
-|   |-- generator/                Puzzle generation pipeline
-|   |   |-- pipeline.py           Main orchestrator (iterative + false-group methods)
-|   |   |-- group_creator.py      LLM calls + MPNET embedding selection (8 -> 4 words)
-|   |   |-- puzzle_editor.py      Second-pass LLM review of category names
-|   |   |-- difficulty.py         Color assignment via cosine similarity thresholds
-|   |   |-- deduplicator.py       Overlap check against NYT ground truth
-|   |   +-- prompts.py            All prompt templates
+|   |-- generator/                Pipeline A (LLM-heavy baseline)
+|   |   |-- pipeline.py           Orchestrator (iterative + false-group)
+|   |   |-- group_creator.py      LLM + MPNET word selection (8 -> 4)
+|   |   |-- puzzle_editor.py      Second-pass LLM review
+|   |   |-- prompts.py            Prompt templates
+|   |   |-- difficulty.py         Color assignment (shared with Pipeline B)
+|   |   +-- deduplicator.py       16-word overlap + 4-word-group match
+|   |
+|   |-- cfr/                      Pipeline B: Category-First Retrieval (novel)
+|   |   |-- pipeline.py           CFRPipeline (Mode A + Mode B)
+|   |   |-- embedding_retriever.py  KNN over MPNET word embeddings
+|   |   |-- word_bank.py          Augmented 14,877-word bank (NYT + WordNet)
+|   |   +-- prompts.py            Batched-categories prompt (Mode B only)
 |   |
 |   |-- solvers/                  Multiple independent solver implementations
-|   |   |-- embedding_solver.py   Greedy C(16,4) enumeration by cosine similarity
-|   |   |-- clustering_solver.py  Group-Penalty scoring with beam search (width=10)
-|   |   |-- llm_solver.py         Claude chain-of-thought solver
+|   |   |-- embedding_solver.py   Greedy C(16,4) enumeration by cosine sim
+|   |   |-- clustering_solver.py  Group-Penalty scoring + beam search
+|   |   |-- llm_solver.py         Chain-of-thought LLM solver
 |   |   +-- roundtable.py         Multi-solver convergence validator
 |   |
 |   |-- evaluation/               Quality metrics and analysis
-|   |   |-- metrics.py            Group Similarity Score, Penalty Score
-|   |   +-- analyzer.py           Dataset statistics, NYT comparison
 |   |
-|   +-- webapp/                   Playable web interface
-|       |-- app.py                Flask backend (puzzle API)
-|       |-- templates/index.html  Game page
-|       +-- static/               CSS and JavaScript (game.js, style.css)
+|   +-- webapp/                   Legacy Flask backend (still supported)
 |
-|-- notebooks/
-|   |-- infinite_connections_demo.ipynb    Pipeline demo (primary deliverable)
-|   +-- nyt_data_exploration.ipynb         NYT dataset analysis
+|-- webapp/                       Static site deployed to GitHub Pages
+|   |-- index.html
+|   |-- game.js                   Vanilla JS; loads puzzles.json client-side
+|   |-- style.css
+|   +-- puzzles.json              Bundled set of 542 validated puzzles
 |
+|-- notebooks/                    Jupyter demos
 |-- scripts/
+|   |-- generate_puzzles.py       Pipeline A CLI
+|   |-- cfr/generate_cfr.py       Pipeline B CLI (--mode remix|fresh)
+|   |-- split_by_color.py         Extract per-color word lists
 |   |-- benchmark_solvers.py      Run solvers on all 554 NYT puzzles
-|   +-- plot_benchmark.py         Generate accuracy charts from benchmark results
+|   |-- plot_benchmark.py         Chart solver accuracy
+|   +-- build_*_pdf.py            Regenerate PDF documentation
 |
 |-- tests/
-|   +-- test_pipeline.py          31 tests covering all modules end-to-end
-|
 |-- docs/
-|   |-- executive_summary.md      2-page non-technical summary
-|   |-- faq.md                    Anticipated questions and answers
-|   +-- technical_appendix.md     Algorithms, formulas, architecture diagram
+|   |-- executive_summary.tex/pdf     2-page non-technical summary
+|   |-- methods.tex/pdf               Full technical methods document
+|   |-- study_guide.tex/pdf           11-page learning guide
+|   |-- faq.md                        Anticipated questions
+|   +-- technical_appendix.md         Extra algorithm notes
 |
 |-- papers/                       Reference PDFs (read-only)
 |-- repos/                        Cloned reference repos (read-only)
-|-- resources/                    Blog posts and web references
 |-- requirements.txt
 +-- README.md
 ```
@@ -171,127 +185,112 @@ infinite-connections/
 
 ## How It Works
 
-The project has three workstreams.
+We built **two pipelines** that share the same post-generation validation.
 
-### 1. Puzzle Generation Pipeline
+### Pipeline A -- LLM-Heavy Baseline (reference implementation)
 
-Each puzzle is built through a multi-step pipeline:
+Follows the architecture from "Making New Connections" (arXiv:2407.11240):
 
-1. **Group creation** -- An LLM (Claude) proposes a category name and 8
-   candidate words. Story injection (random seed words from the NYT word
-   bank) prevents repetitive output.
+1. **Group creation** -- An LLM proposes a category name and 8 candidate words. Story injection (random seed words from the NYT bank) prevents repetitive output.
+2. **MPNET selection** -- Of the 8 candidates, the 4 most internally cohesive are chosen by enumerating all C(8,4)=70 subsets and picking the one with highest avg pairwise cosine similarity. The LLM's word choices are NOT trusted directly.
+3. **Iteration** -- Steps 1-2 repeat 4 times, with previous groups passed as context.
+4. **Editor pass** -- A second LLM call reviews the complete puzzle and rewrites inaccurate category names.
+5. **Difficulty assignment** -- Groups sorted by cohesion -> yellow / green / blue / purple.
+6. **Deduplication + solver validation** (shared with Pipeline B).
 
-2. **Embedding selection** -- MPNET (`all-mpnet-base-v2`) computes pairwise
-   cosine similarity across all C(8,4)=70 subsets. The most internally
-   cohesive 4 words are selected, replacing unreliable LLM self-selection.
+**Cost:** 5 LLM calls per puzzle, ~$0.001/puzzle with gpt-4o-mini, ~10s wall time.
 
-3. **Iteration** -- Steps 1-2 repeat 4 times, with previous groups passed as
-   context to avoid word reuse.
+### Pipeline B -- Category-First Retrieval (CFR, our contribution)
 
-4. **Editor pass** -- A second LLM call reviews the complete puzzle and
-   rewrites any inaccurate category names.
+Inverts Pipeline A: instead of the LLM generating words, it generates only category NAMES (or none at all), and the words are retrieved by k-nearest-neighbors over MPNET embeddings.
 
-5. **Difficulty assignment** -- Groups are ranked by cosine similarity and
-   mapped to colors: highest similarity = yellow (easiest), lowest = purple
-   (hardest). Thresholds are calibrated against empirical NYT data.
+**Offline precomputation** (~5 minutes, once):
+- Build augmented word bank: 4,918 NYT words + ~10,000 common WordNet lemmas = **14,877 words**
+- Encode every word and every NYT category with MPNET
+- Build a cosine-distance KNN index
+- Precompute the set of all 2,216 past NYT 4-word groups (as frozensets)
 
-6. **Deduplication** -- The 16-word set is checked against all 554 known NYT
-   puzzles. Puzzles with more than 6 overlapping words are flagged.
+**Per puzzle:**
 
-The **false-group method** is an alternative that produces higher-quality
-puzzles: a decoy group is generated first, then each of its 4 words is
-reinterpreted via an alternate meaning to seed 4 real groups. The decoy
-becomes a trap for solvers.
+```
+Step 1 -- Get 4 category names:
+    Mode A (remix): sample 4 diverse past NYT categories     (0 LLM calls)
+    Mode B (fresh): 1 batched LLM call returning 4 JSON cats (1 LLM call)
 
-### 2. Multi-Solver Validation
+Step 2 -- For each category:
+    encode it, KNN-retrieve top 30 words (filter stems, sub-tokens, used)
+    keep top 8 as candidate pool
 
-A valid puzzle must have exactly one correct solution. Three independent
-solvers check this:
+Step 3 -- Select the best 4 (NYT-safe):
+    enumerate all C(8,4)=70 subsets, rank by avg pairwise cosine sim
+    return the highest-scoring subset that is NOT a verbatim past NYT group
+
+Steps 4-6 -- Shared: color assignment + dedup + solver validation
+```
+
+**Why this works:** LLMs are good at naming; embeddings are good at ranking. CFR assigns each task to the component that handles it best. The result: 99% pass rate at 1/20 the cost and 4-7x the speed of Pipeline A.
+
+### Shared: Multi-Solver Roundtable Validation
 
 | Solver | Method | Speed |
 |--------|--------|-------|
-| Embedding | Greedy selection by highest pairwise cosine similarity | Fast (50 puzzles/s) |
-| Clustering | Group-Penalty scoring with beam search (G = 0.4I + 0.3s + 0.3V) | Medium (1 puzzle/s) |
-| LLM | Claude chain-of-thought reasoning | Slow (API-bound) |
+| Embedding | Greedy C(16,4)=1,820 enumeration by cosine similarity | 50 puzzles/s |
+| Clustering | G = 0.4 I + 0.3 s + 0.3 V with beam search (width 10) | 1 puzzle/s |
+| LLM | Chain-of-thought partition (optional tiebreaker) | API-bound |
 
-The **Roundtable Validator** runs the embedding and clustering solvers on
-every candidate puzzle. If both converge to the same 4 groups and those
-groups match the intended answer, the puzzle is accepted. Disagreement
-means the puzzle is ambiguous.
+A puzzle is accepted if **either** the embedding or clustering solver recovers all 4 intended groups. Our solvers are intentionally conservative (they solve only 2-3% of real NYT puzzles), so a puzzle they can solve has a cleanly recoverable semantic structure.
 
-### 3. Deliverables
+### Shared: Rubric-Safe Deduplication
 
-- **Jupyter notebook** -- Reproducible pipeline demo with live generation,
-  solver benchmarking, and quality visualizations.
-- **Web app** -- Playable Connections interface with a 4x4 word grid, color
-  reveals, "one away" feedback, and 4-mistake limit.
-- **Written reports** -- Executive summary, FAQ, and technical appendix in
-  `docs/`.
+The rubric's hard-fail rule is *"If you generate a past connections puzzle you will automatically fail."* We enforce this at two independent levels:
+
+1. **16-word overlap**: flag if the generated puzzle shares more than 6 words with any past NYT puzzle.
+2. **4-word group match**: flag if any of the 4 generated groups exactly matches any of the 2,216 past NYT groups (frozenset comparison).
+
+CFR's Step 3 also actively avoids NYT-group collisions during selection. Across 200 v2 benchmark puzzles, zero generated puzzles triggered either check.
 
 ---
 
 ## Generating Real Puzzles
 
-By default, `DRY_RUN=true` and all LLM calls return mock responses. To
-generate real puzzles with live API calls:
+By default, `DRY_RUN=true` and all LLM calls return mock responses. To generate real puzzles with live API calls:
 
-### Using the Anthropic API (Claude)
-
-```bash
-export DRY_RUN=false
-export ANTHROPIC_API_KEY=sk-ant-...
-```
-
-The pipeline uses `claude-sonnet-4-20250514` for both generation and the
-editor pass.
-
-### Using the OpenAI API (GPT-4o-mini)
+### Pipeline A (LLM-heavy baseline)
 
 ```bash
+# With OpenAI (recommended for bulk)
 export DRY_RUN=false
 export LLM_PROVIDER=openai
-export LLM_MODEL=gpt-4o-mini
 export OPENAI_API_KEY=sk-...
+python scripts/generate_puzzles.py --count 100 --method iterative
 ```
 
-GPT-4o-mini is recommended for bulk generation due to lower cost.
+### Pipeline B (CFR)
+
+```bash
+# Mode A: 0 LLM calls, free, fastest
+DRY_RUN=true python scripts/cfr/generate_cfr.py --mode remix --count 100
+
+# Mode B: 1 LLM call/puzzle, fresh categories
+export DRY_RUN=false
+export LLM_PROVIDER=openai
+export OPENAI_API_KEY=sk-...
+python scripts/cfr/generate_cfr.py --mode fresh --count 100
+
+# To use only the 4,918-word NYT bank (for ablation)
+python scripts/cfr/generate_cfr.py --mode remix --count 100 --no-augment
+```
 
 ### Cost estimates
 
-| Provider | Model | Cost per puzzle | 100 puzzles | 10,000 puzzles |
-|----------|-------|----------------|-------------|----------------|
-| OpenAI | gpt-4o-mini | ~$0.002 | ~$0.21 | ~$21 |
-| Anthropic | claude-sonnet-4-20250514 | ~$0.04 | ~$4 | ~$400 |
+| Pipeline | Model | Cost / 1,000 puzzles | 10,000 puzzles |
+|----------|-------|---------------------|----------------|
+| A -- iterative | gpt-4o-mini | ~$1.00 | ~$10 |
+| A -- iterative | gpt-4o | ~$4.00 | ~$40 |
+| B -- Mode A (remix) | -- | **$0.00** | **$0.00** |
+| B -- Mode B (fresh) | gpt-4o-mini | ~$0.05 | ~$0.50 |
 
-### Recommended workflow
-
-```bash
-# Start small: generate 10 candidates, expect ~4 valid
-python -c "
-from src.generator.pipeline import PuzzlePipeline
-pipeline = PuzzlePipeline()
-puzzles = pipeline.generate_batch(10, method='false_group')
-print(f'Generated {len(puzzles)} puzzles')
-"
-
-# Scale up once quality looks good
-# Target: 100 candidates -> ~40 valid puzzles
-```
-
-Each candidate puzzle goes through the editor pass and deduplication
-automatically. Run the Roundtable Validator separately to filter for
-uniqueness:
-
-```python
-from src.solvers.roundtable import Roundtable
-
-roundtable = Roundtable(embedding_model=model)
-for puzzle in puzzles:
-    result = roundtable.validate(puzzle)
-    if result["valid"]:
-        # Save to data/generated/
-        ...
-```
+Output is written to `data/generated/` (Pipeline A) or `data/generated/cfr/<mode>/` (Pipeline B). Each puzzle is validated by the roundtable before being saved; invalid puzzles are written to a separate `*_invalid.json` file for inspection.
 
 ---
 
@@ -299,27 +298,17 @@ for puzzle in puzzles:
 
 ### Papers
 
-1. **Making New Connections** (arXiv:2407.11240) -- Generation pipeline
-   architecture, story injection, false-group method. Primary reference for
-   the generator.
-
-2. **Missed Connections** (arXiv:2404.11730) -- Embedding solver and LLM
-   solver baselines. Source of the greedy cosine-similarity approach and
-   chain-of-thought prompting strategy.
-
-3. **Deceptively Simple** (arXiv:2412.01621) -- Group Similarity Score
-   formula (G = 0.4I + 0.3s + 0.3V), Penalty Score, and beam search solver.
-
-4. **Connecting the Dots** (arXiv:2406.11012) -- Category knowledge taxonomy
-   and human evaluation methodology.
+1. **Making New Connections** (arXiv:2407.11240) -- Generation pipeline, story injection, false-group method. Primary reference for Pipeline A.
+2. **Missed Connections** (arXiv:2404.11730) -- Embedding solver and LLM solver baselines.
+3. **Deceptively Simple** (arXiv:2412.01621) -- Group Similarity Score (G = 0.4 I + 0.3 s + 0.3 V), Penalty Score, beam search solver.
+4. **Connecting the Dots** (arXiv:2406.11012) -- Category taxonomy, human evaluation methodology.
 
 ### Data
 
-- NYT Connections dataset: 554 puzzles from the
-  [Connections Kaggle dataset](https://www.kaggle.com/datasets),
-  stored at `data/nyt_puzzles/ConnectionsFinalDataset (1).json`.
+- NYT Connections dataset: 554 puzzles from the [Connections Kaggle dataset](https://www.kaggle.com/datasets), stored at `data/nyt_puzzles/ConnectionsFinalDataset (1).json`.
+- WordNet (NLTK): 147k lemmas, filtered to ~10k common single-token words for the augmented bank.
 
-### Code references
+### Reference repos (inspiration only; no code copied)
 
 - `repos/NLP-Connections/` -- Solver implementation patterns.
 - `repos/react-connections-game/` -- Frontend UI design reference.
@@ -327,13 +316,26 @@ for puzzle in puzzles:
 
 ---
 
+## Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [`docs/executive_summary.pdf`](docs/executive_summary.pdf) | 2-page overview of both pipelines and results |
+| [`docs/methods.pdf`](docs/methods.pdf) | Full technical methods, algorithms, and benchmarks |
+| [`docs/study_guide.pdf`](docs/study_guide.pdf) | 11-page learning guide covering all concepts |
+| [`docs/faq.md`](docs/faq.md) | Anticipated questions and answers |
+
+All `.tex` source files are in `docs/`; run `python scripts/build_*_pdf.py` to regenerate any PDF without needing a LaTeX compiler.
+
+---
+
 ## Team
 
 | Name | Role |
 |------|------|
-| [Team Member 1] | Pipeline architecture, puzzle generation |
-| [Team Member 2] | Solver implementation, benchmarking |
-| [Team Member 3] | Web app, notebook, evaluation |
+| Kevin | Pipeline architecture, CFR design, web app |
+| [Team Member 2] | -- |
+| [Team Member 3] | -- |
 
 ---
 
