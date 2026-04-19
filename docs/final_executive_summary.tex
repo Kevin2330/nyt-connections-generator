@@ -1,0 +1,153 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+
+\definecolor{accent}{HTML}{1A5490}
+\definecolor{highlightbg}{HTML}{FFF8DC}
+\hypersetup{colorlinks=true, linkcolor=accent, urlcolor=accent}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{STA 561D | Duke}
+\lhead{Infinite Connections --- Executive Summary}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}
+\titlespacing\section{0pt}{6pt}{4pt}
+
+\newtcolorbox{keybox}{
+    colback=highlightbg, colframe=yellow!60!orange,
+    arc=2mm, boxrule=0.5pt,
+    left=6pt, right=6pt, top=4pt, bottom=4pt,
+}
+
+\title{\textbf{Infinite Connections}\\[0.2em]
+\large Generating New NYT-Style Word Puzzles at Scale}
+\author{Abuzar \quad Adreama \quad Burak \quad Hengkai \quad Kaiwen \\[0.3em]
+STA 561D --- Duke University}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\vspace{-2em}
+
+\section*{The problem}
+
+The New York Times Connections puzzle shows the player 16 words and asks them
+to sort the words into 4 groups of 4 based on a hidden theme. The themes can
+be simple (four synonyms for ``hello''), tricky (four things that fit before the
+word ``fish''), or outright playful (four Taylor Swift album titles). For this
+project we built a system that \emph{creates} these puzzles automatically, at
+scale, with a web app that lets anyone play them in the browser.
+
+Generating a good Connections puzzle is harder than it looks. The 16 words must
+fit together in exactly one way --- no ambiguity. The themes must feel fresh
+but recognizable. And we cannot accidentally reproduce a puzzle the NYT has
+already published, which the grading rubric treats as an automatic failure.
+
+\section*{What we built --- five complementary methods}
+
+Rather than pick one approach and hope it works, each teammate built a different
+method. Together they cover the full design space from ``ask the AI everything''
+to ``use no AI at all.''
+
+\begin{itemize}[leftmargin=*, itemsep=0.25em]
+\item \textbf{Adreama --- Iterative AI generation.} Asks the AI to build one
+group at a time, remembering what it has already used. Built up a library of
+\textbf{400+} puzzles with memory that persists across sessions, so duplicates
+never creep in even across many runs.
+
+\item \textbf{Burak --- Pattern-driven dictionary builder.} Uses no AI for
+generation. Instead, pulls words from language databases (WordNet, ConceptNet,
+Datamuse) and fills puzzle slots using explicit patterns (synonyms,
+category membership, shared actions). Specializes in the green and blue
+difficulty levels with thousands of candidate groups.
+
+\item \textbf{Hengkai --- Quality-first yellow specialist.} Focused on the
+easiest (yellow) difficulty, where cohesion and obviousness matter most. Uses
+cached word embeddings and strict filters that throw out any word too obscure
+or technical.
+
+\item \textbf{Kaiwen --- Two pipelines, compared head to head.}
+\emph{Pipeline A} follows the published ``Making New Connections'' paper: five
+AI calls per puzzle. \emph{Pipeline B} is our new method, \textbf{Category-First
+Retrieval (CFR)}: the AI proposes only the category names (one call per puzzle,
+or zero if we reuse NYT categories), then math finds the matching words from an
+expanded 14{,}877-word dictionary.
+
+\item \textbf{Abuzar --- Multi-agent critic system.} Builds puzzles with one AI
+agent and has a second agent critique the result. Good ideas survive, bad ones
+get rewritten. Pairs this with a playable web server and a library of ``concept
+inspirations'' to keep themes fresh.
+\end{itemize}
+
+All five methods share the same \textbf{safety checks}: every candidate puzzle
+is compared against the 554 real NYT puzzles both as a whole 16-word set
+\emph{and} group-by-group. If any generated group exactly matches a real NYT
+group, we throw that group out and try again. This means we cannot fail the
+``don't copy the NYT'' rule --- the system refuses to emit anything that would
+trigger it.
+
+\section*{Results}
+
+\begin{keybox}
+Across all methods we generated roughly \textbf{2{,}000+ validated puzzles}.
+The best pipeline (CFR) achieves a \textbf{99\% pass rate} on automated
+validation, reproduces \textbf{zero} past NYT puzzles, and uses words from
+a \textbf{14{,}877-word vocabulary --- three times larger than the NYT
+original}. At full scale, generating 10{,}000 puzzles costs between
+\textbf{\$0 and \$50} depending on the method, so we can produce as many as
+the course requires.
+\end{keybox}
+
+\section*{What we learned}
+
+The surprising finding was that the simplest, least-AI-heavy method produced
+the highest pass rate. Asking the AI to do everything (pick words, pick
+categories, pick difficulty) is both expensive and unreliable: the AI gives
+inconsistent word choices and needs a separate editor pass to clean up. But
+letting a language AI do only \emph{the creative naming step} --- and letting
+math handle the mechanical word-lookup step --- produces better results at
+one-twentieth the cost and four times the speed.
+
+Across the team, the strongest puzzles tended to come from methods that
+combined an AI's creativity with deterministic math for selection: everyone's
+pipeline used embeddings (a way to compare how similar two words are
+numerically) somewhere in the process.
+
+\section*{Deliverables}
+
+\begin{itemize}[leftmargin=*, itemsep=0.15em]
+\item A \textbf{live web app} at
+\url{https://kevin2330.github.io/nyt-connections-generator/}
+loads 540+ validated puzzles in the NYT Connections interface. Anyone can play
+them in a browser.
+\item A \textbf{master Jupyter notebook} (\texttt{notebooks/master\_demo.ipynb})
+walks through every method end-to-end in reproducible form. It runs without
+any API keys --- all AI calls fall back to realistic mock responses when none
+are configured.
+\item A \textbf{technical report} (see Methods document and the per-teammate
+folders) details the algorithms, math, and benchmarks.
+\item A \textbf{large pre-generated dataset} on disk, from which the course can
+sample puzzles for TA evaluation.
+\end{itemize}
+
+\section*{Future work}
+
+The next step is \emph{human} evaluation, not just the automated solvers: put
+the puzzles in front of real puzzle players and measure how many they would
+believe came from the NYT. We added a mechanism for that to the web app
+(thumbs-up / thumbs-down on each puzzle) but haven't yet collected a large
+sample. A stretch goal is a fine-tuned embedding model trained specifically on
+Connections puzzles, which would likely push the pass rate even higher for
+puzzles built around wordplay (the one category where our current system is
+weakest).
+
+\end{document}
