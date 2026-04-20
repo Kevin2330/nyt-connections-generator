@@ -142,12 +142,15 @@ def build():
 
     pdf.ln(1)
     pdf.body(
-        "All five methods share the same SAFETY CHECKS: every candidate puzzle "
-        "is compared against the 554 real NYT puzzles both as a whole 16-word "
-        "set AND group-by-group. If any generated group exactly matches a real "
-        "NYT group, we throw that group out and try again. This means we cannot "
-        "fail the 'don't copy the NYT' rule -- the system refuses to emit "
-        "anything that would trigger it."
+        "Individual generators use different duplicate-prevention strategies: "
+        "Kaiwen and Hengkai check each candidate against the 554 past NYT "
+        "puzzles directly; the other three guard against SELF-repetition via "
+        "persistent memory files but don't check the NYT corpus. As a final "
+        "gate, every puzzle in our MERGED submitted dataset is passed through "
+        "Kaiwen's shared validator, which flags any 16-word set that shares "
+        "more than six words with a past NYT puzzle AND any 4-word group that "
+        "exactly matches a past NYT group. That merged gate is what "
+        "guarantees our submitted dataset cannot reproduce a past puzzle."
     )
 
     pdf.section("Results")

@@ -38,35 +38,85 @@ STA 561D --- Duke University}
 
 \section*{Introduction}
 This FAQ anticipates the questions a careful, skeptical reader would ask after
-reading our executive summary or technical appendix. We've grouped them by
-topic: the methodology, the safety rules, the division of work across five
-teammates, the results, and the limitations.
+reading our executive summary or technical report. We group them by topic: how
+each of the five teammates' methods works, how we prevent duplicates, how we
+measure quality, cost and scale, and known limitations.
 
 % =====================================================================
-\section*{Methodology}
+\section*{The five methods, explained individually}
 
-\qitem{Why did you build five different methods instead of picking the best one?}
+\qitem{What method did Kaiwen build?}
+\aitem
+Kaiwen implemented two pipelines head-to-head. \textbf{Pipeline A} is a
+reference implementation of the iterative generator from the ``Making New
+Connections'' paper --- five AI calls per puzzle, one for each of the four
+groups plus a final editor pass. \textbf{Pipeline B} is a new design called
+\textbf{Category-First Retrieval (CFR)}: instead of asking the AI to produce
+words, it asks the AI only for \emph{category names}, and then a word-lookup
+against a 14{,}877-word dictionary finds the best matching words. Mode~A of
+CFR uses zero AI calls (it samples category names from the existing NYT
+catalog); Mode~B uses one AI call per puzzle to invent fresh category names.
+One AI call replaces five at the same quality.
+
+\qitem{What method did Adreama build?}
+\aitem
+Adreama's method is a single-call iterative generator. A GPT-4.1 call returns
+all four groups at once as structured JSON, with a long context prompt that
+carries forward every word and category the generator has used across
+sessions. The generator keeps three persistent memory files
+(\texttt{used\_words.json}, \texttt{used\_categories.json},
+\texttt{used\_boards.json}) so duplicates never creep in even over thousands
+of puzzles. A library of 48 hand-curated ``category webs'' (tuples of
+\textit{real} + \textit{trap} categories) seeds thematic false-group designs.
+The generator retries up to four times on parse or validation errors; batches
+of 50 attempts typically yield $\sim$35 valid puzzles.
+
+\qitem{What method did Burak build?}
+\aitem
+Burak's method is almost entirely non-AI --- the AI only gets called to label
+one group. The pipeline builds puzzles color by color, each color using a
+different algorithm: \textbf{purple} is drawn from a pool scored by eight
+rule-based mechanisms (e.g., collective nouns, contronyms), optionally with a
+machine-learning classifier reranking the pool; \textbf{green} is built by
+rhyme anchors using the CMU pronunciation dictionary; \textbf{blue} is a
+niche-category generator where Claude Haiku validates the group; and
+\textbf{yellow} uses word2vec semantic clusters. ``Impostor'' words are
+planted deliberately to create false-group pressure across colors.
+
+\qitem{What method did Hengkai build?}
+\aitem
+Hengkai is the yellow-difficulty specialist. The generator is fully
+algorithmic --- zero AI calls --- and uses pre-computed GloVe word embeddings,
+ConceptNet relations, and corpus frequency filters. Candidates are scored
+within several relation types (taxonomic, synonymy, verb--noun association,
+ConceptNet link) and the highest-scoring combinations become yellow groups.
+It is the only teammate's generator that validates each candidate group
+against the full 554-puzzle NYT history before acceptance, rejecting any
+group that shares three or more words with a past NYT group. A checkpoint
+system lets batch runs of 700+ puzzles resume after interruption.
+
+\qitem{What method did Abuzar build?}
+\aitem
+Abuzar's method is an agent-oriented system. A single GPT-4.1 call produces
+the full 4-group puzzle in JSON, but the prompt is heavily engineered with
+banned-category lists, banned-purple-type counters, and a trap-word
+mechanism where one purple word is specifically designed to impersonate a
+simpler category. The pipeline enforces self-uniqueness through persistent
+word, category, and board-signature sets; it also ships with a Flask web
+server and a ``concept inspirations'' library for theme variety. It does
+\emph{not} check against the 554 past NYT puzzles --- only against its own
+generated history.
+
+\qitem{Why build five different methods instead of picking the best one?}
 \aitem
 The Connections puzzle is deceptively hard. A single method tends to be great
-at one category style and weak at others: semantic-similarity approaches
-nail ``SYNONYMS FOR X'' but stumble on wordplay like ``\_\_\_FISH'' or hidden
-patterns like ``WORDS CONTAINING COLORS.'' By dividing the work across five
-complementary methods --- AI-heavy iterative (Adreama), pattern-driven
-dictionary (Burak), yellow-only specialist (Hengkai), embedding retrieval
-(Kaiwen), and multi-agent critic (Abuzar) --- we cover more of the puzzle
-design space than any one approach could. It also matches the professor's
-suggestion that we ``identify the different mechanisms in which words are
-grouped and build separate generators for each.''
-
-\qitem{What is the ``Category-First Retrieval'' method that keeps getting mentioned?}
-\aitem
-It is one of our novel contributions (Kaiwen). Traditional methods ask the AI
-to produce every word; then a deterministic step picks the best 4 out of 8.
-That's wasteful --- four of the AI's eight words are always thrown away.
-CFR inverts the flow: the AI produces only the \emph{category name}, and a
-word-lookup against a 14{,}877-word dictionary finds the 30 most closely
-related words, from which we pick the best four. One AI call replaces five,
-at the same (or better) quality.
+at one category style and weak at others: semantic-similarity approaches nail
+``SYNONYMS FOR X'' but stumble on wordplay like ``\_\_\_FISH'' or hidden
+patterns like ``WORDS CONTAINING COLORS.'' By spreading the work across five
+complementary methods we cover more of the design space than any one
+approach could. It also matches the professor's suggestion that we
+\emph{identify the different mechanisms in which words are grouped and build
+separate generators for each.}
 
 \qitem{Why use embeddings at all --- aren't LLMs just as good?}
 \aitem
@@ -74,206 +124,218 @@ LLMs are good at creative naming but inconsistent at ranking. Asked to pick
 ``the best 4 of these 8 words,'' an LLM gives different answers each time
 depending on temperature, seed, and context. Embeddings (numerical
 fingerprints of each word's meaning) give us \emph{deterministic} similarity
-scores: we get the same answer every time, which makes difficulty colors and
-validation reproducible. The combined approach --- LLM for naming, embeddings
-for ranking --- gets the best of both worlds.
-
-\qitem{How do the teammates' methods fit together?}
-\aitem
-We publish each method separately so they can be compared, but they share the
-same post-processing pipeline:
-\begin{itemize}[leftmargin=*, itemsep=0.1em]
-\item Difficulty color assignment via within-group cohesion scores
-\item Deduplication against the 554 past NYT puzzles
-\item Multi-solver roundtable validation (two independent algorithms must agree)
-\end{itemize}
-So every puzzle, regardless of which teammate's generator made it, passes
-through the same quality gate.
-
-\qitem{Why did Hengkai focus only on yellow, and Burak only on non-purple?}
-\aitem
-The NYT's yellow category is always the easiest and the most semantically
-cohesive; a specialist who tunes just for yellow can produce unusually
-high-quality easy groups. Purple, the hardest, depends heavily on wordplay
-and hidden patterns --- which are hard for embedding-based methods. Rather
-than produce mediocre purples, Hengkai and Burak focused where their
-technique excels, while the more general pipelines (Adreama, Kaiwen, Abuzar)
-handled the full puzzle.
+scores: we get the same answer every time, which makes difficulty colors
+and validation reproducible. The combined approach --- LLM for naming,
+embeddings for ranking --- gets the best of both.
 
 % =====================================================================
-\section*{Safety and duplication}
+\section*{Preventing duplicates}
 
-\qitem{How do you know you aren't just reproducing past NYT puzzles?}
+\qitem{How does each teammate prevent duplicates against past NYT puzzles?}
 \aitem
-We built two independent checks:
-\begin{itemize}[leftmargin=*, itemsep=0.1em]
-\item \textbf{16-word overlap}: flag any candidate whose 16 words share more
-than 6 with any of the 554 past NYT puzzles.
-\item \textbf{4-word group match}: flag any candidate whose 4-word group
-exactly matches any of the 2{,}216 past NYT 4-word groups.
-\end{itemize}
-Our pipeline doesn't just detect these collisions post-hoc --- during
-word selection, it also skips any 4-word combination that matches a past NYT
-group and picks the next-best one instead. Across 500+ benchmark puzzles, zero
-have triggered either check. The hard-fail rule cannot be violated without
-removing the guard.
+Not all five methods check against the 554 past NYT puzzles. Here's the
+honest breakdown:
 
-\qitem{Could the LLM leak a memorized NYT puzzle?}
+\begin{center}
+\small
+\begin{tabular}{p{0.15\linewidth} p{0.5\linewidth} p{0.3\linewidth}}
+\toprule
+\textbf{Teammate} & \textbf{Check vs.~past NYT puzzles?} & \textbf{Self-duplicate check} \\
+\midrule
+Kaiwen  & \textbf{Yes.} 16-word set overlap $>\!6$ flag + exact 4-word group match against all $\sim$2{,}216 past NYT groups. Enforced during generation (CFR skips any candidate that matches a past group). & Implicit via per-batch unique words \\
+Hengkai & \textbf{Yes.} Rejects any yellow group that shares 3 or more words with a past NYT group. & Anchor-repeat limit + checkpointing \\
+Adreama & No explicit check against NYT puzzles. & \textbf{Yes:} persistent JSON files \\
+Abuzar  & No explicit check against NYT puzzles. & \textbf{Yes:} persistent JSON files \\
+Burak   & No explicit check against NYT puzzles. & In-memory only (per notebook run) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The strongest guarantee comes from Kaiwen's pipeline, which enforces the check
+both during word selection (skip-and-retry) and as a final gate. Because
+Kaiwen's roundtable validator is used as the shared acceptance step across
+the team's final merged dataset, any puzzle that slips through a teammate's
+own generator still has to pass the 4-word-group match before it lands in the
+submitted dataset. In that sense the team-wide submitted dataset \emph{is}
+guarded against NYT duplication --- via Kaiwen's step --- even when the
+upstream generator didn't check.
+
+\qitem{What about self-duplication across batches?}
 \aitem
-The underlying language models were trained on web text, so they have seen
-Connections discussions. But our pipeline never lets the LLM output the final
-word list directly; the LLM only proposes categories or pools, and the word
-choice is done by deterministic dictionary lookup. Even if the LLM suggested
-a real NYT group, the group-level dedup check catches it before acceptance.
+Four of the five methods have an explicit self-duplication defense. Adreama
+and Abuzar persist three files each (\texttt{used\_words.json},
+\texttt{used\_categories.json}, \texttt{used\_boards.json}) that carry state
+across sessions. Hengkai's batch runner checkpoints to a JSON file and
+resumes without repeating groups. Kaiwen's CFR excludes already-used words
+within a puzzle and deduplicates by board signature across batches. Burak's
+notebook, the exception, holds its dedup state only in memory --- a repeated
+notebook run can in principle regenerate the same puzzle. In practice our
+merged dataset is deduplicated by board signature as a final step, which
+removes any cross-teammate collisions.
 
 \qitem{What about near-duplicates --- a puzzle with 5 overlapping words?}
 \aitem
-Our threshold is 6 (any overlap of 7 or more words flags the puzzle). With
-16-word puzzles drawn from a 14{,}877-word bank, overlapping 5 or 6 words
-happens by chance maybe once in thousands of puzzles. We report the overlap
-counts in every puzzle's metadata so a reviewer can audit this directly.
+Kaiwen's threshold is 6 (any overlap of 7 or more words flags the puzzle;
+Hengkai's threshold for yellow groups alone is 3). With 16-word puzzles
+drawn from a 14{,}877-word bank, overlapping 5 or 6 words happens by chance
+perhaps once in thousands of generated puzzles. The per-puzzle metadata we
+save includes the overlap count against each past NYT puzzle so a reviewer
+can audit this directly and adjust the threshold if desired.
+
+\qitem{Could the LLM leak a memorized NYT puzzle?}
+\aitem
+The underlying language models were trained on web text, so they have
+certainly seen Connections discussions. Three of our pipelines
+(Kaiwen, Burak, Hengkai) do not let the LLM produce the final word list
+directly --- they only let it propose category names or bless a candidate
+group, while the actual words come from deterministic dictionary lookup. For
+the pipelines that do ask the LLM to emit the full 16 words (Adreama and
+Abuzar), the group-level dedup in our merged pipeline catches any leaked
+group before acceptance.
 
 % =====================================================================
 \section*{Quality and evaluation}
 
 \qitem{99\% pass rate --- doesn't that mean your solver is too lenient?}
 \aitem
-We don't trust our own solvers to be lenient; that's why we run \emph{two}
+We don't trust a single solver; that's why Kaiwen's pipeline runs \emph{two}
 independent ones. A puzzle is accepted only if at least one solver fully
 recovers the intended 4-group partition. Both solvers use deterministic
 algorithms (greedy cosine selection and beam-search clustering) and solve
-only 2--3\% of the real NYT puzzles --- they are conservative, not easy.
-So a puzzle that our solvers \emph{can} crack has a cleanly recoverable
-structure (exactly what a good puzzle should have).
+only 2--3\% of the real NYT puzzles when tested directly on them --- they
+are conservative, not easy. So a puzzle that our solvers \emph{can} crack
+has a cleanly recoverable structure (exactly what a good puzzle should have).
 
-\qitem{How close to the NYT style are the puzzles, really?}
+\qitem{How close to the NYT style are the generated puzzles?}
 \aitem
-The rubric's A+ target is that TAs rate at least 40\% of our puzzles as
-``plausibly having come from the NYTimes.'' We haven't yet run a formal
-human evaluation; we added a thumbs-up/thumbs-down button to the web app
-so ratings can be collected at scale. Internally, on the categories where
-our system excels (synonyms, types-of-X, themed nouns) many puzzles are
-indistinguishable from NYT to a casual reader. On pure wordplay categories
-(``\_\_\_FISH,'' letter homophones), the output is weaker --- that is a real
-limitation we describe below.
+We have not yet run a formal human evaluation. Internally, on the categories
+where our methods excel (synonyms, types-of-X, themed nouns) many puzzles
+are difficult to distinguish from NYT output on casual inspection. On pure
+wordplay categories (``\_\_\_FISH,'' letter homophones), the output is
+weaker --- see the limitations section. We added a thumbs-up/thumbs-down
+rating button to the web app so real players can rate puzzles at scale, and
+we plan to collect at least several hundred ratings before submission.
 
 \qitem{What's the unique-solution guarantee?}
 \aitem
 A Connections puzzle is only valid if exactly one 4-way partition fits the
-intended themes. We enforce this in two ways: (1) during generation,
-CFR's candidate selector skips any 4-word group with a high cross-group
-``bleed'' score (words that fit another group too well), and (2) during
-validation, our two solvers must find the intended partition --- if they
-find a \emph{different} partition that also satisfies the themes, the puzzle
-is rejected as ambiguous.
+intended themes. Our pipeline enforces this in two ways: (1) during
+generation, CFR's candidate selector skips any 4-word group with a high
+cross-group ``bleed'' score (words that fit another group too well), and (2)
+during validation, our two solvers must find the intended partition --- if
+they find a \emph{different} partition that also satisfies the themes, the
+puzzle is rejected as ambiguous.
 
 \qitem{Is the word bank big enough?}
 \aitem
 The NYT has used about 4{,}918 unique words across all 554 of its puzzles.
-Our augmented bank has \textbf{14{,}877 words} --- three times larger. In the
-output, 62--69\% of generated words come from the \emph{non-NYT} portion,
-showing that the expansion is actually being used, not just sitting on disk.
+Kaiwen's augmented bank has \textbf{14{,}877 words} --- three times larger.
+In the CFR output, 62--69\% of generated words come from the \emph{non-NYT}
+portion, showing the expansion is actually being used. Burak and Hengkai
+additionally pull from WordNet, ConceptNet, and the Brown corpus, which
+expand the vocabulary further within those specialized pipelines.
 
 % =====================================================================
 \section*{Cost and scale}
 
-\qitem{What does it cost to generate the 10{,}000 puzzles the rubric mentions?}
+\qitem{What does it cost to generate 10{,}000 puzzles with each method?}
 \aitem
 \begin{center}
 \begin{tabular}{lr}
 \toprule
-\textbf{Method} & \textbf{Cost per 10k puzzles} \\
+\textbf{Method} & \textbf{Approx.~cost / 10{,}000 puzzles} \\
 \midrule
 Kaiwen CFR Mode A (no AI calls)        & \$0      \\
 Kaiwen CFR Mode B (1 AI call each)     & \$3      \\
-Burak pattern-builder (no AI calls)    & \$0      \\
-Hengkai yellow specialist              & ${\sim}\$1$   \\
-Adreama iterative (4 AI calls each)    & ${\sim}\$40$  \\
-Pipeline A baseline (5 AI calls each)  & ${\sim}\$50$  \\
+Hengkai yellow generator (no AI calls) & \$0      \\
+Burak pattern-builder (2 AI calls/puzzle) & ${\sim}\$20$  \\
+Adreama iterative (1 long AI call/puzzle) & ${\sim}\$10$  \\
+Abuzar agent system (1 long AI call/puzzle) & ${\sim}\$15$ \\
+Pipeline A baseline (5 AI calls/puzzle)  & ${\sim}\$50$ \\
 \bottomrule
 \end{tabular}
 \end{center}
-Even the most expensive method is within a routine student budget. The
-cheap methods let us generate unlimited puzzles at zero cost.
+The cheapest methods let us generate unlimited puzzles at zero cost; even
+the most expensive is within a routine student budget.
 
 \qitem{Why are different methods cheaper than others?}
 \aitem
-Because they make fewer calls to the paid AI service. Adreama asks the AI
-four times per puzzle. Pipeline A asks five times. Kaiwen's CFR Mode B asks
-only once. Kaiwen's CFR Mode A and Burak's method don't ask the AI at all ---
-they use only dictionaries and math, which are free to run on a laptop.
+They make fewer calls to the paid AI service. Pipeline A asks the AI five
+times per puzzle. Adreama and Abuzar each make one long call. CFR Mode B
+makes one short call. CFR Mode A and Hengkai's generator make zero calls ---
+they use dictionaries, embeddings, and math, which run free on a laptop.
 
 \qitem{Will this scale to 100{,}000 puzzles?}
 \aitem
 Yes. CFR Mode A runs at about 1.3 seconds per puzzle on a single laptop CPU
 with no network calls, so 100{,}000 puzzles take about 36 hours of wall time
-and cost \$0. The bottleneck at that scale would be the roundtable validator,
-not generation.
+and cost \$0. Hengkai's batch generator scales similarly. The bottleneck
+at that scale is the roundtable validator, not generation.
 
 % =====================================================================
 \section*{Reproducibility}
 
 \qitem{Can someone else reproduce your results without API keys?}
 \aitem
-Yes. The code ships with a \texttt{DRY\_RUN=true} default: every call to the
-AI service is intercepted and replaced by a realistic mock response. The
-master notebook, the web app, the test suite, and the solver benchmark all
-run end-to-end with no keys configured. Turning \texttt{DRY\_RUN=false}
-(and setting \texttt{OPENAI\_API\_KEY}) switches to real calls.
+Mostly, yes. Kaiwen's code ships with a \texttt{DRY\_RUN=true} default:
+every call to the AI service is intercepted and replaced by a realistic
+mock response. The master notebook, the web app, the test suite, and the
+solver benchmark all run end-to-end with no keys configured. Setting
+\texttt{DRY\_RUN=false} (with \texttt{OPENAI\_API\_KEY}) switches to real
+calls. Adreama's and Abuzar's generators require live API access. Burak's
+and Hengkai's generators run offline after pre-computing their embeddings
+and corpora.
 
 \qitem{How do I re-run the benchmarks?}
 \aitem
-Two commands:
+Two commands for Kaiwen's pipeline:
 \begin{verbatim}
-python scripts/cfr/generate_cfr.py --mode remix --count 100     # Mode A
-python scripts/cfr/generate_cfr.py --mode fresh  --count 100    # Mode B
+python scripts/cfr/generate_cfr.py --mode remix --count 100
+python scripts/cfr/generate_cfr.py --mode fresh --count 100
 \end{verbatim}
 Output is written to \texttt{data/generated/cfr/\dots} with per-puzzle
-metadata (pass rate, solver traces, dedup results) for audit.
+metadata (pass rate, solver traces, dedup results) for audit. Other
+teammates' generators live in their own folders and each ship with
+instructions.
 
 \qitem{Where is the code?}
 \aitem
-Our main repository is at
-\url{https://github.com/Kevin2330/nyt-connections-generator}.
-Each teammate's method is in a separate subfolder; the shared pipeline lives in
-\texttt{src/}. The live web app
-(\url{https://kevin2330.github.io/nyt-connections-generator/}) loads 540+
-validated puzzles from the same repo.
+The primary repository is at
+\url{https://github.com/Kevin2330/nyt-connections-generator}. The live web
+app at
+\url{https://kevin2330.github.io/nyt-connections-generator/}
+loads 540+ validated puzzles from the same repo. Individual teammate code
+lives in the \texttt{STA561/} directory of the submission; Abuzar's code
+additionally lives in a private team repository.
 
 % =====================================================================
-\section*{Limitations and future work}
+\section*{Limitations}
 
-\qitem{What's the biggest weakness of your system?}
+\qitem{What's the biggest weakness of the overall system?}
 \aitem
-Wordplay and syntactic categories. Our methods rely on semantic similarity
-(how related two words are in meaning), which captures ``SYNONYMS FOR SMART''
+Wordplay and syntactic categories. Our embedding-based methods (Kaiwen,
+Hengkai) rely on semantic similarity, which captures ``SYNONYMS FOR SMART''
 but not ``WORDS THAT END IN -ING'' or ``\_\_\_FISH.'' These pattern-based
-categories require a different kind of reasoning --- matching strings and
-letters --- that embeddings don't naturally do well. Abuzar's multi-agent
-system partially addresses this via an explicit ``concept inspiration'' layer,
-but purple (hardest) categories remain our weakest output.
+categories require string-level and phonetic reasoning that embeddings
+don't naturally do well. Burak's CMU-rhyme green generator and Abuzar's
+multi-agent system partly address this, but the hardest (purple) categories
+remain our collective weakest output.
 
 \qitem{Why does WordNet sometimes return awkward words (e.g., MORPHOPHONEMIC)?}
 \aitem
-WordNet includes many archaic and technical words. We filter by
-corpus-frequency and character length, but some oddities slip through. A
-higher frequency threshold or intersection with a common-English list (like
-the Google 10{,}000-most-common-words list we optionally include) would
-further tighten this.
+WordNet includes many archaic and technical words. Kaiwen's pipeline filters
+by corpus frequency and character length, but some oddities slip through. A
+higher frequency threshold or intersection with a common-English list (the
+Google 10{,}000-most-common-words list is already included as an optional
+filter) would tighten this further.
 
-\qitem{What would you do next if you had another month?}
+\qitem{Why does Burak's generator have no cross-session deduplication?}
 \aitem
-Three priorities, in order:
-\begin{itemize}[leftmargin=*, itemsep=0.15em]
-\item \textbf{Human evaluation}: collect 500+ TA/player ratings via the web
-app to measure actual ``plausibly-NYT'' percentage.
-\item \textbf{False-group CFR}: port the paper's best single-method technique
-into CFR's 1-AI-call framework, which should dramatically improve hardest-category quality.
-\item \textbf{Fine-tune embeddings on Connections data}: train a specialized
-version of the embedding model on the 2{,}216 past NYT (category, words)
-pairs, which would give us much better retrieval for the wordplay categories
-we currently handle poorly.
-\end{itemize}
+It is an honest gap. Burak's notebook holds its used-words set only in
+memory, so two separate notebook runs could in principle generate the same
+puzzle. In practice the final merged dataset is deduplicated by
+16-word board signature as a post-processing step, which removes any such
+collisions before submission.
 
 % =====================================================================
 \section*{Teamwork}
@@ -285,21 +347,13 @@ we currently handle poorly.
 \toprule
 \textbf{Teammate} & \textbf{Contribution} \\
 \midrule
-Adreama & Iterative AI generation with cross-session memory \\
-Burak   & Pattern-driven dictionary builder (green + blue) \\
-Hengkai & Quality-first yellow-difficulty specialist \\
-Kaiwen  & Baseline pipeline + Category-First Retrieval + web app \\
-Abuzar  & Multi-agent critic system + Flask web server \\
+Adreama & Iterative AI generator with cross-session memory and trap-word webs \\
+Burak   & Non-AI pattern-driven builder (purple mechanism + rhyme green + word2vec yellow) \\
+Hengkai & Yellow specialist: embedding + ConceptNet scoring, NYT-history overlap check \\
+Kaiwen  & Pipeline A baseline, CFR Modes A \& B, roundtable validator, web app \\
+Abuzar  & Multi-agent critic system + Flask web server + concept-inspiration library \\
 \bottomrule
 \end{tabular}
 \end{center}
-
-\qitem{Did you share code across teammates?}
-\aitem
-The assignment asks us not to share code, so each teammate's generator is
-their own. We share data (the same NYT ground-truth dataset) and the
-validation pipeline (Kaiwen's roundtable solvers) for consistent grading.
-This means we can directly compare methods on the same footing without
-anyone ``winning'' by tuning the evaluator.
 
 \end{document}

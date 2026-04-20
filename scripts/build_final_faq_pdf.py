@@ -35,7 +35,6 @@ class FAQ(FPDF):
         self.ln(1)
 
     def qa(self, question, answer_paragraphs):
-        # Q line
         self.ln(1.5)
         self.set_font("Helvetica", "B", 10)
         self.set_text_color(26, 84, 144)
@@ -43,7 +42,6 @@ class FAQ(FPDF):
         self.multi_cell(190, 5, f"Q.  {question}")
         self.set_text_color(0, 0, 0)
         self.set_font("Helvetica", "", 10)
-        # A paragraphs
         if isinstance(answer_paragraphs, str):
             answer_paragraphs = [answer_paragraphs]
         for i, para in enumerate(answer_paragraphs):
@@ -84,7 +82,7 @@ def build():
     pdf.set_auto_page_break(auto=True, margin=15)
     pdf.add_page()
 
-    # Title
+    # Title block
     pdf.set_font("Helvetica", "B", 18)
     pdf.set_text_color(26, 84, 144)
     pdf.ln(2)
@@ -109,186 +107,246 @@ def build():
     pdf.set_x(10)
     pdf.multi_cell(190, 4.5,
         "This FAQ anticipates the questions a careful, skeptical reader would "
-        "ask after reading our executive summary or technical appendix. We've "
-        "grouped them by topic: the methodology, the safety rules, the division "
-        "of work across five teammates, the results, and the limitations.")
+        "ask after reading our executive summary or technical report. We group "
+        "them by topic: how each of the five teammates' methods works, how we "
+        "prevent duplicates, how we measure quality, cost and scale, and known "
+        "limitations.")
 
-    # ================ METHODOLOGY ================
-    pdf.section("Methodology")
+    # ================ INDIVIDUAL METHODS ================
+    pdf.section("The five methods, explained individually")
 
-    pdf.qa("Why did you build five different methods instead of picking the best one?",
-        "The Connections puzzle is deceptively hard. A single method tends to be "
-        "great at one category style and weak at others: semantic-similarity "
+    pdf.qa("What method did Kaiwen build?",
+        "Kaiwen implemented two pipelines head-to-head. Pipeline A is a "
+        "reference implementation of the iterative generator from the 'Making "
+        "New Connections' paper -- five AI calls per puzzle, one for each of "
+        "the four groups plus a final editor pass. Pipeline B is a new design "
+        "called CATEGORY-FIRST RETRIEVAL (CFR): instead of asking the AI to "
+        "produce words, it asks the AI only for CATEGORY NAMES, and then a "
+        "word-lookup against a 14,877-word dictionary finds the best matching "
+        "words. Mode A of CFR uses zero AI calls (it samples category names "
+        "from the existing NYT catalog); Mode B uses one AI call per puzzle to "
+        "invent fresh category names. One AI call replaces five at the same "
+        "quality.")
+
+    pdf.qa("What method did Adreama build?",
+        "Adreama's method is a single-call iterative generator. A GPT-4.1 call "
+        "returns all four groups at once as structured JSON, with a long "
+        "context prompt that carries forward every word and category the "
+        "generator has used across sessions. The generator keeps three "
+        "persistent memory files (used_words.json, used_categories.json, "
+        "used_boards.json) so duplicates never creep in even over thousands of "
+        "puzzles. A library of 48 hand-curated 'category webs' (tuples of REAL "
+        "+ TRAP categories) seeds thematic false-group designs. The generator "
+        "retries up to four times on parse or validation errors; batches of "
+        "50 attempts typically yield ~35 valid puzzles.")
+
+    pdf.qa("What method did Burak build?",
+        "Burak's method is almost entirely non-AI -- the AI only gets called "
+        "to label one group. The pipeline builds puzzles color by color, each "
+        "color using a different algorithm: PURPLE is drawn from a pool scored "
+        "by eight rule-based mechanisms (e.g., collective nouns, contronyms), "
+        "optionally with a machine-learning classifier reranking the pool; "
+        "GREEN is built by rhyme anchors using the CMU pronunciation dictionary; "
+        "BLUE is a niche-category generator where Claude Haiku validates the "
+        "group; and YELLOW uses word2vec semantic clusters. 'Impostor' words "
+        "are planted deliberately to create false-group pressure across colors.")
+
+    pdf.qa("What method did Hengkai build?",
+        "Hengkai is the yellow-difficulty specialist. The generator is fully "
+        "algorithmic -- zero AI calls -- and uses pre-computed GloVe word "
+        "embeddings, ConceptNet relations, and corpus frequency filters. "
+        "Candidates are scored within several relation types (taxonomic, "
+        "synonymy, verb-noun association, ConceptNet link) and the "
+        "highest-scoring combinations become yellow groups. It is the only "
+        "teammate's generator that validates each candidate group against the "
+        "full 554-puzzle NYT history before acceptance, rejecting any group "
+        "that shares three or more words with a past NYT group. A checkpoint "
+        "system lets batch runs of 700+ puzzles resume after interruption.")
+
+    pdf.qa("What method did Abuzar build?",
+        "Abuzar's method is an agent-oriented system. A single GPT-4.1 call "
+        "produces the full 4-group puzzle in JSON, but the prompt is heavily "
+        "engineered with banned-category lists, banned-purple-type counters, "
+        "and a trap-word mechanism where one purple word is specifically "
+        "designed to impersonate a simpler category. The pipeline enforces "
+        "self-uniqueness through persistent word, category, and board-signature "
+        "sets; it also ships with a Flask web server and a 'concept inspirations' "
+        "library for theme variety. It does NOT check against the 554 past "
+        "NYT puzzles -- only against its own generated history.")
+
+    pdf.qa("Why build five different methods instead of picking the best one?",
+        "The Connections puzzle is deceptively hard. A single method tends to "
+        "be great at one category style and weak at others: semantic-similarity "
         "approaches nail 'SYNONYMS FOR X' but stumble on wordplay like '___FISH' "
-        "or hidden patterns like 'WORDS CONTAINING COLORS.' By dividing the work "
-        "across five complementary methods -- AI-heavy iterative (Adreama), "
-        "pattern-driven dictionary (Burak), yellow-only specialist (Hengkai), "
-        "embedding retrieval (Kaiwen), and multi-agent critic (Abuzar) -- we "
-        "cover more of the puzzle design space than any one approach could. It "
-        "also matches the professor's suggestion that we 'identify the different "
-        "mechanisms in which words are grouped and build separate generators "
-        "for each.'")
-
-    pdf.qa("What is the 'Category-First Retrieval' method that keeps getting mentioned?",
-        "It is one of our novel contributions (Kaiwen). Traditional methods ask "
-        "the AI to produce every word; then a deterministic step picks the best "
-        "4 out of 8. That's wasteful -- four of the AI's eight words are always "
-        "thrown away. CFR inverts the flow: the AI produces only the CATEGORY "
-        "NAME, and a word-lookup against a 14,877-word dictionary finds the 30 "
-        "most closely related words, from which we pick the best four. One AI "
-        "call replaces five, at the same (or better) quality.")
+        "or hidden patterns like 'WORDS CONTAINING COLORS.' By spreading the "
+        "work across five complementary methods we cover more of the design "
+        "space than any one approach could. It also matches the professor's "
+        "suggestion that we IDENTIFY THE DIFFERENT MECHANISMS IN WHICH WORDS "
+        "ARE GROUPED AND BUILD SEPARATE GENERATORS FOR EACH.")
 
     pdf.qa("Why use embeddings at all -- aren't LLMs just as good?",
-        "LLMs are good at creative naming but inconsistent at ranking. Asked to "
-        "pick 'the best 4 of these 8 words,' an LLM gives different answers "
+        "LLMs are good at creative naming but inconsistent at ranking. Asked "
+        "to pick 'the best 4 of these 8 words,' an LLM gives different answers "
         "each time depending on temperature, seed, and context. Embeddings "
         "(numerical fingerprints of each word's meaning) give us DETERMINISTIC "
         "similarity scores: we get the same answer every time, which makes "
         "difficulty colors and validation reproducible. The combined approach "
-        "-- LLM for naming, embeddings for ranking -- gets the best of both "
-        "worlds.")
+        "-- LLM for naming, embeddings for ranking -- gets the best of both.")
 
-    pdf.qa("How do the teammates' methods fit together?",
-        "We publish each method separately so they can be compared, but they "
-        "share the same post-processing pipeline:")
-    pdf.bullets([
-        "Difficulty color assignment via within-group cohesion scores",
-        "Deduplication against the 554 past NYT puzzles",
-        "Multi-solver roundtable validation (two independent algorithms must agree)",
-    ])
+    # ================ SAFETY / DUPLICATES ================
+    pdf.section("Preventing duplicates")
+
+    pdf.qa("How does each teammate prevent duplicates against past NYT puzzles?",
+        "Not all five methods check against the 554 past NYT puzzles. Here is "
+        "the honest breakdown:")
+    pdf.table(
+        ["Teammate", "Check vs past NYT puzzles?", "Self-duplicate check"],
+        [
+            ["Kaiwen",  "YES: 16-word overlap>6 + exact 4-word group match",  "implicit, per-batch"],
+            ["Hengkai", "YES: reject if >=3 words overlap past NYT groups",   "anchor-repeat limit + checkpoints"],
+            ["Adreama", "No explicit check vs NYT",                            "YES: persistent JSON files"],
+            ["Abuzar",  "No explicit check vs NYT",                            "YES: persistent JSON files"],
+            ["Burak",   "No explicit check vs NYT",                            "in-memory only (per notebook run)"],
+        ],
+        widths=[24, 95, 71],
+    )
     pdf.set_x(10)
     pdf.multi_cell(190, 4.5,
-        "So every puzzle, regardless of which teammate's generator made it, "
-        "passes through the same quality gate.")
+        "The strongest guarantee comes from Kaiwen's pipeline, which enforces "
+        "the check both during word selection (skip-and-retry) and as a final "
+        "gate. Because Kaiwen's roundtable validator is used as the shared "
+        "acceptance step across the team's final merged dataset, any puzzle "
+        "that slips through a teammate's own generator still has to pass the "
+        "4-word-group match before it lands in the submitted dataset. In that "
+        "sense the team-wide submitted dataset IS guarded against NYT "
+        "duplication -- via Kaiwen's step -- even when the upstream generator "
+        "didn't check.")
 
-    pdf.qa("Why did Hengkai focus only on yellow, and Burak only on non-purple?",
-        "The NYT's yellow category is always the easiest and the most "
-        "semantically cohesive; a specialist who tunes just for yellow can "
-        "produce unusually high-quality easy groups. Purple, the hardest, "
-        "depends heavily on wordplay and hidden patterns -- which are hard for "
-        "embedding-based methods. Rather than produce mediocre purples, "
-        "Hengkai and Burak focused where their technique excels, while the more "
-        "general pipelines (Adreama, Kaiwen, Abuzar) handled the full puzzle.")
+    pdf.qa("What about self-duplication across batches?",
+        "Four of the five methods have an explicit self-duplication defense. "
+        "Adreama and Abuzar persist three files each (used_words.json, "
+        "used_categories.json, used_boards.json) that carry state across "
+        "sessions. Hengkai's batch runner checkpoints to a JSON file and "
+        "resumes without repeating groups. Kaiwen's CFR excludes already-used "
+        "words within a puzzle and deduplicates by board signature across "
+        "batches. Burak's notebook, the exception, holds its dedup state only "
+        "in memory -- a repeated notebook run can in principle regenerate the "
+        "same puzzle. In practice our merged dataset is deduplicated by board "
+        "signature as a final step, which removes any cross-teammate "
+        "collisions.")
 
-    # ================ SAFETY ================
-    pdf.section("Safety and duplication")
-
-    pdf.qa("How do you know you aren't just reproducing past NYT puzzles?",
-        "We built two independent checks:")
-    pdf.bullets([
-        "16-word overlap: flag any candidate whose 16 words share more than 6 "
-        "with any of the 554 past NYT puzzles.",
-        "4-word group match: flag any candidate whose 4-word group exactly "
-        "matches any of the 2,216 past NYT 4-word groups.",
-    ])
-    pdf.set_x(10)
-    pdf.multi_cell(190, 4.5,
-        "Our pipeline doesn't just detect these collisions post-hoc -- during "
-        "word selection, it also skips any 4-word combination that matches a "
-        "past NYT group and picks the next-best one instead. Across 500+ "
-        "benchmark puzzles, zero have triggered either check. The hard-fail "
-        "rule cannot be violated without removing the guard.")
+    pdf.qa("What about near-duplicates -- a puzzle with 5 overlapping words?",
+        "Kaiwen's threshold is 6 (any overlap of 7 or more words flags the "
+        "puzzle; Hengkai's threshold for yellow groups alone is 3). With "
+        "16-word puzzles drawn from a 14,877-word bank, overlapping 5 or 6 "
+        "words happens by chance perhaps once in thousands of generated "
+        "puzzles. The per-puzzle metadata we save includes the overlap count "
+        "against each past NYT puzzle so a reviewer can audit this directly "
+        "and adjust the threshold if desired.")
 
     pdf.qa("Could the LLM leak a memorized NYT puzzle?",
         "The underlying language models were trained on web text, so they have "
-        "seen Connections discussions. But our pipeline never lets the LLM "
-        "output the final word list directly; the LLM only proposes categories "
-        "or pools, and the word choice is done by deterministic dictionary "
-        "lookup. Even if the LLM suggested a real NYT group, the group-level "
-        "dedup check catches it before acceptance.")
-
-    pdf.qa("What about near-duplicates -- a puzzle with 5 overlapping words?",
-        "Our threshold is 6 (any overlap of 7 or more words flags the puzzle). "
-        "With 16-word puzzles drawn from a 14,877-word bank, overlapping 5 or 6 "
-        "words happens by chance maybe once in thousands of puzzles. We report "
-        "the overlap counts in every puzzle's metadata so a reviewer can audit "
-        "this directly.")
+        "certainly seen Connections discussions. Three of our pipelines "
+        "(Kaiwen, Burak, Hengkai) do not let the LLM produce the final word "
+        "list directly -- they only let it propose category names or bless a "
+        "candidate group, while the actual words come from deterministic "
+        "dictionary lookup. For the pipelines that do ask the LLM to emit the "
+        "full 16 words (Adreama and Abuzar), the group-level dedup in our "
+        "merged pipeline catches any leaked group before acceptance.")
 
     # ================ QUALITY ================
     pdf.section("Quality and evaluation")
 
     pdf.qa("99% pass rate -- doesn't that mean your solver is too lenient?",
-        "We don't trust our own solvers to be lenient; that's why we run TWO "
+        "We don't trust a single solver; that's why Kaiwen's pipeline runs TWO "
         "independent ones. A puzzle is accepted only if at least one solver "
         "fully recovers the intended 4-group partition. Both solvers use "
         "deterministic algorithms (greedy cosine selection and beam-search "
-        "clustering) and solve only 2-3% of the real NYT puzzles -- they are "
-        "conservative, not easy. So a puzzle that our solvers CAN crack has a "
-        "cleanly recoverable structure (exactly what a good puzzle should have).")
+        "clustering) and solve only 2-3% of the real NYT puzzles when tested "
+        "directly on them -- they are conservative, not easy. So a puzzle that "
+        "our solvers CAN crack has a cleanly recoverable structure (exactly "
+        "what a good puzzle should have).")
 
-    pdf.qa("How close to the NYT style are the puzzles, really?",
-        "The rubric's A+ target is that TAs rate at least 40% of our puzzles "
-        "as 'plausibly having come from the NYTimes.' We haven't yet run a "
-        "formal human evaluation; we added a thumbs-up/thumbs-down button to "
-        "the web app so ratings can be collected at scale. Internally, on the "
-        "categories where our system excels (synonyms, types-of-X, themed "
-        "nouns) many puzzles are indistinguishable from NYT to a casual reader. "
-        "On pure wordplay categories ('___FISH,' letter homophones), the output "
-        "is weaker -- that is a real limitation we describe below.")
+    pdf.qa("How close to the NYT style are the generated puzzles?",
+        "We have not yet run a formal human evaluation. Internally, on the "
+        "categories where our methods excel (synonyms, types-of-X, themed "
+        "nouns) many puzzles are difficult to distinguish from NYT output on "
+        "casual inspection. On pure wordplay categories ('___FISH,' letter "
+        "homophones), the output is weaker -- see the limitations section. "
+        "We added a thumbs-up/thumbs-down rating button to the web app so "
+        "real players can rate puzzles at scale, and we plan to collect at "
+        "least several hundred ratings before submission.")
 
     pdf.qa("What's the unique-solution guarantee?",
         "A Connections puzzle is only valid if exactly one 4-way partition "
-        "fits the intended themes. We enforce this in two ways: (1) during "
-        "generation, CFR's candidate selector skips any 4-word group with a "
-        "high cross-group 'bleed' score (words that fit another group too "
-        "well), and (2) during validation, our two solvers must find the "
-        "intended partition -- if they find a DIFFERENT partition that also "
-        "satisfies the themes, the puzzle is rejected as ambiguous.")
+        "fits the intended themes. Our pipeline enforces this in two ways: "
+        "(1) during generation, CFR's candidate selector skips any 4-word "
+        "group with a high cross-group 'bleed' score (words that fit another "
+        "group too well), and (2) during validation, our two solvers must "
+        "find the intended partition -- if they find a DIFFERENT partition "
+        "that also satisfies the themes, the puzzle is rejected as ambiguous.")
 
     pdf.qa("Is the word bank big enough?",
         "The NYT has used about 4,918 unique words across all 554 of its "
-        "puzzles. Our augmented bank has 14,877 WORDS -- three times larger. "
-        "In the output, 62-69% of generated words come from the NON-NYT "
-        "portion, showing that the expansion is actually being used, not just "
-        "sitting on disk.")
+        "puzzles. Kaiwen's augmented bank has 14,877 WORDS -- three times "
+        "larger. In the CFR output, 62-69% of generated words come from the "
+        "NON-NYT portion, showing the expansion is actually being used. "
+        "Burak and Hengkai additionally pull from WordNet, ConceptNet, and "
+        "the Brown corpus, which expand the vocabulary further within those "
+        "specialized pipelines.")
 
     # ================ COST & SCALE ================
     pdf.section("Cost and scale")
 
-    pdf.qa("What does it cost to generate the 10,000 puzzles the rubric mentions?",
-        "Here is the cost breakdown per method at 10,000-puzzle scale:")
+    pdf.qa("What does it cost to generate 10,000 puzzles with each method?",
+        "Approximate cost per 10,000 puzzles:")
     pdf.table(
-        ["Method", "Cost / 10,000 puzzles"],
+        ["Method", "Approx cost / 10,000 puzzles"],
         [
-            ["Kaiwen CFR Mode A (no AI calls)",        "$0"],
-            ["Kaiwen CFR Mode B (1 AI call each)",     "~$3"],
-            ["Burak pattern-builder (no AI calls)",    "$0"],
-            ["Hengkai yellow specialist",              "~$1"],
-            ["Adreama iterative (4 AI calls each)",    "~$40"],
-            ["Pipeline A baseline (5 AI calls each)",  "~$50"],
+            ["Kaiwen CFR Mode A (no AI calls)",         "$0"],
+            ["Kaiwen CFR Mode B (1 AI call each)",      "~$3"],
+            ["Hengkai yellow generator (no AI calls)",  "$0"],
+            ["Burak pattern-builder (2 AI calls each)", "~$20"],
+            ["Adreama iterative (1 long AI call each)", "~$10"],
+            ["Abuzar agent system (1 long AI call)",    "~$15"],
+            ["Pipeline A baseline (5 AI calls each)",   "~$50"],
         ],
         widths=[130, 60],
     )
     pdf.set_x(10)
     pdf.multi_cell(190, 4.5,
-        "Even the most expensive method is within a routine student budget. "
-        "The cheap methods let us generate unlimited puzzles at zero cost.")
+        "The cheapest methods let us generate unlimited puzzles at zero cost; "
+        "even the most expensive is within a routine student budget.")
 
     pdf.qa("Why are different methods cheaper than others?",
-        "Because they make fewer calls to the paid AI service. Adreama asks "
-        "the AI four times per puzzle. Pipeline A asks five times. Kaiwen's "
-        "CFR Mode B asks only once. Kaiwen's CFR Mode A and Burak's method "
-        "don't ask the AI at all -- they use only dictionaries and math, "
-        "which are free to run on a laptop.")
+        "They make fewer calls to the paid AI service. Pipeline A asks the AI "
+        "five times per puzzle. Adreama and Abuzar each make one long call. "
+        "CFR Mode B makes one short call. CFR Mode A and Hengkai's generator "
+        "make zero calls -- they use dictionaries, embeddings, and math, "
+        "which run free on a laptop.")
 
     pdf.qa("Will this scale to 100,000 puzzles?",
         "Yes. CFR Mode A runs at about 1.3 seconds per puzzle on a single "
         "laptop CPU with no network calls, so 100,000 puzzles take about 36 "
-        "hours of wall time and cost $0. The bottleneck at that scale would "
-        "be the roundtable validator, not generation.")
+        "hours of wall time and cost $0. Hengkai's batch generator scales "
+        "similarly. The bottleneck at that scale is the roundtable validator, "
+        "not generation.")
 
     # ================ REPRODUCIBILITY ================
     pdf.section("Reproducibility")
 
     pdf.qa("Can someone else reproduce your results without API keys?",
-        "Yes. The code ships with a DRY_RUN=true default: every call to the "
-        "AI service is intercepted and replaced by a realistic mock response. "
-        "The master notebook, the web app, the test suite, and the solver "
-        "benchmark all run end-to-end with no keys configured. Turning "
-        "DRY_RUN=false (and setting OPENAI_API_KEY) switches to real calls.")
+        "Mostly, yes. Kaiwen's code ships with a DRY_RUN=true default: every "
+        "call to the AI service is intercepted and replaced by a realistic "
+        "mock response. The master notebook, the web app, the test suite, "
+        "and the solver benchmark all run end-to-end with no keys configured. "
+        "Setting DRY_RUN=false (with OPENAI_API_KEY) switches to real calls. "
+        "Adreama's and Abuzar's generators require live API access. Burak's "
+        "and Hengkai's generators run offline after pre-computing their "
+        "embeddings and corpora.")
 
     pdf.qa("How do I re-run the benchmarks?",
-        "Two commands:")
+        "Two commands for Kaiwen's pipeline:")
     pdf.set_font("Courier", "", 9)
     pdf.set_x(14)
     pdf.multi_cell(186, 5,
@@ -298,48 +356,44 @@ def build():
     pdf.set_x(10)
     pdf.multi_cell(190, 4.5,
         "Output is written to data/generated/cfr/... with per-puzzle metadata "
-        "(pass rate, solver traces, dedup results) for audit.")
+        "(pass rate, solver traces, dedup results) for audit. Other "
+        "teammates' generators live in their own folders and each ship with "
+        "instructions.")
 
     pdf.qa("Where is the code?",
-        "Our main repository is at https://github.com/Kevin2330/nyt-connections-generator. "
-        "Each teammate's method is in a separate subfolder; the shared pipeline "
-        "lives in src/. The live web app "
-        "(kevin2330.github.io/nyt-connections-generator/) loads 540+ validated "
-        "puzzles from the same repo.")
+        "The primary repository is at "
+        "https://github.com/Kevin2330/nyt-connections-generator. The live web "
+        "app at kevin2330.github.io/nyt-connections-generator/ loads 540+ "
+        "validated puzzles from the same repo. Individual teammate code lives "
+        "in the STA561/ directory of the submission; Abuzar's code "
+        "additionally lives in a private team repository.")
 
     # ================ LIMITATIONS ================
-    pdf.section("Limitations and future work")
+    pdf.section("Limitations")
 
-    pdf.qa("What's the biggest weakness of your system?",
-        "Wordplay and syntactic categories. Our methods rely on semantic "
-        "similarity (how related two words are in meaning), which captures "
+    pdf.qa("What's the biggest weakness of the overall system?",
+        "Wordplay and syntactic categories. Our embedding-based methods "
+        "(Kaiwen, Hengkai) rely on semantic similarity, which captures "
         "'SYNONYMS FOR SMART' but not 'WORDS THAT END IN -ING' or '___FISH.' "
-        "These pattern-based categories require a different kind of reasoning "
-        "-- matching strings and letters -- that embeddings don't naturally "
-        "do well. Abuzar's multi-agent system partially addresses this via an "
-        "explicit 'concept inspiration' layer, but purple (hardest) categories "
-        "remain our weakest output.")
+        "These pattern-based categories require string-level and phonetic "
+        "reasoning that embeddings don't naturally do well. Burak's CMU-rhyme "
+        "green generator and Abuzar's multi-agent system partly address this, "
+        "but the hardest (purple) categories remain our collective weakest "
+        "output.")
 
     pdf.qa("Why does WordNet sometimes return awkward words (e.g., MORPHOPHONEMIC)?",
-        "WordNet includes many archaic and technical words. We filter by "
-        "corpus-frequency and character length, but some oddities slip through. "
-        "A higher frequency threshold or intersection with a common-English "
-        "list (like the Google 10,000-most-common-words list we optionally "
-        "include) would further tighten this.")
+        "WordNet includes many archaic and technical words. Kaiwen's pipeline "
+        "filters by corpus frequency and character length, but some oddities "
+        "slip through. A higher frequency threshold or intersection with a "
+        "common-English list (the Google 10,000-most-common-words list is "
+        "already included as an optional filter) would tighten this further.")
 
-    pdf.qa("What would you do next if you had another month?",
-        "Three priorities, in order:")
-    pdf.bullets([
-        "Human evaluation: collect 500+ TA/player ratings via the web app to "
-        "measure actual 'plausibly-NYT' percentage.",
-        "False-group CFR: port the paper's best single-method technique into "
-        "CFR's 1-AI-call framework, which should dramatically improve "
-        "hardest-category quality.",
-        "Fine-tune embeddings on Connections data: train a specialized "
-        "version of the embedding model on the 2,216 past NYT (category, "
-        "words) pairs, which would give us much better retrieval for the "
-        "wordplay categories we currently handle poorly.",
-    ])
+    pdf.qa("Why does Burak's generator have no cross-session deduplication?",
+        "It is an honest gap. Burak's notebook holds its used-words set only "
+        "in memory, so two separate notebook runs could in principle generate "
+        "the same puzzle. In practice the final merged dataset is "
+        "deduplicated by 16-word board signature as a post-processing step, "
+        "which removes any such collisions before submission.")
 
     # ================ TEAMWORK ================
     pdf.section("Teamwork")
@@ -348,21 +402,14 @@ def build():
     pdf.table(
         ["Teammate", "Contribution"],
         [
-            ["Adreama", "Iterative AI generation with cross-session memory"],
-            ["Burak",   "Pattern-driven dictionary builder (green + blue)"],
-            ["Hengkai", "Quality-first yellow-difficulty specialist"],
-            ["Kaiwen",  "Baseline pipeline + Category-First Retrieval + web app"],
-            ["Abuzar",  "Multi-agent critic system + Flask web server"],
+            ["Adreama", "Iterative AI generator with cross-session memory and trap-word webs"],
+            ["Burak",   "Non-AI pattern-driven builder (purple mechanism + rhyme green + word2vec yellow)"],
+            ["Hengkai", "Yellow specialist: embedding + ConceptNet scoring, NYT-history overlap check"],
+            ["Kaiwen",  "Pipeline A baseline, CFR Modes A & B, roundtable validator, web app"],
+            ["Abuzar",  "Multi-agent critic system + Flask web server + concept-inspiration library"],
         ],
-        widths=[35, 155],
+        widths=[25, 165],
     )
-
-    pdf.qa("Did you share code across teammates?",
-        "The assignment asks us not to share code, so each teammate's "
-        "generator is their own. We share data (the same NYT ground-truth "
-        "dataset) and the validation pipeline (Kaiwen's roundtable solvers) "
-        "for consistent grading. This means we can directly compare methods on "
-        "the same footing without anyone 'winning' by tuning the evaluator.")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     pdf.output(str(OUT))

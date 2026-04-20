@@ -88,12 +88,15 @@ get rewritten. Pairs this with a playable web server and a library of ``concept
 inspirations'' to keep themes fresh.
 \end{itemize}
 
-All five methods share the same \textbf{safety checks}: every candidate puzzle
-is compared against the 554 real NYT puzzles both as a whole 16-word set
-\emph{and} group-by-group. If any generated group exactly matches a real NYT
-group, we throw that group out and try again. This means we cannot fail the
-``don't copy the NYT'' rule --- the system refuses to emit anything that would
-trigger it.
+Individual generators use different duplicate-prevention strategies:
+Kaiwen and Hengkai check each candidate against the 554 past NYT puzzles
+directly; the other three guard against \emph{self}-repetition via persistent
+memory files but don't check the NYT corpus. As a final gate, every puzzle in
+our \textbf{merged submitted dataset} is passed through Kaiwen's shared
+validator, which flags any 16-word set that shares more than six words with a
+past NYT puzzle \emph{and} any 4-word group that exactly matches a past NYT
+group. That merged gate is what guarantees our submitted dataset cannot
+reproduce a past puzzle.
 
 \section*{Results}
 
